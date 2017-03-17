@@ -1,0 +1,5 @@
+select r.r_object_id, r.object_name, r.fiscal_year, r.agency_id, o.org_chain_acronym, f.r_folder_path from foia_annual_report r, foia_ref_organization o, dm_folder f where r.agency_id = o.r_object_id and o.acronym = 'DOJ' and r.i_folder_id = f.r_object_id and object_name like '%Edited%' and publish_flag = 1 enable (row_based);
+go
+
+select r.r_object_id, r.object_name, r.fiscal_year, r.agency_id, o.org_chain_acronym, f.r_folder_path from foia_annual_report r, foia_ref_organization o, dm_folder f where r.agency_id = o.r_object_id and o.acronym = 'EOUSA' and r.i_folder_id = f.r_object_id and object_name like '%Edited%' and publish_flag = 1 enable (row_based);
+go
