@@ -1,7 +1,7 @@
 package com.google.linked.list;
 
 /**
- * Created by ychang on 3/6/2017. The thought is
+ * Created by ychang on 3/6/2017. The thought is insert next node to head of current list
  */
 public class ReverseList {
 

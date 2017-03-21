@@ -16,6 +16,17 @@ public class LowestCommonAncestorBST {
       return lowestCommonAncestor(root.right, p, q);
     return root;
   }
+
+  public int nextValue(TreeNode root, int value) {
+    if (root==null) return Integer.MIN_VALUE;
+    if (root.val<=value) {
+      return nextValue(root.right, value);
+    }
+    int left = nextValue(root.left, value);
+    if (left==Integer.MIN_VALUE) return root.val;
+    return left;
+  }
+
 }
 
 class TreeNode {
