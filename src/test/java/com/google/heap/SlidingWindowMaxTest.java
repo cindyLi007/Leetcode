@@ -13,13 +13,13 @@ public class SlidingWindowMaxTest {
   public void maxSlidingWindow() throws Exception {
     // Given
     SlidingWindowMax slidingWindowMax = new SlidingWindowMax();
-    int[] nums = new int[]{1, 3, 1, 2, 0, 5};
+    int[] nums = new int[]{7, 2, 4 };
 
     // When
-    int[] res = slidingWindowMax.maxSlidingWindow(nums, 3);
+    int[] res = slidingWindowMax.maxSlidingWindow(nums, 2);
 
     // Then
-    assertThat(res, is(new int[]{3, 3, 2, 5}));
+    assertThat(res, is(new int[]{7, 4}));
   }
 
 }

@@ -48,7 +48,7 @@ public class FindAllAnagrams {
       /** if we find the window's size equals to p, then we have to shift window left to find the new match windows
        * any entry in the hash which value >=0 means this char in p, so if we find the left (we will shift out) 's hash
        * value is >=0, we need count++ since in line 31 to 33, we decrease count. Reset the hash[left] because we kicked
-       * out the left, the count >= 0 indicate it was original in the hash, cuz it won't go below 0
+       * out the left, the hash[c] >= 0 indicate it was original in the hash, cuz it won't go below 0
        */
       if (right - left==p.length()) {
         if (hash[s.charAt(left)-'a']>=0) {

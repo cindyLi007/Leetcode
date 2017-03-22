@@ -8,19 +8,19 @@ import java.util.Map;
  */
 public class LongestSubstring {
   public int lengthOfLongestSubstring(String s) {
-    int start = 0, res = 0;
+    int left = 0, right=0, res = 0;
     Map<Character, Integer> map = new HashMap();
-    for (int i = 0; i<s.length(); i++) {
-      char c = s.charAt(i);
+    while (right<s.length()) {
+      char c = s.charAt(right);
       if (map.containsKey(c)) {
         /**
-         * must compare start and current repeating char next index, for example "abba" when go to last 'a', now start is
-         * 2, map(c)+1 is 1, we should use start instead of map.get(c)+1
+         * must compare left and current repeating char next index, for example "abba" when go to last 'a', now left is
+         * 2, map(c)+1 is 1, we should use left instead of map.get(c)+1
          */
-        start = Math.max(map.get(c) + 1, start);
+        left = Math.max(map.get(c) + 1, left);
       }
-      map.put(c, i);
-      res = Math.max(res, i - start + 1);
+      map.put(c, right++);
+      res = Math.max(res, right - left);
     }
     return res;
   }

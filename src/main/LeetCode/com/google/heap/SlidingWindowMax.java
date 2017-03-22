@@ -1,7 +1,7 @@
 package com.google.heap;
 
-import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.LinkedList;
 
 /**
  * Created by ychang on 3/14/2017.
@@ -38,27 +38,29 @@ public class SlidingWindowMax {
   }
 
   /**
-   * this can beat 32%, but this is O(n)
+   * this can beat 39%, but this is O(n)
    */
   public int[] maxSlidingWindow_Deque(int[] nums, int k) {
-    if (nums.length<=1 || k<=1)
-      return nums;
-    int[] res = new int[nums.length - k + 1];
-    int z = 0;
-    Deque<Integer> queue = new ArrayDeque();
-    for (int i = 0; i<nums.length; i++) {
-      // first remove all out of range index in queue
-      while (!queue.isEmpty() && queue.peek()<i - k + 1)
-        queue.poll();
-      // seconde remove all index which value < cur value and before cur because we will not use it
-      while (!queue.isEmpty() && nums[queue.peekLast()]<=nums[i])
+    if (nums.length<=1) return nums;
+    int left=0, right=0, z=0;
+    int[] res = new int[nums.length-k+1];
+    Deque<Integer> queue = new LinkedList();
+    while (right<nums.length) {
+      // first remove all out of range index in queue, the header is the earliest
+      while(!queue.isEmpty()&&queue.peekFirst()<left)
+        queue.pollFirst();
+      // second remove all index which value < cur value and before cur because we will not use it
+      while (!queue.isEmpty()&&nums[queue.peekLast()]<=nums[right])
         queue.pollLast();
-      // third add cur value,
-      queue.offer(i);
-      // i>=k-1 is the first window right edge
-      if (i>=k - 1)
-        res[z++] = nums[queue.peek()];
+      // third add value to queue
+      queue.offer(right++);
+      // left the window left edge, when window extends to k-len, begin to increment left each time
+      if (right-left==k) {
+        res[z++]=nums[queue.peek()];
+        left++;
+      }
     }
     return res;
   }
+
 }

@@ -1,7 +1,7 @@
 package com.google.dp;
 
 /**
- * Created by ychang on 1/3/2017.
+ * Created by ychang on 1/3/2017. This can beat 64%
  * Use DP, keep Left max height and Right max height, use the min value of left-max and right-max(shortest plank) to
  * compare with current height, if longer, add diff to result.
  * The key is for each unit, we only care the left highest plank and right highest plank, because between them we can

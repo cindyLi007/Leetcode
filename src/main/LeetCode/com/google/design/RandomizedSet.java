@@ -7,7 +7,7 @@ import java.util.Random;
 
 /**
  * Design a data structure that supports all following operations in average O(1) time.
- * To achieve O(1) time in getRandom, we have to keep a list which can use get(index) to return a random element.
+ * To achieve O(1) time in getRandom, we have to keep a ArrayList which can use get(index) to return a random element.
  * Could not use {@link java.util.LinkedHashSet} or {@link java.util.LinkedHashMap} because both of them do not have get
  * method.
  */
@@ -36,7 +36,7 @@ public class RandomizedSet {
 
   /** Removes a value from the set. Returns true if the set contained the specified element.
    * need swap last element to the removed element in list to keep all other elements index. Otherwise we remove an element
-   * in the middle of the list will shift all right element, so the HashMap val-location pair screw up
+   * in the middle of the list will shift all right elements, so the HashMap val-location pair screw up
    */
   public boolean remove(int val) {
     if (!map.containsKey(val)) return false;

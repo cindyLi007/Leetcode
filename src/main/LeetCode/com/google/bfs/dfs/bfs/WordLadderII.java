@@ -21,11 +21,14 @@ public class WordLadderII {
     dict.remove(beginWord);
     Queue<String> queue = new LinkedList();
     queue.offer(beginWord);
+    /**
+     * this map is use to store a word's all prev words from beginWord side
+     */
     Map<String, Set<String>> map = new HashMap();
-    Set<String> set = new HashSet();
+    Set<String> secondLastWords = new HashSet();
     int len = beginWord.length();
 
-    while (!queue.isEmpty() && set.size()==0) {
+    while (!queue.isEmpty() && secondLastWords.size()==0) {
       int size = queue.size();
       Set<String> removeStrings = new HashSet();
       for (int i = 0; i<size; i++) {
@@ -43,13 +46,13 @@ public class WordLadderII {
                 map.put(newWord, new HashSet<>());
               map.get(newWord).add(word);
               /**
-               Notice, we should NOT put !queue.contains(newWord) in line 38, because although queue contains newWord,
-               that maybe from another route, we still need add entry to map. check !queue.contains(newWord) is just to
-               avoid add newWord twice in queue
+               Notice, we should NOT put !queue.contains(newWord) in line 41, because although queue contains newWord,
+               that maybe from another route, we still need add entry to map to record this route. check
+               !queue.contains(newWord) is just to avoid add newWord twice in queue
                */
               if (newWord.equals(endWord)) {
-                set.add(word);
-                break;
+                secondLastWords.add(word);
+                break; // this break will out for one position letter replace, but still go to next position
               } else if (!queue.contains(newWord)) {
                 queue.offer(newWord);
               }
@@ -58,10 +61,11 @@ public class WordLadderII {
           }
         }
       }
+      // dict is like a un-visited word lib
       dict.removeAll(removeStrings);
     }
 
-    for (String word : set) {
+    for (String word : secondLastWords) {
       List<String> list = new LinkedList();
       list.add(endWord);
       dfs(map, list, word, beginWord, res);

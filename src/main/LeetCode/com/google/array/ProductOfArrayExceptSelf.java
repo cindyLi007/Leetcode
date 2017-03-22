@@ -35,10 +35,10 @@ public class ProductOfArrayExceptSelf {
     for (int i=1; i<len; i++) {
       res[i]=res[i-1]*nums[i-1];
     }
-    int product=1;
+    int rightProduct=1;
     for (int i=len-2; i>=0; i--) {
-      product*=nums[i+1];
-      res[i]*=product;
+      rightProduct*=nums[i+1];
+      res[i]*=rightProduct;
     }
     return res;
   }
