@@ -1,8 +1,8 @@
 package com.google.hash.table;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -17,10 +17,11 @@ public class GroupAnagrams {
       Arrays.sort(c);
       String s = String.valueOf(c);
       if (!map.containsKey(s)) {
-        map.put(s, new LinkedList());
+        // ArrayList can be faster than LinkedList
+        map.put(s, new ArrayList());
       }
       map.get(s).add(str);
     }
-    return new LinkedList(map.values());
+    return new ArrayList(map.values());
   }
 }

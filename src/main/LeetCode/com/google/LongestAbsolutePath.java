@@ -8,16 +8,21 @@ import java.util.Stack;
 public class LongestAbsolutePath {
 
   public static void main(String[] args) {
-    System.out.println("max length is " + lengthLongestPath("a\n\taa\n\t\taaa\n\t\t\tfile1.txt\naaaaaaaaaaaaaaaaaaaaa\n\tsth.png"));
+    System.out.println("max length is " + lengthLongestPath("dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext"));
+    System.out.println("max length is " + lengthLongestPathArray("a\n\taa\n\t\taaa\n\t\t\tfile1.txt\naaaaaaaaaaaaaaaaaaaaa\n\tsth.png"));
   }
 
   public static int lengthLongestPath(String input) {
     int maxLen = 0;
     Stack<Integer> stack = new Stack<>();
-    for (String s : input.split("\n")) {
+    String[] split = input.split("\n");
+    for (String s : split) {
+      /**
+       * must use lastIndexOf to find the last \t, that is indicate layer
+       */
       int layer = s.lastIndexOf("\t") + 1;
       // pop out till this dir/file root dir, must be "while" instead of "if", stack should only store current dir/file parent dir
-      while (layer < stack.size()) {
+      while (layer<stack.size()) {
         stack.pop();
       }
       int length = stack.isEmpty() ? s.length() : stack.peek() + s.length() - layer + 1;
@@ -36,8 +41,7 @@ public class LongestAbsolutePath {
     int[] stack = new int[strings.length];
     for (String s : strings) {
       int layer = s.lastIndexOf("\t") + 1;
-      int len = s.substring(layer).length();
-      int length = layer == 0 ? len : stack[layer-1] + len + 1;
+      int length = layer==0 ? s.length() : stack[layer - 1] + s.length() - layer + 1; // this +1 is to add "/" for path
       stack[layer] = length;
       if (s.contains(".")) {
         maxLen = Math.max(maxLen, length);

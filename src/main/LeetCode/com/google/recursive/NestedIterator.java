@@ -1,30 +1,31 @@
 package com.google.recursive;
 
+import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 
 import com.google.stack.NestedInteger;
 
 /**
- * Created by ychang on 1/9/2017.
+ * Created by ychang on 1/9/2017. This can beat 95%
  */
 public class NestedIterator implements Iterator<Integer> {
-  Queue<Integer> q = new LinkedList();
   Iterator<Integer> it;
+  List<Integer> list;
 
   public NestedIterator(List<NestedInteger> nestedList) {
-    makeQueue(nestedList);
-    it = q.iterator();
+    list = new ArrayList();
+    parse(nestedList);
+    it = list.iterator();
   }
 
-  private void makeQueue(List<NestedInteger> list) {
-    for (NestedInteger ni : list) {
-      if (ni.isInteger())
-        q.add(ni.getInteger());
-      else
-        makeQueue(ni.getList());
+  private void parse(List<NestedInteger> nestedList) {
+    for (NestedInteger ni : nestedList) {
+      if (ni.isInteger()) {
+        list.add(ni.getInteger());
+      } else {
+        parse(ni.getList());
+      }
     }
   }
 

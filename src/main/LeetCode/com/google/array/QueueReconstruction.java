@@ -44,5 +44,6 @@ public class QueueReconstruction {
       }
       System.out.println();
     });
+    System.out.println(Arrays.deepToString(res));
   }
 }

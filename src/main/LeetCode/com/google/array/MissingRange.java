@@ -10,17 +10,21 @@ import java.util.List;
 public class MissingRange {
   public List<String> findMissingRanges(int[] nums, int lower, int upper) {
     List<String> res = new ArrayList();
+    long lo = lower, up = upper;
     for (int num : nums) {
-      if (lower < num) {
-        if (lower == num-1) res.add(lower+"");
-        else res.add(lower+"->"+(num-1));
+      if (lo<num) {
+        if (lo==num - 1)
+          res.add(lo + "");
+        else
+          res.add(lo + "->" + (num - 1));
       }
-      lower=num+1;
+      lo = (long) num + 1;
     }
-    if (lower==Integer.MIN_VALUE) return res;
-    if (lower<=upper) {
-      if (lower==upper) res.add(lower+"");
-      else res.add(lower+"->"+upper);
+    if (lo<=up) {
+      if (lo==up)
+        res.add(lo + "");
+      else
+        res.add(lo + "->" + up);
     }
     return res;
   }

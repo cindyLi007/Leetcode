@@ -39,7 +39,8 @@ public class UTF8Validation {
       return true;
     int bits = 0;
     for (int i : data) {
-      if (bits !=0 && i>=192) return false;
+      if (bits!=0 && i>=192 || i>=248)
+        return false;
       if (i>=240) { // the 4 bytes beginning
         bits = 3;
       } else if (i>=224) { //the 3 bytes beginning

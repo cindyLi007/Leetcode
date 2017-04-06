@@ -12,7 +12,7 @@ import java.util.Queue;
  * 1 2 3
  * 8 9 4
  * 7 6 5
- * for cell [2,2] which is 6, it can flow to Pacific from 6->5->4->3. but if we only check 7 or 9, we think it could not
+ * for cell [2,1] which is 6, it can flow to Pacific from 6->5->4->3. but if we only check 7 or 9, we think it could not
  * flow to Pacific
  */
 public class PacificAtlanticWaterFlow {

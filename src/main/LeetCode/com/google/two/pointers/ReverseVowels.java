@@ -34,6 +34,24 @@ public class ReverseVowels {
     return sb.toString();
   }
 
+  /**
+   * this can beat 87%
+   */
+  public String reverseVowels_charArray(String s) {
+    int i=0, j=s.length()-1;
+    char[] ch = s.toCharArray();
+    while (i<j) {
+      while (i<j && "aeiouAEIOU".indexOf(ch[i])<0) i++;
+      while (j>i && "aeiouAEIOU".indexOf(ch[j])<0) j--;
+      if (i<j) {
+        char c = ch[i];
+        ch[i]=ch[j];
+        ch[j]=c;
+        i++; j--;
+      }
+    }
+    return String.valueOf(ch);
+  }
 }
 
 

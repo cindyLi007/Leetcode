@@ -21,7 +21,7 @@ public class CountOfSmallerNumberTest {
     List<Integer> list = cosn.countSmaller(array);
 
     // Then
-    assertThat(list, contains(new Integer(0), new Integer(0)));
+    assertThat(list, contains(new Integer(2), new Integer(1), new Integer(1), new Integer(0)));
 
   }
 

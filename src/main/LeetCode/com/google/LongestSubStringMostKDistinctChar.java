@@ -8,10 +8,13 @@ import java.util.Map;
  */
 public class LongestSubStringMostKDistinctChar {
   public static void main(String[] args) {
-    int result = lengthOfLongestSubstringKDistinct("ecbc", 2);
+    int result = lengthOfLongestSubstringKDistinct_2("eceba", 2);
     System.out.println(result);
   }
 
+  /**
+   * this can beat 30%
+   */
   public static int lengthOfLongestSubstringKDistinct(String s, int k) {
     int start = 0, i = 0, res = 0;
     Map<Character, Integer> map = new HashMap();
@@ -35,5 +38,27 @@ public class LongestSubStringMostKDistinctChar {
       i++;
     }
     return Math.max(i - start, res);
+  }
+
+  /**
+   * this can beat 93%
+   */
+  public static int lengthOfLongestSubstringKDistinct_2(String s, int k) {
+    int[] map = new int[256];
+    int left=0, right=0, count=0, res=0;
+    char[] ch = s.toCharArray();
+    while (right<ch.length) {
+      if (map[ch[right]]++==0) count++;
+      if (count>k) {
+        while (left<=right) {
+          map[ch[left]]--;
+          if (map[ch[left++]]==0) break;
+        }
+        count--;
+      }
+      res=Math.max(res, right-left+1);
+      right++;
+    }
+    return res;
   }
 }
