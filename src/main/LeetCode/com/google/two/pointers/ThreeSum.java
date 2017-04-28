@@ -20,6 +20,9 @@ public class ThreeSum {
       int j = i + 1, k = nums.length - 1;
       while (j<k) {
         if (nums[j] + nums[k]==-nums[i]) {
+          /**
+           * this is a tricky thing to add a new-band Integer List
+           */
           res.add(Arrays.asList(nums[i], nums[j++], nums[k--]));
           while (j<k && nums[j]==nums[j - 1])
             j++;
