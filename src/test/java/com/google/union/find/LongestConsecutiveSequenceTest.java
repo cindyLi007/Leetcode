@@ -14,13 +14,13 @@ public class LongestConsecutiveSequenceTest {
   @Test
   public void longestConsecutive() throws Exception {
     // Given
-    int[] array = new int[]{1,2,0,1};
+    int[] array = new int[]{0};
 
     // When
     int res = lcs.longestConsecutive(array);
 
     // Then
-    assertThat(res, is(3));
+    assertThat(res, is(1));
   }
 
 }

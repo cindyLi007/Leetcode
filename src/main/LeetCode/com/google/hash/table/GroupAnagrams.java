@@ -22,6 +22,9 @@ public class GroupAnagrams {
       }
       map.get(s).add(str);
     }
+    /**
+     * ArrayList or LinkedList constructor can take Collection<? extends E> as parameter
+     */
     return new ArrayList(map.values());
   }
 }

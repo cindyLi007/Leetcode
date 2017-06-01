@@ -16,6 +16,7 @@ public class LRUCache {
      * @param  accessOrder     the ordering mode - true means access-order, false mean insertion-order.
      *                         be default, it is insertion order which means we will remove the earliest inserted element
      *                         no matter whether we visited after that, so we MUST set it to true to apply LRU
+     * Notice if constructor is non-Generic, Map.Entry could not be generic, otherwise there is a compile error
      */
     map = new LinkedHashMap(capacity, 0.75f, true) {
       protected boolean removeEldestEntry(Map.Entry eldest) {

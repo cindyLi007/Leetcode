@@ -12,6 +12,7 @@ public class LongestConsecutiveSequence {
   int res = 0;
 
   public int longestConsecutive(int[] nums) {
+    if (nums.length>0) res=1;
     uf = new int[nums.length];
     sz = new int[nums.length];
     /** this map <value, index> is to help find left and right nodes, since union find always use index as component Id,

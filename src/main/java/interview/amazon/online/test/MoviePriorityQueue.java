@@ -1,4 +1,4 @@
-package interview.amazon;
+package interview.amazon.online.test;
 
 import java.util.HashSet;
 import java.util.LinkedList;

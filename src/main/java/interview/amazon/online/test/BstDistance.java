@@ -1,4 +1,4 @@
-package interview.amazon;
+package interview.amazon.online.test;
 
 /**
  * Created by ychang on 1/16/2017.
@@ -10,7 +10,7 @@ public class BstDistance {
       return 0;
     Node root = new Node(values[0]);
     for (int i = 1; i<n; i++) {
-      root = add(root, values[i]);
+      add(root, values[i]);
     }
     return search(node1, node2, root);
   }
@@ -20,9 +20,9 @@ public class BstDistance {
       return -1;
     int min = Math.min(v1, v2);
     int max = Math.max(v1, v2);
-    if (min<root.value && max<root.value) {
+    if (max<root.value) {
       return search(v1, v2, root.left);
-    } else if (min>root.value && max>root.value) {
+    } else if (min>root.value) {
       return search(v1, v2, root.right);
     } else {
       int d1 = dis(v1, root, 0);

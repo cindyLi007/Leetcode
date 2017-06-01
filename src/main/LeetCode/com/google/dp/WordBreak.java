@@ -10,15 +10,12 @@ import java.util.Set;
 public class WordBreak {
   public boolean wordBreak(String s, List<String> wordDict) {
     Set<String> dict = new HashSet(wordDict);
-    boolean[] dp = new boolean[s.length()+1];
-    dp[0]=true;
-    for (int i=1; i<=s.length(); i++) {
-      for (int j=0; j<i; j++) {
-        // when j==0, we check whether char(0 to i-1) which is s.substring(0, i) is in dict
-        if (dp[j] && dict.contains(s.substring(j, i))) {
-          dp[i]=true;
-          break;
-        }
+    boolean[] dp = new boolean[s.length() + 1];
+    dp[0] = true;
+    for (int i = 0; i<s.length(); i++) {
+      for (int j = 0; j<=i && !dp[i + 1]; j++) {
+        if (dp[j] && wordDict.contains(s.substring(j, i + 1)))
+          dp[i + 1] = true;
       }
     }
     return dp[s.length()];

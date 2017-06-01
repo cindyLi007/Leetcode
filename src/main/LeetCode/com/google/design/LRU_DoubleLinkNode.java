@@ -7,71 +7,71 @@ import java.util.Map;
  * Created by ychang on 3/19/2017.
  */
 public class LRU_DoubleLinkNode {
-  // map
-  private Map<Integer, CacheObject> map;
-  private final int MAX_ENTRIES;
-  private CacheObject head, tail;
+  CacheNode head, tail; // head is for insert, tail is for remove
+  Map<Integer, CacheNode> map;
+  final int size;
 
   public LRU_DoubleLinkNode(int capacity) {
+    size=capacity;
     map = new HashMap();
-    MAX_ENTRIES = capacity;
   }
 
   public int get(int key) {
-    if (map.containsKey(key)) {
-      CacheObject node = map.get(key);
-      if (head!=node)
-        moveToTop(node);
-      return node.value;
-    }
-    return -1;
+    if (!map.containsKey(key)) return -1;
+    CacheNode node = map.get(key);
+    if (node!=head) moveToTop(node);
+    return node.val;
   }
 
-  private void moveToTop(CacheObject node) {
-    node.prev.next = node.next;
-    if (node.next!=null)
-      node.next.prev = node.prev;
-    else
-      tail = node.prev;
-    node.prev = null;
-    node.next = head;
-    head.prev = node;
-    head = node;
+  private void moveToTop(CacheNode node) {
+    if (node==tail) {
+      node.prev.next=null;
+      tail=node.prev;
+    } else {
+      node.prev.next=node.next;
+      node.next.prev=node.prev;
+    }
+    node.next=head;
+    head.prev=node;
+    head=node;
   }
 
   public void put(int key, int value) {
     if (map.containsKey(key)) {
-      CacheObject node = map.get(key);
-      node.value = value;
-      if (head!=node)
-        moveToTop(node);
+      CacheNode node = map.get(key);
+      node.val=value;
+      if (node!=head) moveToTop(node);
     } else {
-      CacheObject node = new CacheObject(key, value);
+      CacheNode node = new CacheNode(key, value);
       if (head==null) {
-        head = node;
-        tail = node;
+        head=node;
+        tail=node;
       } else {
-        node.next = head;
-        head.prev = node;
-        head = node;
+        node.next=head;
+        head.prev=node;
+        head=node;
       }
       map.put(key, node);
-      if (map.size()>MAX_ENTRIES) {
-        CacheObject revNode = map.get(tail.key);
-        map.remove(revNode.key);
-        tail = revNode.prev;
-        tail.next = null;
+      if (map.size()>size) {
+        removeEldest();
       }
     }
   }
 
-  class CacheObject {
-    int key, value;
-    CacheObject prev, next;
+  private void removeEldest() {
+    CacheNode node = tail;
+    map.remove(node.key);
+    tail.prev.next=null;
+    tail=tail.prev;
+  }
 
-    CacheObject(int k, int v) {
-      key = k;
-      value = v;
+  class CacheNode {
+    CacheNode prev, next;
+    int key, val;
+
+    CacheNode(int k, int v) {
+      key=k;
+      val=v;
     }
   }
 }

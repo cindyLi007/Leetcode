@@ -1,27 +1,46 @@
 package com.google.bfs.dfs.dfs;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by ychang on 2/22/2017.
  */
 public class BinaryTreePath {
+  // top-down recursive, beat 92%
   public List<String> binaryTreePaths(TreeNode root) {
-    List<String> list = new LinkedList();
-    if (root!=null) traverse(root, "", list);
-    return list;
+    List<String> res = new ArrayList();
+    if (root!=null) traverse(root, res, "");
+    return res;
   }
 
-  private void traverse(TreeNode root, String s, List<String> list) {
+  private void traverse(TreeNode root, List<String> res, String prefix){
     if (root.left==null && root.right==null) {
-      list.add(s+root.val);
-    }
-    if (root.left!=null) {
-      traverse(root.left, s+root.val+"->", list);
-    }
-    if (root.right!=null) {
-      traverse(root.right, s+root.val+"->", list);
+      res.add(prefix+root.val);
+    } else {
+      if (root.left!=null) {
+        traverse(root.left, res, prefix+root.val+"->");
+      }
+      if (root.right!=null) {
+        traverse(root.right, res, prefix+root.val+"->");
+      }
     }
   }
+
+  // bottom-up recursive, beat 39%
+  public List<String> binaryTreePaths_bottomUp(TreeNode root) {
+    List<String> res = new ArrayList();
+    if (root==null) return res;
+    List<String> list = binaryTreePaths(root.left);
+    list.addAll(binaryTreePaths(root.right));
+    if (list.size()==0) {
+      res.add(root.val+"");
+    } else {
+      for (String str : list) {
+        res.add(root.val + "->" + str);
+      }
+    }
+    return res;
+  }
 }
+

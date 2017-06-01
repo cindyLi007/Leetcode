@@ -14,13 +14,15 @@ public class ReadNCharGivenRead4 {
    */
   public int read(char[] buf, int n) {
     char[] temp = new char[4];
-    // first read to temp from file
-    int count=read4(temp);
-    int total=0;
-    while (count>0) {
-      for (int i=0; i<count && total<n; i++) buf[total++]=temp[i];
-      if (count<4||total>=n) break;
-      count=read4(temp);
+    // first read char to temp from file
+    int count = read4(temp);
+    int total = 0;
+    while (total<n) {
+      for (int i = 0; i<count && total<n; i++)
+        buf[total++] = temp[i];
+      if (count<4) // count<4 means read to end of the file
+        break;
+      count = read4(temp);
     }
     return total;
   }

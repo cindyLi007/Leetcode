@@ -1,4 +1,4 @@
-package interview.amazon;
+package interview.amazon.online.test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;

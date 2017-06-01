@@ -24,8 +24,38 @@ public class MergeKSortedLists {
     return res.next;
   }
 
+  public ListNode mergeKLists(ListNode[] lists) {
+    if (lists.length==0) return null;
+    return merge(lists, 0, lists.length-1);
+  }
+
+  private ListNode merge(ListNode[] list, int l, int h) {
+    if (h-l>1) {
+      int mid = l+(h-l)/2;
+      return merge(merge(list, l, mid), merge(list, mid+1, h));
+    } else if (h-l==1) {
+      return merge(list[l], list[h]);
+    } else return list[l];
+  }
+
+  private ListNode merge(ListNode l1, ListNode l2) {
+    ListNode res = new ListNode(0), prev=res;
+    while (l1!=null && l2!=null) {
+      if (l1.val<l2.val) {
+        prev.next=l1;
+        l1=l1.next;
+      } else {
+        prev.next=l2;
+        l2=l2.next;
+      }
+      prev=prev.next;
+    }
+    prev.next=(l1==null) ? l2 : l1;
+    return res.next;
+  }
+
   // this can beat 88% divide and conquer
-  public ListNode mergeKLists_fastest(ListNode[] lists) {
+  /*public ListNode mergeKLists_fastest(ListNode[] lists) {
     return mergeKLists(lists, 0, lists.length - 1);
   }
 
@@ -54,5 +84,5 @@ public class MergeKSortedLists {
     }
     prev.next = l1==null ? l2 : l1;
     return res.next;
-  }
+  }*/
 }

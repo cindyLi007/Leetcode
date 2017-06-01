@@ -13,11 +13,11 @@ public class IntegerToEnglishWordsTest {
   public void numberToWords() throws Exception {
     // Given
     IntegerToEnglishWords integer = new IntegerToEnglishWords();
-    int num1=123, num2=12345, num3=1234567, num4=1000000;
+    int num1=123, num2=12345, num3=1234567, num4=1000;
 
     // When
-    String word1 = integer.numberToWords_reverse(num1);
     String word4 = integer.numberToWords_reverse(num4);
+    String word1 = integer.numberToWords_reverse(num1);
     String word2 = integer.numberToWords(num2);
     String word3 = integer.numberToWords(num3);
 

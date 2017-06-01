@@ -10,6 +10,7 @@ public class FirstBadVersion {
     while (low<high) {
       int mid = low + (high-low)/2;
       if (isBadVersion(mid)) {
+        // must include mid, because mid-1 maybe a good version, if high=mid-1, we maybe miss 1st bad version
         high=mid;
       } else {
         low=mid+1;

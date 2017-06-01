@@ -5,21 +5,27 @@ package com.google.binary.search;
  */
 public class SearchInRotatedSortedArray {
   public int search(int[] nums, int target) {
-    int lo = 0, hi = nums.length - 1;
-    while (lo<=hi) {
-      int mid = (lo + hi)/2;
+    int low = 0, high = nums.length - 1;
+    while (low<=high) {
+      if (low==high)
+        return nums[low]==target ? low : -1;
+      int mid = low + (high - low)/2;
       if (nums[mid]==target)
         return mid;
-      if (nums[mid]<nums[hi]) { // second part is ordered
-        if (target<nums[mid] || target>nums[hi])
-          hi = mid - 1;
+      /**
+       * a rotated part mean the greatest and least element all in this part, so to make sure target in it, we need check
+       * both > and <
+       */
+      if (nums[mid]>nums[high]) { // rotate happen in [mid+1, high]
+        if (target<nums[low] || target>nums[mid])
+          low = mid + 1;
         else
-          lo = mid + 1;
-      } else { // first part is ordered
-        if (target<nums[lo] || target>nums[mid])
-          lo = mid + 1;
+          high = mid - 1;
+      } else { // rotate happen in [low, mid]
+        if (target>nums[high] || target<nums[mid])
+          high = mid - 1;
         else
-          hi = mid - 1;
+          low = mid + 1;
       }
     }
     return -1;

@@ -1,6 +1,7 @@
 package com.google.bfs.dfs.dfs;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -28,5 +29,33 @@ public class RemoveInvalidParentheses {
       remove(reversed, ans, 0, 0, new char[]{')', '('});
     else // finished right to left
       ans.add(reversed);
+  }
+
+  public List<String> removeInvalidParentheses_mine(String s) {
+    List<String> res = new LinkedList();
+    remove(s, res, 0, new char[]{'(', ')'});
+    remove(new StringBuilder(s).reverse().toString(), res, 0, new char[]{')', '('});
+    return res;
+  }
+  /**
+   * start is the index from which we begin to scan "(" and ")", that means sbustring[0, i-1] is valid
+   *
+   */
+  private void remove(String s, List<String> res, int start, char[] ch) {
+    int count=0;
+    for (int i=start; i<s.length(); i++) {
+      char c = s.charAt(i);
+      if (c==ch[0]) count++;
+      else if (c==ch[1]) count--;
+      if (count<0) {
+        for (int j=start; j<=i; j++) {
+          if (s.charAt(j)==ch[1] && (j==start || s.charAt(j-1)!=ch[1])) {
+            remove(s.substring(0, j)+s.substring(j+1), res, i, ch);
+          }
+        }
+        return;
+      }
+    }
+    if (count==0) res.add(s);
   }
 }

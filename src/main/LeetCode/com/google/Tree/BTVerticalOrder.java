@@ -11,6 +11,7 @@ import java.util.Queue;
  * Created by ychang on 4/26/2017.
  */
 public class BTVerticalOrder {
+
   public List<List<Integer>> verticalOrder(TreeNode root) {
     List<List<Integer>> res = new ArrayList();
     if (root==null) return res;

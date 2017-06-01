@@ -17,7 +17,9 @@ public class LongestConsecutiveSequence {
         int left = map.containsKey(n-1) ? map.get(n-1) : 0;
         int right = map.containsKey(n+1) ? map.get(n+1) : 0;
         int length = left+1+right; // if n is isolated, left and right are 0, length is 1.
-        // must put n in map, to avoid duplicated adding to map, and duplicated calculation
+        /**
+         * must put n in map, to avoid duplicated adding to map, and duplicated calculation
+         */
         map.put(n, length);
         res=Math.max(res, length);
         /** change boundary-value's length, no need to change all entries length,

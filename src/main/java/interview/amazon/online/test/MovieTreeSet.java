@@ -1,4 +1,4 @@
-package interview.amazon;
+package interview.amazon.online.test;
 
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Set;
 import java.util.TreeSet;
+
+import interview.amazon.online.test.Movie;
 
 /**
  * Created by ychang on 1/16/2017.

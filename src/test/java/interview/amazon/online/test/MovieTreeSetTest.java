@@ -1,4 +1,4 @@
-package interview.amazon;
+package interview.amazon.online.test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
@@ -6,6 +6,9 @@ import static org.hamcrest.Matchers.is;
 import java.util.Set;
 
 import org.junit.Test;
+
+import interview.amazon.online.test.Movie;
+import interview.amazon.online.test.MovieTreeSet;
 
 /**
  * Created by ychang on 1/16/2017.
