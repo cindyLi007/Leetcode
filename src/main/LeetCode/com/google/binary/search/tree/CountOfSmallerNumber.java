@@ -5,11 +5,15 @@ import java.util.List;
 
 /**
  * Created by ychang on 2/1/2017.
+ * You are given an integer array nums and you have to return a new counts array. The counts array has the property where
+ * counts[i] is the number of smaller elements to the right of nums[i].
+ * Example: Given nums = [5, 2, 6, 1] Return the array [2, 1, 1, 0].
  */
 public class CountOfSmallerNumber {
   public List<Integer> countSmaller(int[] nums) {
     /**
-     * Must be Integer[] instead of int[], otherwise could not use Arrays.asList to convert to List<Integer>
+     * Must be Integer[] instead of int[], otherwise could not use Arrays.asList to convert to List<Integer>, using an
+     * array is much faster than using a list
      */
     Integer[] res = new Integer[nums.length];
     TreeNode root = null;
@@ -66,4 +70,5 @@ public class CountOfSmallerNumber {
       dup = 1;
     }
   }
+
 }

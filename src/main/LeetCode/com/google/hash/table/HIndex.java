@@ -13,34 +13,36 @@ public class HIndex {
    */
   public int hIndex(int[] citations) {
     Arrays.sort(citations);
-    int len = citations.length;
-    for (int i = 0; i<len; i++) {
-      if (len - i<=citations[i])
-        return len - i;
-    }
-    return 0;
+    int i = 0, N = citations.length;
+    /**
+     * citations[i]<N-i means we have NOT find a point, there VALUE of point >= N-i(remaining papers), since array is sorted
+     */
+    while (i<N && N - i>citations[i])
+      i++;
+    return i<N ? N - i : 0;
   }
 
   /**
    * this can beat 55%
    */
   public int hIndex_woSort(int[] citations) {
-    int len=citations.length;
+    int n=citations.length;
     /**
-     * nums is an array to record how many paper cited this number i
+     * papers is an array to record how many papers whose value is == i, that last one is to record how many papers value is >=n
      */
-    int[] nums = new int[len+1];
-    for (int i=0; i<len; i++) {
-      if (citations[i]>=len) nums[len]++;
-      else nums[citations[i]]++;
+    int[] paper=new int[n+1];
+    for (int num : citations) {
+      if (num>n) paper[n]++;
+      else paper[num]++;
     }
     /**
      * temp is accumulated all papers which was cited at least i;
      */
-    int temp=0;
-    for (int i=len; i>=0; i--) {
-      temp+=nums[i];
-      if (temp>=i) return i;
+    int temp = 0;
+    for (int i = n; i>=0; i--) {
+      temp += paper[i];
+      if (temp>=i)
+        return i; //must return i, could not return temp, because for [0, 0, 0, 0, 0], when i=0, temp is 5, but we result should be 0
     }
     return 0;
   }

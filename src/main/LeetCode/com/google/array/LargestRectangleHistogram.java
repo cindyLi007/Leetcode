@@ -9,13 +9,14 @@ import java.util.Stack;
 public class LargestRectangleHistogram {
   /**
    * For each column, find from 0 to it maxArea. For each column, we need NOT care from it to heights.length-1, because
-   * next columns with consider it.
+   * next columns with consider it. this can beat 91%
    */
   public int largestRectangleArea(int[] heights) {
     int max = 0;
+    // for each i, find Max Area among [i, i], [i-1, i], [i-2, i] ... [0, i]
     for (int i = 0; i<heights.length; i++) {
       /**
-       * Filter out unnecessary calculation
+       * skip unnecessary calculation, if next bar is >= this bar, need not check this one
        */
       if (i + 1<heights.length && heights[i]<=heights[i + 1])
         continue;
@@ -28,13 +29,16 @@ public class LargestRectangleHistogram {
     return max;
   }
 
+  /**
+   * this can beat 41%
+   */
   public int largestRectangleArea_stack(int[] heights) {
     // stack store index instead of height
     Stack<Integer> stack = new Stack();
     int i=0, maxArea=0;
     int[] h = Arrays.copyOf(heights, heights.length+1);
     while (i<h.length) {
-      // stack only keep a increasing sequence
+      // stack only keep a non-decreasing sequence
       if (stack.isEmpty() || h[i]>=h[stack.peek()]){
         stack.push(i++);
       } else {
@@ -50,4 +54,5 @@ public class LargestRectangleHistogram {
     }
     return maxArea;
   }
+
 }

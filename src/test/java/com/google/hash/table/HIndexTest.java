@@ -13,7 +13,7 @@ public class HIndexTest {
   public void hIndex() throws Exception {
     // Given
     HIndex hIndex = new HIndex();
-    int[] array = new int[]{3, 0, 6, 1, 5};
+    int[] array = new int[]{5, 57, 58, 59};
 
     // When
     int res = hIndex.hIndex_woSort(array);

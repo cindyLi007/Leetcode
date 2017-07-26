@@ -24,12 +24,11 @@ public class WordLadder {
           for (char c = 'a'; c<='z'; c++) {
             wordChar[j] = c;
             String subWord = String.valueOf(wordChar);
-            if (subWord.equals(word) || !dict.contains(subWord))
-              continue;
-            if (subWord.equals(endWord))
-              return depth + 1;
-            dict.remove(subWord);
-            queue.offer(subWord);
+            if (dict.contains(subWord)) {
+              if (subWord.equals(endWord)) return depth+1;
+              dict.remove(subWord);
+              queue.offer(subWord);
+            }
           }
         }
       }

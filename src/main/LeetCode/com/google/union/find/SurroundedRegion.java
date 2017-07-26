@@ -33,7 +33,6 @@ public class SurroundedRegion {
     }
     uf[m*n] = m*n;
 
-    //
     for (int i = 0; i<m; i++) {
       for (int j = 0; j<n; j++) {
         if (board[i][j]=='O') {
@@ -71,7 +70,7 @@ public class SurroundedRegion {
     return node;
   }
 
-  private void change(int m, int n, char[][] board) {
+  private void  change(int m, int n, char[][] board) {
     for (int i = 0; i<m; i++) {
       for (int j = 0; j<n; j++) {
         if (board[i][j]=='O' && !isConnect(i*n + j, m*n))

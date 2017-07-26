@@ -12,13 +12,13 @@ public class LargestRectangleHistogramTest {
   public void largestRectangleArea() throws Exception {
     // Given
     LargestRectangleHistogram lrh = new LargestRectangleHistogram();
-    int[] heights = new int[]{4,2,0,3,2,5};
+    int[] heights = new int[]{2, 1, 5, 6, 2, 3};
 
     // When
-    int maxArea = lrh.largestRectangleArea_stack(heights);
+    int maxArea = lrh.largestRectangleArea(heights);
 
     // Than
-    assertThat(maxArea, is(3));
+    assertThat(maxArea, is(10));
   }
 
 }

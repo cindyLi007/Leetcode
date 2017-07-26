@@ -13,13 +13,13 @@ public class FindPerimeterTest {
   public void findPerimeter() throws Exception {
     // Given
     FindPerimeter findPerimeter = new FindPerimeter();
-    int[][] grid = new int[][]{{1, 1, 1, 1}, {1, 1, 1, 1}, {1, 1, 0, 1}, {1, 1, 1, 1}};
+    int[][] grid = new int[][]{{1, 0, 0, 0}, {1, 1, 0, 1}, {1, 1, 0, 1}, {1, 1, 1, 1}};
 
     // When
-    int perimeter = findPerimeter.findPerimeter(grid, 2, 1);
+    int perimeter = findPerimeter.findPerimeter(grid, 2, 2);
 
     // Then
-    assertThat(perimeter, is(16));
+    assertThat(perimeter, is(12));
   }
 
 }

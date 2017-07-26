@@ -1,5 +1,6 @@
 package com.google.bfs.dfs.bfs;
 
+import java.util.ArrayList;
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
@@ -36,5 +37,29 @@ public class BTZigzagLevelTraverse {
       left=!left;
     }
     return res;
+  }
+
+  /**
+   * this is a better solution
+   */
+  public List<List<Integer>> zigzagLevelOrder_DFS(TreeNode root) {
+    List<List<Integer>> res = new ArrayList();
+    traverse(root, res, 0);
+    return res;
+  }
+
+  private void traverse(TreeNode root, List<List<Integer>> res, int level) {
+    if (root==null) return;
+    if (res.size()<=level) {
+      res.add(new LinkedList());
+    }
+    List<Integer> list = res.get(level);
+    if (level%2==0) { // from left to right
+      list.add(root.val);
+    } else { // from right to left;
+      list.add(0, root.val);
+    }
+    traverse(root.left, res, level+1);
+    traverse(root.right, res, level+1);
   }
 }

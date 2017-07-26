@@ -20,7 +20,7 @@ public class RotateImage {
         matrix[start][i]=matrix[end-offset][start];
         matrix[end-offset][start]=matrix[end][end-offset];
         /**
-        * should not use offset in matrix, such as matrix[offset] because offset is a relativi position, not absolute position
+        * should not use offset in matrix, such as matrix[offset] because offset is a relative position, not absolute position
         */
         matrix[end][end-offset]=matrix[i][end];
         matrix[i][end]=top;

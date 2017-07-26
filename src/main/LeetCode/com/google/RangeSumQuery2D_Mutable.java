@@ -7,7 +7,7 @@ import java.util.Arrays;
  */
 public class RangeSumQuery2D_Mutable {
   int[][] matrix;
-  int[][] tree;
+  int[][] tree; // tree is 2D BIT which means tree[4][4] is sum [{0, 0}, {3, 3}]
   int rows, cols;
 
   public RangeSumQuery2D_Mutable(int[][] matrix) {
@@ -23,10 +23,14 @@ public class RangeSumQuery2D_Mutable {
     }
   }
 
+  /**
+   * for each value, we need change current row all stride values, also we need change stride-rows' all stride values
+   */
   public void update(int row, int col, int val) {
     int diff = val - matrix[row][col];
     matrix[row][col] = val;
-    for (int i = row + 1; i <= rows; i += i & (-i)) {
+    for (int i = row + 1; i <= rows; i += i & (-i)) { // row stride
+      // for each stride row, change stride col value
       for (int j = col + 1; j <= cols; j += j & (-j)) {
         tree[i][j] += diff;
       }
@@ -50,12 +54,7 @@ public class RangeSumQuery2D_Mutable {
   public static void main(String[] args) {
     int[][] twoD_array = new int[][]{{3, 0, 1, 4, 2}, {5, 6, 3, 2, 1}, {1, 2, 0, 1, 5}, {4, 1, 0, 1, 7}, {1, 0, 3, 0, 5}};
     RangeSumQuery2D_Mutable query2D_mutable = new RangeSumQuery2D_Mutable(twoD_array);
-    Arrays.stream(query2D_mutable.tree).forEach(i -> {
-      for (int j=0; j<i.length; j++) {
-        System.out.print(" " + i[j]);
-      }
-      System.out.println();
-    });
+    System.out.println(Arrays.deepToString(query2D_mutable.tree));
     System.out.println(query2D_mutable.sumRegion(2, 1, 4, 3));
     query2D_mutable.update(1, 0, 1);
     System.out.println(query2D_mutable.sumRegion(2, 1, 4, 3));

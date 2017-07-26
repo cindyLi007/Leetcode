@@ -7,6 +7,9 @@ import java.util.Stack;
  * Created by ychang on 2/15/2017.
  */
 public class MaxRectangle {
+  /**
+   * this can beat 54%
+   */
   public int maximalRectangle(char[][] matrix) {
     if (matrix==null || matrix.length==0 || matrix[0].length==0) return 0;
     int[] height = new int[matrix[0].length];
@@ -38,6 +41,7 @@ public class MaxRectangle {
   }
 
   /**
+   * this can beat 98%
    * height counts the number of successive '1's above (plus the current one). The value of left & right means the
    * boundaries of the rectangle which contains the current point with a height of value height
    */
@@ -56,7 +60,7 @@ public class MaxRectangle {
         int v=matrix[i][j];
         if (v=='0') {
           h[j]=0;
-          left[j]=0;
+          left[j]=0; // when v=='0', set left[j]=0 mean we only consider curLeft in next row
           curLeft=j+1;
         } else {
           h[j]++;

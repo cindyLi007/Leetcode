@@ -12,14 +12,14 @@ public class MaximalSquareTest {
   @Test
   public void maximalSquare() throws Exception {
     //Given
-    char[][] matrix = new char[][]{"10100".toCharArray(), "10111".toCharArray(), "11111".toCharArray(), "10010".toCharArray()};
+    char[][] matrix = new char[][]{"0001".toCharArray(), "1101".toCharArray(), "1111".toCharArray(), "0111".toCharArray(), "0111".toCharArray()};
     MaximalSquare maximalSquare = new MaximalSquare();
 
     // When
-    int square = maximalSquare.maximalSquare(matrix);
+    int square = maximalSquare.maximalSquare_bruceForce(matrix);
 
     // Then
-    assertThat(square, is(4));
+    assertThat(square, is(9));
   }
 
 }
