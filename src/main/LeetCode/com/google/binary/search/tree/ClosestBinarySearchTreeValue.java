@@ -9,7 +9,6 @@ public class ClosestBinarySearchTreeValue {
     if (kid==null)
       return root.val;
     int b = closestValue(kid, target);
-    double v = root.val - target;
     return Math.abs(root.val - target)<Math.abs(b - target) ? root.val : b;
   }
 

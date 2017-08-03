@@ -40,7 +40,8 @@ public class BTZigzagLevelTraverse {
   }
 
   /**
-   * this is a better solution
+   * this is a better solution, using DFS to go as deep as possible in left-right order, but when insert in each
+   * level list, one insert into last, one insert into first
    */
   public List<List<Integer>> zigzagLevelOrder_DFS(TreeNode root) {
     List<List<Integer>> res = new ArrayList();

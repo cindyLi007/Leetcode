@@ -38,11 +38,6 @@ public class MaximumSubArray {
     return res;
   }
 
-  /**
-   *
-   * @param nums
-   * @return
-   */
   public int maxSubArray_DivideConquer(int[] nums) {
     if (nums.length==0)
       return 0;

@@ -29,7 +29,7 @@ public class RotateImage {
   }
 
   /**
-   * this can beat 74%, the key idea is first upside down them swap[i,j] with [j,i]
+   * this can beat 74%, the key idea is first upside down, then swap[i,j] with [j,i]
    */
   public void rotate_clockwise(int[][] matrix) {
     int n = matrix.length;

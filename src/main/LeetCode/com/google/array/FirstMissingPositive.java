@@ -2,6 +2,7 @@ package com.google.array;
 
 /**
  * Created by ychang on 7/24/2017.
+ * Given an unsorted integer array, find the first missing positive integer.
  */
 public class FirstMissingPositive {
   public int firstMissingPositive(int[] nums) {

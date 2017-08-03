@@ -8,7 +8,7 @@ package com.google.bit.manipulation;
 public class MissingNumber {
   public int missingNumber(int[] nums) {
     /** because index [0, n-1] take [0, n], there must be an index (or n) has no matched number, for all matched
-     * index-number pair, using xor can get 0, 0^a=a, finally we can find the missing number
+     * [index, number] pair, using xor can get 0, 0^a=a, finally we can find the missing number
     */
     int n=nums.length, sum=n;
     for (int i=0; i<n; i++) {

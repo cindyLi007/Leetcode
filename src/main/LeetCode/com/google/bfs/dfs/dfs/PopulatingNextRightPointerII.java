@@ -5,6 +5,9 @@ package com.google.bfs.dfs.dfs;
  */
 public class PopulatingNextRightPointerII {
   public void connect(TreeLinkNode root) {
+    /**
+     * for each level, connect lower level, keep the first node in next level
+     */
     while (root!=null) {
       TreeLinkNode p = root;
       TreeLinkNode cur=null, firstChild=null;

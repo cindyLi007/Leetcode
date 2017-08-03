@@ -16,7 +16,7 @@ public class ReverseList {
     return res;
   }
 
-  public ListNode reverseList_recursive(ListNode head) {
+  public ListNode reverse(ListNode head) {
     return reverse(head, null);
   }
 

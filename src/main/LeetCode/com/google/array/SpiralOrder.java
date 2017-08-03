@@ -14,7 +14,7 @@ public class SpiralOrder {
     spiral(matrix, 0, m-1, 0, n-1, res);
     /**
      * use subList to avoid duplicated elements, since all duplicated elements can only happened in the end of the list,
-     * we can safely truncate till m*n (exclusive as substring)
+     * we can safely truncate till m*n (exclusive as subList)
     */
     return res.subList(0, m*n);
   }

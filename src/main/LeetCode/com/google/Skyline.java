@@ -21,8 +21,9 @@ public class Skyline {
     List<int[]> res = new ArrayList();
     List<int[]> points = new ArrayList();
     for (int[] b : buildings) {
-      points.add(new int[]{b[0], b[2]});
-      points.add(new int[]{b[1], -b[2]});
+      // each building is represented by a triplet of integers [Li, Ri, Hi]
+      points.add(new int[]{b[0], b[2]}); // left edge
+      points.add(new int[]{b[1], -b[2]}); // right edge
     }
 
     /**
@@ -37,6 +38,7 @@ public class Skyline {
      * value is count of buildings currently "alive"
      */
     TreeMap<Integer, Integer> heights = new TreeMap<>(Comparator.reverseOrder());
+
     /**
      * we must first put 0 as default horizontal level, that is useful when skyline is not continuous and we need mark
      * the right-most vertices to end current skyline, and this point will never been removed from pq
@@ -44,9 +46,9 @@ public class Skyline {
     heights.put(0, 1);
     int prev = 0;
     for (int[] p : points) {
-      if (p[1]>0) {
+      if (p[1]>0) { // left point
         heights.put(p[1], heights.getOrDefault(p[1], 0) + 1);
-      } else {
+      } else { // right point
         heights.put(-p[1], heights.get(-p[1]) - 1);
         if (heights.get(-p[1])==0)
           heights.remove(-p[1]);
@@ -64,7 +66,7 @@ public class Skyline {
 
   /**
    * this method can beat 33%, this is because we use PriorityQueue instead of TreeMap to store height, PriorityQueue is
-   * slower than TreeMap
+   * slower than TreeMap, because TreeMap is a totally sorted data structure, while PQ need change root each time root is pop
    */
   public List<int[]> getSkyline_priorityQueue(int[][] buildings) {
     List<int[]> res = new ArrayList();
