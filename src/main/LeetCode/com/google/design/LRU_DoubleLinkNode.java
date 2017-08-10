@@ -9,50 +9,53 @@ import java.util.Map;
 public class LRU_DoubleLinkNode {
   CacheNode head, tail; // head is for insert, tail is for remove
   Map<Integer, CacheNode> map;
-  final int size;
+  final int SIZE;
 
   public LRU_DoubleLinkNode(int capacity) {
-    size=capacity;
+    SIZE = capacity;
     map = new HashMap();
   }
 
   public int get(int key) {
-    if (!map.containsKey(key)) return -1;
+    if (!map.containsKey(key))
+      return -1;
     CacheNode node = map.get(key);
-    if (node!=head) moveToTop(node);
+    if (node!=head)
+      moveToTop(node);
     return node.val;
   }
 
   private void moveToTop(CacheNode node) {
     if (node==tail) {
-      node.prev.next=null;
-      tail=node.prev;
+      node.prev.next = null;
+      tail = node.prev;
     } else {
-      node.prev.next=node.next;
-      node.next.prev=node.prev;
+      node.prev.next = node.next;
+      node.next.prev = node.prev;
     }
-    node.next=head;
-    head.prev=node;
-    head=node;
+    node.next = head;
+    head.prev = node;
+    head = node;
   }
 
   public void put(int key, int value) {
     if (map.containsKey(key)) {
       CacheNode node = map.get(key);
-      node.val=value;
-      if (node!=head) moveToTop(node);
+      node.val = value;
+      if (node!=head)
+        moveToTop(node);
     } else {
       CacheNode node = new CacheNode(key, value);
       if (head==null) {
-        head=node;
-        tail=node;
+        head = node;
+        tail = node;
       } else {
-        node.next=head;
-        head.prev=node;
-        head=node;
+        node.next = head;
+        head.prev = node;
+        head = node;
       }
       map.put(key, node);
-      if (map.size()>size) {
+      if (map.size()>SIZE) {
         removeEldest();
       }
     }
@@ -61,8 +64,8 @@ public class LRU_DoubleLinkNode {
   private void removeEldest() {
     CacheNode node = tail;
     map.remove(node.key);
-    tail.prev.next=null;
-    tail=tail.prev;
+    tail.prev.next = null;
+    tail = tail.prev;
   }
 
   class CacheNode {
@@ -70,8 +73,8 @@ public class LRU_DoubleLinkNode {
     int key, val;
 
     CacheNode(int k, int v) {
-      key=k;
-      val=v;
+      key = k;
+      val = v;
     }
   }
 }

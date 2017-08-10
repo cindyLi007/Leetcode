@@ -12,6 +12,23 @@ public class ClosestBinarySearchTreeValue {
     return Math.abs(root.val - target)<Math.abs(b - target) ? root.val : b;
   }
 
+  public int closestValue_iterative(TreeNode root, double target) {
+    /**
+     * IMPORTANT: MUST use double to record minDiff to avoid loss conversion from double to int
+     */
+    double min=Double.MAX_VALUE;
+    int res=root.val;
+    while (root!=null) {
+      if (Math.abs(root.val-target) < min) {
+        res=root.val;
+        min=Math.abs(root.val-target);
+      }
+      if (target<root.val) root=root.left;
+      else root=root.right;
+    }
+    return res;
+  }
+
   public static void main(String[] args) {
     TreeNode root = new TreeNode(Integer.MAX_VALUE);
     root.left = new TreeNode(Integer.MIN_VALUE);

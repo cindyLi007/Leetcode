@@ -5,7 +5,7 @@ import java.util.LinkedList;
 
 /**
  * Created by ychang on 12/8/2016.
- * this question also tag as design, so make all class member private and for window size and list make them final,
+ * this question also tag as design, so make all class member private and for window SIZE and list make them final,
  * make sum long to hold more integers. the performance has no difference with using array or linked list
  */
 public class MovingAverage {

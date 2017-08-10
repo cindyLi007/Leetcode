@@ -5,11 +5,12 @@ package com.google.array;
  */
 public class RemoveDuplicated {
   public int removeDuplicates(int[] nums) {
-    if (nums.length<=1) return nums.length;
-    int res=0;
-    for (int i=1; i<nums.length; i++) {
-      if (nums[i]!=nums[res]) nums[++res]=nums[i];
+    int i = 0; // i is the position of last no-dup item
+    for (int j = 1; j<nums.length; j++) { // j is the running pointer
+      if (nums[j]!=nums[i]) { // when current item is NOT duplicated with prev one
+        nums[++i] = nums[j];
+      }
     }
-    return res+1;
+    return i + 1;
   }
 }

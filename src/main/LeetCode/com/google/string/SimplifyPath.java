@@ -1,10 +1,12 @@
 package com.google.string;
 
+import java.util.Stack;
+
 /**
  * Created by ychang on 5/10/2017.
  */
 public class SimplifyPath {
-  public String simplifyPath(String path) {
+  public String simplifyPath_woStack(String path) {
     if (path==null || path.length()==0)
       return path;
     String[] paths = path.split("/");
@@ -29,4 +31,20 @@ public class SimplifyPath {
     }
     return sb.length()==0 ? "/" : sb.toString();
   }
+
+  public String simplifyPath(String path) {
+    Stack<String> stack = new Stack();
+    String[] paths = path.split("/");
+    for (String s : paths) {
+      if (s.equals("..") && !stack.isEmpty()) stack.pop();
+      else if (!s.equals(".")) stack.push(s);
+    }
+    StringBuilder sb = new StringBuilder();
+    while (!stack.isEmpty()) {
+      sb.append("/").append(stack.pop());
+    }
+    return sb.length()==0 ? "/" : sb.toString();
+  }
 }
+
+

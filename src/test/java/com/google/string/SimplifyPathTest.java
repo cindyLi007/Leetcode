@@ -15,7 +15,8 @@ public class SimplifyPathTest {
     SimplifyPath simplifyPath = new SimplifyPath();
 
     // When
-    String path = simplifyPath.simplifyPath("/a/./b///../c/../././../d/..//../e/./f/./g/././//.//h///././/..///");
+//    String path = simplifyPath.simplifyPath("/a/./b///../c/../././../d/..//../e/./f/./g/././//.//h///././/..///");
+    String path = simplifyPath.simplifyPath("/...");
 
     // Then
     assertThat(path, is("/c"));

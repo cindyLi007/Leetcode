@@ -14,12 +14,12 @@ public class SearchInRotatedSortedArrayTest {
   @Test
   public void search_rotatedIndex() throws Exception {
     // Given
-    int[] array = new int[]{3, 1};
+    int[] array = new int[]{1, 3, 5};
 
     // When
-    int res = sirsa.search_rotatedIndex(array, 3);
+    int res = sirsa.search(array, 3);
 
-    assertThat(res, is(0));
+    assertThat(res, is(1));
 
   }
 
