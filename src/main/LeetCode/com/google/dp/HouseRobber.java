@@ -18,4 +18,20 @@ public class HouseRobber {
     }
     return dp[nums.length-1];
   }
+
+  public int rob_simple(int[] nums) {
+    int N=nums.length;
+    if (N<=1) return N==1 ? nums[0] : 0;
+    /**
+     * we need not keep an array to store dp, only 2 numbers are fine, because along with walking through the nums, anytime
+     * we only need keep dp[i-2] and dp[i-1]
+     */
+    int p0=nums[0], p1=Math.max(p0, nums[1]);
+    for (int i=2; i<N; i++) {
+      int temp = p1;
+      p1 = Math.max(p0+nums[i], p1);
+      p0=temp;
+    }
+    return p1;
+  }
 }

@@ -36,14 +36,18 @@ public class LongestPalindromicString {
   }
 
   /**
-   * this can beat 9%, the idea is dp[i][j] is whether from i to j is a Palindrome. dp[i][j]=char(i)==char(j) && dp[i+1][j-1]
-   * so we know for i we should from len-1 to 0, and j should from i to len-1
+   * this can beat 9%, the idea is dp[i][j] is whether str[i, j] (i<=j<len) is a Palindrome. dp[i][j]=char(i)==char(j)
+   * && dp[i+1][j-1] so we know for i we should from len-1 to 0, and j should from i to len-1
   */
   public String longestPalindrome_dp(String s) {
     int len = s.length();
     if (len<=1) return s;
     boolean[][] dp = new boolean[len][len];
     String res = s.substring(0, 1);
+    /**
+    * because dp[i][j] depends on dp[i+1][j-1], which means we need first calculate dp[i+1][j-1], so i should be loop
+    * in reverse order, j loop in ascending order
+    */
     for (int i=len-1; i>=0; i--) {
       for (int j=i; j<len; j++) {
         if (i==j) dp[i][j]=true;

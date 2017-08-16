@@ -30,31 +30,28 @@ public class ReverseNodesInKGroup {
     return node;
   }
 
-  // this can beat 57%
+  // this can beat 75%
   public ListNode reverseKGroup_withoutStack(ListNode head, int k) {
     if (head==null || head.next==null || k==1)
       return head;
-    int i = 0;
     ListNode run = head;
-    while (i<k && run!=null) {
-      i++;
+    int count = 0;
+    while (count<k && run!=null) {
       run = run.next;
+      count++;
     }
-    if (i<k)
+    if (count<k)
       return head;
-    ListNode nextGroup = reverseKGroup_withoutStack(run, k);
-    // below just reverse a list algorithm.
-    i = 0;
-    ListNode dummy = null, h = head;
-    while (i<k) {
+    ListNode prev = head;
+    while (count>1) {
       ListNode temp = head.next;
-      head.next = dummy;
-      dummy = head;
-      head = temp;
-      i++;
+      head.next = temp.next;
+      temp.next = prev;
+      prev = temp;
+      count--;
     }
-    h.next = nextGroup;
-    return dummy;
+    head.next = reverseKGroup(run, k);
+    return prev;
   }
 
   public void setZeroes(int[][] matrix) {

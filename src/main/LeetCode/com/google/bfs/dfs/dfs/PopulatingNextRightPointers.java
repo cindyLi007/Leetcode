@@ -5,19 +5,11 @@ package com.google.bfs.dfs.dfs;
  */
 public class PopulatingNextRightPointers {
   public void connect_recursive(TreeLinkNode root) {
-    if (root==null) return;
-    connect(root.left, root.right);
-  }
-
-  private void connect(TreeLinkNode left, TreeLinkNode right) {
-    if (left==null) return;
-    left.next=right;
-    /**
-     * the tricky thing is when we go down, we always keep 2 adjacent tree nodes even they do not share some father
-     */
-    connect(left.left, left.right);
-    connect(left.right, right.left);
-    connect(right.left, right.right);
+    if (root==null || (root.left==null && root.right==null)) return;
+    root.left.next=root.right;
+    root.right.next=root.next==null ? null : root.next.left;
+    connect_recursive(root.left);
+    connect_recursive(root.right);
   }
 
   public void connect_iteratively(TreeLinkNode root) {

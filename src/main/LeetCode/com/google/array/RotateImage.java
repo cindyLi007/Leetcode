@@ -34,7 +34,9 @@ public class RotateImage {
   public void rotate_clockwise(int[][] matrix) {
     int n = matrix.length;
     if (n<=1) return;
-    // clockwise, first upside down; anti-clockwise, first left-side right
+    /**
+     * clockwise, first upside down; anti-clockwise, first left-side right
+     */
     for (int layer=0; layer<n/2; layer++) {
       for (int i=0; i<n; i++) {
         swap(matrix, layer, i, n-1-layer, i);

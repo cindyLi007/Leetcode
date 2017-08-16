@@ -11,7 +11,7 @@ import java.util.List;
 public class ThreeSum {
   public List<List<Integer>> threeSum(int[] nums) {
     List<List<Integer>> res = new LinkedList();
-    if (nums==null || nums.length==0)
+    if (nums==null || nums.length<3)
       return res;
     Arrays.sort(nums);
     for (int i = 0; i<nums.length - 2 && nums[i]<=0; i++) {
