@@ -29,7 +29,7 @@ public class LongestLIS {
   public int lengthOfLIS_BinarySearch(int[] nums) {
     int N=nums.length;
     if (N<=1) return N;
-    // dp is an array which dp[i] save the current min value which can reach LIS is i, dp[i] is dynamically updated
+    // dp is an array which dp[i] save the current min value which can reach LIS length is i, dp[i] is dynamically updated
     int[] dp = new int[N];
     int res=0;
     for (int x : nums) {
