@@ -8,7 +8,7 @@ package com.google.string;
  * Given s = "the sky is blue",
  * return "blue is sky the".
  * Could you do it in-place without allocating extra space?
- * NOTICE: Java is parse by value, which mean when we parse an array, we can only change the value of array[i], but if we set
+ * NOTICE: Java is parse by value, which means when we parse an array, we can only change the value of array[i], but if we set
  * array = a new array, outside the method, the array is still the original one. that is the reason we can only do it in-place
  * for example, if we create a new char[] with word-reversed-value, and we set it to s, outside the reverseWords method, the
  * value of s does not change.

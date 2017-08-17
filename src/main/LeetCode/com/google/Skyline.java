@@ -41,14 +41,14 @@ public class Skyline {
 
     /**
      * we must first put 0 as default horizontal level, that is useful when skyline is not continuous and we need mark
-     * the right-most vertices to end current skyline, and this point will never been removed from pq
+     * the right-most vertices to end current skyline, and this point will never been removed from heap
      */
     heights.put(0, 1);
     int prev = 0;
     for (int[] p : points) {
       if (p[1]>0) { // left point
         heights.put(p[1], heights.getOrDefault(p[1], 0) + 1);
-      } else { // right point
+      } else { // right point, notice p[1] is neg number
         heights.put(-p[1], heights.get(-p[1]) - 1);
         if (heights.get(-p[1])==0)
           heights.remove(-p[1]);
