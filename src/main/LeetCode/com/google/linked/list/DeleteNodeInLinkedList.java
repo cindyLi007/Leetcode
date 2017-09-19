@@ -1,16 +1,17 @@
 package com.google.linked.list;
 
+import com.google.common.base.Preconditions;
+
 /**
  * Created by ychang on 3/5/2017.
  */
 public class DeleteNodeInLinkedList {
-  public void deleteNode(ListNode node) {
-    ListNode prev=null;
-    while (node.next!=null) {
-      node.val=node.next.val;
-      prev=node;
-      node=node.next;
-    }
-    prev.next=null;
+  public synchronized void deleteNode(ListNode node) {
+    if (node==null)
+      return;
+    Preconditions.checkArgument(node.next!=null, "We could not delete node since this is the tail of the list");
+    int v = node.next.val;
+    node.next = node.next.next;
+    node.val = v;
   }
 }

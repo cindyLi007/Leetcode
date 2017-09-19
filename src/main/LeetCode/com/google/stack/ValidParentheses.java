@@ -10,6 +10,9 @@ public class ValidParentheses {
     if (s==null || s.length()==0) {
       return true;
     }
+    /**
+     * this step can improve performance
+     */
     if (s.length()%2==1) {
       return false;
     }

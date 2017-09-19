@@ -24,21 +24,28 @@ public class MeetingRoomII {
     return count;
   }
 
+  /**
+   * this one is faster because PriorityQueue is a heap data structure which is slower than direct array, but the idea is same
+   * Anytime we keep the earliest End_Time and compare it with next start meeting's start time. If start time is later than
+   * earliest End_Time, we can use that meeting room and update the earliest End_Time.
+   */
   public int minMeetingRooms_fastest(Interval[] intervals) {
     int meet = intervals.length;
     int[] start = new int[meet], end = new int[meet];
-    for (int i=0; i<meet; i++) {
-      start[i]=intervals[i].start;
-      end[i]=intervals[i].end;
+    for (int i = 0; i<meet; i++) {
+      start[i] = intervals[i].start;
+      end[i] = intervals[i].end;
     }
     Arrays.sort(start);
     Arrays.sort(end);
-    int rooms=0, endptr=0;
-    for (int i=0; i<meet; i++) {
+    int rooms = 0, endptr = 0;
+    for (int i = 0; i<meet; i++) {
       // if the current meeting's startTime is before so-far earliest endTime, need one empty room for this meeting
-      if (start[i]<end[endptr]);
-      // else we can use the meeting which endTime = end[endptr] 'room, and go to next endTime
-      else endptr++;
+      if (start[i]<end[endptr])
+        rooms++;
+        // else we can use the meeting which endTime = end[endptr] 'room, and go to next endTime
+      else
+        endptr++;
     }
     return rooms;
   }

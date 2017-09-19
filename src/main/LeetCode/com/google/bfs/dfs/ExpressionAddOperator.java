@@ -33,10 +33,11 @@ public class ExpressionAddOperator {
     } else {
       int end = num.charAt(index)=='0' ? index+1 : num.length();
       for (int i=index+1; i<=end; i++) {
-        long curVal = Long.parseLong(num.substring(index, i));
-        dfs(num, target, i, val+curVal, path+"+"+num.substring(index, i), res, curVal);
-        dfs(num, target, i, val-curVal, path+"-"+num.substring(index, i), res, -curVal);
-        dfs(num, target, i, val-diff+diff*curVal, path+"*"+num.substring(index, i), res, diff*curVal);
+        String number = num.substring(index, i);
+        long curVal = Long.parseLong(number);
+        dfs(num, target, i, val+curVal, path+"+"+ number, res, curVal);
+        dfs(num, target, i, val-curVal, path+"-"+ number, res, -curVal);
+        dfs(num, target, i, val-diff+diff*curVal, path+"*"+ number, res, diff*curVal);
       }
     }
   }

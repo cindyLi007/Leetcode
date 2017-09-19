@@ -1,64 +1,66 @@
 package com.google.union.find;
 
-import java.util.Arrays;
-
-/**
- * Created by ychang on 6/16/2017.
- */
 public class NumberIsland {
   public int numIslands(char[][] grid) {
-    int M=grid.length, N=M==0 ? 0 : grid[0].length;
-    int[] id = new int[M*N];
-    Arrays.fill(id, -1);
-    int count = init(grid, id, M, N);
-    print(id, M, N);
-    for (int i=0; i<M; i++) {
-      for (int j=0; j<N; j++) {
+    int M = grid.length, N = M==0 ? 0 : grid[0].length;
+    int[] union = new int[M*N], sz = new int[M*N];
+    int count = buildUnion(grid, union, sz, M, N);
+    for (int i = 0; i<M; i++) {
+      for (int j = 0; j<N; j++) {
         if (grid[i][j]=='1') {
-          if (union(grid, M, N, i, j, i, j + 1, id))
+          if (i<M - 1 && grid[i + 1][j]=='1' && bind(union, sz, i*N + j, (i + 1)*N + j))
             count--;
-          if (union(grid, M, N, i, j, i + 1, j, id))
+          if (j<N - 1 && grid[i][j + 1]=='1' && bind(union, sz, i*N + j, i*N + j + 1))
             count--;
         }
       }
-      print(id, M, N);
-      System.out.println("*************************");
+    }
+    print(union, M, N);
+    return count;
+  }
+
+  private boolean bind(int[] union, int[] sz, int x, int y) {
+    int p = find(x, union), q = find(y, union);
+    if (p!=q) {
+      if (sz[p]>sz[q]) {
+        union[q] = p;
+        sz[p] += sz[q];
+      } else {
+        union[p] = q;
+        sz[q] += sz[p];
+      }
+    }
+    return p!=q ? true : false;
+  }
+
+  private int find(int x, int[] union) {
+    while (union[x]!=x) {
+      union[x] = union[union[x]];
+      x = union[x];
+    }
+    return x;
+  }
+
+  private int buildUnion(char[][] grid, int[] union, int[] sz, int M, int N) {
+    int count = 0;
+    for (int i = 0; i<M; i++) {
+      for (int j = 0; j<N; j++) {
+        if (grid[i][j]=='1') {
+          count++;
+          union[i*N + j] = i*N + j;
+          sz[i*N + j] = 1;
+        }
+      }
     }
     return count;
   }
 
   private void print(int[] id, int M, int N) {
-    for (int i=0; i<M; i++) {
-      for (int j=0; j<N; j++) {
-        System.out.format("%3d", id[i*N+j]);
+    for (int i = 0; i<M; i++) {
+      for (int j = 0; j<N; j++) {
+        System.out.format("%3d", id[i*N + j]);
       }
       System.out.println();
     }
-  }
-
-  private int init(char[][] grid, int[] id, int M, int N) {
-    int count=0;
-    for (int i=0; i<M; i++) {
-      for (int j=0; j<N; j++) {
-        if (grid[i][j]=='1') {
-          id[i*N+j]=i*N+j;
-          count++;
-        }
-      }
-    }
-    return count;
-  }
-  private boolean union(char[][] grid, int M, int N, int x1, int y1, int x2, int y2, int[] id) {
-    if (x2>=M || y2>=N || grid[x2][y2]=='0') return false;
-    int p=find(x1*N+y1, id), q=find(x2*N+y2, id);
-    if (p!=q) id[q]=p;
-    return p!=q ? true : false;
-  }
-  private int find(int i, int[] id) {
-    while(i!=id[i]) {
-      id[i]=id[id[i]];
-      i=id[i];
-    }
-    return i;
   }
 }

@@ -19,7 +19,10 @@ public class CombinationSum4 {
   private int combination(int[] nums, int target, int[] dp) {
     if (target<0) return 0;
     if (dp[target]!=-1) {
-      return dp[target]; // means we have calculate this number's comb sum before
+      /** since we for every specific sum, we always from nums[0] to search all combination, if its dp value has been set,
+       * means we have calculate this number's comb sum before, we need NOT from nums[0] to search all combination for it
+       */
+      return dp[target];
     }
     int res=0;
     for (int i=0; i<nums.length; i++) {

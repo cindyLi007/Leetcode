@@ -1,5 +1,6 @@
 package com.google.hash.table;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 /**
@@ -8,6 +9,9 @@ import java.util.HashMap;
  * we only care boundary-value's length.
  */
 public class LongestConsecutiveSequence {
+  /**
+   * this can beat 24%
+   */
   public int longestConsecutive(int[] nums) {
     HashMap<Integer, Integer> map = new HashMap();
     int res=0;
@@ -23,11 +27,33 @@ public class LongestConsecutiveSequence {
         map.put(n, length);
         res=Math.max(res, length);
         /** change boundary-value's length, no need to change all entries length,
-         only care new-construct sequence left and right boundary value's length
+         only care new-construct sequence's left and right boundary value's length
         */
         map.put(n-left, length);
         map.put(n+right, length);
       }
+    }
+    return res;
+  }
+
+  /**
+   * this can beat 96%, but time complexity is O(NlgN)
+   */
+  public int longestConsecutive_firstSort(int[] nums) {
+    if (nums.length==0)
+      return 0;
+    Arrays.sort(nums);
+    int res = 1, prev = nums[0], cur = 1;
+    for (int i = 1; i<nums.length; i++) {
+      if (nums[i]==prev)
+        continue;
+      if (nums[i] - 1==prev) {
+        cur++;
+        res = Math.max(res, cur);
+      } else {
+        cur = 1;
+      }
+      prev = nums[i];
     }
     return res;
   }

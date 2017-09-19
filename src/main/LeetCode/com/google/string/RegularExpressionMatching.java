@@ -4,6 +4,9 @@ package com.google.string;
  * Created by ychang on 5/2/2017.
  */
 public class RegularExpressionMatching {
+  /**
+   * this can beat 17%
+   */
   public boolean isMatch(String s, String p) {
     // base case
     if (p.length()==0)
@@ -12,8 +15,7 @@ public class RegularExpressionMatching {
     if (p.length()==1 || p.charAt(1)!='*') {
       if (s.length()>0 && (p.charAt(0)==s.charAt(0) || p.charAt(0)=='.'))
         return isMatch(s.substring(1), p.substring(1));
-      else
-        return false;
+      return false;
     } else {
       if (s.length()>0 && (p.charAt(0)==s.charAt(0) || p.charAt(0)=='.')) {
         /**

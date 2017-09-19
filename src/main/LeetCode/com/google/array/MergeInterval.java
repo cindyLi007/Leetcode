@@ -1,5 +1,6 @@
 package com.google.array;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -10,6 +11,9 @@ import java.util.List;
  * element's start and end values.
  */
 public class MergeInterval {
+  /**
+   * this one can beat only 5%
+   */
   public List<Interval> merge(List<Interval> intervals) {
     if (intervals==null || intervals.size()<=1)
       return intervals;
@@ -30,16 +34,39 @@ public class MergeInterval {
     result.add(new Interval(start, end));
     return result;
   }
+
+  /**
+   * this one can beat 92%, similar with meeting room II
+   * {@link com.google.heap.MeetingRoomII}
+   */
+  public List<Interval> merge_faster(List<Interval> intervals) {
+    if (intervals==null || intervals.size()==0) return intervals;
+    int n=intervals.size();
+    /**
+     * we need not to care whether array start and array end pair matches,
+     */
+    int[] start=new int[n], end=new int[n];
+    for (int i=0; i<n; i++) {
+      start[i]=intervals.get(i).start;
+      end[i]=intervals.get(i).end;
+    }
+    Arrays.sort(start);
+    Arrays.sort(end);
+    List<Interval> res = new LinkedList();
+    for (int i=0, j=0; i<n; i++) {
+      // j is start, i is end, each time we compare the next interval's start with current's end.
+      if (i==n-1 || start[i+1]>end[i]) {
+        res.add(new Interval(start[j], end[i]));
+        j=i+1;
+      }
+    }
+    return res;
+  }
 }
 
 class Interval {
   int start;
   int end;
-
-  Interval() {
-    start = 0;
-    end = 0;
-  }
 
   Interval(int s, int e) {
     start = s;

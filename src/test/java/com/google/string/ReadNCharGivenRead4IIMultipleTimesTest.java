@@ -6,6 +6,7 @@ import org.junit.Test;
  * Created by ychang on 4/26/2017.
  */
 public class ReadNCharGivenRead4IIMultipleTimesTest {
+
   @Test
   public void read() throws Exception {
     // Given
@@ -14,8 +15,9 @@ public class ReadNCharGivenRead4IIMultipleTimesTest {
 
     // When
     read4IIMultipleTimes.read(buff, 1);
-    read4IIMultipleTimes.read(buff, 4);
+    read4IIMultipleTimes.read(buff, 2);
 
+    // Then
 
   }
 

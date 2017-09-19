@@ -13,8 +13,11 @@ public class WordBreak {
     boolean[] dp = new boolean[s.length() + 1];
     dp[0] = true;
     for (int i = 0; i<s.length(); i++) {
-      for (int j = 0; j<=i && !dp[i + 1]; j++) {
-        if (dp[j] && wordDict.contains(s.substring(j, i + 1)))
+      /**
+       * j from i to 0 is faster than from 0 to i
+       */
+      for (int j = i; j>=0 && !dp[i + 1]; j--) {
+        if (dp[j] && dict.contains(s.substring(j, i + 1)))
           dp[i + 1] = true;
       }
     }

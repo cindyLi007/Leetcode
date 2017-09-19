@@ -15,10 +15,10 @@ public class RegularExpressionMatchingTest {
     RegularExpressionMatching regularExpressionMatching = new RegularExpressionMatching();
 
     // When
-    boolean result = regularExpressionMatching.isMatch("aaaaaaaaaaaaab", "a*a*a*a*a*a*a*a*a*a*c");
+//    boolean result = regularExpressionMatching.isMatch("aaaaaaaaaaaaab", "a*a*a*a*a*a*a*a*a*a*c");
+    boolean result = regularExpressionMatching.isMatch("aa", ".*");
 
     // Then
     assertThat(result, is(Boolean.FALSE));
   }
-
 }

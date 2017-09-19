@@ -22,4 +22,17 @@ public class AlienDictionaryDFSTest {
     assertThat(alienOrder, is("wertf"));
   }
 
+  @Test
+  public void alienOrder_BFSTest() throws Exception {
+    // Given
+    AlienDictionaryBFS alienDictionaryBFS = new AlienDictionaryBFS();
+    String[] words = new String[]{"xz", "as", "xa"};
+
+    // When
+    String alienOrder = alienDictionaryBFS.alienOrder(words);
+
+    // Then
+    assertThat(alienOrder, is("wertf"));
+  }
+
 }

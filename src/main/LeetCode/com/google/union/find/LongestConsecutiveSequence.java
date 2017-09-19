@@ -5,6 +5,7 @@ import java.util.HashMap;
 /**
  * Created by ychang on 1/13/2017.
  * No need to create a separate class UnionFind
+ * this can beat 69%
  */
 public class LongestConsecutiveSequence {
   int[] uf;
@@ -35,8 +36,8 @@ public class LongestConsecutiveSequence {
   }
 
   private void connect(int x, int y){
-    int p = find(x, uf);
-    int q = find(y, uf);
+    int p = find(x);
+    int q = find(y);
     if (p!=q) {
       int small = sz[q]<sz[p] ? q : p;
       int large = sz[q]<sz[p] ? p : q;
@@ -47,7 +48,7 @@ public class LongestConsecutiveSequence {
     }
   }
 
-  public int find(int x, int[] uf){
+  public int find(int x){
     while (uf[x]!=x) {
       uf[x]=uf[uf[x]];
       x=uf[x];

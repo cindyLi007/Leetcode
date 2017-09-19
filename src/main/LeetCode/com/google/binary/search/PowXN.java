@@ -10,28 +10,25 @@ public class PowXN {
     if(n == 0) {
       return 1;
     }
-    if(x == 0) {
-      return 0;
+    if (n<0) {
+      x=1/x;
     }
-    if( n < 0) {
-      if( n == Integer.MIN_VALUE) {
+    double res = 1;
+    if( n == Integer.MIN_VALUE) {
         /**
-          Make -2147483648 to -2147483647
+          Make -2147483648 to -2147483647 to prevent overflow when switch n to positive number
         */
         n++;
-        if(x < 0) {
-          x = -x; //we made n odd so need to update sign
-        }
+        res*=x;
       }
-      n = -n;
-      x = 1/x;
-    }
+    n=Math.abs(n);
     if(n % 2 == 0) {
-      return myPow(x*x, n/2);
+      res *=  myPow(x*x, n/2);
     }
     else {
-      return x * myPow(x*x, n/2);
+      res *= x * myPow(x*x, n/2);
     }
+    return res;
   }
 
   public double myPow_nonRecursive(double x, int n) {

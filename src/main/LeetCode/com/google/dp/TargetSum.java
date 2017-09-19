@@ -5,29 +5,31 @@ package com.google.dp;
  */
 public class TargetSum {
   /**
-   * we need found sum[P]-sum[Q]=target, => sum[P]+sum[Q]+sum[P]-sum[Q]=target+sum => 2*sum[P]=target+sum
+   * Find a subset of nums that need to be positive, and the rest of them negative, such that the sum is equal to target
+   * Let P be the positive subset and N be the negative subset
+   * we need found sum[P]-sum[N] = target, =>
+   * sum[P]+sum[Q]+sum[P]-sum[Q] = target+sum[P]+sum[N] =>
+   *                    2*sum[P] = target+sum
    * so sum[P]=(target+sum)/2
+   * original problem has been converted to a subset sum problem as follows: Find a subset P of nums such that
+   * sum(P) = (target + sum(nums)) / 2
    */
   public int findTargetSumWays(int[] nums, int S) {
-    int sum = 0;
-    for (int num : nums)
-      sum += num;
-    if (sum<S || (sum + S)%2!=0)
-      return 0;
-    return subsum(nums, (sum + S)/2);
-  }
-
-  private int subsum(int[] nums, int target) {
-    int[] dp = new int[target + 1];
-    dp[0] = 1;
+    int sum=0;
+    for (int num : nums) sum+=num;
+    if ((sum+S)%2==1 || sum<S) return 0;
+    sum=(sum+S)/2;
+    int[] dp = new int[sum+1];
+    dp[0]=1;
     for (int num : nums) {
       /**
-       * We must from high to low,
+       * for each num, loop all sum from high to low to update sum's combination number, each loop for a num is to check
+       * if we use it in sum, whether we can update the sum's combination number. We must from high to low,
        */
-      for (int i = target; i>=num; i--) {
-        dp[i] += dp[i - num];
+      for (int j=sum; j>=num; j--) {
+        dp[j]+=dp[j-num];
       }
     }
-    return dp[target];
+    return dp[sum];
   }
 }

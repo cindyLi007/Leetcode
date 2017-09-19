@@ -13,7 +13,12 @@ public class NumberIslandTest {
   public void numIslands() throws Exception {
     // Given
     NumberIsland numberIsland = new NumberIsland();
-    char[][] grid = new char[][]{"1111111".toCharArray(), "0000001".toCharArray(), "1111101".toCharArray(), "1000101".toCharArray(), "1010101".toCharArray(), "1011101".toCharArray(), "1111111".toCharArray()};
+    char[][] grid = new char[][]{
+        "11110".toCharArray(),
+        "11010".toCharArray(),
+        "11000".toCharArray(),
+        "00000".toCharArray()
+    };
 
     // When
     int islands = numberIsland.numIslands(grid);

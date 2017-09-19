@@ -45,7 +45,9 @@ public class AlienDictionaryBFS {
         }
       }
     }
-    // we need make sure finally all nodes's inDegree is 0 (we traverse all nodes)
+    /** we need make sure finally all nodes's inDegree is 0 (we traverse all nodes), if not, that means we have a loop
+     * among some nodes, which make those nodes' inDegree can not be 0, so we did not add them to queue
+     */
     return sb.length()==charNum ? sb.toString() : "";
   }
 

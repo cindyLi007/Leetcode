@@ -30,6 +30,9 @@ public class MergeKSortedLists {
     return res.next;
   }
 
+  /**
+   * this divide and conquer can beat 84%
+   */
   public ListNode mergeKLists(ListNode[] lists) {
     if (lists.length==0) return null;
     return merge(lists, 0, lists.length-1);

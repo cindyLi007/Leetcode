@@ -3,6 +3,7 @@ package com.google;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.PriorityQueue;
 import java.util.TreeMap;
@@ -55,10 +56,9 @@ public class Skyline {
       }
 
       // if after add/remove new vertices, the new pq's head (current highest height) changed, no matter higher or lower
-      int cur = heights.firstKey(); // current highest height
-      if (cur!=prev) {
-        res.add(new int[]{p[0], cur});
-        prev = cur;
+      if (heights.firstKey()!=prev) {
+        prev = heights.firstKey();
+        res.add(new int[]{p[0], prev});
       }
     }
     return res;
@@ -70,7 +70,7 @@ public class Skyline {
    */
   public List<int[]> getSkyline_priorityQueue(int[][] buildings) {
     List<int[]> res = new ArrayList();
-    List<int[]> points = new ArrayList();
+    List<int[]> points = new LinkedList();
     for (int[] b : buildings) {
       points.add(new int[]{b[0], b[2]});
       points.add(new int[]{b[1], -b[2]});
@@ -107,8 +107,8 @@ public class Skyline {
     /**
      * when 2 buildings start-end-connected, make sure next-building's start before prev-building's end, so can erase
      * duplicated points such as [1, 3, 2], [3, 4, 2] should be [1, 2] [4, 0], not [1, 2] [3, 0], [3, 2], [4, 0]
-     * Please notice after insert all points to PriorityQueue points, if check points, we can find PriorityQueue is NOT
-     * all sorted, that is because this data structure is "A binary heap" which means it is only partially ordered, with
+     * Please notice after insert all points into PriorityQueue, if check points, we can find PriorityQueue is NOT all
+     * sorted, that is because this data structure is "A binary heap" which means it is only partially ordered, with
      * the smallest element at the root. When you remove that, the heap is reordered so that the next smallest element
      * is at the root.
      */
