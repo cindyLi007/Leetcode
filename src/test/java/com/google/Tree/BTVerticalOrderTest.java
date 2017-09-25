@@ -23,11 +23,26 @@ public class BTVerticalOrderTest {
     // Given
     BTVerticalOrder solution = new BTVerticalOrder();
     TreeNode root = new TreeNode(3);
-    TreeNode right = new TreeNode(20);
+    TreeNode level1_left = new TreeNode(9);
+    TreeNode level1_right = new TreeNode(8);
+    TreeNode level2_left_left = new TreeNode(4);
+    TreeNode level2_left_right = new TreeNode(0);
+    TreeNode level2_right_left = new TreeNode(1);
+    TreeNode level2_right_right = new TreeNode(7);
+    root.left = level1_left;
+    root.right = level1_right;
+    level1_left.left = level2_left_left;
+    level1_left.right = level2_left_right;
+    level2_left_right.right = new TreeNode(2);
+    level1_right.left = level2_right_left;
+    level1_right.right = level2_right_right;
+    level2_right_left.left = new TreeNode(5);
+
+    /*TreeNode right = new TreeNode(20);
     right.left = new TreeNode(15);
     right.right = new TreeNode(7);
     root.right = right;
-    root.left = new TreeNode(9);
+    root.left = new TreeNode(9);*/
 
     // When
     List<List<Integer>> verticalOrder = solution.verticalOrder(root);

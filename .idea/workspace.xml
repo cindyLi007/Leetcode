@@ -2,109 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fba78393-1326-4876-a317-19bf94d1c0d3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/Tree/DiameterOfBT.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/dfs/GraphValidTree.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/system/design/EncodeAndDecodeTinyUrl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/system/design/TinyURL.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/union/find/GraphValidTree.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/temp/Solution.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/interview/microsoft/onsite/DeleteNodeInLinkedList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/interview/microsoft/onsite/FirstUniqueChar.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/interview/microsoft/onsite/LetterCombination.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/interview/microsoft/onsite/RemoveDuplicatedCharFromString.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/google/Tree/BTVerticalOrderTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/google/bfs/dfs/bfs/WallAndGatesTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/google/bfs/dfs/dfs/GraphValidTreeTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/google/linked/list/DeleteNodeInLinkedListTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/interview/microsoft/onsite/FirstUniqueCharTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/interview/microsoft/onsite/LetterCombinationTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/interview/microsoft/onsite/RemoveDuplicatedCharFromStringTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/temp/SolutionTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/union/find/NumberIslands.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/temp/MergeKList.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/temp/PrintDate.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/temp/StrToInt.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/google/union/find/NumberIslands$UnionFind.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/google/union/find/NumberIslands.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgi/collection/SetExample.class" afterPath="$PROJECT_DIR$/target/classes/com/cgi/collection/SetExample.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgi/collection/builder/pattern/BuilderPatternTest.class" afterPath="$PROJECT_DIR$/target/classes/com/cgi/collection/builder/pattern/BuilderPatternTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgi/collection/compare/TestComparable.class" afterPath="$PROJECT_DIR$/target/classes/com/cgi/collection/compare/TestComparable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgi/collection/compare/TestComparator.class" afterPath="$PROJECT_DIR$/target/classes/com/cgi/collection/compare/TestComparator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgi/file/BufferedReaderTest.class" afterPath="$PROJECT_DIR$/target/classes/com/cgi/file/BufferedReaderTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgi/file/NioReaderReadAll.class" afterPath="$PROJECT_DIR$/target/classes/com/cgi/file/NioReaderReadAll.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgi/file/NioReaderTest.class" afterPath="$PROJECT_DIR$/target/classes/com/cgi/file/NioReaderTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgi/interfaceExtend/lambda/AnalyzerTool.class" afterPath="$PROJECT_DIR$/target/classes/com/cgi/interfaceExtend/lambda/AnalyzerTool.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgi/interfaceExtend/lambda/LambdaTest.class" afterPath="$PROJECT_DIR$/target/classes/com/cgi/interfaceExtend/lambda/LambdaTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgi/nested/EmployeeImplTest.class" afterPath="$PROJECT_DIR$/target/classes/com/cgi/nested/EmployeeImplTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgi/stream/CollectTest.class" afterPath="$PROJECT_DIR$/target/classes/com/cgi/stream/CollectTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgi/stream/JoinTest.class" afterPath="$PROJECT_DIR$/target/classes/com/cgi/stream/JoinTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgi/stream/LazyTest.class" afterPath="$PROJECT_DIR$/target/classes/com/cgi/stream/LazyTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgi/stream/MapTest.class" afterPath="$PROJECT_DIR$/target/classes/com/cgi/stream/MapTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgi/stream/PeekTest.class" afterPath="$PROJECT_DIR$/target/classes/com/cgi/stream/PeekTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgi/stream/SortTest.class" afterPath="$PROJECT_DIR$/target/classes/com/cgi/stream/SortTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/google/BombEnemy.class" afterPath="$PROJECT_DIR$/target/classes/com/google/BombEnemy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/google/OptimalAccountBalance.class" afterPath="$PROJECT_DIR$/target/classes/com/google/OptimalAccountBalance.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/google/Skyline.class" afterPath="$PROJECT_DIR$/target/classes/com/google/Skyline.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/google/WiggleSort.class" afterPath="$PROJECT_DIR$/target/classes/com/google/WiggleSort.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/google/array/Interval.class" afterPath="$PROJECT_DIR$/target/classes/com/google/array/Interval.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/google/array/MergeInterval.class" afterPath="$PROJECT_DIR$/target/classes/com/google/array/MergeInterval.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/google/array/MissingRange.class" afterPath="$PROJECT_DIR$/target/classes/com/google/array/MissingRange.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/google/array/QueueReconstruction.class" afterPath="$PROJECT_DIR$/target/classes/com/google/array/QueueReconstruction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/google/array/bit/manipulation/GameOfLife.class" afterPath="$PROJECT_DIR$/target/classes/com/google/array/bit/manipulation/GameOfLife.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/bfs/WallAndGates.class" afterPath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/bfs/WallAndGates.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/dfs/CloneGraph.class" afterPath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/dfs/CloneGraph.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/dfs/NumberOfIslands.class" afterPath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/dfs/NumberOfIslands.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/dfs/ReconstructItinerary.class" afterPath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/dfs/ReconstructItinerary.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/dfs/UndirectedGraphNode.class" afterPath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/dfs/UndirectedGraphNode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/google/binary/search/IntersectionOfTwoArrays.class" afterPath="$PROJECT_DIR$/target/classes/com/google/binary/search/IntersectionOfTwoArrays.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/google/binary/search/PowXN.class" afterPath="$PROJECT_DIR$/target/classes/com/google/binary/search/PowXN.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/google/dp/WordBreak.class" afterPath="$PROJECT_DIR$/target/classes/com/google/dp/WordBreak.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/google/hash/table/LongestConsecutiveSequence.class" afterPath="$PROJECT_DIR$/target/classes/com/google/hash/table/LongestConsecutiveSequence.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/google/hash/table/TopKFrequentElement.class" afterPath="$PROJECT_DIR$/target/classes/com/google/hash/table/TopKFrequentElement.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/google/linked/list/DeleteNodeInLinkedList.class" afterPath="$PROJECT_DIR$/target/classes/com/google/linked/list/DeleteNodeInLinkedList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/google/linked/list/MergeKSortedLists.class" afterPath="$PROJECT_DIR$/target/classes/com/google/linked/list/MergeKSortedLists.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/google/math/ExcelSheetColumnTitle.class" afterPath="$PROJECT_DIR$/target/classes/com/google/math/ExcelSheetColumnTitle.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/google/stack/ValidParentheses.class" afterPath="$PROJECT_DIR$/target/classes/com/google/stack/ValidParentheses.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/google/union/find/LongestConsecutiveSequence.class" afterPath="$PROJECT_DIR$/target/classes/com/google/union/find/LongestConsecutiveSequence.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/google/array/RotateImageTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/google/array/RotateImageTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/google/bfs/dfs/bfs/WordLadderIITest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/google/bfs/dfs/bfs/WordLadderIITest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_3_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_19_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_ws_rs_javax_ws_rs_api_2_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java8 practice.iml" afterPath="$PROJECT_DIR$/java8 practice.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/Skyline.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/Skyline.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/Tree/BTVerticalOrder.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/Tree/BTVerticalOrder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/array/MergeInterval.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/array/MergeInterval.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/backtracking/WildcardMatching.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/backtracking/WildcardMatching.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/Tree/DiameterOfBT.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/Tree/DiameterOfBT.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/ExpressionAddOperator.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/ExpressionAddOperator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/bfs/WallAndGates.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/bfs/WallAndGates.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/dfs/CloneGraph.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/dfs/CloneGraph.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/dfs/NumberOfIslands.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/dfs/NumberOfIslands.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/dfs/TargetSum.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/dfs/TargetSum.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/binary/search/PowXN.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/binary/search/PowXN.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/dp/CombinationSum4.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/dp/CombinationSum4.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/dp/PartitionEqualSubsetSum.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/dp/PartitionEqualSubsetSum.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/dp/TargetSum.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/dp/TargetSum.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/dp/WordBreak.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/dp/WordBreak.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/graph/AlienDictionaryBFS.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/graph/AlienDictionaryBFS.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/graph/AlienDictionaryDFS.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/graph/AlienDictionaryDFS.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/hash/table/HIndex.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/hash/table/HIndex.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/hash/table/LongestConsecutiveSequence.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/hash/table/LongestConsecutiveSequence.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/heap/MeetingRoomII.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/heap/MeetingRoomII.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/linked/list/DeleteNodeInLinkedList.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/linked/list/DeleteNodeInLinkedList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/linked/list/InsertInterval.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/linked/list/InsertInterval.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/linked/list/MergeKSortedLists.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/linked/list/MergeKSortedLists.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/stack/ValidParentheses.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/stack/ValidParentheses.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/string/ReadNCharGivenRead4IIMultipleTimes.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/string/ReadNCharGivenRead4IIMultipleTimes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/string/RegularExpressionMatching.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/string/RegularExpressionMatching.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/union/find/LongestConsecutiveSequence.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/union/find/LongestConsecutiveSequence.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/union/find/NumberIsland.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/union/find/NumberIsland.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/google/dp/PartitionEqualSubsetSumTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/google/dp/PartitionEqualSubsetSumTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/google/graph/AlienDictionaryDFSTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/google/graph/AlienDictionaryDFSTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/google/hash/table/HIndexTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/google/hash/table/HIndexTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/google/linked/list/InsertIntervalTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/google/linked/list/InsertIntervalTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/google/string/ReadNCharGivenRead4IIMultipleTimesTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/google/string/ReadNCharGivenRead4IIMultipleTimesTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/google/string/RegularExpressionMatchingTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/google/string/RegularExpressionMatchingTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/google/union/find/NumberIslandTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/google/union/find/NumberIslandTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/system/design/TinyURL.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/system/design/TinyURL.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/interview/microsoft/onsite/LetterCombination.java" afterPath="$PROJECT_DIR$/src/main/java/interview/microsoft/onsite/LetterCombination.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/google/DivideAndConquer/ExpressionAddOperatorTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/google/DivideAndConquer/ExpressionAddOperatorTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/google/Tree/BTVerticalOrderTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/google/Tree/BTVerticalOrderTest.java" />
     </list>
     <ignored path="java8 practice.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -137,112 +51,105 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="GraphValidTree.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/dfs/GraphValidTree.java">
+      <file leaf-file-name="RegularExpressionMatching.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/string/RegularExpressionMatching.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GraphValidTree.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/union/find/GraphValidTree.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="3" column="52" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
+            <state relative-caret-position="682">
+              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WallAndGates.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/bfs/WallAndGates.java">
+      <file leaf-file-name="ReadNCharGivenRead4IIMultipleTimes.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/string/ReadNCharGivenRead4IIMultipleTimes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="60" column="3" selection-start-line="60" selection-start-column="3" selection-end-line="60" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HIndex.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/hash/table/HIndex.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+            <state relative-caret-position="946">
+              <caret line="43" column="11" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TinyURL.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/system/design/TinyURL.java">
+      <file leaf-file-name="NumberIsland.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/union/find/NumberIsland.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EncodeAndDecodeTinyUrl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/system/design/EncodeAndDecodeTinyUrl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DiameterOfBT.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/Tree/DiameterOfBT.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding>
-                <element signature="e#146#147#0" expanded="true" />
-                <element signature="e#180#181#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+            <state relative-caret-position="44">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HIndexTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/google/hash/table/HIndexTest.java">
+      <file leaf-file-name="NumberOfIslands.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/union/find/NumberOfIslands.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+            <state relative-caret-position="374">
+              <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+              <folding>
+                <element signature="method#UnionFind#0;class#UnionFind#0;class#NumberOfIslands#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NumberOfIslands.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/dfs/NumberOfIslands.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1210">
+              <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BinaryTreePath.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/dfs/BinaryTreePath.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="16" column="72" selection-start-line="16" selection-start-column="72" selection-end-line="16" selection-end-column="72" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WallAndGatesTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/google/bfs/dfs/bfs/WallAndGatesTest.java">
+      <file leaf-file-name="ExpressionAddOperator.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/ExpressionAddOperator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="383">
+              <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExpressionAddOperatorTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/google/DivideAndConquer/ExpressionAddOperatorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReflectiveCallable.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ideaLibSources/junit-4.11-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BTVerticalOrderTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/google/Tree/BTVerticalOrderTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="533">
+              <caret line="47" column="62" selection-start-line="47" selection-start-column="62" selection-end-line="47" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -277,23 +184,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/temp/SolutionTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/google/Tree/BTVerticalOrderTest.java" />
-        <option value="$PROJECT_DIR$/src/main/LeetCode/temp/Solution.java" />
-        <option value="$PROJECT_DIR$/src/main/LeetCode/com/google/Tree/BTVerticalOrder.java" />
         <option value="$PROJECT_DIR$/src/main/LeetCode/com/google/linked/list/DeleteNodeInLinkedList.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/google/linked/list/DeleteNodeInLinkedListTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/interview/microsoft/onsite/DeleteNodeInLinkedList.java" />
         <option value="$PROJECT_DIR$/src/test/java/temp/RegularExpressionTest.java" />
         <option value="$PROJECT_DIR$/src/main/LeetCode/temp/RegularExpression.java" />
-        <option value="$PROJECT_DIR$/src/main/LeetCode/com/google/heap/MeetingRoomII.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/google/string/ReadNCharGivenRead4IIMultipleTimesTest.java" />
-        <option value="$PROJECT_DIR$/src/main/LeetCode/com/google/string/ReadNCharGivenRead4IIMultipleTimes.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/google/union/find/NumberIslandTest.java" />
         <option value="$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/dfs/NumberOfIslands.java" />
         <option value="$PROJECT_DIR$/src/main/LeetCode/com/google/union/find/NumberIsland.java" />
         <option value="$PROJECT_DIR$/src/main/LeetCode/com/google/design/SerializeDeserializeBT.java" />
-        <option value="$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/ExpressionAddOperator.java" />
         <option value="$PROJECT_DIR$/src/main/LeetCode/com/google/linked/list/MergeKSortedLists.java" />
         <option value="$PROJECT_DIR$/src/main/LeetCode/com/google/dp/WordBreak.java" />
         <option value="$PROJECT_DIR$/src/main/LeetCode/com/google/array/MergeInterval.java" />
@@ -324,10 +224,17 @@
         <option value="$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/bfs/WallAndGates.java" />
         <option value="$PROJECT_DIR$/src/main/LeetCode/com/google/hash/table/HIndex.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/google/hash/table/HIndexTest.java" />
+        <option value="$PROJECT_DIR$/src/main/LeetCode/com/google/Tree/DiameterOfBT.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/LeetCode/com/google/system/design/TinyURL.java" />
         <option value="$PROJECT_DIR$/src/main/LeetCode/com/google/system/design/EncodeAndDecodeTinyUrl.java" />
-        <option value="$PROJECT_DIR$/src/main/LeetCode/com/google/Tree/DiameterOfBT.java" />
+        <option value="$PROJECT_DIR$/src/main/LeetCode/com/google/heap/MeetingRoomII.java" />
+        <option value="$PROJECT_DIR$/src/main/java/interview/microsoft/onsite/LetterCombination.java" />
+        <option value="$PROJECT_DIR$/src/main/LeetCode/com/google/Tree/BTVerticalOrder.java" />
+        <option value="$PROJECT_DIR$/src/main/LeetCode/com/google/string/ReadNCharGivenRead4IIMultipleTimes.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/google/Tree/BTVerticalOrderTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/google/DivideAndConquer/ExpressionAddOperatorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/ExpressionAddOperator.java" />
       </list>
     </option>
   </component>
@@ -405,7 +312,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -534,10 +441,70 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java8 practice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java8 practice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LeetCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="google" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java8 practice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java8 practice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LeetCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="google" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dfs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -545,7 +512,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="extract.method.default.visibility" value="private" />
@@ -553,7 +520,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="Hindex&#9;PSI&#9;JAVA://com.google.hash.table.HIndex&#10;gate&#9;PSI&#9;JAVA://com.google.bfs.dfs.bfs.WallAndGates&#10;parti&#9;PSI&#9;JAVA://com.google.dp.PartitionEqualSubsetSum&#10;target&#9;FILE&#9;file://C:/Users/ychang/IdeaProjects/java8 practice/src/main/LeetCode/com/google/dp/TargetSum.java&#10;alien&#9;PSI&#9;JAVA://com.google.graph.AlienDictionaryDFS&#10;validPare&#9;PSI&#9;JAVA://com.google.stack.ValidParentheses&#10;pow&#9;PSI&#9;JAVA://com.google.binary.search.PowXN&#10;combination&#9;PSI&#9;JAVA://com.google.dp.CombinationSum4&#10;Random&#9;PSI&#9;JAVA://com.google.design.RandomizedSet&#10;longestc&#9;PSI&#9;JAVA://com.google.union.find.LongestConsecutiveSequence&#10;LongestCon&#9;PSI&#9;JAVA://com.google.hash.table.LongestConsecutiveSequence&#10;reg&#9;PSI&#9;JAVA://com.google.string.RegularExpressionMatching&#10;wild&#9;PSI&#9;JAVA://com.google.backtracking.WildcardMatching&#10;LRU&#9;PSI&#9;JAVA://com.google.design.LRUCache&#10;insert&#9;PSI&#9;JAVA://com.google.linked.list.InsertInterval&#10;merge&#9;FILE&#9;file://C:/Users/ychang/IdeaProjects/java8 practice/src/main/LeetCode/com/google/array/MergeInterval.java&#10;skyli&#9;FILE&#9;file://C:/Users/ychang/IdeaProjects/java8 practice/src/main/LeetCode/com/google/Skyline.java&#10;clone&#9;PSI&#9;JAVA://com.google.bfs.dfs.dfs.CloneGraph&#10;nestedIter&#9;PSI&#9;JAVA://com.google.recursive.NestedIterator&#10;NestedIterator&#9;PSI&#9;JAVA://com.google.stack.NestedIterator&#10;nested&#9;PSI&#9;JAVA://com.google.stack.NestedIntegerImpl&#10;meeting&#9;FILE&#9;file://C:/Users/ychang/IdeaProjects/java8 practice/src/main/LeetCode/com/google/heap/MeetingRoomII.java&#10;mergeInterval&#9;PSI&#9;JAVA://com.google.array.MergeInterval&#10;wordb&#9;PSI&#9;JAVA://com.google.dp.WordBreakII&#10;mergek&#9;PSI&#9;JAVA://com.google.linked.list.MergeKSortedLists&#10;Path&#9;PSI&#9;JAVA://com.google.bfs.dfs.dfs.BinaryTreePath&#10;expressionadd&#9;PSI&#9;JAVA://com.google.bfs.dfs.ExpressionAddOperator&#10;Seri&#9;FILE&#9;file://C:/Users/ychang/IdeaProjects/java8 practice/src/main/LeetCode/com/google/design/SerializeDeserializeBT.java&#10;numberofIslands&#9;FILE&#9;file://C:/Users/ychang/IdeaProjects/java8 practice/src/main/LeetCode/com/google/bfs/dfs/dfs/NumberOfIslands.java&#10;NumberOfIslands&#9;PSI&#9;JAVA://com.google.union.find.NumberOfIslands&#10;number&#9;PSI&#9;JAVA://com.google.union.find.NumberIsland&#10;remo&#9;FILE&#9;file://C:/Users/ychang/IdeaProjects/java8 practice/src/test/java/interview/microsoft/onsite/RemoveDuplicatedCharFromStringTest.java&#10;remove&#9;FILE&#9;file://C:/Users/ychang/IdeaProjects/java8 practice/src/test/java/interview/microsoft/onsite/RemoveDuplicatedCharFromStringTest.java&#10;read4&#9;PSI&#9;JAVA://com.google.string.ReadNCharGivenRead4IIMultipleTimes&#10;RE&#9;FILE&#9;file://C:/Users/ychang/IdeaProjects/java8 practice/src/main/LeetCode/com/google/string/RegularExpressionMatching.java&#10;Regu&#9;PSI&#9;JAVA://com.google.string.RegularExpressionMatching&#10;De&#9;FILE&#9;file://C:/Users/ychang/IdeaProjects/java8 practice/src/main/LeetCode/com/google/linked/list/DeleteNodeInLinkedList.java&#10;Verti&#9;PSI&#9;JAVA://com.google.Tree.BTVerticalOrder&#10;medi&#9;PSI&#9;JAVA://com.google.binary.search.MedianOfTwoSortedArray&#10;sky&#9;FILE&#9;file://C:/Users/ychang/IdeaProjects/java8 practice/src/main/LeetCode/com/google/Skyline.java&#10;Numberof&#9;PSI&#9;JAVA://com.google.bit.manipulation.NumberOfBits&#10;FindMin&#9;PSI&#9;JAVA://com.google.binary.search.FindMinInRotatedArray&#10;ValidPa&#9;PSI&#9;JAVA://com.google.stack.ValidParentheses&#10;Popul&#9;PSI&#9;JAVA://com.google.bfs.dfs.dfs.PopulatingNextRightPointerII&#10;Seriali&#9;PSI&#9;JAVA://com.google.design.SerializeDeseriralizeBST&#10;setMatri&#9;PSI&#9;JAVA://com.google.array.SetMatrixZero&#10;sortColor&#9;PSI&#9;JAVA://algorithm.sort.SortColor&#10;MaxSub&#9;PSI&#9;JAVA://com.google.dp.MaximumSubArray&#10;ReverseWor&#9;PSI&#9;JAVA://com.google.string.ReverseWordsII&#10;skyline&#9;PSI&#9;JAVA://com.google.Skyline" />
+    <property name="SearchEverywhereHistoryKey" value="AddOp&#9;PSI&#9;JAVA://com.google.bfs.dfs.ExpressionAddOperator&#10;BinaryTree&#9;PSI&#9;JAVA://com.google.bfs.dfs.dfs.BinaryTreePath&#10;numberofislands&#9;PSI&#9;JAVA://com.google.union.find.NumberOfIslands&#10;number&#9;PSI&#9;JAVA://com.google.union.find.NumberIsland&#10;read&#9;PSI&#9;JAVA://com.google.string.ReadNCharGivenRead4IIMultipleTimes&#10;Regu&#9;FILE&#9;file://C:/Users/ychang/IdeaProjects/java8 practice/src/main/LeetCode/com/google/string/RegularExpressionMatching.java&#10;vertical&#9;PSI&#9;JAVA://com.google.Tree.BTVerticalOrder&#10;seria&#9;PSI&#9;JAVA://com.google.design.SerializeDeserializeBT&#10;letter&#9;PSI&#9;JAVA://com.google.backtracking.LetterComboOfPhoneNum&#10;MeetingRoomII&#9;FILE&#9;file://C:/Users/ychang/IdeaProjects/java8 practice/src/main/LeetCode/com/google/heap/MeetingRoomII.java&#10;t&#9;FILE&#9;file://C:/Users/ychang/IdeaProjects/java8 practice/src/main/LeetCode/com/google/system/design/TinyURL.java&#10;MoviePrio&#9;PSI&#9;JAVA://interview.amazon.online.test.MoviePriorityQueue&#10;pom.xml&#9;FILE&#9;file://C:/Users/ychang/IdeaProjects/java8 practice/pom.xml&#10;Hindex&#9;PSI&#9;JAVA://com.google.hash.table.HIndex&#10;gate&#9;PSI&#9;JAVA://com.google.bfs.dfs.bfs.WallAndGates&#10;parti&#9;PSI&#9;JAVA://com.google.dp.PartitionEqualSubsetSum&#10;target&#9;FILE&#9;file://C:/Users/ychang/IdeaProjects/java8 practice/src/main/LeetCode/com/google/dp/TargetSum.java&#10;alien&#9;PSI&#9;JAVA://com.google.graph.AlienDictionaryDFS&#10;validPare&#9;PSI&#9;JAVA://com.google.stack.ValidParentheses&#10;pow&#9;PSI&#9;JAVA://com.google.binary.search.PowXN&#10;combination&#9;PSI&#9;JAVA://com.google.dp.CombinationSum4&#10;Random&#9;PSI&#9;JAVA://com.google.design.RandomizedSet&#10;longestc&#9;PSI&#9;JAVA://com.google.union.find.LongestConsecutiveSequence&#10;LongestCon&#9;PSI&#9;JAVA://com.google.hash.table.LongestConsecutiveSequence&#10;reg&#9;PSI&#9;JAVA://com.google.string.RegularExpressionMatching&#10;wild&#9;PSI&#9;JAVA://com.google.backtracking.WildcardMatching&#10;LRU&#9;PSI&#9;JAVA://com.google.design.LRUCache&#10;insert&#9;PSI&#9;JAVA://com.google.linked.list.InsertInterval&#10;merge&#9;FILE&#9;file://C:/Users/ychang/IdeaProjects/java8 practice/src/main/LeetCode/com/google/array/MergeInterval.java&#10;skyli&#9;FILE&#9;file://C:/Users/ychang/IdeaProjects/java8 practice/src/main/LeetCode/com/google/Skyline.java&#10;clone&#9;PSI&#9;JAVA://com.google.bfs.dfs.dfs.CloneGraph&#10;nestedIter&#9;PSI&#9;JAVA://com.google.recursive.NestedIterator&#10;NestedIterator&#9;PSI&#9;JAVA://com.google.stack.NestedIterator&#10;nested&#9;PSI&#9;JAVA://com.google.stack.NestedIntegerImpl&#10;meeting&#9;FILE&#9;file://C:/Users/ychang/IdeaProjects/java8 practice/src/main/LeetCode/com/google/heap/MeetingRoomII.java&#10;mergeInterval&#9;PSI&#9;JAVA://com.google.array.MergeInterval&#10;wordb&#9;PSI&#9;JAVA://com.google.dp.WordBreakII&#10;mergek&#9;PSI&#9;JAVA://com.google.linked.list.MergeKSortedLists&#10;Path&#9;PSI&#9;JAVA://com.google.bfs.dfs.dfs.BinaryTreePath&#10;expressionadd&#9;PSI&#9;JAVA://com.google.bfs.dfs.ExpressionAddOperator&#10;Seri&#9;FILE&#9;file://C:/Users/ychang/IdeaProjects/java8 practice/src/main/LeetCode/com/google/design/SerializeDeserializeBT.java&#10;numberofIslands&#9;FILE&#9;file://C:/Users/ychang/IdeaProjects/java8 practice/src/main/LeetCode/com/google/bfs/dfs/dfs/NumberOfIslands.java&#10;NumberOfIslands&#9;PSI&#9;JAVA://com.google.union.find.NumberOfIslands&#10;remo&#9;FILE&#9;file://C:/Users/ychang/IdeaProjects/java8 practice/src/test/java/interview/microsoft/onsite/RemoveDuplicatedCharFromStringTest.java&#10;remove&#9;FILE&#9;file://C:/Users/ychang/IdeaProjects/java8 practice/src/test/java/interview/microsoft/onsite/RemoveDuplicatedCharFromStringTest.java&#10;read4&#9;PSI&#9;JAVA://com.google.string.ReadNCharGivenRead4IIMultipleTimes&#10;RE&#9;FILE&#9;file://C:/Users/ychang/IdeaProjects/java8 practice/src/main/LeetCode/com/google/string/RegularExpressionMatching.java&#10;De&#9;FILE&#9;file://C:/Users/ychang/IdeaProjects/java8 practice/src/main/LeetCode/com/google/linked/list/DeleteNodeInLinkedList.java&#10;Verti&#9;PSI&#9;JAVA://com.google.Tree.BTVerticalOrder&#10;medi&#9;PSI&#9;JAVA://com.google.binary.search.MedianOfTwoSortedArray" />
     <property name="last_opened_file_path" value="$MAVEN_REPOSITORY$/javax/ws/rs/javax.ws.rs-api" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/LeetCode" />
@@ -591,85 +558,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HIndexTest">
-    <configuration default="false" name="PartitionEqualSubsetSumTest.canPartition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.google.dp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="java8 practice" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.google.dp" />
-      <option name="MAIN_CLASS_NAME" value="com.google.dp.PartitionEqualSubsetSumTest" />
-      <option name="METHOD_NAME" value="canPartition" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="PartitionEqualSubsetSumTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.google.dp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="java8 practice" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.google.dp" />
-      <option name="MAIN_CLASS_NAME" value="com.google.dp.PartitionEqualSubsetSumTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="GraphValidTreeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.google.bfs.dfs.dfs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="java8 practice" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.google.bfs.dfs.dfs" />
-      <option name="MAIN_CLASS_NAME" value="com.google.bfs.dfs.dfs.GraphValidTreeTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.ExpressionAddOperatorTest">
     <configuration default="false" name="WallAndGatesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -708,6 +597,84 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.google.hash.table" />
       <option name="MAIN_CLASS_NAME" value="com.google.hash.table.HIndexTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="SerializeDeserializeBTTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.google.design.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="java8 practice" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.google.design" />
+      <option name="MAIN_CLASS_NAME" value="com.google.design.SerializeDeserializeBTTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="BTVerticalOrderTest.verticalOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.google.Tree.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="java8 practice" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.google.Tree" />
+      <option name="MAIN_CLASS_NAME" value="com.google.Tree.BTVerticalOrderTest" />
+      <option name="METHOD_NAME" value="verticalOrder" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ExpressionAddOperatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.google.DivideAndConquer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="java8 practice" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.google.DivideAndConquer" />
+      <option name="MAIN_CLASS_NAME" value="com.google.DivideAndConquer.ExpressionAddOperatorTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -972,6 +939,28 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -1065,19 +1054,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.PartitionEqualSubsetSumTest.canPartition" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.PartitionEqualSubsetSumTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.GraphValidTreeTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.WallAndGatesTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.HIndexTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.WallAndGatesTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.HIndexTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.SerializeDeserializeBTTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.BTVerticalOrderTest.verticalOrder" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ExpressionAddOperatorTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.HIndexTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.WallAndGatesTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.GraphValidTreeTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.PartitionEqualSubsetSumTest.canPartition" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.PartitionEqualSubsetSumTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ExpressionAddOperatorTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.BTVerticalOrderTest.verticalOrder" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.SerializeDeserializeBTTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.HIndexTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.WallAndGatesTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1252,7 +1241,13 @@
       <workItem from="1505412970948" duration="1973000" />
       <workItem from="1505439289557" duration="6383000" />
       <workItem from="1505495382078" duration="1862000" />
-      <workItem from="1505617429009" duration="20799000" />
+      <workItem from="1505617429009" duration="21146000" />
+      <workItem from="1505828792877" duration="270000" />
+      <workItem from="1505866546851" duration="4097000" />
+      <workItem from="1505873381226" duration="8991000" />
+      <workItem from="1506021877674" duration="6174000" />
+      <workItem from="1506103607578" duration="7123000" />
+      <workItem from="1506195687505" duration="4256000" />
     </task>
     <task id="LOCAL-00001" summary="Update and add new files">
       <created>1490111733505</created>
@@ -1338,30 +1333,37 @@
       <option name="project" value="LOCAL" />
       <updated>1502996753607</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added more leetcode questions&#10;">
+      <created>1505827464306</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1505827464306</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HIndexTest - 2017.09.18 at 09h 11m 38s.xml">
-      <configuration name="HIndexTest" configurationId="JUnit" />
+    <history-entry file="ExpressionAddOperatorTest - 2017.09.23 at 15h 56m 41s.xml">
+      <configuration name="ExpressionAddOperatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PartitionEqualSubsetSumTest_canPartition - 2017.09.14 at 23h 01m 21s.xml">
-      <configuration name="PartitionEqualSubsetSumTest.canPartition" configurationId="JUnit" />
+    <history-entry file="ExpressionAddOperatorTest - 2017.09.23 at 15h 58m 10s.xml">
+      <configuration name="ExpressionAddOperatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegularExpressionMatchingTest - 2017.09.11 at 10h 38m 20s.xml">
-      <configuration name="RegularExpressionMatchingTest" configurationId="JUnit" />
+    <history-entry file="ExpressionAddOperatorTest - 2017.09.23 at 15h 58m 26s.xml">
+      <configuration name="ExpressionAddOperatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegularExpressionMatchingTest - 2017.09.11 at 10h 38m 39s.xml">
-      <configuration name="RegularExpressionMatchingTest" configurationId="JUnit" />
+    <history-entry file="ExpressionAddOperatorTest - 2017.09.23 at 15h 59m 13s.xml">
+      <configuration name="ExpressionAddOperatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegularExpressionMatchingTest - 2017.09.11 at 10h 40m 06s.xml">
-      <configuration name="RegularExpressionMatchingTest" configurationId="JUnit" />
+    <history-entry file="ExpressionAddOperatorTest - 2017.09.23 at 16h 02m 26s.xml">
+      <configuration name="ExpressionAddOperatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegularExpressionTest_isMatch - 2017.08.24 at 23h 40m 22s.xml">
-      <configuration name="RegularExpressionTest.isMatch" configurationId="JUnit" />
+    <history-entry file="ExpressionAddOperatorTest - 2017.09.23 at 16h 03m 55s.xml">
+      <configuration name="ExpressionAddOperatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegularExpressionTest_isMatch - 2017.08.24 at 23h 40m 52s.xml">
-      <configuration name="RegularExpressionTest.isMatch" configurationId="JUnit" />
+    <history-entry file="SerializeDeserializeBTTest - 2017.09.20 at 09h 22m 24s.xml">
+      <configuration name="SerializeDeserializeBTTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="WallAndGatesTest - 2017.09.17 at 22h 03m 37s.xml">
       <configuration name="WallAndGatesTest" configurationId="JUnit" />
@@ -1374,7 +1376,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1914053000" />
+    <option name="totallyTimeSpent" value="1945311000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
@@ -1384,22 +1386,23 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30827886" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33333334" sideWeight="0.50625" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15075107" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15052083" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3496732" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897604" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2265625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1828125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3845316" sideWeight="0.49375" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24183007" sideWeight="0.49375" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897604" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.203125" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2002,12 +2005,6 @@
           <option name="timeStamp" value="1095" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/google/DivideAndConquer/ExpressionAddOperatorTest.java</url>
-          <line>25</line>
-          <properties />
-          <option name="timeStamp" value="1110" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/google/linked/list/InsertIntervalTest.java</url>
           <line>27</line>
           <properties />
@@ -2049,8 +2046,26 @@
           <properties />
           <option name="timeStamp" value="1136" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/google/design/SerializeDeserializeBTTest.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="1140" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/google/Tree/BTVerticalOrderTest.java</url>
+          <line>47</line>
+          <properties />
+          <option name="timeStamp" value="1141" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/ExpressionAddOperator.java</url>
+          <line>65</line>
+          <properties />
+          <option name="timeStamp" value="1145" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="1140" />
+      <option name="time" value="1146" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
@@ -2064,114 +2079,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/union/find/NumberOfIslands.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/union/find/NumberOfIslands_II.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="47" column="23" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/union/find/NumberIsland.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/design/SerializeDeserializeBT.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/google/DivideAndConquer/ExpressionAddOperatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/ExpressionAddOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="29" column="68" selection-start-line="29" selection-start-column="68" selection-end-line="29" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/dfs/BinaryTreePath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/linked/list/MergeKSortedLists.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/dp/WordBreakII.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/dp/WordBreak.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/heap/MeetingRoom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/stack/NestedIntegerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/stack/NestedIterator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="902">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/recursive/NestedIterator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1364">
-          <caret line="67" column="28" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/util/stream/Collectors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1078">
-          <caret line="103" column="19" selection-start-line="103" selection-start-column="19" selection-end-line="103" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/dfs/CloneGraph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -2190,13 +2097,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/heap/MeetingRoomII.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -2256,20 +2156,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/junit-4.11-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/string/RegularExpressionMatching.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/design/RandomizedSet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1034">
@@ -2305,7 +2191,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2313,9 +2198,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="616">
           <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2323,9 +2205,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="17" column="100" selection-start-line="17" selection-start-column="100" selection-end-line="17" selection-end-column="100" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2340,10 +2219,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#buildGraph#0;class#AlienDictionaryDFS#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2351,7 +2226,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="704">
           <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2383,25 +2257,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/dfs/GraphValidTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
+        <state relative-caret-position="440">
           <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/union/find/GraphValidTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
+        <state relative-caret-position="66">
           <caret line="3" column="52" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/google/bfs/dfs/bfs/WallAndGatesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="330">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
@@ -2409,66 +2279,198 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/bfs/WallAndGates.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
+        <state relative-caret-position="1298">
           <caret line="60" column="3" selection-start-line="60" selection-start-column="3" selection-end-line="60" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/google/hash/table/HIndexTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
+        <state relative-caret-position="352">
           <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/hash/table/HIndex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
+        <state relative-caret-position="572">
           <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/system/design/TinyURL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/system/design/EncodeAndDecodeTinyUrl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/Tree/DiameterOfBT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="440">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/interview/amazon/online/test/MoviePriorityQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/system/design/TinyURL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1826">
+          <caret line="94" column="3" selection-start-line="94" selection-start-column="3" selection-end-line="94" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/system/design/EncodeAndDecodeTinyUrl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/heap/MeetingRoomII.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/lang/SuppressWarnings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/interview/microsoft/onsite/LetterCombination.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/backtracking/LetterComboOfPhoneNum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/google/design/SerializeDeserializeBTTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="27" column="65" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/design/SerializeDeserializeBT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
           <folding>
-            <element signature="e#146#147#0" expanded="true" />
-            <element signature="e#180#181#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/Tree/BTVerticalOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1364">
+          <caret line="118" column="35" selection-start-line="118" selection-start-column="35" selection-end-line="118" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#verticalOrder#0;class#BTVerticalOrder#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/string/RegularExpressionMatching.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/string/ReadNCharGivenRead4IIMultipleTimes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="946">
+          <caret line="43" column="11" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/union/find/NumberIsland.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/union/find/NumberOfIslands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+          <folding>
+            <element signature="method#UnionFind#0;class#UnionFind#0;class#NumberOfIslands#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/dfs/NumberOfIslands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1210">
+          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/dfs/BinaryTreePath.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="16" column="72" selection-start-line="16" selection-start-column="72" selection-end-line="16" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/google/Tree/BTVerticalOrderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="47" column="62" selection-start-line="47" selection-start-column="62" selection-end-line="47" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ideaLibSources/junit-4.11-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/google/DivideAndConquer/ExpressionAddOperatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/ExpressionAddOperator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>

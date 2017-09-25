@@ -19,14 +19,14 @@ public class MeetingRoomII {
         count--;
         endList.poll();
       }
-      endList.add(intervals[i].end);
+      endList.offer(intervals[i].end);
     }
     return count;
   }
 
   /**
    * this one is faster because PriorityQueue is a heap data structure which is slower than direct array, but the idea is same
-   * Anytime we keep the earliest End_Time and compare it with next start meeting's start time. If start time is later than
+   * Anytime we keep the earliest End_Time and compare it with next meeting's start time. If start time is later than
    * earliest End_Time, we can use that meeting room and update the earliest End_Time.
    */
   public int minMeetingRooms_fastest(Interval[] intervals) {

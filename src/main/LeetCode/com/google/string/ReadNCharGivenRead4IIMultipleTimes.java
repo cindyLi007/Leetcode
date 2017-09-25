@@ -26,18 +26,22 @@ public class ReadNCharGivenRead4IIMultipleTimes {
     int total = 0;
     while (total<n) {
       // num==0 means there is no leftover from prev read
-      if (num==0)
+      if (num==0) {
         num = read4(cache);
-      // num==0 means there is no char read from file to cache, so terminate
-      if (num==0)
-        break;
-      // if not from prev read, ptr is 0, otherwise from prev left position
-      while (ptr<num && total<n)
-        buf[total++] = cache[ptr++];
-      if (ptr>=num) { // have read all chars from cache, reset num and ptr
-        num = 0;
         ptr = 0;
       }
+      // num==0 means there is no char read from file to cache, so terminate
+      if (num==0)
+        return total;
+      // if not from prev read, ptr is 0, otherwise from prev left position
+      for (; ptr<num; ptr++) {
+        buf[total++] = cache[ptr];
+        if (total == n) {
+          ptr++;
+          return total;
+        }
+      }
+      num=0;
     }
     return total;
   }

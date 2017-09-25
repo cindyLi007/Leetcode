@@ -32,9 +32,10 @@ import java.util.Queue;
  * based on the above example, we can find each node's left is in the list just BEFORE it's list, each node's right is
  * in the list just AFTER it's list. So can use a index bound in a nodes to record its position in the res.
  *
- * The idea is we traverse the tree in level order, for each node, record its vertical position, left is parent's index-1,
- * right is parent's index+1, when poll the node out, we put it in the corresponding index list in the map, finally we
- * loop through map from most-left to most-right and write each list to res.
+ * The idea is we traverse the tree in level order(Notice, we must traverse in level order, could not dfs, that is because
+ * for each vertical list, higher level must be in front of lower level.) for each node, record its vertical position,
+ * left is parent's index-1, right is parent's index+1, when poll the node out, we put it in the corresponding index list
+ * in the map, finally we loop through map from most-left to most-right and write each list to res.
  */
 public class BTVerticalOrder {
 
@@ -136,4 +137,5 @@ public class BTVerticalOrder {
     if (root.left!=null) getRange(root.left, range, index-1);
     if (root.right!=null) getRange(root.right, range, index+1);
   }
+
 }

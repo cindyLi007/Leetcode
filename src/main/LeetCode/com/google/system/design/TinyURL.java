@@ -1,11 +1,22 @@
 package com.google.system.design;
 
+import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
+
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 /**
  * Created by ychang on 9/18/2017.
  */
+@Path("")
 public class TinyURL {
   Map<Integer, String> stol; // read
   Map<String, Integer> ltos;  // write
@@ -17,6 +28,23 @@ public class TinyURL {
     ltos = new HashMap();
     counter = 1;
     ELEMENTS = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  }
+
+  @GET
+  @Path("/{shortUrl}")
+  @Produces(MediaType.APPLICATION_JSON)
+  public Response getUrl(@PathParam("shortUrl") String shortUrl) {
+    String originalUrl = shortToLong(shortUrl);
+    URI uri = URI.create(originalUrl);
+    return Response.status(Response.Status.MOVED_PERMANENTLY).location(uri).build();
+  }
+
+  @POST
+  @Path("/")
+  @Consumes(MediaType.APPLICATION_JSON)
+  public Response estimateCosts(String longUrl){
+    String alias = longToShort(longUrl);
+    return Response.ok("{'url' : '" + alias + "'}").build();
   }
 
   // insert a new URL, notice now the shortUrl (alias) is unrelated to url, it is a sequential id rendered from counter

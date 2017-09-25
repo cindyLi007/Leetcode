@@ -12,6 +12,7 @@ import com.google.common.base.Preconditions;
  */
 public class LetterCombination {
   final String[] LETTERS = new String[]{"0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+
   public List<String> letterCombination(String digits) {
     Preconditions.checkArgument(isNotEmpty(digits) && digits.length()==10, "Please enter a valid 10 digit phone number");
 

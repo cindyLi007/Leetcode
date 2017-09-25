@@ -20,10 +20,10 @@ public class ExpressionAddOperatorTest {
     ExpressionAddOperator expressionAddOperator = new ExpressionAddOperator();
 
     // When
-    List<String> strings = expressionAddOperator.addOperators("123", 6);
+    List<String> strings = expressionAddOperator.addOperators("232", 8);
 
     // Then
-    assertThat(strings, is(Arrays.asList("10-5", "1*0+5")));
+    assertThat(strings, is(Arrays.asList("2*3+2", "2+3*2")));
   }
 
 }
