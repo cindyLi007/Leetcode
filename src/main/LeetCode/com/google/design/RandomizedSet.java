@@ -8,7 +8,7 @@ import java.util.Random;
 /**
  * Design a data structure that supports all following operations in average O(1) time.
  * To achieve O(1) time in getRandom, we have to keep a ArrayList which can use get(index) to return a random element.
- * Could not use {@link java.util.LinkedHashSet} or {@link java.util.LinkedHashMap} because both of them do not have get
+ * Could not use {@link java.util.LinkedHashSet} or {@link java.util.LinkedHashMap} because both of them do not have get(index)
  * method.
  */
 public class RandomizedSet {

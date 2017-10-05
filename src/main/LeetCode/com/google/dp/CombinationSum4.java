@@ -35,6 +35,10 @@ public class CombinationSum4 {
   public int combinationSum4_bottomUp(int[] nums, int target) {
     int[] dp=new int[target+1];
     dp[0]=1;
+    /**
+     * for each target, we need loop through all num in nums to find combinations for it. so outer loop is target, inner
+     * loop is nums
+     */
     for (int i=1; i<=target; i++) {
       for (int j=0; j<nums.length; j++) {
         if (i>=nums[j]) dp[i]+=dp[i-nums[j]];

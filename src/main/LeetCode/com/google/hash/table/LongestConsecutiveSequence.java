@@ -10,7 +10,7 @@ import java.util.HashMap;
  */
 public class LongestConsecutiveSequence {
   /**
-   * this can beat 24%
+   * this can beat 64%
    */
   public int longestConsecutive(int[] nums) {
     HashMap<Integer, Integer> map = new HashMap();
@@ -43,18 +43,15 @@ public class LongestConsecutiveSequence {
     if (nums.length==0)
       return 0;
     Arrays.sort(nums);
-    int res = 1, prev = nums[0], cur = 1;
+    int max = 1, temp = 1;
     for (int i = 1; i<nums.length; i++) {
-      if (nums[i]==prev)
-        continue;
-      if (nums[i] - 1==prev) {
-        cur++;
-        res = Math.max(res, cur);
-      } else {
-        cur = 1;
+      if (nums[i] - 1==nums[i - 1]) {
+        temp++;
+        max = Math.max(max, temp);
+      } else if (nums[i]!=nums[i - 1]) {
+        temp = 1;
       }
-      prev = nums[i];
     }
-    return res;
+    return max;
   }
 }

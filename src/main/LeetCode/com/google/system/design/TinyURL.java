@@ -42,7 +42,7 @@ public class TinyURL {
   @POST
   @Path("/")
   @Consumes(MediaType.APPLICATION_JSON)
-  public Response estimateCosts(String longUrl){
+  public Response writeUrl(String longUrl){
     String alias = longToShort(longUrl);
     return Response.ok("{'url' : '" + alias + "'}").build();
   }

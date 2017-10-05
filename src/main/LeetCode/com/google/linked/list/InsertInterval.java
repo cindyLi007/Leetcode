@@ -20,7 +20,10 @@ public class InsertInterval {
     int j = intervals.size() - 1;
     while (j>=0 && intervals.get(j).start>newInterval.end)
       res.add(i, intervals.get(j--));
-    // must have this check to guarantee newInterval is in the middle of intervals and need merge with some interval and intervals is not empty
+    /**
+     * must have this check to guarantee newInterval is in the middle of intervals and need merge with some interval
+     * and intervals is not empty
+     */
     if (res.size()!=intervals.size()) {
       newInterval.start = Math.min(newInterval.start, intervals.get(i).start);
       newInterval.end = Math.max(newInterval.end, intervals.get(j).end);
@@ -91,8 +94,8 @@ public class InsertInterval {
     while (l<=r) {
       int m=l+(r-l)/2, val= left ? intervals.get(m).end : intervals.get(m).start;
       if (val==v) return m;
-      else if (val<v) l=m+1;
-      else r=m-1;
+      else if (val<v) l=m+1; // to find a index in which val<v now m is the clost one
+      else r=m-1; // val>v to find a index in which val>v, now m is the closet one
     }
     return left ? r+1 : l-1;
   }

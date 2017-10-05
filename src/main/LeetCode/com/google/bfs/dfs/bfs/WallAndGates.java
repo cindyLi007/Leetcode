@@ -40,23 +40,25 @@ public class WallAndGates {
   }
 
   // this can beat 85%
+  int[][] dirs = new int[][]{{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
   public void wallsAndGates_dfs_faster(int[][] rooms) {
-    for (int i=0; i<rooms.length; i++) {
-      for (int j=0; j<rooms[0].length; j++) {
-        if (rooms[i][j]==0) dfs(rooms, i, j, 0);
+    int M=rooms.length, N=M==0? 0 : rooms[0].length;
+    if (M==0 || N==0) return;
+    for (int i=0; i<M; i++) {
+      for (int j=0; j<N; j++) {
+        if (rooms[i][j]==0)
+          dfs(rooms, M, N, i, j, 1);
       }
     }
   }
-  private void dfs(int[][] rooms, int x, int y, int dis) {
-    /**
-     * must rooms[x][y]<dis, not rooms[x][y]<=dis, because from a gate, dis=0, if room[x][y]<=dis, will skip all gates
-     */
-    if (x<0 || y<0 || x>=rooms.length || y>=rooms[0].length || rooms[x][y]<dis) return;
-    rooms[x][y]=dis;
-    // use this way instead of dirs[][], faster
-    dfs(rooms, x+1, y, dis+1);
-    dfs(rooms, x-1, y, dis+1);
-    dfs(rooms, x, y+1, dis+1);
-    dfs(rooms, x, y-1, dis+1);
+
+  private void dfs(int[][] rooms, int M, int N, int i, int j, int dis) {
+    for (int[] dir : dirs) {
+      int x=i+dir[0], y=j+dir[1];
+      if (x>=0 && x<M && y>=0 && y<N && rooms[x][y]>dis) {
+        rooms[x][y]=dis;
+        dfs(rooms, M, N, x, y, dis+1);
+      }
+    }
   }
 }

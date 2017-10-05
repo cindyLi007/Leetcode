@@ -14,7 +14,8 @@ public class WordBreak {
     dp[0] = true;
     for (int i = 0; i<s.length(); i++) {
       /**
-       * j from i to 0 is faster than from 0 to i
+       * j from i to 0 is faster than from 0 to i, that is because dp[bigger one} is a combination of of N dp[smaller one]
+       * for dp[bigger one], we only need consider one word, from [j, i+1)
        */
       for (int j = i; j>=0 && !dp[i + 1]; j--) {
         if (dp[j] && dict.contains(s.substring(j, i + 1)))

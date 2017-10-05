@@ -53,11 +53,11 @@ public class MergeInterval {
     Arrays.sort(start);
     Arrays.sort(end);
     List<Interval> res = new LinkedList();
-    for (int i=0, j=0; i<n; i++) {
+    for (int i=1, j=0; i<=n; i++) {
       // j is start, i is end, each time we compare the next interval's start with current's end.
-      if (i==n-1 || start[i+1]>end[i]) {
-        res.add(new Interval(start[j], end[i]));
-        j=i+1;
+      if (i==n || start[i]>end[i-1]) {
+        res.add(new Interval(start[j], end[i-1]));
+        j=i;
       }
     }
     return res;

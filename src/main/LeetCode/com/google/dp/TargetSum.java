@@ -23,8 +23,9 @@ public class TargetSum {
     dp[0]=1;
     for (int num : nums) {
       /**
-       * for each num, loop all sum from high to low to update sum's combination number, each loop for a num is to check
-       * if we use it in sum, whether we can update the sum's combination number. We must from high to low,
+       * for each num, MUST loop all sum from HIGH to LOW to update sum's combination number, each loop for a num is to check
+       * when we use it in a sum, which sum's combination number we can update. We must from HIGH to LOW, because if we loop
+       * from low to high, the higher one will immediately use the just-calculate lower one, that means we use this number twice.
        */
       for (int j=sum; j>=num; j--) {
         dp[j]+=dp[j-num];

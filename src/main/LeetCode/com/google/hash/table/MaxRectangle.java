@@ -47,28 +47,29 @@ public class MaxRectangle {
    */
   public int maximalRectangle_dp(char[][] matrix) {
     if (matrix==null || matrix.length==0 || matrix[0].length==0) return 0;
-    int m=matrix.length, n=matrix[0].length, res=0;
+    int n=matrix[0].length, res=0;
     int[] h=new int[n], left=new int[n], right=new int[n];
     /**
      * notice must first fill right to value n
      */
     Arrays.fill(right, n);
-    for (int i=0; i<m; i++) {
+    for (char[] row : matrix) {
       // curLeft and curRight is to record for current row the left and right bound
       int curLeft=0, curRight=n;
       for (int j=0; j<n; j++) {
-        int v=matrix[i][j];
-        if (v=='0') {
+        if (row[j]=='0') {
           h[j]=0;
-          left[j]=0; // when v=='0', set left[j]=0 mean we only consider curLeft in next row
+          left[j]=0; // when row[j]=='0', set left[j]=0 means we reset it's value, only consider curLeft in next column
           curLeft=j+1;
         } else {
           h[j]++;
+          // left[j] comes from the above row, if left[j] > curLeft, that means in the above rows, there must be some break point
+          // in left[j]-1 which make cur column bar is higher than the left column bar
           left[j]=Math.max(left[j], curLeft);
         }
       }
       for (int j=n-1; j>=0; j--) {
-        if (matrix[i][j]=='0') {
+        if (row[j]=='0') {
           right[j]=n;
           curRight=j;
         } else {

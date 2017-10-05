@@ -18,9 +18,9 @@ public class LRUCache {
      *                         no matter whether we visited after that, so we MUST set it to true to apply LRU
      * Notice if constructor is non-Generic, Map.Entry could not be generic, otherwise there is a compile error
      */
-    map = new LinkedHashMap(capacity, 0.75f, true) {
-      protected boolean removeEldestEntry(Map.Entry eldest) {
-        return this.size()>capacity;
+    map = new LinkedHashMap<Integer, Integer>(capacity, 0.75f, true) {
+      protected boolean removeEldestEntry(Map.Entry<Integer, Integer> eldest) {
+        return size()>capacity;
       }
     };
   }

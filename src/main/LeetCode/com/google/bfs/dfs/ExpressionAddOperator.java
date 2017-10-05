@@ -1,6 +1,7 @@
 package com.google.bfs.dfs;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -39,6 +40,33 @@ public class ExpressionAddOperator {
         dfs(num, target, i, val-curVal, path+"-"+ number, res, -curVal);
         dfs(num, target, i, val-diff+diff*curVal, path+"*"+ number, res, diff*curVal);
       }
+    }
+  }
+
+  public List<String> addOperators_mine(String num, int target) {
+    List<String> res = new LinkedList();
+    dfs(num, target, "", 0, (long) 0, (long) 1, res);
+    return res;
+  }
+
+  private void dfs(String num, int target, String prefix, int index, long sum, long preMul, List<String> res) {
+    if (index==num.length()) {
+      if (target==sum)
+        res.add(prefix);
+      return;
+    }
+    for (int i = index + 1; i<=num.length(); i++) {
+      String sub = num.substring(index, i);
+      long n = Long.parseLong(sub);
+      if (prefix.length()==0)
+        dfs(num, target, "" + n, i, n, preMul*n, res);
+      else {
+        dfs(num, target, prefix + "+" + n, i, sum + n, n, res);
+        dfs(num, target, prefix + "-" + n, i, sum - n, -n, res);
+        dfs(num, target, prefix + "*" + n, i, sum - preMul + preMul*n, preMul*n, res);
+      }
+      if (sub.charAt(0)=='0')
+        i = num.length() + 1;
     }
   }
 }

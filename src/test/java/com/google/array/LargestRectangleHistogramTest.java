@@ -21,4 +21,19 @@ public class LargestRectangleHistogramTest {
     assertThat(maxArea, is(10));
   }
 
+  @Test
+  public void largestRectangleArea_stack() throws Exception {
+    // Given
+    LargestRectangleHistogram lrh = new LargestRectangleHistogram();
+    int[] heights = new int[]{0, 1, 0, 1};
+
+    // When
+    int maxArea = lrh.largestRectangleArea_stack(heights);
+
+    // Than
+    assertThat(maxArea, is(1));
+  }
+
+
+
 }

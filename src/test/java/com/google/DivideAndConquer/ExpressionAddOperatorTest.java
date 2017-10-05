@@ -1,9 +1,8 @@
 package com.google.DivideAndConquer;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.Is.is;
+import static org.hamcrest.Matchers.hasItems;
 
-import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Test;
@@ -20,10 +19,10 @@ public class ExpressionAddOperatorTest {
     ExpressionAddOperator expressionAddOperator = new ExpressionAddOperator();
 
     // When
-    List<String> strings = expressionAddOperator.addOperators("232", 8);
+    List<String> strings = expressionAddOperator.addOperators("105", 5);
 
     // Then
-    assertThat(strings, is(Arrays.asList("2*3+2", "2+3*2")));
+    assertThat(strings, hasItems("1*0+5", "10-5"));
   }
 
 }

@@ -9,26 +9,25 @@ public class MaximalSquare {
   /**
    * Top, Left, and Top Left decides the size of the square. If all of them are same, then the size of square increases by 1.
    * If they're not same, they can increase by 1 to the minimal square.
-   * this can beat 24%
+   * this can beat 67%
    */
   public int maximalSquare(char[][] matrix) {
-    if (matrix.length==0)
-      return 0;
-    int m = matrix.length, n = matrix[0].length;
+    int M = matrix.length, N = M==0 ? 0 : matrix[0].length;
+    if (M==0 || N==0) return 0;
     /**
      * dp is aux to record a cell's max_length, we loop from matrix[0][0], but save it in dp[1][1], because we use
      * dp[0][j] and dp[i][0] which are all 0s for left side and top side calculation.
      */
-    int[][] dp = new int[m + 1][n + 1];
+    int[][] dp = new int[M + 1][N + 1];
     int res = 0;
-    for (int i = 1; i<=m; i++) {
-      for (int j = 1; j<=n; j++) {
-        if (matrix[i - 1][j - 1]=='1') {
+    for (int i=0; i<M; i++) {
+      for (int j=0; j<N; j++) {
+        if (matrix[i][j]=='1') {
           /**
            * we need not check all top and left and top_left , just check one top, left and top_left step.
            */
-          dp[i][j] = Math.min(Math.min(dp[i - 1][j], dp[i][j - 1]), dp[i - 1][j - 1]) + 1;
-          res = Math.max(res, dp[i][j]);
+          dp[i+1][j+1]=Math.min(dp[i][j+1], Math.min(dp[i+1][j], dp[i][j]))+1;
+          res=Math.max(res, dp[i+1][j+1]);
         }
       }
     }

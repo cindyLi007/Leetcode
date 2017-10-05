@@ -13,4 +13,15 @@ public class RemoveDuplicated {
     }
     return i + 1;
   }
+
+  public int removeDuplicates_II(int[] nums) {
+    int i=0;
+    for (int j=2; j<nums.length; j++) {
+      if (nums[j]!=nums[i]) {
+        i+=2;
+        nums[i]=nums[j];
+      }
+    }
+    return i+1;
+  }
 }

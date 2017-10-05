@@ -31,6 +31,9 @@ public class RemoveInvalidParentheses {
       ans.add(reversed);
   }
 
+  /**
+   * this one is not correct, has duplicated string in result
+   */
   public List<String> removeInvalidParentheses_mine(String s) {
     List<String> res = new LinkedList();
     remove(s, res, 0, new char[]{'(', ')'});
@@ -38,8 +41,7 @@ public class RemoveInvalidParentheses {
     return res;
   }
   /**
-   * start is the index from which we begin to scan "(" and ")", that means sbustring[0, i-1] is valid
-   *
+   * start is the index from which we begin to scan "(" and ")", that means substring[0, i-1] is valid
    */
   private void remove(String s, List<String> res, int start, char[] ch) {
     int count=0;

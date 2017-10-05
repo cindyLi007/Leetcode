@@ -18,7 +18,7 @@ public class CloneGraph {
   public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
     if (node==null)
       return null;
-    return dfs(node, new HashMap<Integer, UndirectedGraphNode>());
+    return dfs(node, new HashMap<>());
   }
 
   private UndirectedGraphNode dfs(UndirectedGraphNode node, Map<Integer, UndirectedGraphNode> map) {

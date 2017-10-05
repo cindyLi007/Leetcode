@@ -8,7 +8,7 @@ import java.util.Stack;
  */
 public class LargestRectangleHistogram {
   /**
-   * For each column, find from 0 to it maxArea. For each column, we need NOT care from it to heights.length-1, because
+   * For each column, find from 0 to it's maxArea. For each column, we need NOT care from it to heights.length-1, because
    * next columns with consider it. this can beat 91%
    */
   public int largestRectangleArea(int[] heights) {
@@ -38,10 +38,13 @@ public class LargestRectangleHistogram {
     int i=0, maxArea=0;
     int[] h = Arrays.copyOf(heights, heights.length+1);
     while (i<h.length) {
-      // stack only keep a non-decreasing sequence
+      /** stack only keep a non-decreasing sequence, must push index which height equals to stack.peek() to stack, that is
+       *  because i maybe not adjacent with stack.peek(), for example, [0, 1, 0, 1], if we don't put index 2 to stack, when
+       *  we go to the last index, the stack.peek() is 0, we assume from index 3 to index 0, all height is >=1 which is wrong
+       */
       if (stack.isEmpty() || h[i]>=h[stack.peek()]){
         stack.push(i++);
-      } else {
+      } else if (h[i]<h[stack.peek()]){
         int j = stack.pop();
         /**
          * when stack is empty, width is i, which means from 0 to i-1, all column is >=h[j] (otherwise, stack can not be

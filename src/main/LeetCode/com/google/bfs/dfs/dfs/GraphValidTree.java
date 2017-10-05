@@ -24,11 +24,11 @@ public class GraphValidTree {
   }
 
   private boolean dfs(Set<Integer>[] graph, int node, boolean[] visited, int parent) {
-    if (visited[node])
-      return true;
+    /*if (visited[node])
+      return true;*/
     visited[node] = true;
     for (Integer n : graph[node]) {
-      /** if a neighbor has been visited, but not this node's direct parent, there must be a cycle, for example
+      /** if a neighbor has been visited, but not from this node's direct parent, there must be a cycle, for example
        * [1, 2], [2, 3], [1, 3], when we go to 3, 1 is it's neighbor, but 3's parent is 2, so there is a cycle
        */
       if (visited[n] && parent!=n || !visited[n] && !dfs(graph, n, visited, node))
@@ -38,14 +38,14 @@ public class GraphValidTree {
   }
 
   private Set<Integer>[] buildGraph(int n, int[][] edges) {
-    Set<Integer>[] map = new HashSet[n];
+    Set<Integer>[] set = new HashSet[n];
     for (int i = 0; i<n; i++)
-      map[i] = new HashSet();
+      set[i] = new HashSet();
     for (int[] edge : edges) {
       int x = edge[0], y = edge[1];
-      map[x].add(y);
-      map[y].add(x);
+      set[x].add(y);
+      set[y].add(x);
     }
-    return map;
+    return set;
   }
 }
