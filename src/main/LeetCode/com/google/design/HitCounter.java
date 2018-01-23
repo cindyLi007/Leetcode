@@ -4,32 +4,43 @@ package com.google.design;
  * Created by ychang on 3/31/2017.
  */
 public class HitCounter {
-  int[] count;
-  int start, sum;
+  private int[] times;
+  private int[] hits;
 
-  /** Initialize your data structure here. */
+  /**
+   * Initialize your data structure here.
+   */
   public HitCounter() {
-    count = new int[300];
-    start = 1;
-    sum = 0;
+    times = new int[300];
+    hits = new int[300];
   }
 
-  /** Record a hit.
-   @param timestamp - The current timestamp (in seconds granularity). */
+  /**
+   * Record a hit.
+   * @param timestamp - The current timestamp (in seconds granularity).
+   */
   public void hit(int timestamp) {
-    count[(timestamp-start)%300]++;
-    sum++;
+    int index = timestamp%300;
+    if (times[index]!=timestamp) {
+      times[index] = timestamp;
+      hits[index] = 1;
+    } else {
+      hits[index]++;
+    }
   }
 
-  /** Return the number of hits in the past 5 minutes.
-   @param timestamp - The current timestamp (in seconds granularity). */
+  /**
+   * Return the number of hits in the past 5 minutes.
+   * @param timestamp - The current timestamp (in seconds granularity).
+   */
   public int getHits(int timestamp) {
-    if (timestamp-start>=300) {
-      for (; start<timestamp-299; start++) {
-        sum-=count[start%300];
-        count[start%300]=0;
+    int total = 0;
+    for (int i = 0; i<300; i++) {
+      if (timestamp - times[i]<300) {
+        total += hits[i];
       }
     }
-    return sum;
+    return total;
   }
+
 }
