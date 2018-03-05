@@ -1,6 +1,6 @@
 package interview.microsoft.onsite;
 
-import static org.apache.commons.lang.StringUtils.isNotEmpty;
+import static org.apache.commons.lang3.StringUtils.isNotEmpty;
 
 import java.util.LinkedList;
 import java.util.List;
