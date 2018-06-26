@@ -7,11 +7,12 @@ import java.util.Queue;
 /**
  * Created by ychang on 3/1/2017.
  */
-public class BTLeverOrderTraverse {
+public class BTLevelOrderTraverse {
   /**
    * beat 41%
    */
   public List<List<Integer>> levelOrder(TreeNode root) {
+    // use LinkedList is faster than ArrayList
     List<List<Integer>> res = new LinkedList();
     if (root==null) return res;
     Queue<TreeNode> queue = new LinkedList();

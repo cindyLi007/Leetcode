@@ -2,12 +2,15 @@ package com.google.string;
 
 /**
  * Created by ychang on 7/23/2017.
+ * Leetcode 186
+ *
  * Given an input string, reverse the string word by word. A word is defined as a sequence of non-space characters.
  * The input string does not contain leading or trailing spaces and the words are always separated by a single space.
  * For example,
  * Given s = "the sky is blue",
  * return "blue is sky the".
  * Could you do it in-place without allocating extra space?
+ *
  * NOTICE: Java is parse by value, which means when we parse an array, we can only change the value of array[i], but if we set
  * array = a new array, outside the method, the array is still the original one. that is the reason we can only do it in-place
  * for example, if we create a new char[] with word-reversed-value, and we set it to s, outside the reverseWords method, the
@@ -15,20 +18,19 @@ package com.google.string;
  */
 public class ReverseWordsII {
   public void reverseWords(char[] s) {
-    int start = 0, end = s.length - 1;
-    if (start>=end)
-      return;
+    int N=s.length;
+
     // 1. reverse whole string, so all words are reversed
-    reverse(s, start, end);
+    reverse(s, 0, N-1);
+
     // 2. reverse each word back
-    for (int i = 0; i<=end; i++) {
-      if (s[i]==' ') {
+    int start=0;
+    for (int i = 1; i<=N; i++) {
+      if (i==N || s[i]==' ') {
         reverse(s, start, i - 1);
         start = i + 1;
       }
     }
-    // 3. handle the last word or there is only one word in the char array
-    reverse(s, start, end);
   }
 
   private void reverse(char[] str, int s, int e) {

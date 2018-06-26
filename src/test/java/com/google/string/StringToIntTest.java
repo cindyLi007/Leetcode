@@ -18,7 +18,7 @@ public class StringToIntTest {
     System.out.println(c);
 
     // When
-    int i = stringToInt.myAtoi("    010");
+    int i = stringToInt.myAtoi("-91283472332");
 
     // Then
     assertThat(i, is(10));

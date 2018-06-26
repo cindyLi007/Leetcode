@@ -14,7 +14,7 @@ package com.google.string;
 public class AddStrings {
 
   public String addStrings(String num1, String num2) {
-    // always make num1 is the longer string
+    // always make num1 is the longer string, could not swap strings in a method since Java is pass-by-value
     if (num1.length() < num2.length()) {
       String temp = num1;
       num1 = num2;
@@ -26,6 +26,9 @@ public class AddStrings {
       int n1=ch1[i--]-'0', n2=j>=0 ? ch2[j--]-'0' : 0;
       int sum=n1+n2+carry;
       if (sum>9) {
+        /**
+         * Notice, when convert digits to char, must ADD '0' and cast to char
+         */
         ch1[i+1]=(char)(sum%10 + '0');
         carry=1;
       } else {
@@ -33,15 +36,13 @@ public class AddStrings {
         carry=0;
       }
     }
+    /**
+     * java is pass-by-value, so this will not change the value of String num1, num2
+     */
     if (carry==1) {
       return "1"+String.valueOf(ch1);
     }
     return String.valueOf(ch1);
   }
-
-  private void swap(String num1, String num2) {
-
-  }
-
 
 }
