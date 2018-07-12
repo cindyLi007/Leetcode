@@ -50,6 +50,8 @@ public class IntersectionOfTwoLinkedList {
     if (headA==null || headB==null) return null;
     ListNode pa = headA, pb = headB;
     while (pa!=pb) {
+      // please notice, must check pa==null instead of pa.next == null, otherwise, TLE, cause we never hit null for 2
+      // non intersection list.
       pa = pa==null ? headB : pa.next;
       pb = pb==null ? headA : pb.next;
     }

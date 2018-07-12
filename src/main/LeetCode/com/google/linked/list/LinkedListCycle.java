@@ -2,6 +2,11 @@ package com.google.linked.list;
 
 /**
  * Created by ychang on 1/31/2017.
+ *
+ * O(N)
+ * suppose there is K nodes from head to Start_of_Loop, when slow enters loop, it steps K, fast steps 2K, which means
+ * fast enters loop K steps, so fast behind slow (loopSize-K) steps, it will take (loopSize-K) steps to catch slow
+ * when fast and slow meet in line 18, slow enters loop (loopSize-K) step, which means slow need take K steps to reach Start_of_Loop
  */
 public class LinkedListCycle {
   public ListNode detectCycle(ListNode head) {
@@ -23,7 +28,7 @@ public class LinkedListCycle {
     }
 
     /** Move slow to Head. Keep fast at Meeting Point. Each are k steps from the Loop Start. If they move at the same pace,
-     * they must meet at Loop Start. k is the distance from start start to cycle entry point
+     * they must meet at Loop Start. k is the distance from head to cycle entry point
      */
     slow = head;
     while (slow!=fast) {

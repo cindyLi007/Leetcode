@@ -5,11 +5,10 @@ package com.google.math;
  */
 public class ExcelSheetColumnNumber {
   public int titleToNumber(String s) {
-    if (s==null || s.length()==0) return 0;
-    int res=0;
-    for (int i=s.length()-1, j=0; i>=0; i--, j++) {
-      int num = (s.charAt(i)-'A'+1) * (int)Math.pow(26,j);
-      res+=num;
+    int res =0;
+    for (int i=0; i<s.length(); i++) {
+      int i1 = (s.charAt(i) - 'A') + 1;
+      res = res*26 + i1;
     }
     return res;
   }
