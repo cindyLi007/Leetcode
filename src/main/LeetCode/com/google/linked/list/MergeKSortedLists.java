@@ -6,12 +6,12 @@ import java.util.PriorityQueue;
  * Created by ychang on 3/6/2017.
  */
 public class MergeKSortedLists {
-  // this can beat 25%
+  // this can beat 25%, Time: O(N*logK), N is number of total nodes, K is number of list, Space: O(K)
   public ListNode mergeKLists_priorityQueue(ListNode[] lists) {
     /**
      * IMPORTANT, must have <> when new PriorityQueue, because we use Lambda
      */
-    PriorityQueue<ListNode> pq = new PriorityQueue<>((l1, l2) -> l1.val - l2.val);
+    PriorityQueue<ListNode> pq = new PriorityQueue<>(lists.length, (l1, l2) -> l1.val - l2.val);
     for (ListNode node : lists) {
       if (node!=null)
       /**
@@ -31,7 +31,7 @@ public class MergeKSortedLists {
   }
 
   /**
-   * this divide and conquer can beat 84%
+   * this divide and conquer can beat 84%, Time: O(N*logK), Space: O(k) given recursive
    */
   public ListNode mergeKLists(ListNode[] lists) {
     if (lists.length==0) return null;

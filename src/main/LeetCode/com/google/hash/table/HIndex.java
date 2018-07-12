@@ -50,4 +50,22 @@ public class HIndex {
     }
     return 0;
   }
+
+  public int hIndex_woExtraSpaceOrChangeInput(int[] citations) {
+    int len = citations.length;
+    int res = 0;
+    for (int i = 0; i < len; i++) {
+      if (citations[i] <= res) continue;
+      // sum is the number of paper whose citation is >= citations[i]
+      int sum = 0;
+      for (int j = 0; j < len; j++) {
+        if (citations[j] >= citations[i]) sum++;
+      }
+      // between sum and citations[i], must choose min val.
+      // for example, [1,1] sum is 2, but res should be 1. [100] res should be 1
+      res = Math.max(res, Math.min(sum, citations[i]));
+    }
+
+    return res;
+  }
 }

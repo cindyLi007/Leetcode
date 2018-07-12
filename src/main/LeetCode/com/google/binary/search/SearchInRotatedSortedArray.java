@@ -4,28 +4,29 @@ package com.google.binary.search;
  * Created by ychang on 1/25/2017.
  */
 public class SearchInRotatedSortedArray {
+
+  // Time: O(logN), Space: O(1)
   public int search(int[] nums, int target) {
     int low = 0, high = nums.length - 1;
-    while (low<=high) {
-      if (low==high)
-        return nums[low]==target ? low : -1;
-      int mid = low + (high - low)/2;
-      if (nums[mid]==target)
+
+    while (low <= high) {
+      int mid = low + (high - low) / 2;
+      if (nums[mid] == target)
         return mid;
+
       /**
-       * a rotated part mean the greatest and least element all in this part, so to make sure target in it, we need check
-       * both > and <
+       * we need first determine the rotated part is in left or right
        */
-      if (nums[mid]>nums[high]) { // rotate happen in [mid+1, high]
-        if (target<nums[low] || target>nums[mid])
+      if (nums[mid] > nums[high]) { // rotate happen in [mid+1, high], the sorted part is [low, mid+1]
+        if (target >= nums[low] && target < nums[mid]) { // the target is in the sorted part
+          high = mid - 1;
+        } else
+          low = mid + 1;
+      } else { // rotate happen in [low, mid], sorted part is [mid, high]
+        if (target > nums[mid] && target <= nums[high])
           low = mid + 1;
         else
           high = mid - 1;
-      } else { // rotate happen in [low, mid]
-        if (target>nums[high] || target<nums[mid])
-          high = mid - 1;
-        else
-          low = mid + 1;
       }
     }
     return -1;

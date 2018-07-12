@@ -4,6 +4,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.stream.IntStream;
+
 /**
  * Created by ychang on 10/16/2016.
  */
@@ -20,7 +22,7 @@ public class PrimeCheckTesterTest {
     // Given
 
     // When
-    boolean result = primeCheckTester.isPrime(4);
+    boolean result = primeCheckTester.isPrime(10);
 
     // Then
     Assert.assertFalse(result);

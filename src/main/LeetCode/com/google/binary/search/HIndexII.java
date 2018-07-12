@@ -5,19 +5,21 @@ package com.google.binary.search;
  */
 public class HIndexII {
   /**
-   * this can beat 77%
+   * this can beat 100% Time: O(lgN)
    */
   public int hIndex(int[] citations) {
-    int l = 0, N = citations.length, h = N - 1;
-    while (l<=h) {
-      int mid = l + (h - l)/2;
-      if (citations[mid]==(N - mid)) // [0, 1, 3, 5, 6] mid=2, N=5 citations[2]=3 == (5-2)
-        return N - mid;
-      if (citations[mid]>(N - mid)) // [56, 57, 68] citations[1]>(3-1)
-        h = mid - 1;
-      else
-        l = mid + 1; // [0, 0, 0] citation[1]=0<(3-1)
+    int len=citations.length;
+    int low=0, high=len-1;
+    while (low<=high) {
+      int mid = low+(high-low)/2;
+      if (len-mid<=citations[mid]) {
+        // since array is sorted, we can guarantee that there are at least (len-mid) papers whose value >= citations[mid]
+        high=mid-1;
+      }
+      else {
+        low=mid+1;
+      }
     }
-    return N - l; //[100] h=-1, l=0, N-l=1
+    return len-low;
   }
 }

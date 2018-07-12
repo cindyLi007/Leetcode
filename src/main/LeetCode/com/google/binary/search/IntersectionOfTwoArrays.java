@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /**
  * Created by ychang on 1/28/2017.
@@ -22,6 +23,14 @@ public class IntersectionOfTwoArrays {
         res.add(i);
       }
     }
+
+    // int i=0;
+    // int[] a = new int[res.size()];
+    // for (int num : res) {
+    //     a[i++]=num;
+    // }
+
+    // This is much slower than directly create an array and copy one-by-one from set to array as above
     return set.stream().mapToInt(i->i).toArray();
   }
 
