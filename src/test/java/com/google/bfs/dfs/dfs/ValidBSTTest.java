@@ -18,7 +18,7 @@ public class ValidBSTTest {
     ValidBST validBST = new ValidBST();
 
     // When
-    boolean isValid = validBST.isValidBST(root);
+    boolean isValid = validBST.isValidBST_BFS(root);
 
     // Then
     assertThat(isValid, is(Boolean.FALSE));

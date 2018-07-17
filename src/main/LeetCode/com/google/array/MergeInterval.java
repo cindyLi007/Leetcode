@@ -2,6 +2,7 @@ package com.google.array;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -12,31 +13,25 @@ import java.util.List;
  */
 public class MergeInterval {
   /**
-   * this one can beat only 5%
+   * this one can beat only 38%
+   * Time: O(NlgN), Space: O(1)
    */
   public List<Interval> merge(List<Interval> intervals) {
-    if (intervals==null || intervals.size()<=1)
-      return intervals;
-    Collections.sort(intervals, (i1, i2) -> i1.start - i2.start);
-    int start = intervals.get(0).start, end = intervals.get(0).end;
-    List<Interval> result = new LinkedList();
-    for (int i = 1; i<intervals.size(); i++) {
-      Interval cur = intervals.get(i);
-      if (cur.start<=end) {
-        end = Math.max(end, cur.end);
+    intervals.sort(Comparator.comparingInt(a -> a.start));
+    int i=1;
+    while (i<intervals.size()) {
+      if (intervals.get(i).start<=intervals.get(i-1).end) {
+        intervals.get(i-1).end = Math.max(intervals.get(i-1).end, intervals.get(i).end);
+        intervals.remove(i);
       } else {
-        result.add(new Interval(start, end));
-        start = cur.start;
-        end = cur.end;
+        i++;
       }
     }
-    // must add the last interval here
-    result.add(new Interval(start, end));
-    return result;
+    return intervals;
   }
 
   /**
-   * this one can beat 92%, similar with meeting room II
+   * this one can beat 100%, similar with meeting room II
    * {@link com.google.heap.MeetingRoomII}
    */
   public List<Interval> merge_faster(List<Interval> intervals) {
