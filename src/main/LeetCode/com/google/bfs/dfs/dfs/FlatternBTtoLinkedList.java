@@ -18,7 +18,7 @@ public class FlatternBTtoLinkedList {
       return leftTail.right!=null ? flat(leftTail.right) : leftTail;
     }
     /**
-     * since after 1ine 12, we know either left or right is not null or both is not null, if we go line 23, that means
+     * since after 1ine 12, we know either left or right is not null or both is not null, if we go line 24, that means
      * left is null, so right must not be null, need NOT to check
      */
     return flat(root.right);

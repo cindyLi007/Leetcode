@@ -41,7 +41,7 @@ public class TrieTree<V> {
   }
 }
 
-class TrieNode {
-  Object value;
+class TrieNode<T> {
+  T value;
   TrieNode[] next = new TrieNode[26];
 }

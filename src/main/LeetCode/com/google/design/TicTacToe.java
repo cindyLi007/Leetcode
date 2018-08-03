@@ -33,6 +33,7 @@ public class TicTacToe {
    * 1: Player 1 wins.
    * 2: Player 2 wins.
    */
+  // Time: O(1)
   public int move(int row, int col, int player) {
     int num = player==1 ? 1 : -1;
     rows[row] += num;

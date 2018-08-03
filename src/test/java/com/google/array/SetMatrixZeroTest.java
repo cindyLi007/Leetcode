@@ -10,7 +10,7 @@ public class SetMatrixZeroTest {
   public void setZeroes() throws Exception {
     // Given
     SetMatrixZero setMatrixZero = new SetMatrixZero();
-    int[][] array = new int[][]{{1}};
+    int[][] array = new int[][]{{0, 1, 2, 0}, {3, 4, 5, 2}, {1, 3, 1, 5}};
 
     // When
     setMatrixZero.setZeroes(array);

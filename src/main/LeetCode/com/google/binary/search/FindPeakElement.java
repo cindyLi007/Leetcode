@@ -1,10 +1,13 @@
 package com.google.binary.search;
 
+import java.sql.Time;
+
 /**
  * Created by ychang on 1/26/2017.
  * It can be converted to find the max in array, binary search
  */
-public class FindPeekElement {
+public class FindPeakElement {
+  // Time: O(lgN)
   public int findPeakElement(int[] nums) {
     int lo = 0, hi = nums.length - 1;
     while (lo<hi) {

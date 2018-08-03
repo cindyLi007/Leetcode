@@ -17,6 +17,24 @@ public class LowestCommonAncestorBST {
     return root;
   }
 
+  // Time: O(h)
+  public TreeNode lowestCommonAncestor_iter(TreeNode root, TreeNode p, TreeNode q) {
+    if (root==null) return null;
+    TreeNode min = p.val<q.val ? p : q;
+    TreeNode max = p.val<q.val ? q : p;
+    // try to find the 1st node which val>min && val<max, which means the 2 nodes are in its left and right subTree,
+    // so there must be while
+    while (root.val<min.val || root.val>max.val) {
+      while (root.val<min.val) {
+        root = root.right;
+      }
+      while (root.val>max.val) {
+        root=root.left;
+      }
+    }
+    return root;
+  }
+
   public int nextValue(TreeNode root, int value) {
     if (root==null) return Integer.MIN_VALUE;
     if (root.val<=value) {

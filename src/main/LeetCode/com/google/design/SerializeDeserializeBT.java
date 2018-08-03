@@ -6,7 +6,7 @@ import java.util.LinkedList;
 
 /**
  * Created by ychang on 3/19/2017.
- * The key point of this problem is for each node eve it is null, we need have val for it
+ * The key point of this problem is for each node even it is null, we need have val for it
  */
 public class SerializeDeserializeBT {
   // Encodes a tree to a single string.

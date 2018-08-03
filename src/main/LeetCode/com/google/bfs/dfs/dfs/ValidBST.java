@@ -60,6 +60,7 @@ public class ValidBST {
     }
   }
 
+  // Time: O(N), Space: O(N)
   public boolean isValidBST_BFS(TreeNode root) {
     if (root == null) return true;
     Deque<QueueEntry> queue = new ArrayDeque<>();
