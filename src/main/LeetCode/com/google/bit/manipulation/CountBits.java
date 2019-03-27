@@ -11,21 +11,20 @@ package com.google.bit.manipulation;
  * For num = 5 you should return [0,1,1,2,1,2].
  */
 public class CountBits {
-  public int[] countBits(int num) {
-    int[] res = new int[num + 1];
-    if (num == 0)
-      return res;
-    res[1] = 1;
-    for (int i = 2; i <= num; i++) {
-      // since a number mod 2 is 0 means the most right digit is 0, so we can use the number of (num>>1)
-      // for example 1110, >> is 111, # of 1 is same.
-      if (i % 2 == 0)
-        res[i] = res[i / 2];
-      // a number mod 2 is 1 means the most right digit is 1, so we can use the number of (num>> 1) + 1
-      // for example, 1111, >> is 111, # of 1 is (# of 111 + 1)
-      else
-        res[i] = res[i / 2] + 1;
+    public int[] countBits(int num) {
+        int[] res = new int[num + 1];
+        res[0] = 0;
+        for (int i = 1; i <= num; i++) {
+            if (i % 2 == 0) {
+                // since a number mod 2 is 0 means the most right digit is 0, so we can use the number of (num>>1)
+                // for example 1110, >> is 111, # of 1 is same.
+                res[i] = res[i / 2];
+            } else {
+                // a number mod 2 is 1 means the most right digit is 1, so we can use the number of (num>> 1) + 1
+                // for example, 1111, >> is 111, # of 1 is (# of 111 + 1)
+                res[i] = res[i / 2] + 1;
+            }
+        }
+        return res;
     }
-    return res;
-  }
 }

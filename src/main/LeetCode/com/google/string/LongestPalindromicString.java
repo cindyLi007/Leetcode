@@ -13,7 +13,8 @@ public class LongestPalindromicString {
     if (s.length()<=1) return s;
     start=0;
     max=1;
-    for (int i=0; i<s.length()-1; i++) {
+    // if (len-i)*2 < max, stop => i>(2*len-max)/2 stop
+    for (int i=0; i<s.length()-max/2; i++) {
       /**
        * we need consider odd and even 2 cases for each i
        */
@@ -50,11 +51,13 @@ public class LongestPalindromicString {
     */
     for (int i=len-1; i>=0; i--) {
       for (int j=i; j<len; j++) {
-        if (i==j) dp[i][j]=true;
-        else {
-          dp[i][j]= s.charAt(i)==s.charAt(j) && (j-i<=2 || dp[i+1][j-1]);
-          if (dp[i][j] && j-i+1>res.length()) {
-            res=s.substring(i, j+1);
+        if (s.charAt(i) == s.charAt(j)) {
+          if (i==j || i+1==j // this check is to guarantee that we only check dp[i][j] where i<=j
+          || dp[i+1][j-1]) {
+            dp[i][j]=true;
+          }
+          if (dp[i][j] && j-i+1 > res.length()) {
+            res = s.substring(i, j+1);
           }
         }
       }

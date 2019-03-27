@@ -30,4 +30,38 @@ public class ValidSudoku {
     }
     return true;
   }
+
+  // Time: O(N*N), Space: O(N), N is the board.length
+  public boolean isValidSudoku_ezUnderstand(char[][] board) {
+    for (int i=0; i<9; i++) {
+      if (hasDuplicated(board, i, i+1, 0, 9)||hasDuplicated(board, 0, 9, i, i+1)) {
+        return false;
+      }
+    }
+    // a 9*9 board can be divide 3*3 cube to check.
+    for (int i=0; i<3; i++) {
+      for (int j=0; j<3; j++) {
+        if (hasDuplicated(board, i*3, (i+1)*3, j*3, (j+1)*3)) {
+          return false;
+        }
+      }
+    }
+    return true;
+  }
+
+  /**
+   * check whether this is duplicated value from in [rowStart, rowEnd)[columnStart, columnEnd)
+   */
+  private boolean hasDuplicated(char[][] b, int rowStart, int rowEnd, int columnStart, int columnEnd) {
+    Set<Character> set = new HashSet<>();
+    for (int i=rowStart; i<rowEnd; i++) {
+      for (int j=columnStart; j<columnEnd; j++) {
+        if (b[i][j]!='.' && set.contains(b[i][j])) {
+          return true;
+        }
+        set.add(b[i][j]);
+      }
+    }
+    return false;
+  }
 }

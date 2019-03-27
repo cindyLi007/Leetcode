@@ -1,12 +1,6 @@
 package com.google.bfs.dfs.bfs;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Queue;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by ychang on 3/5/2017.
@@ -84,6 +78,71 @@ public class WordLadderII {
         dfs(map, list, word, beginWord, res);
         list.remove(0);
       }
+    }
+  }
+
+  int len;
+
+  public List<List<String>> findLadders_Graph(String beginWord, String endWord, List<String> wordList) {
+    Set<String> D = new HashSet<>(wordList);
+    len = beginWord.length();
+    Queue<Vertex> queue = new ArrayDeque<>();
+    List<String> removingString = new ArrayList<>();
+    queue.add(buildGraph(beginWord, new ArrayList<String>(), D, removingString));
+    List<List<String>> res = new ArrayList<>();
+    boolean found = false;
+
+    while (!queue.isEmpty() && !found) {
+      int size = queue.size();
+      for (int i=0; i<size; i++) {
+        Vertex v = queue.remove();
+        for (String n : v.neighbors) {
+          if (n.equals(endWord)) {
+            v.previousPath.add(n);
+            res.add(v.previousPath);
+            found = true;
+            break;
+          } else {
+            Vertex next = buildGraph(n, new ArrayList(v.previousPath), D, removingString);
+            if (next.neighbors.size() > 0) {
+              queue.add(next);
+            }
+          }
+        }
+      }
+      D.remove(removingString);
+      removingString.clear();
+    }
+
+    return res;
+  }
+
+  private Vertex buildGraph(String word, List<String> prevPath, Set<String> D, List<String> removingString) {
+    Vertex v = new Vertex(word, prevPath);
+    for (int i=0; i<len; i++) {
+      char[] chars = word.toCharArray();
+      for (char c='a'; c<='z'; c++) {
+        chars[i]=c;
+        String s = String.valueOf(chars);
+        if (D.contains(s)) {
+          removingString.add(s);
+          v.neighbors.add(s);
+        }
+      }
+    }
+    return v;
+  }
+
+  private class Vertex {
+    List<String> previousPath;
+    String label;
+    List<String> neighbors;
+
+    Vertex(String word, List<String> prevPath) {
+      label = word;
+      previousPath = prevPath;
+      previousPath.add(label);
+      neighbors = new ArrayList<>();
     }
   }
 }

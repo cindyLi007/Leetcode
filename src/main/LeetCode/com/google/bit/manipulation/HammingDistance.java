@@ -10,8 +10,8 @@ public class HammingDistance {
     int diff = x^y;
     int res=0;
     while (diff!=0) {
-      if ((diff&1)==1) res++;
-      diff>>=1;
+      res++;
+      diff &= diff-1;
     }
     return res;
   }

@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
  * Created by grchan on 7/26/2018
  */
 public class Permutations {
+  // O(n*n!)
   public List<List<Integer>> permute(int[] nums) {
     List<Integer> list = new ArrayList<>();
     for (int i : nums) {

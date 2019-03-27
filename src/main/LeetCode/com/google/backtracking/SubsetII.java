@@ -8,43 +8,31 @@ import java.util.List;
  * Created by ychang on 5/11/2017.
  */
 public class SubsetII {
-  /**
-   * use ArrayList is faster than LinkedList
-   */
+  // Time: O(n!), Space: O(N)
   public List<List<Integer>> subsetsWithDup(int[] nums) {
-    Arrays.sort(nums);
-    List<List<Integer>> res = new ArrayList();
-    res.add(new ArrayList());
-
-    for (int i=0; i<nums.length; i++) {
-      List<List<Integer>> temp = new ArrayList();
-      for (List<Integer> list : res) {
-        List<Integer> cur = new ArrayList(list);
-        cur.add(nums[i]);
-        temp.add(cur);
-      }
-      res.addAll(temp);
-      /**
-       * for duplicated element, we only add it to new created lists, not existing lists. For example, [], [1]
-       * when we add 2, we got [], [1], [2], [1, 2], so if next element is also 2, we could not add it to [], [1], we can
-       * only add it to [2], [1, 2],
-       */
-      while (i<nums.length-1 && nums[i+1]==nums[i]) {
-        i++;
-        List<List<Integer>> dup = new ArrayList();
-        for (List<Integer> list : temp) {
-          List<Integer> cur = new ArrayList(list);
-          cur.add(nums[i]);
-          dup.add(cur);
-        }
-        temp=dup;
-        res.addAll(temp);
-      }
-    }
+    List<List<Integer>> res = new ArrayList<>();
+    Arrays.sort(nums); // O(nlgn)
+    subset(nums, 0, res, new ArrayList<Integer>());
     return res;
   }
 
-  public List<List<Integer>> subsetsWithDup_dup(int[] nums) {
+  private void subset(int[] nums, int start, List<List<Integer>> res, List<Integer> list) {
+    res.add(new ArrayList(list));
+
+    for (int i=start; i<nums.length; i++) {
+      list.add(nums[i]);
+      subset(nums, i+1, res, list);
+      list.remove(list.size()-1);
+      /*
+       * we only want to add duplicated element to just-created list, not to previous ones
+       * for example nums is [1, 2, 2], now we have [], [1], we add 2 to create new [2],
+       * [1, 2], for the next 2, we just want to add it to [2] and [1, 2], not [] and [1]
+       */
+      while (i<nums.length-1 && nums[i]==nums[i+1]) i++;
+    }
+  }
+
+  public List<List<Integer>> subsetsWithDup_noRecursive(int[] nums) {
     Arrays.sort(nums);
     List<List<Integer>> res = new ArrayList();
     res.add(new ArrayList());

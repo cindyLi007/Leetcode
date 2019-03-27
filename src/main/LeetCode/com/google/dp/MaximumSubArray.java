@@ -20,7 +20,22 @@ public class MaximumSubArray {
     return res;
   }
 
+  public int findMaximumSubarray(int[] nums) {
+    int minSum=0, runningSum=0, maxSum=0;
+    for (int i = 0; i < nums.length; i++) {
+      runningSum += nums[i];
+      if (runningSum < minSum) {
+        minSum = runningSum;
+      }
+      if (runningSum - minSum> maxSum) {
+        maxSum = runningSum - minSum;
+      }
+    }
+    return maxSum;
+  }
+
   /**
+   * Time: O(n), Space: O(1)
    * from the above, we found we need not a dp array, just save a curSum, because each time we only care dp[i-1]
    */
   public int maxSubArray_improve(int[] nums) {
@@ -38,6 +53,7 @@ public class MaximumSubArray {
     return res;
   }
 
+  // Time: O(N*lgN), Space: O(lgN)
   public int maxSubArray_DivideConquer(int[] nums) {
     if (nums.length==0)
       return 0;

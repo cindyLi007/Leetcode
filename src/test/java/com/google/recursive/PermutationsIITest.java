@@ -16,9 +16,9 @@ public class PermutationsIITest {
   public void permuteUnique() {
     // Given
     PermutationsII permutationsII = new PermutationsII();
-    int[] nums = new int[]{2, 2, 1, 1};
+    int[] nums = new int[]{2, 2, 2, 3, 3};
 
     // Then
-    List<List<Integer>> res = permutationsII.permuteUnique(nums);
+    List<List<Integer>> res = permutationsII.permuteUnique_recursive(nums);
   }
 }
