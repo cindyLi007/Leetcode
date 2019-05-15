@@ -8,6 +8,8 @@ import java.util.Stack;
  * Created by ychang on 1/9/2017.
  * The reason we use Stack is the Data Structure is nested. For all manipulation of nested Data Structure,
  * first consider Stack. Such as Decode String
+ *
+ * refer {@link com.google.recursive.NestedIterator}
  */
 public class NestedIterator implements Iterator<Integer> {
   Stack<NestedInteger> stack = new Stack();

@@ -10,6 +10,6 @@ public class SubsetIITest {
         SubsetII subsetII = new SubsetII();
 
         // When
-        subsetII.subsetsWithDup_noRecursive(new int[]{1, 2, 2});
+        subsetII.subset(new int[]{1, 2, 3});
     }
 }

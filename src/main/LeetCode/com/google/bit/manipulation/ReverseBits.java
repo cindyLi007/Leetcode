@@ -1,5 +1,11 @@
 package com.google.bit.manipulation;
 
+/**
+ * Leetcode 190. Reverse Bits
+ * Reverse bits of a given 32 bits unsigned integer.
+ * Follow up, if this function is called many times, how would you optimize it
+ * We can divide an int into 4 bytes, and reverse each byte then combine into an int. For each byte, we can use cache to improve performance.
+ */
 public class ReverseBits {
     // Reverse bits of a given 32 bits unsigned integer.
     public int reverseBits(int n) {

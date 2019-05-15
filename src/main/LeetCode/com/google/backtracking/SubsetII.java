@@ -8,6 +8,24 @@ import java.util.List;
  * Created by ychang on 5/11/2017.
  */
 public class SubsetII {
+  public List<List<Integer>> subset(int[] nums) {
+    int N = (int) Math.pow(2.0, nums.length);
+    List<List<Integer>> res = new ArrayList<>();
+    for (int i = 0; i < N; i++) {
+      List<Integer> list = new ArrayList<>();
+      int count = 0, j=i;
+      while (j != 0) {
+        if ((j & 1) == 1) {
+          list.add(nums[count]);
+        }
+        count++;
+        j >>>= 1;
+      }
+      res.add(list);
+    }
+    return res;
+  }
+
   // Time: O(n!), Space: O(N)
   public List<List<Integer>> subsetsWithDup(int[] nums) {
     List<List<Integer>> res = new ArrayList<>();

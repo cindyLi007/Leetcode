@@ -24,8 +24,12 @@ public class NestedIteratorTest {
     com.google.recursive.NestedIterator nestedIterator = new com.google.recursive.NestedIterator(list);
 
     // When
-
-
+    System.out.println(nestedIterator.next());
+    System.out.println(nestedIterator.next());
+    System.out.println(nestedIterator.next());
+    System.out.println(nestedIterator.next());
+    System.out.println(nestedIterator.next());
+    nestedIterator.hasNext();
   }
 
   @Test

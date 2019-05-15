@@ -8,22 +8,20 @@ package com.google.bit.manipulation;
  * 4 bytes (1st >=240, 2nd, 3rd and 4th [128, 192), 240 is 1111 xxxx
  */
 public class UTF8Validation {
-  public boolean validUtf8(int[] data) {
+  // Time: O(N), Space: O(1)
+  public boolean validUtf8_useValue(int[] data) {
     if (data==null || data.length==0)
       return true;
     int bits = 0;
     for (int i : data) {
+      if ((bits!=0 && i>=192) || (bits==0 && (i>=248 || (i>128 && i<192))))
+        return false;
+      // if we can step here, that means so far the data is valid UTF-8, we focus one process the data, not check valid
       if (i>=240) { // the 4 bytes beginning
-        if (bits!=0)
-          return false;
         bits = 3;
       } else if (i>=224) { //the 3 bytes beginning
-        if (bits!=0)
-          return false;
         bits = 2;
       } else if (i>=192) { //the 2 bytes beginning
-        if (bits!=0)
-          return false;
         bits = 1;
       } else if (i>=128) { // the 4-byte, 3-byte and 2-byte remaining bytes
         bits--;
@@ -34,32 +32,34 @@ public class UTF8Validation {
     return bits==0; // if bits>0, that means missing 4-byte, 3-byte and 2-byte remaining bytes
   }
 
-  public boolean validUtf8_simplify(int[] data) {
-    if (data==null || data.length==0)
-      return true;
-    int bits = 0;
-    for (int i : data) {
-      if (bits!=0 && i>=192 || i>=248)
-        return false;
-      if (i>=240) { // the 4 bytes beginning
-        bits = 3;
-      } else if (i>=224) { //the 3 bytes beginning
-        bits = 2;
-      } else if (i>=192) { //the 2 bytes beginning
-        bits = 1;
-      } else if (i>=128) { // the 4-byte, 3-byte and 2-byte remaining bytes
-        bits--;
-        if (bits<0)
-          return false; // if bits<0, that means do not have heading integer for 4-byte, 3-byte and 2-byte
+  // Time: O(N*8), Space: O(1)
+  public boolean validUtf8_bitManipulation(int[] data) {
+    int bytes = 0;
+    int mask = 1<<7;
+    for (int num : data) {
+      if (bytes==0) {
+        if ((num & mask) == 0) continue;
+        while ((num & mask)!=0) {
+          num<<=1;
+          bytes++;
+        }
+        if (bytes>4 || bytes<2) return false;
+        bytes--;
+      } else {
+        if ((num & mask)!=0 && (num & (1<<6))==0) {
+          bytes--;
+        } else {
+          return false;
+        }
       }
     }
-    return bits==0; // if bits>0, that means missing 4-byte, 3-byte and 2-byte remaining bytes
+    return bytes==0;
   }
 
   public static void main(String[] args) {
     UTF8Validation utf8Validation = new UTF8Validation();
     int[] data = new int[]{235, 140, 140, 140, 4};
-    boolean res = utf8Validation.validUtf8(data);
+    boolean res = utf8Validation.validUtf8_bitManipulation(data);
     System.out.println(res);
   }
 }

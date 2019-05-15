@@ -5,27 +5,41 @@ import java.util.List;
 
 public class FindMIssingRange {
     public List<String> findMissingRanges(int[] nums, int lower, int upper) {
-        List<String> res = new ArrayList<>();
-        if (nums.length==0) {
-            String str = lower==upper ? lower+"" : lower + "->" + upper;
-            res.add(str);
+        List<String> res = new ArrayList<String>();
+        if (nums.length == 0) {
+            res.add(generate(lower, upper));
             return res;
         }
-        if (nums[0]>lower) {
-            String str = nums[0]-lower==1 ? lower+"" : lower + "->" + (nums[0]-1);
-            res.add(str);
-        }
-        int i=1;
-        for (; i<nums.length; i++) {
-            if (nums[i]-1>nums[i-1]) {
-                String str = nums[i]-nums[i-1]==2 ? nums[i]-1+"" : nums[i-1]+1 + "->" + (nums[i]-1);
-                res.add(str);
+        int prev = lower - 1;
+        for (int i = 0; i < nums.length; i++) {
+            int num = nums[i];
+            if (num > prev + 1) {
+                res.add(generate(prev + 1, num - 1));
             }
+            prev = num;
+            if (num >= upper) break;
         }
-        if (upper > nums[i-1]) {
-            String str = upper - nums[i-1] == 1 ? upper+"" : nums[i-1]+1 + "->" + upper;
-            res.add(str);
-        }
+
+        if (prev < upper) res.add(generate(prev + 1, upper));
+
         return res;
+    }
+
+    private String generate(int start, int end) {
+        StringBuilder sb = new StringBuilder();
+        sb.append(start);
+        if (start != end) {
+            sb.append("->").append(end);
+        }
+
+        return sb.toString();
+    }
+
+    public static void main(String... args) {
+        FindMIssingRange findMIssingRange = new FindMIssingRange();
+        List<String> missingRanges = findMIssingRange.findMissingRanges(
+                new int[]{-2147483648,2147483647},
+        -2147483648,
+        2147483647);
     }
 }

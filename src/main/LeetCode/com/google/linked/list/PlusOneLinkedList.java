@@ -30,4 +30,21 @@ public class PlusOneLinkedList {
     }
     return res.val==0 ? head : res;
   }
+
+  public ListNode plusOne_recursive(ListNode head) {
+    ListNode dummy = new ListNode(1);
+    dummy.next = head;
+    return plus(head) == 1 ? dummy : dummy.next;
+  }
+
+  private int plus(ListNode node) {
+    if (node.next==null || plus(node.next)==1) {
+      node.val+=1;
+      if (node.val==10) {
+        node.val=0;
+        return 1;
+      }
+    }
+    return 0;
+  }
 }
