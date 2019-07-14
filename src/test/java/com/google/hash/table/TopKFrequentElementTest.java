@@ -16,10 +16,11 @@ public class TopKFrequentElementTest {
   public void topKFrequent() throws Exception {
     // Given
     int[] array = new int[]{1, 1, 1, 2, 2, 3};
+//    int[] array = new int[]{1, 2};
     TopKFrequentElement topKFrequentElement = new TopKFrequentElement();
 
     // When
-    List<Integer> kList = topKFrequentElement.topKFrequent_TreeMap(array, 2);
+    List<Integer> kList = topKFrequentElement.topKFrequent_TreeMap_Stream(array, 4);
 
     // Then
     assertThat(kList, is(Arrays.asList(1, 2)));

@@ -15,11 +15,33 @@ public class CloneGraph {
   /**
    * this method can beat 70%
    */
-  public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
-    if (node==null)
-      return null;
-    return dfs(node, new HashMap<>());
+  public Node cloneGraph(Node node) {
+    if (node==null) return null;
+    Map<Integer, Node> map = new HashMap<>();
+    return dfs(node, map);
   }
+
+  private Node dfs(Node node, Map<Integer, Node> map) {
+    map.put(node.val, new Node(node.val, new ArrayList()));
+    for (Node n : node.neighbors) {
+      map.get(node.val).neighbors.add(map.get(n.val)!=null ?
+              map.get(n.val) : dfs(n, map));
+    }
+    return map.get(node.val);
+  }
+
+  class Node {
+    public int val;
+    public List<Node> neighbors;
+
+    public Node() {}
+
+    public Node(int _val,List<Node> _neighbors) {
+      val = _val;
+      neighbors = _neighbors;
+    }
+  };
+
 
   private UndirectedGraphNode dfs(UndirectedGraphNode node, Map<Integer, UndirectedGraphNode> map) {
     UndirectedGraphNode copy = new UndirectedGraphNode(node.label);

@@ -2,7 +2,7 @@ package com.google.binary.search;
 
 /**
  * Created by ychang on 1/31/2017.
- * Binary search, if low part total count > mid value, means there are some duplicate value in low part, otherwise, that
+ * Binary search, if low part total count_bruteForce > mid value, means there are some duplicate value in low part, otherwise, that
  * means in high part
  */
 public class FindDuplicateNumber {

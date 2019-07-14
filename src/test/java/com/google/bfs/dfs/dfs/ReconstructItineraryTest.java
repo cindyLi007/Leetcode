@@ -5,6 +5,7 @@ import static org.junit.Assert.assertThat;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.junit.Test;
 
@@ -20,7 +21,7 @@ public class ReconstructItineraryTest {
     ReconstructItinerary reconstructItinerary = new ReconstructItinerary();
 
     // When
-    List<String> itinerary = reconstructItinerary.findItinerary(tickets);
+    List<String> itinerary = reconstructItinerary.findItinerary_recursive(tickets);
 
     // Then
     assertThat(itinerary, is(Arrays.asList("JFK", "NRT", "JFK", "KUL")));

@@ -36,7 +36,7 @@ public class Skyline {
 
     /**
      * Create a heap based on y, the head of the heap is the highest level of current heap, the key is the height, the
-     * value is count of buildings currently "alive"
+     * value is count_bruteForce of buildings currently "alive"
      */
     TreeMap<Integer, Integer> heights = new TreeMap<>(Comparator.reverseOrder());
 

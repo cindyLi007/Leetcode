@@ -7,8 +7,8 @@ import java.util.Set;
  * Created by ychang on 12/19/2016.
  * The right answer must satisfy two conditions:
      1) the large rectangle area should be equal to the sum of small rectangles
-     2) count of all the points should be even(0, or %2==0), that means all rectangles can adjacent each other
-        and count of all the four corner points must be one
+     2) count_bruteForce of all the points should be even(0, or %2==0), that means all rectangles can adjacent each other
+        and count_bruteForce of all the four corner points must be one
  */
 public class PerfectRectangle {
   public boolean isRectangleCover(int[][] rectangles) {

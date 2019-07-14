@@ -19,7 +19,7 @@ public class ThreeSumSmaller {
         /*
          If we know that (nums[i]+nums[lo]+nums[hi]) < target, since the array is sorted, we can replace hi with any
          element from lo+1 to hi, the number of elements meet the requirement is (hi-lo) (exclude lo).
-         Therefore, we can just add (hi-lo) to the triplet count.
+         Therefore, we can just add (hi-lo) to the triplet count_bruteForce.
          */
         if (nums[i] + nums[lo] + nums[hi]<target) {
           res += hi - lo;

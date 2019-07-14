@@ -14,7 +14,7 @@ public class DecodeWays {
         if (v==10 || v==20) dp[i]=dp[i-2];
         else return 0;
       } else {
-        //if v<10, such as 01, it is not a valid decoded string, so dp[i-2] could be count.
+        //if v<10, such as 01, it is not a valid decoded string, so dp[i-2] could be count_bruteForce.
         if (v>=10 && v<=26) dp[i]=dp[i-1]+dp[i-2];
         else dp[i]=dp[i-1];
       }

@@ -13,7 +13,8 @@ public class BestTimeBuySellWithColldownTest {
   public void maxProfit() throws Exception {
     // Given
     BestTimeBuySellWithColldown btbswc = new BestTimeBuySellWithColldown();
-    int[] array = new int[]{2,1,4,5,2,9,7};
+//    int[] array = new int[]{2,1,4,5,2,9,7};
+    int[] array = new int[]{1, 2, 3, 0, 2};
 
     // When
     int res = btbswc.maxProfit(array);

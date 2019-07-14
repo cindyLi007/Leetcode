@@ -21,8 +21,8 @@ public class GenerateAbbreviation {
     if (pos==word.length)
       list.add(str.append(count>0 ? count : "").toString());
     else {
-      dfs(word, list, str, pos + 1, count + 1); // abbreviation, we will not append count or char to str
-      // not abbreviation, so we need append prev count, and current char, and we need reset count to 0
+      dfs(word, list, str, pos + 1, count + 1); // abbreviation, we will not append count_bruteForce or char to str
+      // not abbreviation, so we need append prev count_bruteForce, and current char, and we need reset count_bruteForce to 0
       dfs(word, list, str.append(count>0 ? count : "").append(word[pos]), pos + 1, 0);
     }
     str.setLength(len);

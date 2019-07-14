@@ -24,10 +24,14 @@ public class PacificAtlanticWaterFlow {
 
     boolean[][] p = new boolean[m][n];
     boolean[][] a = new boolean[m][n];
+    // the "Pacific ocean" touches the left and top edges
+    // the "Atlantic ocean" touches the right and bottom edges.
+    // first do the left and right edge
     for (int i=0; i<m; i++) {
       dfs(p, matrix, i, 0, Integer.MIN_VALUE);
       dfs(a, matrix, i, n-1, Integer.MIN_VALUE);
     }
+    // then do the top and bottom edges
     for (int i=0; i<n; i++) {
       dfs(p, matrix, 0, i, Integer.MIN_VALUE);
       dfs(a, matrix, m-1, i, Integer.MIN_VALUE);
@@ -40,12 +44,14 @@ public class PacificAtlanticWaterFlow {
     return res;
   }
   int[][] dirs = new int[][]{{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
-  private void dfs(boolean[][] visited, int[][] matrix, int x, int y, int prev) {
+  private void dfs(boolean[][] reachable, int[][] matrix, int x, int y, int prev) {
     int m=matrix.length, n=matrix[0].length;
-    if (x<0 || x>=m || y<0 || y>=n || visited[x][y] || matrix[x][y]<prev) return;
-    visited[x][y]=true;
+    // Notice, one point can be from left and top, or lower and right, so we must check whether this point has
+    // be visited by other direction point and set the true, if set to true, no need to check further
+    if (x<0 || x>=m || y<0 || y>=n || reachable[x][y] || matrix[x][y]<prev) return;
+    reachable[x][y]=true;
     for (int[] dir : dirs) {
-      dfs(visited, matrix, x+dir[0], y+dir[1], matrix[x][y]);
+      dfs(reachable, matrix, x+dir[0], y+dir[1], matrix[x][y]);
     }
   }
 
@@ -62,14 +68,10 @@ public class PacificAtlanticWaterFlow {
     Queue<int[]> pq = new LinkedList();
     Queue<int[]> aq = new LinkedList();
     for (int i = 0; i<m; i++) {
-      p[i][0] = true;
-      a[i][n - 1] = true;
       pq.add(new int[]{i, 0});
       aq.add(new int[]{i, n - 1});
     }
     for (int i = 0; i<n; i++) {
-      p[0][i] = true;
-      a[m - 1][i] = true;
       pq.add(new int[]{0, i});
       aq.add(new int[]{m - 1, i});
     }
@@ -93,11 +95,11 @@ public class PacificAtlanticWaterFlow {
     int[][] dirs = new int[][]{{0, -1}, {0, 1}, {1, 0}, {-1, 0}};
     while (!visited.isEmpty()) {
       int[] cur = visited.poll();
+      array[cur[0]][cur[1]]=true;
       for (int[] dir : dirs) {
         int x = cur[0] + dir[0], y = cur[1] + dir[1];
         if (x<0 || x>=m || y<0 || y>=n || array[x][y] || matrix[x][y]<matrix[cur[0]][cur[1]])
           continue;
-        array[x][y] = true;
         visited.offer(new int[]{x, y});
       }
     }

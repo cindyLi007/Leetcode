@@ -36,27 +36,22 @@ public class SpiralOrder {
     }
 
     public List<Integer> spiralOrder(int[][] matrix) {
+        int M=matrix.length-1, N = M<0 ? 0 : matrix[0].length-1;
         List<Integer> res = new ArrayList<>();
-        if (matrix.length == 0 || matrix[0].length == 0) return res;
-        int r0 = 0, r1 = matrix.length - 1, c0 = 0, c1 = matrix[0].length - 1;
-
-        while (r0 < r1 && c0 < c1) {
-            for (int i = c0; i < c1; i++) res.add(matrix[r0][i]);
-            for (int i = r0; i < r1; i++) res.add(matrix[i][c1]);
-            for (int i = c1; i > c0; i--) res.add(matrix[r1][i]);
-            for (int i = r1; i > r0; i--) res.add(matrix[i][c0]);
-            r0++;
-            r1--;
-            c0++;
-            c1--;
+        int r0=0, r1=M, c0=0, c1=N;
+        while (r0<r1 && c0<c1) {
+            for (int i=c0; i<c1; i++) res.add(matrix[r0][i]);
+            for (int i=r0; i<r1; i++) res.add(matrix[i][c1]);
+            for (int i=c1; i>c0; i--) res.add(matrix[r1][i]);
+            for (int i=r1; i>r0; i--) res.add(matrix[i][c0]);
+            r0++; r1--; c0++; c1--;
         }
+        if (r0>r1 || c0>c1) return res;
 
-        if (r0 == r1 || c0 == c1) {
-            if (r0 == r1) {
-                for (int i = c0; i <= c1; i++) res.add(matrix[r0][i]);
-            } else {
-                for (int i = r0; i <= r1; i++) res.add(matrix[i][c0]);
-            }
+        if (r0==r1) {
+            for (int i=c0; i<=c1; i++) res.add(matrix[r0][i]);
+        } else {
+            for (int i=r0; i<=r1; i++) res.add(matrix[i][c0]);
         }
 
         return res;

@@ -21,4 +21,5 @@ public class PaintFence {
     }
     return same+diff;
   }
+
 }

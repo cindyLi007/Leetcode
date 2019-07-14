@@ -1,11 +1,6 @@
 package com.google.hash.table;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 import com.google.common.collect.Multimap;
 import com.google.common.collect.TreeMultimap;
@@ -44,32 +39,30 @@ public class TopKFrequentElement {
   /**
    * beat 47%
    */
-  public List<Integer> topKFrequent_TreeMap(int[] nums, int k) {
-    /**
-     * map is num -> times pair
-     */
-    Map<Integer, Integer> map = new HashMap();
+  public List<Integer> topKFrequent_TreeMap_Stream(int[] nums, int k) {
+    Map<Integer, Integer> map = new HashMap<>();
     for (int num : nums) {
-      if (!map.containsKey(num)) map.put(num, 0);
-      map.put(num, map.get(num)+1);
+      map.put(num, map.getOrDefault(num, 0)+1);
     }
-    /**
-     * can use natural order
-     */
-    TreeMap<Integer, List<Integer>> tree = new TreeMap();
+    PriorityQueue<Integer> pq = new PriorityQueue(k, (o1, o2) -> map.get(o1) - map.get(o2));
     for (Integer key : map.keySet()) {
-      if (!tree.containsKey(map.get(key))) tree.put(map.get(key), new LinkedList());
-      tree.get(map.get(key)).add(key);
+      pq.offer(key);
+      if (pq.size()>k) pq.poll();
     }
-    List<Integer> res = new LinkedList();
-    for (int i=k; i>0; ) {
-      /**
-       * poll last one since it is the most frequent
-       */
-      List<Integer> list = tree.pollLastEntry().getValue();
-      res.addAll(list);
-      i-=list.size();
+    /*
+    System.out.println(pq.peek());
+    map.put(3, 4);
+    pq.remove(3);
+    pq.add(3);
+    System.out.println(pq.peek());
+    this part is to test when the value of an itme in heap change, whether it will be re-ordered automatically
+    */
+
+    List<Integer> res = new ArrayList();
+    while (!pq.isEmpty()) {
+      res.add(pq.poll());
     }
+    Collections.reverse(res);
     return res;
   }
 

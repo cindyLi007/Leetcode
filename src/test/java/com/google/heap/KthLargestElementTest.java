@@ -18,7 +18,7 @@ public class KthLargestElementTest {
     int result = kthLargestElement.findKthLargest(new int[]{3,2,3,0,3,2,1,5,6,4}, 2);
 
     // Then
-    assertThat(result, is(2));
+    assertThat(result, is(5));
   }
 
 }

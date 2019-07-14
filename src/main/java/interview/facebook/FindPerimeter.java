@@ -50,7 +50,7 @@ public class FindPerimeter {
     int m=grid.length, n=grid[0].length;
     if (visited.contains(new Point(r, c)))
       return 0;
-    // grid[r][c]!=color mean it can be treated as a boundary, if hit grid boundary, count 1
+    // grid[r][c]!=color mean it can be treated as a boundary, if hit grid boundary, count_bruteForce 1
     if (r==m || r<0 || c==n || c<0 || grid[r][c]!=color) return 1;
     /**
      * only same color points need to be put in visited set

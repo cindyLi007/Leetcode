@@ -10,9 +10,9 @@ import java.util.TreeMap;
  */
 public class ReorderArrayDouble {
     // Time: O(N*lgK), K is the distict number in A, Space: O(N)
-    public boolean canReorderDoubled(int[] A) {
+    public static boolean canReorderDoubled(int[] A) {
         // return a map which is orderded by key's value (num in A)
-        // <num, frequency> map
+        // <num, frequency> map, O(N*lgK)
         Map<Integer, Integer> map = new TreeMap<>();
         for (int n : A) {
             map.put(n, map.getOrDefault(n, 0) + 1);
@@ -20,12 +20,20 @@ public class ReorderArrayDouble {
         // return a key iterator in ascending order
         for (int key : map.keySet()) {
             if (map.get(key)==0) continue;
-            int want = key < 0 ? key/2 : key * 2;
-            if (key<0 && key%2!=0 || map.getOrDefault(want, 0) < map.get(key)) {
+            // if key < 0, in the ordered TreeMap, we have not encounter the samller one, so we need /2.
+            // for ex. -4, -2, -1, when handle -4, we need find -2, when handle -2, we need find -1.
+            if (key<0 && key%2!=0) return false;
+            int want = key<0 ? key/2 : key*2;
+            map.put(want, map.getOrDefault(want, 0) - map.get(key));
+            if (map.get(want)<0) {
                 return false;
             }
-            map.put(want, map.get(want) - map.get(key));
         }
         return true;
+    }
+
+    public static void main(String... args) {
+        boolean res = canReorderDoubled(new int[]{-5, -2, 2, 4});
+        System.out.println(res);
     }
 }

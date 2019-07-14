@@ -1,5 +1,9 @@
 package com.google.dp;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by ychang on 5/30/2017.
  */
@@ -32,5 +36,47 @@ public class TargetSum {
       }
     }
     return dp[sum];
+  }
+
+  /**
+   * from dfs begins, because that is easy to think, but there are some duplicated calculation.
+   * 1. we can create a dp[N][Value], -Sum<=Value<=Sum, because idx of array can not be negative, we can make it shift Sum. So dp=new int[N][2*Sum+1] where dp[N-1][Sum] is the final value
+   * 2. as dfs, eachtime add one more item for + and -, consider all values which can be reached by previous items
+   * 3. after loop through the array, dp[sum+S] is the result
+   */
+  public int findTargetSumWays_dfs(int[] nums, int S) {
+    return dfs(nums, 0, S);
+  }
+
+  private int dfs(int[] nums, int idx, int target) {
+    if (idx==nums.length) {
+      return target==0 ? 1 : 0;
+    }
+    return dfs(nums, idx+1, target+nums[idx]) + dfs(nums, idx+1, target-nums[idx]);
+  }
+
+  public int findTargetSumWays_dp(int[] nums, int S) {
+    int N=nums.length;
+    int sum=0;
+    for (int i : nums) {
+      sum+=i;
+    }
+    int[] dp = new int[2 * sum + 1];
+    dp[nums[0]+sum]=1;
+    dp[-nums[0]+sum]=1;
+
+    for (int i=1; i<N; i++) {
+      int v=nums[i];
+      int[] next = new int[2*sum+1];
+      for (int d=0; d<=2*sum; d++) {
+        if (dp[d]!=0) {
+          next[d+v] += dp[d];
+          next[d-v] += dp[d];
+        }
+      }
+      dp=next;
+    }
+
+    return dp[sum+S];
   }
 }

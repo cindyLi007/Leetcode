@@ -1,8 +1,6 @@
 package com.google.recursive;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by ychang on 4/1/2017.
@@ -26,5 +24,11 @@ public class StrobogrammaticNumberII {
       if (!root) res.add("0" + str + "0");
     }
     return res;
+  }
+
+  public static void main(String... args) {
+    StrobogrammaticNumberII strobogrammaticNumberII = new StrobogrammaticNumberII();
+    List<String> strobogrammatic = strobogrammaticNumberII.findStrobogrammatic(2);
+    strobogrammatic.forEach(o-> System.out.print(o + ", "));
   }
 }

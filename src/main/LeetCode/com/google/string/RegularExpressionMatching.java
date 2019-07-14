@@ -51,9 +51,9 @@ public class RegularExpressionMatching {
         } else {
           if (p.charAt(j)=='*') {
             if (p.charAt(j - 1)==s.charAt(i) || p.charAt(j - 1)=='.') {
-              dp[i + 1][j + 1] = dp[i + 1][j] || //we count a* as single one, because we ignore '*'
-                  dp[i + 1][j - 1] || // we count a* as empty, because we ignore 'a*'
-                  dp[i][j + 1]; // we count a* as multiple one, because we count a* to previous char in s
+              dp[i + 1][j + 1] = dp[i + 1][j] || //we count_bruteForce a* as single one, because we ignore '*'
+                  dp[i + 1][j - 1] || // we count_bruteForce a* as empty, because we ignore 'a*'
+                  dp[i][j + 1]; // we count_bruteForce a* as multiple one, because we count_bruteForce a* to previous char in s
             } else {
               dp[i + 1][j + 1] = dp[i + 1][j - 1];
             }

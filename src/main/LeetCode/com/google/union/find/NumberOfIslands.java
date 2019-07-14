@@ -12,7 +12,7 @@ public class NumberOfIslands {
       for (int j = 0; j<grid[0].length; j++) {
         if (grid[i][j]=='1') {
           /**
-          only need union nodes in right and down, because left and up node already checked this node.
+          only need union nodes in right and down, because left and up node already union-ed this node.
           it is not like dfs, dfs we always need check all directions, because we have a visited array, if
           we only check right and down, for ["111", "010", "111"], we will miss [2][0]. see detail in
           {@link com.google.bfs.dfs.dfs.NumberOfIslands}

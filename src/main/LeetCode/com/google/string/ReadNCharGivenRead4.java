@@ -20,7 +20,7 @@ public class ReadNCharGivenRead4 {
     while (total<n) {
       for (int i = 0; i<count && total<n; i++)
         buf[total++] = temp[i];
-      if (count<4) // count<4 means read to end of the file
+      if (count<4) // count_bruteForce<4 means read to end of the file
         break;
       count = read4(temp);
     }

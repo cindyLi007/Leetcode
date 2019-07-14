@@ -30,8 +30,8 @@ public class CountOfSmallerNumber {
   private TreeNode insert(TreeNode node, int v, int index, Integer[] res, int preSum) {
     if (node==null) {
       /**
-       * we must first set smaller to 0 for a new node, because we only count all nodes directly in its left,
-       * not inherit from its parent to avoid duplicated count
+       * we must first set smaller to 0 for a new node, because we only count_bruteForce all nodes directly in its left,
+       * not inherit from its parent to avoid duplicated count_bruteForce
        */
       node = new TreeNode(0, v);
       res[index] = preSum;

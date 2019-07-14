@@ -1,7 +1,7 @@
 package com.google.Tree;
 
 /**
- * Given a complete binary tree, count the number of nodes.
+ * Given a complete binary tree, count_bruteForce the number of nodes.
  *
  * Note:
  *

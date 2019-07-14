@@ -12,7 +12,7 @@ package com.google.string;
 public class ReadNCharGivenRead4IIMultipleTimes {
   char[] cache = new char[4];
   /**
-   * num is the count of chars in cache, ptr is the pointer for the next char to read in cache, if both is 0, that means
+   * num is the count_bruteForce of chars in cache, ptr is the pointer for the next char to read in cache, if both is 0, that means
    * we should call read4 to load chars from file to cache, otherwise, should read from index ptr to num (exclusive)
    */
   int num=0, ptr=0;

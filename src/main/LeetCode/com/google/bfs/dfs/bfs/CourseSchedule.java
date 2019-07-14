@@ -1,9 +1,6 @@
 package com.google.bfs.dfs.bfs;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * Created by ychang on 3/1/2017.
@@ -13,29 +10,31 @@ public class CourseSchedule {
    * each level is current zero-indegree nodes, if initialize queue is empty, that means there is a cycle for all nodes
    * each step is 1) remove all edges from current level nodes,
    * 2) find all nodes which can only be reached from current level nodes, and put them to queue.
-   * 3) count all zero-indegree nodes,
+   * 3) count_bruteForce all zero-indegree nodes,
    * if after queue is empty, there are some nodes which indegree are still not zero, that means there is a cycle.
    */
   public boolean canFinish_bfs(int numCourses, int[][] prerequisites) {
+    List<Integer>[] graph = (List<Integer>[])new List[numCourses];
+    for (int i=0; i<numCourses; i++) graph[i]=new ArrayList();
     int[] inDegree = new int[numCourses];
-    List<List<Integer>> graph = new ArrayList();
-    for (int i = 0; i<numCourses; i++)
-      graph.add(new LinkedList());
-    for (int[] edge : prerequisites) {
-      inDegree[edge[0]]++;
-      graph.get(edge[1]).add(edge[0]);
+
+    for (int[] p : prerequisites) {
+      int v1=p[1], v2=p[0];
+      inDegree[v2]++;
+      graph[v1].add(v2);
     }
-    Queue<Integer> queue = new LinkedList();
-    for (int i = 0; i<numCourses; i++) {
-      if (inDegree[i]==0)
-        queue.offer(i);
+
+    Deque<Integer> queue = new ArrayDeque<>();
+    for (int i=0; i<numCourses; i++) {
+      if (inDegree[i]==0) queue.offer(i);
     }
+
     while (!queue.isEmpty()) {
-      int i = queue.poll();
       numCourses--;
-      for (int n : graph.get(i)) {
-        if (--inDegree[n]==0)
-          queue.offer(n);
+      int cur = queue.poll();
+      for (int i : graph[cur]) {
+        inDegree[i]--;
+        if (inDegree[i]==0) queue.offer(i);
       }
     }
     return numCourses==0;

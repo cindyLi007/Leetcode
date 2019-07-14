@@ -25,7 +25,7 @@ public class PartitionEqualSubsetSum {
     for (int num : nums) {
       /**
        * for each num, must loop dp from high to low, because we check whether dp[i]!=0, if we loop dp from low to high,
-       * it will count just-added dp[i]. For example array [1, 5, 11, 5], for first num 1, dp[0]=1, others are all 0, if
+       * it will count_bruteForce just-added dp[i]. For example array [1, 5, 11, 5], for first num 1, dp[0]=1, others are all 0, if
        * we go from low to high, we will make all dp[i] to 1.
        */
       for (int j = sum; j>=num; j--) { // to prevent index out of bound, i from dp.length-1-num

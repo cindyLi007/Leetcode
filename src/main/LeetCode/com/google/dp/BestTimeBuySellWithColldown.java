@@ -4,23 +4,20 @@ package com.google.dp;
  * Created by ychang on 3/9/2017.
  */
 public class BestTimeBuySellWithColldown {
-  public int maxProfit(int[] prices) {
-    if (prices==null || prices.length<=1)
-      return 0;
-    int dp[] = new int[prices.length];
-    dp[0] = 0;
-    int min = 0;
-    for (int i = 1; i<prices.length; i++) {
-      int temp = 0;
-      if (prices[i]>prices[min])
-        temp = prices[i] - prices[min];
-      else
-        min = prices[i]< prices[min] ? i : min;
-      dp[i] = temp + (temp==0 ? dp[i - 1] : 0);
-      if (temp!=0 && min - 2>0)
-        dp[i] += dp[min - 2];
-      dp[i]=Math.max(dp[i], dp[i-1]);
+    // Time: O(N), Space: O(N)
+    public int maxProfit(int[] prices) {
+        int N = prices.length;
+        if (N <= 1) return 0;
+        // buy and sell present the maxProfit which end-by buy or sell at i-th day, buy or sell not neccesarily happened
+        // at i-th day
+        int[] buy = new int[N], sell = new int[N];
+        buy[0] = -prices[0];
+        sell[0] = 0;
+        for (int i = 1; i < N; i++) {
+            if (i == 1) buy[i] = Math.max(buy[i - 1], -prices[i]);
+            else buy[i] = Math.max(buy[i - 1], sell[i - 2] - prices[i]);
+            sell[i] = Math.max(sell[i - 1], buy[i - 1] + prices[i]);
+        }
+        return sell[N - 1];
     }
-    return dp[prices.length - 1];
-  }
 }

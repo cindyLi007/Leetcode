@@ -15,7 +15,7 @@ public class TargetSumTest {
     TargetSum targetSum = new TargetSum();
 
     // When
-    int targetSumWays = targetSum.findTargetSumWays(new int[]{1, 1, 1, 1, 1}, 3);
+    int targetSumWays = targetSum.findTargetSumWays_dp(new int[]{0, 0, 1}, 1);
 
     // Then
     assertThat(targetSumWays, is(5));

@@ -22,10 +22,10 @@ public class RepeatedStringPatternTest {
   @Test
   public void repeatedSubstringPattern() throws Exception {
     // Given
-    String s = "abcabcabcabc";
+    String s = "aba";
 
     // When
-    boolean res = rsp.repeatedSubstringPattern(s);
+    boolean res = rsp.repeatedSubstringPattern_test(s);
 
     // Then
     assertThat(res, is(TRUE));

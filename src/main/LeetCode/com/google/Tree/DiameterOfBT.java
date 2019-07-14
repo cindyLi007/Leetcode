@@ -18,8 +18,8 @@ public class DiameterOfBT {
      */
     int rootPath = Math.max(left[0], right[0]) + 1;
     /**
-     * Notice, rootPath maybe > max, that is because for rootPath, we count node instead of edge, however, when we calculate
-     * path pass root, we don't count root, so make path-pass-root has correct number
+     * Notice, rootPath maybe > max, that is because for rootPath, we count_bruteForce node instead of edge, however, when we calculate
+     * path pass root, we don't count_bruteForce root, so make path-pass-root has correct number
      */
     int max = Math.max(Math.max(left[1], right[1]), left[0] + right[0]);
     return new int[]{rootPath, max};

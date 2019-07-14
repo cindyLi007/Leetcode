@@ -38,9 +38,33 @@ public class DecodeString {
     return current.toString();
   }
 
+  int pos = 0;
+  public String decodeString_recursive(String s) {
+    StringBuilder sb = new StringBuilder();
+    int num = 0;
+    for (int i=pos; i<s.length(); i++) {
+      char c = s.charAt(i);
+      if (Character.isDigit(c)) {
+        num = num*10 + (c-'0');
+      } else if (c=='[') {
+        pos=i+1;
+        String inner = decodeString_recursive(s);
+        while (num-->0) sb.append(inner);
+        num=0;
+        i=pos;
+      } else if (c==']') {
+        pos=i;
+        return sb.toString();
+      } else {
+        sb.append(c);
+      }
+    }
+    return sb.toString();
+  }
+
   public static void main(String[] main) {
     DecodeString instance = new DecodeString();
-    String s = instance.decodeString("3[a]2[bc]");// return "aaabcbc".
+    String s = instance.decodeString_recursive("3[a]2[bc]");// return "aaabcbc".
     System.out.println(s + " " + s.equals("aaabcbc"));
     s = instance.decodeString("3[a2[c]]"); //return "accaccacc".
     System.out.println(s + " " + s.equals("accaccacc"));

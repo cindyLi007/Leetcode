@@ -30,8 +30,8 @@ public class EditDistanceTest {
     EditDistance editDistance = new EditDistance();
 
     // When
-    int distance = editDistance.minDistance("zoologicoarchaeologist", "zoogeologist");
-//    int distance = editDistance.minDistance("abcde", "ace");
+//    int distance = editDistance.minDistance("zoologicoarchaeologist", "zoogeologist");
+    int distance = editDistance.minDistance("horse", "ros");
 
     // Then
     assertThat(distance, is(10));

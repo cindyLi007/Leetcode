@@ -23,14 +23,14 @@ public class Permutations {
     return res;
   }
 
-  private void directedPermute(int i, List<Integer> list, List<List<Integer>> res) {
-    if (i==list.size()-1) {
+  private void directedPermute(int startPos, List<Integer> list, List<List<Integer>> res) {
+    if (startPos==list.size()-1) {
       res.add(new ArrayList(list));
     } else {
-      for (int j=i; j<list.size(); j++) {
-        Collections.swap(list, i, j);
-        directedPermute(i+1, list, res);
-        Collections.swap(list, i, j);
+      for (int j=startPos; j<list.size(); j++) {
+        Collections.swap(list, startPos, j);
+        directedPermute(startPos+1, list, res);
+        Collections.swap(list, startPos, j);
       }
     }
   }

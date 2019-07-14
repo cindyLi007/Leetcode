@@ -9,7 +9,7 @@ public class PerfectSquaresTest {
   @Test
   public void numSquares() throws Exception {
     PerfectSquares perfectSquares = new PerfectSquares();
-    perfectSquares.numSquares_DP(4);
+    perfectSquares.numSquares_DP(12);
   }
 
 }

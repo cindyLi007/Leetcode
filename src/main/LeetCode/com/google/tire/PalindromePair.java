@@ -19,6 +19,7 @@ public class PalindromePair {
     for (int i=0; i<words.length; i++) {
       map.put(words[i], i);
     }
+
     for (int i=0; i<words.length; i++) {
       String word = words[i];
       for (int j=word.length(); j>=0; j--) {
@@ -57,7 +58,7 @@ public class PalindromePair {
 //    String[] words = new String[]{"bat", "tab", "cat"};
     String[] words = new String[]{"abcd", "dcba", "lls", "tts", "sssll"};
 //    String[] words = new String[]{"a", ""};
-    List<List<Integer>> lists = palindromePair.palindromePairs(words);
+    List<List<Integer>> lists = palindromePair.palindromePairs_HashMap(words);
     lists.stream().forEach(System.out::print);
   }
 

@@ -20,13 +20,13 @@ public class FindAllAnagrams {
       hash[c-'a']++;
     }
 
-    /** two points, left and right edge of sliding window initialize count to p's length
+    /** two points, left and right edge of sliding window initialize count_bruteForce to p's length
      */
     int left = 0, right = 0, count = p.length();
 
     while (right<s.length()) {
       /** if the character's hash entry must > 0, that means it existing in p and have not achieve the number in p, so we can
-       * count it in target string, decrease the count
+       * count_bruteForce it in target string, decrease the count_bruteForce
       */
       if (hash[s.charAt(right)-'a']>0) {
         count--;
@@ -38,8 +38,8 @@ public class FindAllAnagrams {
       hash[s.charAt(right)-'a']--;
       right++;
 
-      /** when the count is down to 0, means we found the right anagram, then add window's left to result list, because
-        * anytime we only keep a p.length() window, the count can always change between p.length() to 0
+      /** when the count_bruteForce is down to 0, means we found the right anagram, then add window's left to result list, because
+        * anytime we only keep a p.length() window, the count_bruteForce can always change between p.length() to 0
        */
       if (count==0) {
         list.add(left);
@@ -47,7 +47,7 @@ public class FindAllAnagrams {
 
       /** if we find the window's size equals to p, then we have to shift window left to find the new match windows
        * any entry in the hash which value >=0 means this char in p, so if we find the left (we will shift out) 's hash
-       * value is >=0, we need count++ since in line 31 to 33, we decrease count. Reset the hash[left] because we kicked
+       * value is >=0, we need count_bruteForce++ since in line 31 to 33, we decrease count_bruteForce. Reset the hash[left] because we kicked
        * out the left, the hash[c] >= 0 indicate it was original in the hash, cuz it won't go below 0
        */
       if (right - left==p.length()) {

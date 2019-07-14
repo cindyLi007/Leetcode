@@ -3,7 +3,7 @@ package com.google.two.pointers;
 /**
  * Created by ychang on 1/3/2017. this can beat 43%
  * Keep leftmost and rightmost, each time use the shorter one to compare with current height.
- * Always move the shorter side pointer, that is because we count water from that side.
+ * Always move the shorter side pointer, that is because we count_bruteForce water from that side.
  */
 public class TrappingRainWater {
   public int trap(int[] height) {

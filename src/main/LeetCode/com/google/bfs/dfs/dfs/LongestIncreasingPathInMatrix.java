@@ -32,7 +32,7 @@ public class LongestIncreasingPathInMatrix {
     int res = 1;
     if (x>0 && matrix[x - 1][y]>v) {
       /**
-       * please note, must be dfs() + 1, because dfs function returns the max path from greater adjacent cell, not count cell(x, y)
+       * please note, must be dfs() + 1, because dfs function returns the max path from greater adjacent cell, not count_bruteForce cell(x, y)
        */
       res = Math.max(res, dfs(x - 1, y, matrix, cache) + 1);
     }

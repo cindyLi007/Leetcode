@@ -1,9 +1,6 @@
 package com.google.bfs.dfs.bfs;
 
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by ychang on 3/1/2017.
@@ -23,15 +20,17 @@ public class PerfectSquares {
      * From Math theory, if a number mod 8 is 7, it result is 4
      */
     if (n % 8 == 7) return 4;
+
     int[] dp = new int[n+1];
+    Arrays.fill(dp, n);
     dp[0]=0;
     for (int i=1; i<=n; i++) {
       // using a temp var can faster than visit dp[i] every time in the loop
-      int min=i;
-      for (int j=1; (j*j)<=i; j++) {
-        min=Math.min(dp[i-j*j]+1, min);
+      int min = dp[i];
+      for (int j=1; j*j<=i; j++) {
+        min = Math.min(min, dp[i-j*j]+1);
       }
-      dp[i]=min;
+      dp[i] = min;
     }
     return dp[n];
   }
@@ -62,5 +61,4 @@ public class PerfectSquares {
     }
     return -1;
   }
-
 }
