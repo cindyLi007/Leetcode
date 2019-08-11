@@ -36,14 +36,14 @@ public class HIndex {
       if (num>n) paper[n]++;
       else paper[num]++;
     }
-    /**
-     * temp is accumulated all papers which was cited at least i;
-     */
     int temp = 0;
     /**
      * The reason to scan from the end of the array is that we are looking for the greatest h-index.
      */
     for (int i = n; i>=0; i--) {
+      /**
+        * temp is accumulated all papers which was cited at least i;
+      */
       temp += paper[i];
       if (temp>=i)
         return i; //must return i, could not return temp, because for [0, 0, 0, 0, 0], when i=0, temp is 5, but we result should be 0

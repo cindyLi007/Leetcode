@@ -7,7 +7,7 @@ import java.util.Map;
  * Created by ychang on 2/7/2017. Using HashMap to keep char -> latest index
  */
 public class LongestSubstring {
-  public int lengthOfLongestSubstring(String s) {
+  public static int lengthOfLongestSubstring(String s) {
     int left = 0, right=0, res = 0;
     Map<Character, Integer> map = new HashMap();
     while (right<s.length()) {
@@ -23,5 +23,11 @@ public class LongestSubstring {
       res = Math.max(res, right - left);
     }
     return res;
+  }
+
+
+  public static void main(String... args) {
+    int res = lengthOfLongestSubstring("abba");
+    System.out.println(res);
   }
 }

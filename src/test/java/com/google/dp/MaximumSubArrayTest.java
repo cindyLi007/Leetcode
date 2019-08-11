@@ -14,14 +14,18 @@ public class MaximumSubArrayTest {
     // Given
     MaximumSubArray maximumSubArray = new MaximumSubArray();
 //    int[] array = new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4};
-    int[] array = new int[]{904, 40, 523, 12, -335, -385, -124, -1481, -31};
+    int[] array = new int[]{-904, 40, 523, 12, -335, -385, -124, 1481, -31};
 
     // When
 //    int res = maximumSubArray.maxSubArray_DivideConquer(array);
-    int res = maximumSubArray.findMaximumSubarray(array);
+    System.out.println(maximumSubArray.findMaximumSubarray(array));
+    int[] res1 = maximumSubArray.maxSubArray(array);
+    System.out.println(res1[0] + " " + res1[1] + " " + res1[2] );
+    int[] res2 = maximumSubArray.maxSubArray_improve(array);
+    System.out.println(res2[0] + " " + res2[1] + " " + res2[2] );
 
     // Then
-    assertThat(res, is(1479));
+//    assertThat(res, is(2116));
 
   }
 

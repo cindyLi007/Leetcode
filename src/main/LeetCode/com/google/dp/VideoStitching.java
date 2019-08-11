@@ -1,5 +1,8 @@
 package com.google.dp;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 public class VideoStitching {
     public int videoStitching(int[][] clips, int T) {
         int[] dp = new int[T+1];
@@ -27,11 +30,23 @@ public class VideoStitching {
         return false;
     }
 
+    public int videoStitching_simple(int[][] clips, int T) {
+        int res = 0;
+        Arrays.sort(clips, Comparator.comparingInt(o -> o[0]));
+        for (int i = 0, st = 0, end = 0; st < T; st = end, ++res) {
+            for (; i < clips.length && clips[i][0] <= st; ++i)
+                end = Math.max(end, clips[i][1]);
+            if (st == end)
+                return -1;
+        }
+        return res;
+    }
+
     public static void main(String... args) {
 //        int[][] clips = new int[][]{{0,1},{6,8},{0,2},{5,6},{0,4},{0,3},{6,7},{1,3},{4,7},{1,4},{2,5},{2,6},{3,4},{4,5},{5,7},{6,9}};
-        int[][] clips = new int[][]{{0,2},{4,6},{8,10},{1,9},{1,5},{5,9}};
+        int[][] clips = new int[][]{{0,2},{2, 4}, {4,6},{6, 8}, {8,10}};
         VideoStitching videoStitching = new VideoStitching();
-        int clip = videoStitching.videoStitching(clips, 10);
+        int clip = videoStitching.videoStitching_simple(clips, 10);
         System.out.println(clip);
     }
 }

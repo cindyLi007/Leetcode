@@ -2,6 +2,9 @@ package com.google.hash.table;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * Created by ychang on 1/12/2017.
@@ -13,6 +16,7 @@ public class LongestConsecutiveSequence {
    * this can beat 64%
    */
   public int longestConsecutive(int[] nums) {
+    Set<Integer> set = Arrays.stream(nums).boxed().collect(Collectors.toSet());
     HashMap<Integer, Integer> map = new HashMap();
     int res=0;
     for (int n:nums) {
@@ -51,6 +55,29 @@ public class LongestConsecutiveSequence {
       } else if (nums[i]!=nums[i - 1]) {
         temp = 1;
       }
+    }
+    return max;
+  }
+
+  // O(N) because for each num, we add and remove 1 time from set
+  public int longestConsecutive_EPI12_9(int[] nums) {
+    if (nums.length<=1)  return nums.length;
+    //Set<Integer> set = Arrays.stream(nums).boxed().collect(Collectors.toSet());
+    Set<Integer> set = new HashSet();
+    for (int n : nums) set.add(n);
+    int max = 1;
+    while (!set.isEmpty()) {
+      int a = set.iterator().next();
+      set.remove(a);
+      int low = a-1;
+      while (set.contains(low)) {
+        set.remove(low--);
+      }
+      int high = a+1;
+      while (set.contains(high)) {
+        set.remove(high++);
+      }
+      max = Math.max(max, high-low-1);
     }
     return max;
   }

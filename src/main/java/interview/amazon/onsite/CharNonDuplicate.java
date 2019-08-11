@@ -1,26 +1,46 @@
 package interview.amazon.onsite;
 
-import java.util.Deque;
-import java.util.LinkedList;
+import java.util.*;
+import java.util.stream.Stream;
 
 /**
  * Created by ychang on 4/4/2017.
+ * Find the last non Duplicated char in a string
  */
 public class CharNonDuplicate {
-  Deque<Character> list = new LinkedList();
-  int[] hash = new int[256];
+  List<Character> list = new ArrayList<>();
+  Map<Character, Integer> map = new HashMap<>();
 
-  public void input(Character c) {
-    if (hash[c]==0) {
-      list.add(c);
-      hash[c]=1;
-    } else {
-      if (list.contains(c)) list.remove(new Character(c));
+  public Character latestNonDuplicated_noStream(String s) {
+    for (char c : s.toCharArray()) {
+      // for nonstream, map val store the count of the char
+      map.put(c, map.getOrDefault(c, 0) + 1);
     }
+    for (int i = s.length() - 1; i >= 0; i--) {
+      if (map.get(s.charAt(i)) == 1) return s.charAt(i);
+    }
+    return null;
   }
 
-  public Character latestNonDuplicated(){
+  public Character latestNonDuplicated() {
     if (list.isEmpty()) return null;
-    return list.peekLast();
+    return list.get(list.size()-1);
+  }
+
+  public static void main(String... main) {
+    CharNonDuplicate duplicate = new CharNonDuplicate();
+    Character nonDuplicated = duplicate.latestNonDuplicated_noStream("abcdcde");
+    System.out.println(nonDuplicated);
+  }
+
+  public void input(Character c) {
+    // for stream, map store the index of the char in the list
+    if (map.containsKey(c) && map.get(c) >=0) {
+      list.remove(map.get(c).intValue());
+      map.put(c, -1);
+    } else {
+      map.put(c, list.size());
+      list.add(c);
+    }
   }
 }

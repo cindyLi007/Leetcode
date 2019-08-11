@@ -6,20 +6,21 @@ public class SortTransformedArray {
         int N=nums.length;
         int[] res = new int[N];
         /**
-         * 1.a>0, two ends in original array are bigger than center
+         * 1.a>=0, two ends in original array are bigger than center
          * 2.a<0, center is bigger than two ends.
          */
-        int idx = a>=0 ? N-1 : 0, i=0, j=N-1;
-        while (i<=j) {
-            int left = q(nums[i], a, b, c), right = q(nums[j], a, b, c);
+        int idx = a>=0 ? N-1 : 0;
+        int left=0, right=N-1;
+        while (left<=right) {
+            int left_res = q(nums[left], a, b, c), right_res = q(nums[right], a, b, c);
             if (a>=0) {
-                res[idx--] = left>=right ? left : right;
-                if (left >= right) i++;
-                else j--;
+                res[idx--] = left_res>=right_res ? left_res : right_res;
+                if (left_res >= right_res) left++;
+                else right--;
             } else {
-                res[idx++] = left <=right ? left : right;
-                if (left<=right) i++;
-                else j--;
+                res[idx++] = left_res <=right_res ? left_res : right_res;
+                if (left_res<=right_res) left++;
+                else right--;
             }
         }
         return res;

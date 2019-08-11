@@ -6,6 +6,7 @@ import java.util.Arrays;
  * Created by ychang on 12/14/2016.
  */
 public class ThreeSumSmaller {
+  // O(N^2)
   public int threeSumSmaller(int[] nums, int target) {
     int res = 0;
     /*

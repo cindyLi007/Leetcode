@@ -1,5 +1,8 @@
 package com.google.tire;
 
+import java.util.*;
+import java.util.stream.Collectors;
+
 // Time: O(26*N*N), N is the average len of words
 class MagicDictionary {
     Trie root;
@@ -67,6 +70,20 @@ class MagicDictionary {
         System.out.println(magicDictionary.search("hhllo"));
         System.out.println(magicDictionary.search("hell"));
         System.out.println(magicDictionary.search("leetcoded"));
+    }
+
+    public boolean isReflected(int[][] points) {
+        int N = points.length;
+        if (N<=1) return false;
+        Map<Integer, Set<Integer>> map = new HashMap();
+        for (int[] p : points) {
+            int x = p[0], y = p[1];
+            map.computeIfAbsent(y, k-> new HashSet<Integer>()).add(x);
+        }
+        for (Integer k : map.keySet()) {
+            if (map.get(k).size()>1) return true;
+        }
+        return false;
     }
 }
 
