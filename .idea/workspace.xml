@@ -2,361 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fba78393-1326-4876-a317-19bf94d1c0d3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_7_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_7_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_all_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_15_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/Tree/BTreeAverageOfLevels.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/Tree/CountCompleteTreeNodes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/array/JumpGameII.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/bfs/BTLevelOrderTraverseII.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/bit/manipulation/CountBits.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/stack/BasicCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/stack/MaxStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/string/ReverseWordIII.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interview/amazon/online/test/PartitionLabel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interview/amazon/online/test/SubstringWithAtMostKDistinctChar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/google/array/JumpGameIITest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/google/math/ExcelSheetColumnNumberTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/google/stack/BasicCalculatorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/google/stack/MaxStackTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/google/string/ReverseWordIIITest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/interview/amazon/online/test/PartitionLabelTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/interview/amazon/online/test/SubstringWithAtMostKDistinctCharTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java8 practice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/java8 practice.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/bfs/BTLeverOrderTraverse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/bfs/BTLevelOrderTraverse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/linked/list/IntersectionOfTwoLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/linked/list/IntersectionOfTwoLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/linked/list/LinkedListCycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/linked/list/LinkedListCycle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/math/ExcelSheetColumnNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/math/ExcelSheetColumnNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/math/ExcelSheetColumnTitle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/math/ExcelSheetColumnTitle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/math/MultiplyString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/math/MultiplyString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/string/AddStrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/string/AddStrings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/string/ReverseWordsII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/string/ReverseWordsII.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/google/string/AddStringsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/google/string/AddStringsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/google/string/StringToIntTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/google/string/StringToIntTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/algorithm/binary/indexed/tree/NumArray.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/algorithm/dp/BadNeighbors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/algorithm/dp/ZigZag.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/algorithm/dp/numberOfCoins.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/algorithm/sort/InsertionSort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/algorithm/sort/MergeSort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/algorithm/sort/QuickSort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/algorithm/sort/SelectionSort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/algorithm/sort/ShellSort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/algorithm/sort/ShuffleCard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/algorithm/sort/SortColor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/algorithm/sort/SortList$ListNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/algorithm/sort/SortList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/algorithm/trie/classic/TrieNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/algorithm/trie/classic/TrieTree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/collection/DequeExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/collection/MapExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/collection/SetExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/collection/builder/pattern/BuilderPatternTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/collection/builder/pattern/Gender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/collection/builder/pattern/Person$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/collection/builder/pattern/Person$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/collection/builder/pattern/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/collection/compare/ComparableStudent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/collection/compare/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/collection/compare/StudentSortGpa.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/collection/compare/StudentSortName.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/collection/compare/TestComparable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/collection/compare/TestComparator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/collection/effective/java/Circle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/collection/effective/java/EnumMapPractice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/collection/effective/java/Rectangle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/collection/effective/java/Shape.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/concurrent/example/client/NetworkClientCallable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/concurrent/example/client/NetworkClientMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/concurrent/example/client/RequestResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/concurrent/example/forkToJoin/FindMaxTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/concurrent/example/forkToJoin/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/concurrent/example/forkToJoin/RandomArrayAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/concurrent/example/server/NetworkServerMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/exception/example/ExceptionMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/exception/example/InvalidOperationException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/file/BufferedReaderTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/file/NioReaderReadAll.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/file/NioReaderTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/forInterview/PrimeCheckTester.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/input/output/system/in/out/BufferedStreamCopyTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/input/output/system/in/out/ByteChannelCopyTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/input/output/system/in/out/ByteStreamCopyTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/input/output/system/in/out/CharStreamCopyTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/input/output/system/in/out/KeyboardInput.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/interfaceExtend/Account.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/interfaceExtend/AccountOperations.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/interfaceExtend/Bank.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/interfaceExtend/BankOperations.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/interfaceExtend/Branch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/interfaceExtend/CheckingAccount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/interfaceExtend/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/interfaceExtend/SavingAccount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/interfaceExtend/lambda/AnalyzerTool.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/interfaceExtend/lambda/LambdaTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/interfaceExtend/lambda/StringAnalyzer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/localdate/time/zone/LocalDateExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/localdate/time/zone/LocalDateTimeExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/localdate/time/zone/LocalTimeExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/localdate/time/zone/TimeBetweenExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/localdate/time/zone/ZoneTimeExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/nested/Employee$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/nested/Employee$BenefitsHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/nested/Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/nested/EmployeeImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/nested/EmployeeImplTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/regx/doubleBackslash.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/serializable/DeserializeTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/serializable/SerializeTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/serializable/Stock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/stream/CollectTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/stream/JoinTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/stream/LazyTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/stream/MapTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/stream/PeekTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/stream/SalesTxn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/stream/SortTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/stream/State.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cgi/stream/TaxRate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/BinaryTreeLongestConsecutiveSequence.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/BombEnemy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/LongestAbsolutePath.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/LongestSubStringMostKDistinctChar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/OptimalAccountBalance.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/PerfectRectangle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/RangeSumQuery2D_Mutable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/SentenceScreenFitting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/Skyline.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/Tree/LowestCommonAncestorBST.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/Tree/LowestCommonAncestorBT.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/Tree/TreeNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/TreeNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/WiggleSort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/array/BattleshipsInBoard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/array/BestTimeBuySellStockII.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/array/Interval.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/array/LargestRectangleHistogram.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/array/MergeInterval.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/array/MissingRange.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/array/PlusOne.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/array/ProductOfArrayExceptSelf.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/array/QueueReconstruction$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/array/QueueReconstruction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/array/RemoveDuplicated.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/array/RemoveElements.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/array/RotateImage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/array/SpiralOrder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/array/ThreeSumSmaller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/array/bit/manipulation/GameOfLife.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/backtracking/LetterComboOfPhoneNum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/SurroundedRegion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/bfs/BTLeverOrderTraverse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/bfs/BTZigzagLevelTraverse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/bfs/BinaryTreeRightSideView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/bfs/CourseSchedule.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/bfs/FindMHTs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/bfs/PacificAtlanticWaterFlow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/bfs/PerfectSquares.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/bfs/ShortestDistance.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/bfs/TreeNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/bfs/WallAndGates.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/bfs/WordLadderII.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/dfs/BTMaxPathSum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/dfs/BinaryTreePath.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/dfs/CloneGraph.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/dfs/FlatternBTtoLinkedList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/dfs/LongestIncreasingPathInMatrix.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/dfs/MaxDepthOfBT.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/dfs/NestedListDepthSum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/dfs/NestedListDepthSumII.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/dfs/NumberOfIslands.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/dfs/PopulatingNextRightPointerII.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/dfs/PopulatingNextRightPointers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/dfs/ReconstructItinerary.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/dfs/RecoverBST.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/dfs/SymmetricTree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/dfs/TreeLinkNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/dfs/TreeNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/dfs/UndirectedGraphNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bfs/dfs/dfs/ValidBST.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/binary/search/FindDuplicateNumber.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/binary/search/FindMinInRotatedArray.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/binary/search/FindPeekElement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/binary/search/GuessNumber.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/binary/search/Heaters.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/binary/search/IntersectionOfTwoArrays.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/binary/search/KthSmallestElementInBST.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/binary/search/MedianOfTwoSortedArray.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/binary/search/PowXN.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/binary/search/Search2DMatrix.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/binary/search/SearchInRotatedSortedArray.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/binary/search/TreeNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/binary/search/tree/ContainDuplicate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/binary/search/tree/CountOfSmallerNumber$TreeNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/binary/search/tree/CountOfSmallerNumber.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/bit/manipulation/UTF8Validation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/design/LRUCache$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/design/LRUCache.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/design/MovingAverage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/design/RandomizedSet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/design/TicTacToe.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/design/ZigzagIterator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/dp/BestTimeBuySellWithColldown.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/dp/BestTimeToBuySellStock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/dp/ClimbingStairs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/dp/DecodeWays.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/dp/HouseRobber.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/dp/MaxProductSubarray.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/dp/MaximalSquare.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/dp/MaximumSubArray.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/dp/RobotSteps.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/dp/TrappingRainWater.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/dp/UniqueBST.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/dp/WordBreak.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/dp/WordBreakII.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/hash/table/ContainsDuplicateII.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/hash/table/CopyListWithRandomPointer$RandomListNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/hash/table/CopyListWithRandomPointer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/hash/table/GroupAnagrams.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/hash/table/HappyNumber.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/hash/table/LongestConsecutiveSequence.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/hash/table/LongestSubstring.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/hash/table/MaxPointsOnALine.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/hash/table/MaxRectangle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/hash/table/RepeatedDna.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/hash/table/TopKFrequentElement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/hash/table/UniqueWord.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/hash/table/ValidAnagram.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/hash/table/ValidSudoku.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/hash/table/ValidWordAbbr.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/heap/SlidingWindowMax.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/linked/list/AddTwoNumbers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/linked/list/AddTwoNumbersII.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/linked/list/DeleteNodeInLinkedList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/linked/list/IntersectionOfTwoLinkedList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/linked/list/LinkedListCycle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/linked/list/ListNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/linked/list/MergeKSortedLists.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/linked/list/MergeTwoSoredLists.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/linked/list/PhoneDir.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/linked/list/PhoneDirectory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/linked/list/PlusOneLinkedList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/linked/list/RemoveLinkedListElement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/linked/list/ReverseList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/linked/list/ReverseNodesInKGroup.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/math/ExcelSheetColumnNumber.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/math/ExcelSheetColumnTitle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/recursive/NestedIterator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/stack/BSTIterator$TreeNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/stack/BSTIterator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/stack/DecodeString.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/stack/MinStack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/stack/NestedInteger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/stack/NestedIntegerImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/stack/NestedIterator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/stack/TrappingRainWater.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/stack/ValidParentheses.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/string/EncodeAndDecode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/string/FindAllAnagrams.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/string/FirstUniqueCharInAString.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/string/IntegerToEnglishWords.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/string/LongestPalindromicString.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/string/RepeatedStringPattern.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/string/StrobogrammaticNumber.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/tire/PalindromePair$TrieNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/tire/PalindromePair.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/tire/WordSquaresSearch$TrieNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/tire/WordSquaresSearch$TrieTree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/tire/WordSquaresSearch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/two/pointers/FindDuplicateNumber.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/two/pointers/Heaters.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/two/pointers/MergeSortedArray.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/two/pointers/MoveZeroes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/two/pointers/ReverseVowels.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/two/pointers/ThreeSum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/two/pointers/TrappingRainWater.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/union/find/LongestConsecutiveSequence.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/union/find/NumberOfIslands$UnionFind.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/union/find/NumberOfIslands.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/union/find/NumberOfIslands_II.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/union/find/SurroundedRegion$UnionFind.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/union/find/SurroundedRegion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/union/find/UnionFind_QuickFind.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/google/union/find/UnionFind_QuickUnion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/interview/tdd/Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/interview/tdd/EmployeeCreator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/interview/tdd/IDb.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/interview/tdd/State.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/algorithm/sort/MergeSortTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/algorithm/sort/SelectionSortTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/algorithm/sort/ShuffleCardTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cgi/forInterview/PrimeCheckTesterTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cgi/nested/EmployeeTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/LongestSubstringTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/OptimalAccountBalanceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/SkylineTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/TrappingRainWaterTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/array/LargestRectangleHistogramTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/array/MergeIntervalTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/array/ProductOfArrayExceptSelfTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/array/RotateImageTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/bfs/dfs/bfs/CourseScheduleTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/bfs/dfs/bfs/PacificAtlanticWaterFlowTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/bfs/dfs/bfs/WordLadderIITest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/bfs/dfs/dfs/LongestIncreasingPathInMatrixTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/bfs/dfs/dfs/NestedListDepthSumIITest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/bfs/dfs/dfs/ReconstructItineraryTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/bfs/dfs/dfs/ValidBSTTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/binary/search/FindMinInRotatedArrayTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/binary/search/GuessNumberTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/binary/search/IntersectionOfTwoArraysTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/binary/search/KthSmallestElementInBSTTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/binary/search/Search2DMatrixTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/binary/search/SearchInRotatedSortedArrayTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/binary/search/tree/ContainDuplicateTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/binary/search/tree/CountOfSmallerNumberTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/design/LRUCacheTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/dp/BestTimeBuySellWithColldownTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/dp/BestTimeToBuySellStockTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/dp/DecodeWaysTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/dp/MaxProductSubarrayTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/dp/MaximalSquareTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/dp/MaximumSubArrayTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/dp/RobotStepsTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/dp/WordBreakIITest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/dp/WordBreakTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/hash/table/HappyNumberTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/hash/table/LongestConsecutiveSequenceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/hash/table/MaxPointsOnALineTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/hash/table/TopKFrequentElementTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/hash/table/ValidSudokuTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/hash/table/ValidWordAbbrTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/heap/SlidingWindowMaxTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/linked/list/AddTwoNumbersIITest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/linked/list/RemoveLinkedListElementTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/linked/list/ReverseListTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/stack/MinStackTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/stack/NestedIteratorTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/string/FindAllAnagramsTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/string/IntegerToEnglishWordsTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/string/LongestPalindromicStringTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/string/RepeatedStringPatternTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/string/ReverseVowelsTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/two/pointers/MoveZeroesTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/two/pointers/ThreeSumTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/union/find/LongestConsecutiveSequenceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/google/union/find/SurroundedRegionTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/interview/tdd/EmployeeCreatorTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="java8 practice.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -372,11 +18,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/java8 practice$com_google_string_in_java8_practice.coverage" NAME="com.google.string in java8 practice Coverage Results" MODIFIED="1483638453088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.google.string.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/java8 practice$PhoneDirectory.coverage" NAME="PhoneDirectory Coverage Results" MODIFIED="1488852800568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.google.linked.list.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/java8 practice$com_google_string_in_java8_practice.coverage" NAME="com.google.string in java8 practice Coverage Results" MODIFIED="1483638453088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.google.string.*</FILTER>
     </SUITE>
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -386,127 +32,7 @@
     <favorites_list name="java8 practice" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.40021458">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="EmployeeImpl.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/cgi/nested/EmployeeImpl.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="140">
-                  <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="EmployeeImplTest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/cgi/nested/EmployeeImplTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="264">
-                  <caret line="14" column="62" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="62" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Employee.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/cgi/nested/Employee.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="726">
-                  <caret line="33" selection-start-line="33" selection-end-line="33" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="JsonTransactionObjectTest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/java/com/cgi/nested/JsonTransactionObjectTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="814">
-                  <caret line="44" column="1" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SortColorTest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/SortColorTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="308">
-                  <caret line="14" selection-start-line="14" selection-end-line="14" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MeetingRoomIIITest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/java/com/google/heap/MeetingRoomIIITest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="418">
-                  <caret line="22" selection-start-line="22" selection-end-line="22" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="JsonTransactionObject.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/cgi/nested/JsonTransactionObject.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="352">
-                  <caret line="16" selection-start-line="16" selection-end-line="16" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="HitCounter.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/design/HitCounter.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="242">
-                  <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AddStrings.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/string/AddStrings.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="66">
-                  <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AddStringsTest.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/test/java/com/google/string/AddStringsTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="66">
-                  <caret line="3" selection-start-line="3" selection-end-line="3" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CountCompleteTreeNodes.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/Tree/CountCompleteTreeNodes.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="242">
-                  <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="InsertIntervalTest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/java/com/google/linked/list/InsertIntervalTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -525,6 +51,11 @@
         <option name="argument" value="--follow-tags" />
         <option name="title" value="Current Branch" />
       </GitPushTagMode>
+    </option>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
     </option>
   </component>
   <component name="IdeDocumentHistory">
@@ -600,11 +131,10 @@
   <component name="MavenProjectNavigator">
     <treeState />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1620" />
-    <option name="height" value="920" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="709" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -632,10 +162,74 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Leetcode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Leetcode" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Leetcode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Leetcode" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Leetcode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Leetcode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Leetcode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Leetcode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Leetcode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Leetcode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Leetcode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Leetcode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="interview" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Leetcode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Leetcode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="true" />
@@ -648,7 +242,7 @@
     <property name="extract.method.default.visibility" value="private" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/LeetCode" />
-    <property name="last_opened_file_path" value="C:/Program Files/Java/jdk1.8.0_161" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -703,9 +297,70 @@
   <component name="RunManager" selected="JUnit.JsonTransactionObjectTest.testJson">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="WIDTH" value="0" />
+      <option name="HEIGHT" value="0" />
+      <module />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
     </configuration>
     <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
       <setting name="vmparams" value="" />
@@ -717,13 +372,13 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
     </configuration>
     <configuration name="JsonTransactionObjectTest.testJson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java8 practice" />
-      <extension name="coverage">
+      <extension name="coverage" enabled="false" merge="false" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.cgi.nested.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <module name="java8 practice" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.cgi.nested" />
@@ -733,20 +388,22 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
+      <envs />
       <patterns />
     </configuration>
     <configuration name="LargestRectangleHistogramTest.largestRectangleArea_stack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java8 practice" />
-      <extension name="coverage">
+      <extension name="coverage" enabled="false" merge="false" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.google.array.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <module name="java8 practice" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.google.array" />
@@ -756,20 +413,22 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
+      <envs />
       <patterns />
     </configuration>
     <configuration name="MaxRectangleTest.maximalRectangle_dp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java8 practice" />
-      <extension name="coverage">
+      <extension name="coverage" enabled="false" merge="false" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.google.hash.table.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <module name="java8 practice" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.google.hash.table" />
@@ -779,20 +438,22 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
+      <envs />
       <patterns />
     </configuration>
     <configuration name="MeetingRoomIIITest.meetingRoomSchedule" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java8 practice" />
-      <extension name="coverage">
+      <extension name="coverage" enabled="false" merge="false" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.google.heap.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <module name="java8 practice" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.google.heap" />
@@ -802,20 +463,22 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
+      <envs />
       <patterns />
     </configuration>
     <configuration name="SortColorTest.sortColors" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java8 practice" />
-      <extension name="coverage">
+      <extension name="coverage" enabled="false" merge="false" runner="idea">
         <pattern>
           <option name="PATTERN" value="algorithm.sort.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <module name="java8 practice" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="algorithm.sort" />
@@ -825,13 +488,17 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
+      <envs />
       <patterns />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" />
@@ -841,13 +508,17 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
+      <envs />
       <patterns />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
@@ -860,12 +531,15 @@
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
       <option name="USE_DEFAULT_REPORTERS" value="false" />
       <option name="PROPERTIES_FILE" />
+      <envs />
       <properties />
       <listeners />
     </configuration>
@@ -923,55 +597,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
-      <option name="BCName" value="" />
-      <option name="IOSSimulatorSdkPath" value="" />
-      <option name="adlOptions" value="" />
-      <option name="airProgramParameters" value="" />
-      <option name="appDescriptorForEmulator" value="Android" />
-      <option name="debugTransport" value="USB" />
-      <option name="debuggerSdkRaw" value="BC SDK" />
-      <option name="emulator" value="NexusOne" />
-      <option name="emulatorAdlOptions" value="" />
-      <option name="fastPackaging" value="true" />
-      <option name="fullScreenHeight" value="0" />
-      <option name="fullScreenWidth" value="0" />
-      <option name="launchUrl" value="false" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="FlashPlayerDebugger.exe" />
-        </LauncherParameters>
-      </option>
-      <option name="mobileRunTarget" value="Emulator" />
-      <option name="moduleName" value="" />
-      <option name="overriddenMainClass" value="" />
-      <option name="overriddenOutputFileName" value="" />
-      <option name="overrideMainClass" value="false" />
-      <option name="runTrusted" value="true" />
-      <option name="screenDpi" value="0" />
-      <option name="screenHeight" value="0" />
-      <option name="screenWidth" value="0" />
-      <option name="url" value="http://" />
-      <option name="usbDebugPort" value="7936" />
-      <method />
-    </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
-      <option name="BCName" value="" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="FlashPlayerDebugger.exe" />
-        </LauncherParameters>
-      </option>
-      <option name="moduleName" value="" />
-      <option name="trusted" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
@@ -1053,22 +678,25 @@
       <arguments />
       <envs />
     </configuration>
-    <list>
-      <item itemvalue="JUnit.LargestRectangleHistogramTest.largestRectangleArea_stack" />
-      <item itemvalue="JUnit.MaxRectangleTest.maximalRectangle_dp" />
-      <item itemvalue="JUnit.SortColorTest.sortColors" />
-      <item itemvalue="JUnit.MeetingRoomIIITest.meetingRoomSchedule" />
-      <item itemvalue="JUnit.JsonTransactionObjectTest.testJson" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.LargestRectangleHistogramTest.largestRectangleArea_stack" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.MaxRectangleTest.maximalRectangle_dp" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.SortColorTest.sortColors" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.MeetingRoomIIITest.meetingRoomSchedule" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.JsonTransactionObjectTest.testJson" />
     </list>
     <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.JsonTransactionObjectTest.testJson" />
-        <item itemvalue="JUnit.MeetingRoomIIITest.meetingRoomSchedule" />
-        <item itemvalue="JUnit.SortColorTest.sortColors" />
-        <item itemvalue="JUnit.MaxRectangleTest.maximalRectangle_dp" />
-        <item itemvalue="JUnit.LargestRectangleHistogramTest.largestRectangleArea_stack" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.JsonTransactionObjectTest.testJson" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.MeetingRoomIIITest.meetingRoomSchedule" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.SortColorTest.sortColors" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.MaxRectangleTest.maximalRectangle_dp" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.LargestRectangleHistogramTest.largestRectangleArea_stack" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -1270,6 +898,9 @@
       <workItem from="1512683924780" duration="4402000" />
       <workItem from="1516703452409" duration="34000" />
       <workItem from="1531365713395" duration="239000" />
+      <workItem from="1565623974251" duration="90000" />
+      <workItem from="1565624084934" duration="65000" />
+      <workItem from="1565624173421" duration="165000" />
     </task>
     <task id="LOCAL-00001" summary="Update and add new files">
       <created>1490111733505</created>
@@ -1412,78 +1043,77 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2090145000" />
+    <option name="totallyTimeSpent" value="2090465000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1620" height="920" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1280" height="709" extended-state="6" />
     <layout>
-      <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="bottom" id="TODO" order="0" />
-      <window_info id="Palette&#9;" order="0" />
-      <window_info id="Image Layers" />
-      <window_info anchor="bottom" id="Java Enterprise" order="1" />
-      <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5057232" side_tool="true" weight="0.3080214" />
-      <window_info anchor="right" id="Maven Projects" order="0" weight="0.15052083" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Run" order="1" weight="0.3496732" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.32897604" />
-      <window_info id="Capture Tool" order="0" />
-      <window_info anchor="right" id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.23229614" />
-      <window_info anchor="right" id="Database" order="0" />
-      <window_info id="Learn" order="2" />
-      <window_info id="Structure" order="0" side_tool="true" />
-      <window_info anchor="right" id="Ant Build" order="0" weight="0.3299356" />
-      <window_info id="UI Designer" order="0" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="1" sideWeight="0.48980686" weight="0.37739873" />
-      <window_info anchor="bottom" id="JRebel Executor" order="1" />
-      <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.4942768" weight="0.3080214" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Tail" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.25925925" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="Dynamic Properties" order="1" />
-      <window_info anchor="right" id="Coverage" order="1" side_tool="true" weight="0.3296875" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="JRebel" order="1" side_tool="true" />
-      <window_info anchor="right" id="Hierarchy" order="1" weight="0.203125" />
-      <window_info anchor="bottom" id="JRebel Console" order="1" side_tool="true" weight="0.32897604" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3080214" sideWeight="0.5057232" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15052083" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3496732" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897604" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23203126" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37739873" sideWeight="0.48980686" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897604" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.203125" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3080214" sideWeight="0.4942768" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25925925" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.3296875" />
-      <window_info id="JRebel" order="6" side_tool="true" />
-      <window_info anchor="right" id="Hierarchy" order="6" weight="0.203125" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5083333" side_tool="true" weight="0.37472767" />
-      <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="right" id="Dynamic Properties" order="7" />
-      <window_info anchor="bottom" id="JRebel Console" order="5" side_tool="true" weight="0.32897604" />
-      <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.23229614" />
-      <window_info anchor="right" id="Ant Build" order="4" weight="0.3299356" />
-      <window_info anchor="bottom" id="TODO" order="1" />
-      <window_info anchor="bottom" id="Run" order="10" weight="0.3496732" />
-      <window_info anchor="bottom" id="Java Enterprise" order="9" />
-      <window_info id="Capture Tool" order="0" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Find" order="11" weight="0.25925925" />
-      <window_info anchor="right" id="Designer" order="2" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Palette&#9;" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.32897604" />
-      <window_info id="Structure" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="JRebel Executor" order="6" />
-      <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.49166667" weight="0.36414254" />
-      <window_info anchor="bottom" id="Tail" order="7" />
-      <window_info anchor="bottom" id="Messages" order="2" weight="0.30827886" />
-      <window_info anchor="right" id="Maven Projects" order="1" weight="0.15052083" />
-      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37472767" sideWeight="0.5083333" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897604" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15052083" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.203125" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36414254" sideWeight="0.49166667" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30827886" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3496732" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897604" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23229614" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25925925" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -2162,21 +1792,21 @@
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/Skyline.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="889">
-          <caret line="121" column="39" selection-start-line="121" selection-start-column="39" selection-end-line="121" selection-end-column="39" />
+          <caret line="121" column="39" lean-forward="false" selection-start-line="121" selection-start-column="39" selection-end-line="121" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/hash/table/HIndex.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
-          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+          <caret line="36" column="24" lean-forward="false" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/dfs/GraphValidTree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="265">
-          <caret line="37" column="3" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
+          <caret line="37" column="3" lean-forward="false" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -2184,7 +1814,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/com/google/bfs/dfs/dfs/GraphValidTreeTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -2193,79 +1823,79 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/temp/Solution1Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+          <caret line="17" column="37" lean-forward="false" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/system/design/EncodeAndDecodeTinyUrl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="879">
-          <caret line="52" column="12" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
+          <caret line="52" column="12" lean-forward="false" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/union/find/GraphValidTree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/temp/Solution1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+          <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/interview/microsoft/onsite/RemoveDuplicatedCharFromStringTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/array/RemoveDuplicated.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+          <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/array/RemoveDuplicatedII.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/Tree/BTVerticalOrder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="104" selection-start-line="104" selection-end-line="104" />
+          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/google/array/LargestRectangleHistogramTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="496">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/array/LargestRectangleHistogram.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
-          <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
+          <caret line="40" column="10" lean-forward="false" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/google/array/RemoveDuplicatedTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <element signature="imports" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2273,37 +1903,37 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/com/google/hash/table/MaxRectangleTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/hash/table/MaxRectangle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="386">
-          <caret line="49" column="7" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
+          <caret line="49" column="7" lean-forward="false" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/dp/MaximalSquare.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/bfs/RemoveInvalidParentheses.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
-          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+          <caret line="17" column="39" lean-forward="false" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/dfs/RemoveInvalidParentheses.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
           <folding>
-            <element signature="imports" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2311,134 +1941,133 @@
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/dfs/CloneGraph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
-          <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
+          <caret line="43" column="10" lean-forward="false" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/dp/WordBreak.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
-          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+          <caret line="14" column="40" lean-forward="false" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/system/design/TinyURL.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="770">
-          <caret line="46" column="60" selection-start-line="46" selection-start-column="60" selection-end-line="46" selection-end-column="60" />
+          <caret line="46" column="60" lean-forward="false" selection-start-line="46" selection-start-column="60" selection-end-line="46" selection-end-column="60" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/heap/MeetingRoomIII.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
-          <caret line="20" column="45" selection-start-line="20" selection-end-line="21" />
+          <caret line="20" column="45" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/interview/facebook/FindPerimeter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
-          <caret line="29" column="10" selection-start-line="29" selection-end-line="30" />
+          <caret line="29" column="10" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/heap/MeetingRoom.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
-          <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+          <caret line="23" column="3" lean-forward="false" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/heap/MeetingRoomII.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="842">
-          <caret line="50" column="3" selection-start-line="50" selection-start-column="3" selection-end-line="50" selection-end-column="3" />
+          <caret line="50" column="3" lean-forward="false" selection-start-line="50" selection-start-column="3" selection-end-line="50" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/bfs/WordLadder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1870">
-          <caret line="89" column="13" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
+          <caret line="89" column="13" lean-forward="false" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/string/ReadNCharGivenRead4IIMultipleTimes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1012">
-          <caret line="46" column="3" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
+          <caret line="46" column="3" lean-forward="false" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/algorithm/sort/SortColor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
-          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+          <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/SortColorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/google/heap/MeetingRoomIIITest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="285">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cgi/nested/EmployeeImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="120">
+          <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cgi/nested/EmployeeImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="14" column="62" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="62" />
+        <state relative-caret-position="180">
+          <caret line="14" column="62" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="62" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.3.1/gson-2.3.1.jar!/com/google/gson/JsonElement.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/lang/Object.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cgi/nested/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="495">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/cgi/nested/JsonTransactionObjectTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="44" column="1" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
+        <state relative-caret-position="537">
+          <caret line="44" column="1" lean-forward="false" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cgi/nested/JsonTransactionObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="165">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -2448,28 +2077,31 @@
     <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.3.1/gson-2.3.1.jar!/com/google/gson/Gson.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
-          <caret line="426" selection-start-line="426" selection-end-line="426" />
+          <caret line="426" column="0" lean-forward="false" selection-start-line="426" selection-start-column="0" selection-end-line="426" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/design/HitCounter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        <state relative-caret-position="165">
+          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/Tree/CountCompleteTreeNodes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        <state relative-caret-position="165">
+          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/google/linked/list/InsertIntervalTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+        <state relative-caret-position="135">
+          <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2477,15 +2109,27 @@
     <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.3.1/gson-2.3.1-sources.jar!/com/google/gson/JsonElement.java" />
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/string/AddStrings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        <state relative-caret-position="45">
+          <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/google/string/AddStringsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="90">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="38" column="17" lean-forward="false" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
