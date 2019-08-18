@@ -1,10 +1,6 @@
 package interview.amazon.onsite;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 /**
  * Created by ychang on 4/4/2017.
@@ -14,13 +10,13 @@ public class BestSeller {
   private Map<Integer, SellItemProxy> prodMap;
 
   public BestSeller() {
-    rankingList = new TreeMap<>();
+    rankingList = new TreeMap<>(Collections.reverseOrder());
     prodMap = new HashMap<>();
   }
 
   public List<Integer> getBestSeller(int num) {
     List<Integer> res = new ArrayList<>();
-    for (Integer amount : rankingList.descendingKeySet()) {
+    for (Integer amount : rankingList.keySet()) {
       res.addAll(rankingList.get(amount));
       if (res.size()>num) return res;
     }

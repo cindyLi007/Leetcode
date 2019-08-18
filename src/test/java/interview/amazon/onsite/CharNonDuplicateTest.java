@@ -21,13 +21,20 @@ public class CharNonDuplicateTest {
 
     // When
     charNonDuplicate.input('c');
+    System.out.println(charNonDuplicate.latestNonDuplicated());
     charNonDuplicate.input('d');
+    System.out.println(charNonDuplicate.latestNonDuplicated());
     charNonDuplicate.input('d');
     System.out.println(charNonDuplicate.latestNonDuplicated());
 
     // When
     charNonDuplicate.input('b');
     System.out.println(charNonDuplicate.latestNonDuplicated());
+    charNonDuplicate.input('a');
+    System.out.println(charNonDuplicate.latestNonDuplicated());
+    charNonDuplicate.input('e');
+    System.out.println(charNonDuplicate.latestNonDuplicated());
+
   }
 
 }

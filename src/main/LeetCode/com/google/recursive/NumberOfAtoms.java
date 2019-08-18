@@ -14,6 +14,7 @@ public class NumberOfAtoms {
         N=formula.length();
         Map<String, Integer> map = helper(formula);
         StringBuilder sb = new StringBuilder();
+        // We could not directly sort map, but we can sort map keys to sort map
         List<String> keys = new ArrayList<>(map.keySet());
         Collections.sort(keys);
         for (String s : keys) {
@@ -25,7 +26,9 @@ public class NumberOfAtoms {
 
     private Map<String, Integer> helper(String f) {
         Map<String, Integer> map = new HashMap<>();
+        // when we encounter ')' that means an inner formula end, we need return to the upper level
         while (i<N && f.charAt(i)!=')') {
+            // when we encounter '(' that mean begin an inner formula.
             if (f.charAt(i)=='(') {
                 i++;
                 Map<String, Integer> inner = helper(f);

@@ -2,7 +2,80 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fba78393-1326-4876-a317-19bf94d1c0d3" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/junit_junit_4_12.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/Tree/ValidSerializaion.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/array/KEmptySlots.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/array/RearrangeStringKDistanceApart.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/array/TaskScheduler.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/bfs/SlidingPuzzles.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/bit/manipulation/IPtoCIDR.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/design/LFU.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/design/SnakeGame.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/design/TwoDFlattenIterator.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/dp/CherryPick.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/dp/MaxSumOfRectangle.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/dp/OddEvenJumps.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/graph/FindCheapestFlight.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/hash/table/LineReflection.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/heap/MedianFinder.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/heap/SlidingWindowMedian.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/linked/list/EmployeeFreeTime.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/queue/MedianSlidingWindow.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/segment/tree/CountRangeSum.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/stack/BasicCalculatorII.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/stack/CarFleet.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/stack/NextElement.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/stack/RemoveDuplicateLetters.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/stack/RemoveKDigits.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/stack/RemoveOuterParentheses.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/string/MiiWindow.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/two/pointers/BackspaceCompare.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/two/pointers/IntervalListIntersection.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/two/pointers/LongestMountain.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/temp/InsertIntervals.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/LeetCode/temp/Solutions_3.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/data/structure/BinarySearchTree.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/interview/Airbnb/AirbnbQueue.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/interview/lyft/IntersectionIterator.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/interview/snapchat/FixedLenSegList.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/interview/snapchat/FixedLengthList.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/interview/uber/phone/interview/NumberOfTarget.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/java8 practice.iml" afterPath="$PROJECT_DIR$/java8 practice.iml" />
+      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/Tree/MaxBT.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/Tree/MaxBT.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/array/ThreeSumSmaller.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/array/ThreeSumSmaller.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/dfs/PopulatingNextRightPointerII.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/dfs/PopulatingNextRightPointerII.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/dp/MaximumSubArray.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/dp/MaximumSubArray.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/dp/VideoStitching.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/dp/VideoStitching.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/hash/table/HIndex.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/hash/table/HIndex.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/hash/table/LongestConsecutiveSequence.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/hash/table/LongestConsecutiveSequence.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/hash/table/LongestSubstring.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/hash/table/LongestSubstring.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/hash/table/MinAreaRectangle.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/hash/table/MinAreaRectangle.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/heap/MeetingRoomII.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/heap/MeetingRoomII.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/heap/MinCostHiringWorkers.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/heap/MinCostHiringWorkers.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/heap/SlidingWindowMax.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/heap/SlidingWindowMax.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/linked/list/InsertInterval.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/linked/list/InsertInterval.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/math/SortTransformedArray.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/math/SortTransformedArray.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/queue/DailyTemperature.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/queue/DailyTemperature.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/recursive/NestedIterator.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/recursive/NumberOfAtoms.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/recursive/NumberOfAtoms.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/stack/BSTIterator.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/stack/BSTIterator.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/stack/NestedIterator.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/stack/NestedIterator.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/string/LongestSubStringMostKDistinctChar.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/string/LongestSubStringMostKDistinctChar.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/string/MinWindowSubstring.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/string/MinWindowSubstring.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/com/google/tire/MagicDictionary.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/com/google/tire/MagicDictionary.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/LeetCode/temp/Solution1.java" afterPath="$PROJECT_DIR$/src/main/LeetCode/temp/Solution1.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interview/amazon/online/test/SubstringWithAtMostKDistinctChar.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interview/amazon/onsite/BestSeller.java" afterPath="$PROJECT_DIR$/src/main/java/interview/amazon/onsite/BestSeller.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interview/amazon/onsite/CharNonDuplicate.java" afterPath="$PROJECT_DIR$/src/main/java/interview/amazon/onsite/CharNonDuplicate.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interview/amazon/onsite/FindItemNumber.java" afterPath="$PROJECT_DIR$/src/main/java/interview/amazon/onsite/FindItemNumber.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/google/Tree/MaxBTTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/google/Tree/MaxBTTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/google/dp/MaximumSubArrayTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/google/dp/MaximumSubArrayTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/google/heap/SlidingWindowMaxTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/google/heap/SlidingWindowMaxTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/google/stack/NestedIteratorTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/google/stack/NestedIteratorTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/google/string/MinWindowSubstringTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/google/string/MinWindowSubstringTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/interview/amazon/online/test/SubstringWithAtMostKDistinctCharTest.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/interview/amazon/onsite/CharNonDuplicateTest.java" afterPath="$PROJECT_DIR$/src/test/java/interview/amazon/onsite/CharNonDuplicateTest.java" />
     </list>
     <ignored path="java8 practice.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +105,30 @@
     <favorites_list name="java8 practice" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="AirbnbQueue.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/interview/Airbnb/AirbnbQueue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IntersectionIterator.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/interview/lyft/IntersectionIterator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -190,11 +286,6 @@
             <path>
               <item name="Leetcode" type="b2602c69:ProjectViewProjectNode" />
               <item name="Leetcode" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Leetcode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Leetcode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -218,13 +309,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="interview" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Leetcode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Leetcode" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -243,7 +327,7 @@
     <property name="ignore_missing_gitignore" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/LeetCode" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
@@ -294,12 +378,50 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.JsonTransactionObjectTest.testJson">
+  <component name="RunManager" selected="Application.IntersectionIterator">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <option name="WIDTH" value="0" />
       <option name="HEIGHT" value="0" />
       <module />
+    </configuration>
+    <configuration name="AirbnbQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="interview.Airbnb.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="interview.Airbnb.AirbnbQueue" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="java8 practice" />
+      <envs />
+    </configuration>
+    <configuration name="IntersectionIterator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="interview.lyft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="interview.lyft.IntersectionIterator" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="java8 practice" />
+      <envs />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -384,56 +506,6 @@
       <option name="PACKAGE_NAME" value="com.cgi.nested" />
       <option name="MAIN_CLASS_NAME" value="com.cgi.nested.JsonTransactionObjectTest" />
       <option name="METHOD_NAME" value="testJson" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="LargestRectangleHistogramTest.largestRectangleArea_stack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.google.array.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="java8 practice" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.google.array" />
-      <option name="MAIN_CLASS_NAME" value="com.google.array.LargestRectangleHistogramTest" />
-      <option name="METHOD_NAME" value="largestRectangleArea_stack" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="MaxRectangleTest.maximalRectangle_dp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.google.hash.table.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="java8 practice" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.google.hash.table" />
-      <option name="MAIN_CLASS_NAME" value="com.google.hash.table.MaxRectangleTest" />
-      <option name="METHOD_NAME" value="maximalRectangle_dp" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -679,19 +751,19 @@
       <envs />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.LargestRectangleHistogramTest.largestRectangleArea_stack" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.MaxRectangleTest.maximalRectangle_dp" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.SortColorTest.sortColors" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.MeetingRoomIIITest.meetingRoomSchedule" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.JsonTransactionObjectTest.testJson" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.SortColorTest.sortColors" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.MeetingRoomIIITest.meetingRoomSchedule" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.JsonTransactionObjectTest.testJson" />
+      <item index="3" class="java.lang.String" itemvalue="Application.AirbnbQueue" />
+      <item index="4" class="java.lang.String" itemvalue="Application.IntersectionIterator" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.JsonTransactionObjectTest.testJson" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.MeetingRoomIIITest.meetingRoomSchedule" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.SortColorTest.sortColors" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.MaxRectangleTest.maximalRectangle_dp" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.LargestRectangleHistogramTest.largestRectangleArea_stack" />
+        <item index="0" class="java.lang.String" itemvalue="Application.IntersectionIterator" />
+        <item index="1" class="java.lang.String" itemvalue="Application.AirbnbQueue" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.JsonTransactionObjectTest.testJson" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.MeetingRoomIIITest.meetingRoomSchedule" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.SortColorTest.sortColors" />
       </list>
     </recent_temporary>
   </component>
@@ -1043,25 +1115,27 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2090465000" />
+    <option name="totallyTimeSpent" value="2091593000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30781758" sideWeight="0.4942768" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3080214" sideWeight="0.5057232" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15052083" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3496732" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3485342" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897604" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23203126" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23203126" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1070,20 +1144,40 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37739873" sideWeight="0.48980686" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897604" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3080214" sideWeight="0.5057232" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15052083" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.203125" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3080214" sideWeight="0.4942768" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37739873" sideWeight="0.48980686" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3496732" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897604" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23203126" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25925925" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1789,20 +1883,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/Skyline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="889">
-          <caret line="121" column="39" lean-forward="false" selection-start-line="121" selection-start-column="39" selection-end-line="121" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/hash/table/HIndex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="36" column="24" lean-forward="false" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/LeetCode/com/google/bfs/dfs/dfs/GraphValidTree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="265">
@@ -2012,7 +2092,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2028,7 +2107,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2036,7 +2114,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="14" column="62" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2052,7 +2129,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2060,7 +2136,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="537">
           <caret line="44" column="1" lean-forward="false" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2068,9 +2143,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2085,7 +2157,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2093,7 +2164,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2111,7 +2181,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2119,9 +2188,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2130,6 +2196,24 @@
         <state relative-caret-position="239">
           <caret line="38" column="17" lean-forward="false" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/interview/Airbnb/AirbnbQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/interview/lyft/IntersectionIterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2150,7 +2234,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Invalid</last-edited>
+          <last-edited>Spring</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -2190,7 +2274,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -2210,7 +2293,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>org.junit.contrib:junit-theories:4.11</last-edited>
+          <last-edited>mockito-all-1.9.5</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

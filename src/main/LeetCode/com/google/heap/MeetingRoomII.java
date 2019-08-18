@@ -1,6 +1,8 @@
 package com.google.heap;
 
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashMap;
 import java.util.PriorityQueue;
 
 /**
@@ -10,7 +12,7 @@ public class MeetingRoomII {
   public int minMeetingRooms(Interval[] intervals) {
     if (intervals==null || intervals.length==0) return 0;
     PriorityQueue<Integer> endList = new PriorityQueue();
-    Arrays.sort(intervals, (i1, i2) -> i1.start-i2.start);
+    Arrays.sort(intervals, Comparator.comparingInt(i2 -> i2.start));
     int count=intervals.length;
     endList.add(intervals[0].end);
     for (int i=1; i<intervals.length; i++) {

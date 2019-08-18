@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class InsertInterval {
   /**
-   * this can beat 95%
+   * this can beat 95%, Time: O(N)
    */
   public List<Interval> insert_inorder(List<Interval> intervals, Interval newInterval) {
     List<Interval> res = new LinkedList();

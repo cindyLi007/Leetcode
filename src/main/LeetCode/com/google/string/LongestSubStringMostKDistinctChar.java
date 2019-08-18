@@ -24,7 +24,6 @@ public class LongestSubStringMostKDistinctChar {
         res = Math.max(res, i - start);
         start = getFirstCharPos(map) + 1;
       }
-      res = Math.max(res, i - start);
       map.put(c, i);
     }
     return Math.max(res, s.length() - start);

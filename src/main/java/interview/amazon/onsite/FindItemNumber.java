@@ -2,6 +2,7 @@ package interview.amazon.onsite;
 
 /**
  * Created by ychang on 4/4/2017.
+ * find the count of a target in a sorted array
  */
 public class FindItemNumber {
   public int findItemTimes(int[] nums, int target) {

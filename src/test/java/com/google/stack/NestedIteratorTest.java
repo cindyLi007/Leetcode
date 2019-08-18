@@ -21,7 +21,7 @@ public class NestedIteratorTest {
     list.add(ni_1);
     list.add(new NestedIntegerImpl(2));
     list.add(ni_1);
-    com.google.recursive.NestedIterator nestedIterator = new com.google.recursive.NestedIterator(list);
+    NestedIterator nestedIterator = new NestedIterator(list);
 
     // When
     System.out.println(nestedIterator.next());

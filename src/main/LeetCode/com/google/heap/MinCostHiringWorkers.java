@@ -18,28 +18,22 @@ public class MinCostHiringWorkers {
         int sumQ = 0;
         // O(n*lgK)
         for (Worker worker : list) {
+            if (pq.size()==K && worker.quality >= pq.peek()) continue;
             pq.offer(worker.quality);
             sumQ += worker.quality;
-            if (pq.size()>K) {
-                // remove the largest Quality, even if the largest one is current worker, we stil use the current worker's
-                // ratio, because WO current worker, we can have a better cost.
-                Integer largestQuality = pq.poll();
-                sumQ -= largestQuality;
-            }
-            if (pq.size()==K) {
-                res = Math.min(res, sumQ * worker.ratio);
-            }
+            // remove the largest Quality
+            if (pq.size()>K) sumQ -= pq.poll();
+            if (pq.size()==K) res = Math.min(res, sumQ * worker.ratio);
         }
         return res;
     }
 
     class Worker {
-        int quality, wage;
+        int quality;
         double ratio; // wage/quality
 
         Worker(int q, int w) {
             quality = q;
-            wage = w;
             ratio = (double) w / (double) q;
         }
     }

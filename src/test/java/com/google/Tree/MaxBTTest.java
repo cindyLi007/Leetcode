@@ -16,6 +16,6 @@ public class MaxBTTest {
     int[] array = {3, 2, 1, 6, 0, 5};
 
     // Then
-    TreeNode treeNode = maxBT.constructMaximumBinaryTree_1(array);
+    TreeNode treeNode = maxBT.constructMaximumBinaryTree_2(array);
   }
 }
