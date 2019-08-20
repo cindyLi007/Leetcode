@@ -14,6 +14,9 @@ public class PrimeCheckTester {
       throw new NumberFormatException("number must be natural number");
     }
 
+    // 1 is not prime
+    if (number == 1) return false;
+
     if (number <= 2) {
       return true;
     }

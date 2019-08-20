@@ -6,43 +6,44 @@ import java.util.Random;
 /**
  * Created by ychang on 5/10/2017.
  * Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
+ * EPI 11.8
  */
 public class KthLargestElement {
     public int findKthLargest(int[] nums, int k) {
-        return findKthLargest(nums, k, (o1, o2) -> o2 - o1);
+        return find(nums, k, (o1, o2) -> o2 - o1);
     }
 
-    private int findKthLargest(int[] nums, int k, Comparator<Integer> cmp) {
-        int left = 0, right = nums.length - 1;
-        Random rand = new Random();
-        while (left <= right) {
-            int idx = rand.nextInt(right - left + 1) + left;
-            int newIdx = partition(nums, k, cmp, idx, left, right);
-            if (newIdx == k - 1) return nums[newIdx];
-            if (newIdx > k - 1) right = newIdx - 1;
-            else left = newIdx + 1;
+    private int find(int[] nums, int k, Comparator<Integer> com) {
+        int left = 0, right = nums.length-1;
+        Random random = new Random();
+        while (left<=right) {
+            int p = random.nextInt(right-left+1) + left;
+            int[] range = partition(nums, k, left, right, p, com);
+            int low = range[0], high = range[1];
+            if (low<=k-1 && k-1<=high) return nums[low];
+            if (k-1<low) right=low-1;
+            else left=high+1;
         }
         return -1;
     }
 
-    private int partition(int[] nums, int k, Comparator<Integer> cmp, int idx, int left, int right) {
-        int val = nums[idx];
-        swap(nums, idx, right);
-        int newIdx = left;
-
-        for (int i = left; i < right; i++) {
-            if (cmp.compare(nums[i], val) <= 0) {
-                swap(nums, i, newIdx++);
-            }
+    private int[] partition(int[] nums, int k, int left, int right, int p, Comparator<Integer> com) {
+        int v = nums[p];
+        swap(nums, p, left);
+        int i=left;
+        while (i<=right) {
+            int c = com.compare(nums[i], v);
+            if (c==0) i++;
+            else if (c<0) swap(nums, left++, i++);
+            else swap(nums, right--, i);
         }
-
-        swap(nums, newIdx, right);
-        return newIdx;
+        return new int[]{left, right};
     }
 
     private void swap(int[] nums, int i, int j) {
-        int temp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = temp;
+        int n = nums[i];
+        nums[i]=nums[j];
+        nums[j]=n;
     }
+
 }
