@@ -22,7 +22,7 @@ public class PrimeCheckTesterTest {
     // Given
 
     // When
-    boolean result = primeCheckTester.isPrime(10);
+    boolean result = primeCheckTester.isPrime(9);
 
     // Then
     Assert.assertFalse(result);

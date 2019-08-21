@@ -1,7 +1,5 @@
 package data.structure;
 
-import java.util.Comparator;
-
 // Key must be extends Comparable which means Key is also an interface, if use implements, that means Key is a class, but
 // we did not define a class of Key
 public class BinarySearchTree<Key extends Comparable<Key>, Value> {
@@ -68,7 +66,6 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
         node.count = size(node.right) + size(node.left) + 1;
         return node;
     }
-
 
     Value get(Key k) {
         Node n = root;
