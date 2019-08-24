@@ -21,10 +21,32 @@ public class SpiralOrderII {
         return res;
     }
 
+    public int[][] generateMatrix_1(int n) {
+        int num = 1;
+        int[][] res = new int[n][n];
+        int[][] dirs = new int[][]{{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+        int d = 0, x = 0, y = 0;
+
+        while (num<=n*n) {
+            res[x][y] = num++;
+            int nextX = x+dirs[d][0];
+            int nextY = y+dirs[d][1];
+            if (nextX<0 || nextX==n || nextY<0 || nextY==n || res[nextX][nextY] != 0) {
+                d = (d+1) % 4;
+                nextX = x+dirs[d][0];
+                nextY = y+dirs[d][1];
+            }
+            x = nextX;
+            y = nextY;
+        }
+
+        return res;
+    }
+
     public static void main(String... args) {
         SpiralOrderII spiralOrderII = new SpiralOrderII();
 
-        int[][] ints = spiralOrderII.generateMatrix(3);
+        int[][] ints = spiralOrderII.generateMatrix_1(3);
 
 
     }
