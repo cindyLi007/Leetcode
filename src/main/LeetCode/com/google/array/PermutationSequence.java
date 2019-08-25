@@ -1,8 +1,9 @@
 package com.google.array;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class PermutationSequence {
     public String getPermutation(int n, int k) {
@@ -13,6 +14,7 @@ public class PermutationSequence {
         }
         List<Integer> list = new ArrayList<>();
         for (int i=1; i<=n; i++) list.add(i);
+        List<Integer> collect = IntStream.range(1, n + 1).boxed().collect(Collectors.toList());
         k--;
         String s = "";
         for (int i=1; i<=n; i++) {
@@ -27,7 +29,7 @@ public class PermutationSequence {
 
     public static void  main(String... args) {
         PermutationSequence permutationSequence = new PermutationSequence();
-        String permutation = permutationSequence.getPermutation(4, 9);
+        String permutation = permutationSequence.getPermutation(4, 17);
         System.out.println(permutation);
     }
 }
