@@ -13,7 +13,7 @@ import java.util.TreeMap;
  */
 public class Skyline {
   /**
-   * this method can beat 70%
+   * this method can beat 70%, Time: O(N*lgN) for sort, Space: O(N)
    */
   public List<int[]> getSkyline(int[][] buildings) {
     /** process buildings, present each building as left-top vertices and right-top vertices, such as (x, y, left/right),

@@ -1,7 +1,6 @@
-package com.google.tire;
+package com.google.trie;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 // Time: O(26*N*N), N is the average len of words
 class MagicDictionary {

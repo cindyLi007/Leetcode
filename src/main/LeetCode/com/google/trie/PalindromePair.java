@@ -1,4 +1,4 @@
-package com.google.tire;
+package com.google.trie;
 
 import java.util.Arrays;
 import java.util.LinkedList;

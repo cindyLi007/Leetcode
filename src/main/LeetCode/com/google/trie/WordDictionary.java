@@ -1,4 +1,4 @@
-package com.google.tire;
+package com.google.trie;
 
 /**
  * Created by ychang on 5/4/2017.
