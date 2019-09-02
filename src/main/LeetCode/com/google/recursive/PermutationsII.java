@@ -2,7 +2,6 @@ package com.google.recursive;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -58,7 +57,7 @@ public class PermutationsII {
     } else {
       for (int i=startIdx; i<nums.length; i++) {
         /**
-         * only when there is no duplicate elem in the following, we pick it in position startIdx. If there is repeat elem in the follwing,
+         * only when there is no duplicate elem in the following, we pick it in position startIdx. If there is repeat elem in the following,
          * we must skip it, only do the swap [startIdx, i] for the last duplicated elem to avoid duplicated reusult
          * for example [2, 2, 1, 1] startIdx is 1, if we swap index [1, 2], we can get [2, 1, 2, 1] and [2, 1, 1, 2],
          * but we will still do swap idex [1, 3] got the [2, 1, 1, 2] and [2, 1, 2, 1] again
