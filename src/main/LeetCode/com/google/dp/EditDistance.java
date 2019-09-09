@@ -48,4 +48,30 @@ public class EditDistance {
     }
     return dp[idx1][idx2];
   }
+
+  public int minDistance_spaceON(String word1, String word2) {
+    int N=word1.length(), M=word2.length();
+    if (N==0) return M; // add M char to word1;
+    if (M==0) return N; // delete M char from word1;
+    int[] dp = new int[N+1];
+    for (int i=0; i<=N; i++) dp[i] = i; // delete i char to cover to word2
+
+    for (int i=1; i<=M; i++) {
+      int prev = dp[0];
+      dp[0]=i;
+      for (int j=1; j<=N; j++) {
+        int temp = dp[j];
+        if (word1.charAt(j-1) == word2.charAt(i-1)) {
+          dp[j] = prev;
+        } else {
+          int replace = prev;
+          int insert = dp[j-1];
+          int delete = dp[j];
+          dp[j] = Math.min(Math.min(replace, insert), delete) + 1;
+        }
+        prev = temp;
+      }
+    }
+    return dp[N];
+  }
 }
