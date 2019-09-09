@@ -15,7 +15,7 @@ public class CombinationSum4Test {
     CombinationSum4 combinationSum4 = new CombinationSum4();
 
     // When
-    int sum4 = combinationSum4.combinationSum4(new int[]{1, 2, 3, -3}, 4);
+    int sum4 = combinationSum4.combinationSum4_bottomUp(new int[]{2, 3, 7}, 6);
 
     // Then
     assertThat(sum4, is(6));
