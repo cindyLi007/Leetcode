@@ -9,13 +9,13 @@ package com.google.dp;
  */
 public class BurstBalloons {
 
+  // Time: O(N^3), Space: O(N*N)
   public int maxCoins(int[] nums) {
     int N = nums.length;
-    int array[] = new int[N+2];
-    array[0]=1;
-    array[N+1]=1;
+    int n[] = new int[N+2];
+    n[0]=n[N+1]=1;
     for (int i=0; i<N; i++) {
-      array[i+1] = nums[i];
+      n[i+1] = nums[i];
     }
 
     // dp[i][j] means in [i, j] what is the max coins
@@ -25,11 +25,23 @@ public class BurstBalloons {
         int j=i+L-1;
         dp[i][j]=0;
         for (int m = i; m<=j; m++) {
-          dp[i][j] = Math.max(dp[i][j], array[i-1]*array[m]*array[j+1] + dp[i][m-1] + dp[m+1][j]);
+          dp[i][j] = Math.max(dp[i][j], n[i-1]* n[m]* n[j+1] + dp[i][m-1] + dp[m+1][j]);
         }
       }
     }
 
     return dp[1][N];
+    // this if for recursive
+    // return f(n, 1, N, new int[N+2][N+2]);
+  }
+
+  private int f(int[] nums, int i, int j, int[][] dp) {
+    if (i>j) return 0;
+    if (dp[i][j]>0) return dp[i][j];
+    for (int m=i; m<=j; m++) {
+      dp[i][j]=Math.max(dp[i][j], f(nums, i, m-1, dp) + f(nums, m+1, j, dp) +
+          nums[i-1]*nums[j+1]*nums[m]);
+    }
+    return dp[i][j];
   }
 }
