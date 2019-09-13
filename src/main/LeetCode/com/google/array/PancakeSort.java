@@ -3,6 +3,10 @@ package com.google.array;
 import java.util.ArrayList;
 import java.util.List;
 
+/** Leetcode 969. Pancake Sorting
+ * each time find the max in the remaining array, flip it to the 1st one, then flip from the 1st to the remaining array
+ * Time: O(N^2), Space: O(1)
+ */
 public class PancakeSort {
   public List<Integer> pancakeSort(int[] A) {
     int N=A.length, curMax = N;
