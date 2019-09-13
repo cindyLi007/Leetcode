@@ -5,12 +5,13 @@ import java.util.*;
 /**
  * https://www.youtube.com/watch?v=b0e0kM4QmWw
  * Leetcode 1012
- * we should calculate without repeated digits number
+ * we should calculate all "without repeated digits number"
  */
 public class NumbersWithRepeatedDigits {
   public static int numDupDigitsAtMostN(int N) {
     // must use N+1, that is because we maybe include N itself as no repeated digits
     int number = N+1;
+    // list stores all digits from right to left in N
     List<Integer> list = new ArrayList();
     while (number>0) {
       list.add(number%10);
@@ -20,18 +21,18 @@ public class NumbersWithRepeatedDigits {
 
     int L=list.size();
     int res=0;
-    // Count all length < L no-repeated numbers, i is the length of the number, all those numbers do not depend on N digits
+    // Count all length < L no-repeated numbers, i is the length of the number, all those numbers do not depend on N's digits
     for (int i=1; i<L; i++) {
       res += 9 * P(9, i-1);
     }
 
     // Count all length==L no repeated numbers
     Set<Integer> set = new HashSet(); // use this to record which digit has be seen
-    for (int i=0; i<L; i++) { // i is the index of leading digit
+    for (int i=0; i<L; i++) { // i is the index of leading digit, i==0 means we choose the most-right digit of N
       int digit = list.get(i);
       // if i==0 that means we process the first digit of N, it could not 0, so from 1
       int j = (i==0) ? 1 : 0;
-      // fix the leading digits, then loop j from [0/1 to digit)
+      // fix the leading digits as j, now the length is L-1-i (we can image as if i==0, we fix the most right digit as j, there is L-1 positions left)
       for (; j<digit; j++) {
         if (!set.contains(j)) res += P(9-i, L-i-1);
       }

@@ -9,6 +9,7 @@ package com.google.dp;
  */
 public class BurstBalloons {
 
+  // Time: O(N^3), Space: O(N^2)
   public int maxCoins(int[] nums) {
     int N = nums.length;
     int array[] = new int[N+2];
@@ -31,5 +32,17 @@ public class BurstBalloons {
     }
 
     return dp[1][N];
+    // return f(array, 1, N, dp);
+  }
+
+  // this is recursive version, this one is easier to think
+  private int f(int[] nums, int i, int j, int[][] dp) {
+    if (i>j) return 0;
+    if (dp[i][j]>0) return dp[i][j];
+    for (int m=i; m<=j; m++) {
+      dp[i][j]=Math.max(dp[i][j], f(nums, i, m-1, dp) + f(nums, m+1, j, dp) +
+          nums[i-1]*nums[j+1]*nums[m]);
+    }
+    return dp[i][j];
   }
 }

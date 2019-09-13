@@ -1,9 +1,6 @@
 package com.google.dp;
 
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class ParallelCourse {
   int res = -1;
@@ -18,11 +15,14 @@ public class ParallelCourse {
     }
     if (graph.size()==N) return -1;
 
+    // for all there is no prerequisite courses, the max semester is 1
     int[] dp = new int[N+1];
     for (int i=1; i<=N; i++) {
       if (!graph.containsKey(i))
         dp[i] = 1;
     }
+
+    // for each course, dfs it to check whether there is loop and it's depth
     for (Integer course : graph.keySet()) {
       dfs(dp, graph, course);
     }
@@ -31,7 +31,9 @@ public class ParallelCourse {
 
   private int dfs(int[] dp, Map<Integer, List<Integer>> graph, int course) {
     if (dp[course]!=0) return dp[course];
+    // we first set it to -1 means we are visiting it
     dp[course] = -1;
+    // max is the course max semester
     int max = -1;
     for (Integer prev : graph.get(course)) {
       int temp = dfs(dp, graph, prev);
@@ -42,6 +44,7 @@ public class ParallelCourse {
     res = Math.max(res, max);
     return max;
   }
+
 
   public static int minimumSemesters_BFS(int N, int[][] relations) {
     Map<Integer, List<Integer>> g = new HashMap<>(); // key: prerequisite, value: course list.
@@ -56,12 +59,12 @@ public class ParallelCourse {
         q.offer(i);
     int semester = 0;
 
-    // because there exists a loop, no node has inDegree ==0, so q is empty
+    // because if there exists a loop, no node has inDegree ==0, so q is empty
     while (!q.isEmpty()) { // BFS traverse all currently 0 in degree vertices.
       for (int sz = q.size(); sz > 0; --sz) { // sz is the search breadth.
         int c = q.poll();
         --N;
-        if (!g.containsKey(c)) continue; // c's in-degree is currently 0, but it has no prerequisite.
+        if (!g.containsKey(c)) continue;
         for (int course : g.remove(c))
           if (--inDegree[course] == 0) // decrease the in-degree of course's neighbors.
             q.offer(course); // add current 0 in-degree vertex into Queue.
