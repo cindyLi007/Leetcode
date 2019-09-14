@@ -29,7 +29,7 @@ public class New21Game {
         }
         double res = 0.0;
         // to calculate the prob which is N or less, we know the final answer is in [K, K-1+W], so should from K to N, sum all probs
-        // Note, SHOULD NOT FROM 1, that is becuase final value could not less than K
+        // Note, SHOULD NOT FROM 1, that is because final value could not less than K
         for (int i=K; i<=N; i++) res+=dp[i];
         return res;
     }
