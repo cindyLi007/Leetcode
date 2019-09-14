@@ -1,7 +1,7 @@
 package com.google.dp;
 
 public class UniquePathII {
-    // Time: O(N*M)
+    // Time: O(N*M), Space: O(N) suppose N is the min one from M and N
     public int uniquePathsWithObstacles(int[][] obstacleGrid) {
         int m=obstacleGrid.length, n=obstacleGrid[0].length;
         int[] dp=new int[n];

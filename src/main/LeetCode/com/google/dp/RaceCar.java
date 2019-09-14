@@ -42,6 +42,33 @@ public class RaceCar {
     return -1;
   }
 
+  // Time: O(target*(log(target)^2)) Space: O(target * target)
+  public int racecar_dp(int target) {
+    int[] dp = new int[target + 1];
+    Arrays.fill(dp, 1, dp.length, -1);
+    return racecar(target, dp);
+  }
+
+  private int racecar(int i, int[] dp) {
+    if (dp[i] >= 0) {
+      return dp[i];
+    }
+
+    dp[i] = Integer.MAX_VALUE;
+
+    int m = 1, j = 1;
+
+    for (; j < i; j = (1 << ++m) - 1) {
+      for (int q = 0, p = 0; p < j; p = (1 << ++q) - 1) {
+        dp[i] = Math.min(dp[i],  m + 1 + q + 1 + racecar(i - (j - p), dp));
+      }
+    }
+
+    dp[i] = Math.min(dp[i], m + (i == j ? 0 : 1 + racecar(j - i, dp)));
+
+    return dp[i];
+  }
+
   public static void main(String... args) {
     RaceCar raceCar = new RaceCar();
     System.out.println(raceCar.raceCar(3)); // should be 2
