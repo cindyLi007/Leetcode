@@ -30,33 +30,35 @@ public class SuperDropEgg {
     return dp[K][N];
   }
 
+  // Time: O(K*lgN), Space: O(K*N)
   public static int superEggDrop_fast(int K, int N) {
-    int[][] dp = new int[N][K+1];
+    int[][] dp = new int[N+1][K+1];
     int m=0;
     while (dp[m][K] < N) {
       m++;
       // calculate for m move, i eggs, what is the max floor we can cover
       for (int i=1; i<=K; i++) {
-        dp[m][i] = 1 + dp[m-1][i-1] + dp[m-1][i];
+        dp[m][i] = dp[m-1][i-1] + dp[m-1][i] + 1;
       }
     }
     return m;
   }
 
+  // Time: O(K*lgN), Space: O(K)
   public static int superEggDrop_saveSpace(int K, int N) {
     int[] dp = new int[K+1];
-    int m=1;
-    for (; dp[K]<N; m++) {
-      // calculate for m move, i eggs, what is the max floor we can cover
+    int m=0;
+    while (dp[K] < N) {
+      m++;
       for (int i=K; i>0; i--) {
-        dp[i] += 1 + dp[i-1];
+        dp[i] += dp[i-1] + 1;
       }
     }
     return m;
   }
 
   public static void main(String... args) {
-    System.out.println(superEggDrop_saveSpace(1, 2)); // should be 1
+    System.out.println(superEggDrop_fast(1, 2)); // should be 1
     System.out.println(superEggDrop_saveSpace(2, 6)); // should be 3
     System.out.println(superEggDrop(3, 14)); // should be 4
   }

@@ -17,6 +17,7 @@ public class RaceCar {
    */
   public int raceCar(int target) {
     Set<String> visited = new HashSet();
+    // use string to identify the pos-speed pair
     visited.add("0-1");
     Deque<int[]> prev = new LinkedList();
     prev.addLast(new int[]{0, 1});

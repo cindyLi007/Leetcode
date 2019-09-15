@@ -8,8 +8,8 @@ public class ProfitSchema {
     int mod = 1000_000_007;
     // dp[k][i][j] is # of schema of use first k tasks, profit is i and use j people
     int[][][] dp = new int[N + 1][P + 1][G + 1];
-    // transition formula is dp[k][i+p][j+g] += dp[k][i][j] is p and g is from profit[k] and group[k] if (i+p<P)
-    // dp[k][P][j+g] += dp[k][i][j] (i+p>=P), j+g <= G
+    // transition formula is dp[k][i+p][j+g] += dp[k-1][i][j] is p and g is from profit[k] and group[k] if (i+p<P)
+    // dp[k][P][j+g] += dp[k-1][i][j] (i+p>=P), j+g <= G
     // dp[k][i][j] += dp[k-1][i][j]
     dp[0][0][0] = 1;
     for (int k=1; k<=N; k++) {
@@ -19,6 +19,7 @@ public class ProfitSchema {
           dp[k][Math.min(P, i+p)][j+g] = (dp[k][Math.min(P, i+p)][j+g] + dp[k-1][i][j]) % mod;
         }
       }
+      // we must add dp[k-1][i][j] to dp[k][i][j], refer to EPI 16.1 the above is with k-th task, now add without k-th task
       for (int i=0; i<=P; i++) for (int j=0; j<=G; j++) {
         dp[k][i][j] = (dp[k][i][j] + dp[k-1][i][j]) % mod;
       }
@@ -34,9 +35,6 @@ public class ProfitSchema {
     int mod = 1000_000_007;
     // dp[i][j] is # of schema of use first k tasks, profit is i and use j people
     int[][] dp = new int[P + 1][G + 1];
-    // transition formula is dp[k][i+p][j+g] += dp[k][i][j] is p and g is from profit[k] and group[k] if (i+p<P)
-    // dp[k][P][j+g] += dp[k][i][j] (i+p>=P), j+g <= G
-    // dp[k][i][j] += dp[k-1][i][j]
     dp[0][0] = 1;
     for (int k=1; k<=N; k++) {
       int p = profit[k-1], g = group[k-1];
