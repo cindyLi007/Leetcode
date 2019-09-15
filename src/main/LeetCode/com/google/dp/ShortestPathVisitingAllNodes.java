@@ -12,36 +12,35 @@ public class ShortestPathVisitingAllNodes {
     // use mask to denote the state which all nodes have been visited (1<<N)-1 is 11..11
     int N = graph.length, mask = (1<<N) - 1;
     // use visited to denote for a node-state combo, whether we already visited it before. state is like "0010010" where 0 means the
-    // node is not visited, 1 means the node is visited. the reason we need the combo is because we maybe revisited some nodes, such as
-    // the example
-    Set<String> visited = new HashSet<>();
-    Deque<int[]> queue = new ArrayDeque();
+    // node is not visited, 1 means the node is visited. the reason we need the combo is because we maybe revisited some nodes
+    // with different state, such as in the example, each time we back to node 0, but with different state
+    int[][] visited = new int[mask+1][N];
+    Deque<int[]> deque = new ArrayDeque();
 
     for (int i=0; i<N; i++) {
-      queue.offer(new int[]{i, 1<<i});
+      deque.offer(new int[]{i, 1<<i});
+      visited[1<<i][i]=1;
     }
 
     int res = 0;
-    while (!queue.isEmpty()) {
-      int sz = queue.size();
+    while (!deque.isEmpty()) {
+      int sz = deque.size();
       for (int i=sz; i>0; i--) {
-        int[] cur = queue.poll();
-        if (cur[1] == mask)
+        int[] cur = deque.poll();
+        if (cur[1]==mask) {
           return res;
-        int[] neighbors = graph[cur[0]];
-        for (int n : neighbors) {
-          // add new neighbor in state
+        }
+        for (int n : graph[cur[0]]) {
           int state = cur[1] | (1<<n);
-          String combo = n + "-" + state;
-          if (!visited.contains(combo)) {
-            visited.add(combo);
-            queue.offer(new int[]{n, state});
+          if (visited[state][n]!=0) {
+            continue;
           }
+          visited[state][n]=res;
+          deque.offer(new int[]{n, state});
         }
       }
       res++;
     }
-
     return -1;
   }
 
