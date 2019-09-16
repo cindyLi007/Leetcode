@@ -19,6 +19,7 @@ import java.util.List;
  */
 public class PartitionLabel {
 
+  // O(N)
   public List<Integer> partitionLabels(String S) {
     List<Integer> res = new ArrayList();
     if (S==null || S.length()==0) return res;
