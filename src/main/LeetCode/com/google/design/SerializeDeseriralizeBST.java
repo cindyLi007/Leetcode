@@ -11,6 +11,7 @@ public class SerializeDeseriralizeBST {
   int idx;
 
   // Encodes a tree to a single string.
+  // Time: O(N), Space: O(lgN) for recursive, pre-order
   public String serialize(TreeNode root) {
     if (root==null) return "";
     StringBuilder sb = new StringBuilder();
