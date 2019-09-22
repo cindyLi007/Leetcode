@@ -1,0 +1,65 @@
+2019 9 20
+1. * Given a list of numbers, return all numbers which occurs odd times
+   * Word search, give a 2D matrix and a list of words, find from any point in the matrix can build a valid word, the
+     direction is 3 ways: left-to-right, up-to-down and left-upper to right-bottom
+     DFS or BFS?
+
+2. System Design
+A In house:
+* there is a hub which can lock or unlock the door of the house, system send command to the hub to take action to
+  lock or unlock the door. This is Asynchronous command which means system sends the request to hub, not but wait hub finish
+  the request
+* Hub will send notification to system when it finishes an action which is lock or unlock
+* This is also a camera to detect the movement around the door, if there is no movement in 15 mins time interval, it will send
+  "Idle" status to system. If there is a movement, it will send "Active" status to system.
+
+B In client:
+* client can use smart phone app to scan the door and click the unlock button, it will send a RESTful request to system
+* system will lock the door after 30 seconds of the unlock action
+* If a unlock happen, system will send an Email to Employee including information for this time unlock.
+
+Design: key components, RESTful API, data store module
+Function: 1. unlock the door, the workflow is client send RESTful request to webServer through load balancer (user to Application Server Map),
+Application Server can keep user's Authentication/Authorization info in memory or in user DB shard, after retrieve user information,
+AppSer send command to HUB and directly return OK to user, to quickly retrieve corresponding house information from DB shard,
+AppServ also need access a cache, and log the activities of DB and change the house status
+2. Hub will send a notification to Server after it unlock the door, the AppServ need process the notification and send it to responding users
+that involves in keep a Queue as a cache to store all notification, AppServ will process them one by one.
+3. AppServ will send a lock command to Hub after 30 seconds, that means we keep another queue for all current locked house, after we send the
+lock command, that request is done. But AppServer expect notification for "lock successfully" and can finally remove the record from the queue
+4. Camera: every 15 mins, it will send a notification for house "Idle/safe" to AppServ, AppSever will keep a cache for all the house status
+   If camera detects a movement, it will send notification immediately to AppServer. AppServer will find the house status, if it is "unlocked",
+   which means the HUB unlocked the door, that is expected, otherwise, will trigger Alarm system.
+
+RESTful API
+* the difference with PUT and POST is PUT is change and POST is create
+@PUT
+@Path
+public Reponse Unlock(@parameter: userInfo, timestamp, houseInfo)
+
+@PUT
+@Path
+public Reponse lock(@parameter: userInfo, timestamp, houseInfo)
+
+Data Store
+How to store house information, NO-SQL
+Queue for Notification
+
+3. Given a data stream with keep feed in the system, return in the past 5 mins, top K most visited URL
+input is the data stream(URLs), output should be a list of URLs similar with hit count
+use heap to keep K most visited URL PriorityQueue
+2 maps, one keep <URL, count>; one keep <URL, list of Entry> Entry including timestamp of the URL
+when read a new URL, lazy update 2 maps, update PriorityQueue
+
+keep a cache in memory, that is the result of during last 5 mins, top K most visited URL. we run the above method every
+10 seconds and in the end to update the cache.
+
+4. prefix, infix and postfix
+for (a-b)*c
+prefix is -ab*c, infix is a-b*c, postfix is ab-c*
+given a prefix, return postfix
+we can build a tree from prefix, which is
+if next char is op, build a node and keep build left and right, otherwise return to upper level
+or we can also use single stack to parse the prefix, which is when we parse a number B in the string, if the pop of the
+stack is a number A, pop A and use the top of the stack op to calculate A op B, (we also pop the stack of operator)
+and push the result back.
