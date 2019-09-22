@@ -1,47 +1,39 @@
 package com.google.design;
 
-import java.util.Arrays;
-import java.util.Deque;
-import java.util.LinkedList;
-
 /**
  * Created by ychang on 3/19/2017.
  * The key point of this problem is for each node even it is null, we need have val for it
  */
 public class SerializeDeserializeBT {
+  int idx;
+
   // Encodes a tree to a single string.
   public String serialize(TreeNode root) {
     StringBuilder sb = new StringBuilder();
-    buildTree(root, sb);
+    if (root==null) return "#";
+    sb.append(String.valueOf(root.val));
+    String left = serialize(root.left);
+    String right = serialize(root.right);
+    sb.append(",").append(left).append(",").append(right);
     return sb.toString();
-  }
-
-  private void buildTree(TreeNode root, StringBuilder sb) {
-    if (root==null) {
-      sb.append('X').append(",");
-    } else {
-      sb.append(root.val).append(",");
-      buildTree(root.left, sb);
-      buildTree(root.right, sb);
-    }
   }
 
   // Decodes your encoded data to tree.
   public TreeNode deserialize(String data) {
-    Deque<String> nodes = new LinkedList<>();
-    nodes.addAll(Arrays.asList(data.split(",")));
-    return buildTree(nodes);
+    if (data.length()==0 || data.equals("#")) return null;
+    String[] n = data.split(",");
+    idx = 0;
+    return helper(n);
   }
 
-  private TreeNode buildTree(Deque<String> list) {
-    String curNode = list.remove();
-    if (curNode.equals("X")) {
-      return null;
+  private TreeNode helper(String[] nodes) {
+    if (idx==nodes.length || nodes[idx].equals("#")) {
+      idx++; return null;
     }
-    TreeNode node = new TreeNode(Integer.valueOf(curNode));
-    node.left=buildTree(list);
-    node.right=buildTree(list);
-    return node;
+    TreeNode root = new TreeNode(Integer.parseInt(nodes[idx++]));
+    root.left = helper(nodes);
+    root.right = helper(nodes);
+    return root;
   }
 }
 

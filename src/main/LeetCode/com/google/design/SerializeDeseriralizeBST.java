@@ -1,48 +1,40 @@
 package com.google.design;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Created by ychang on 3/22/2017.
  */
 public class SerializeDeseriralizeBST {
+  int idx;
+
   // Encodes a tree to a single string.
+  // Time: O(N), Space: O(lgN) for recursive, pre-order
   public String serialize(TreeNode root) {
     StringBuilder sb = new StringBuilder();
-    buildTree(root, sb);
+    if (root==null) return sb.toString();
+    sb.append(root.val);
+    String left = serialize(root.left);
+    String right = serialize(root.right);
+    if (left.length()>0) sb.append("#").append(left);
+    if (right.length()>0) sb.append("#").append(right);
     return sb.toString();
-  }
-
-  private void buildTree(TreeNode root, StringBuilder sb) {
-    if (root==null)
-      return;
-    sb.append(root.val).append(",");
-    buildTree(root.left, sb);
-    buildTree(root.right, sb);
   }
 
   // Decodes your encoded data to tree.
   public TreeNode deserialize(String data) {
-    int[] preOrder = Arrays.stream(data.split(",")).mapToInt(Integer::valueOf).toArray();
-    int[] inOrder = Arrays.copyOf(preOrder, preOrder.length);
-    Arrays.sort(inOrder);
-    Map<Integer, Integer> map = new HashMap();
-    for (int i = 0; i<inOrder.length; i++) {
-      map.put(inOrder[i], i);
-    }
-    return buildTree(preOrder, 0, preOrder.length - 1, inOrder, 0, inOrder.length - 1, map);
+    if (data.length()==0) return null;
+    String[] n = data.split("#");
+    int[] nodes = new int[n.length];
+    for (int i=0; i<n.length; i++)
+      nodes[i] = Integer.parseInt(n[i]);
+    idx=0;
+    return helper(Integer.MAX_VALUE, Integer.MIN_VALUE, nodes);
   }
 
-  private TreeNode buildTree(int[] preOrder, int ps, int pe, int[] inOrder, int is, int ie, Map<Integer, Integer> map) {
-    if (ps>pe)
-      return null;
-    TreeNode root = new TreeNode(preOrder[ps]);
-    int index = map.get(preOrder[ps]);
-    int distance = index - is;
-    root.left = buildTree(preOrder, ps + 1, ps + distance, inOrder, is, is + distance - 1, map);
-    root.right = buildTree(preOrder, ps + distance + 1, pe, inOrder, is + distance + 1, ie, map);
+  private TreeNode helper(int max, int min, int[] nodes) {
+    if (idx==nodes.length || nodes[idx] > max || nodes[idx] < min) return null;
+    TreeNode root = new TreeNode(nodes[idx++]);
+    root.left = helper(root.val, min, nodes);
+    root.right = helper(max, root.val, nodes);
     return root;
   }
 }
