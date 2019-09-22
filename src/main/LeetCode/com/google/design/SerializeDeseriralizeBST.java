@@ -1,5 +1,9 @@
 package com.google.design;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by ychang on 3/22/2017.
  */
@@ -9,32 +13,38 @@ public class SerializeDeseriralizeBST {
   // Encodes a tree to a single string.
   // Time: O(N), Space: O(lgN) for recursive, pre-order
   public String serialize(TreeNode root) {
+    if (root==null) return "";
     StringBuilder sb = new StringBuilder();
-    if (root==null) return sb.toString();
-    sb.append(root.val);
-    String left = serialize(root.left);
-    String right = serialize(root.right);
-    if (left.length()>0) sb.append("#").append(left);
-    if (right.length()>0) sb.append("#").append(right);
-    return sb.toString();
+    return sb.append(root.val).append(",").append(
+        serialize(root.left)).append(serialize(root.right)).toString();
   }
 
   // Decodes your encoded data to tree.
   public TreeNode deserialize(String data) {
     if (data.length()==0) return null;
-    String[] n = data.split("#");
-    int[] nodes = new int[n.length];
-    for (int i=0; i<n.length; i++)
-      nodes[i] = Integer.parseInt(n[i]);
     idx=0;
-    return helper(Integer.MAX_VALUE, Integer.MIN_VALUE, nodes);
+    return helper(data.split(","), Integer.MIN_VALUE, Integer.MAX_VALUE);
   }
 
-  private TreeNode helper(int max, int min, int[] nodes) {
-    if (idx==nodes.length || nodes[idx] > max || nodes[idx] < min) return null;
-    TreeNode root = new TreeNode(nodes[idx++]);
-    root.left = helper(root.val, min, nodes);
-    root.right = helper(max, root.val, nodes);
+  private TreeNode helper(String[] data, int min, int max) {
+    if (idx==data.length) return null;
+    int v = Integer.parseInt(data[idx]);
+    if (v<=min || v>=max) return null;
+    idx++;
+    TreeNode root = new TreeNode(v);
+    root.left = helper(data, min, v);
+    root.right = helper(data, v, max);
+    return root;
+  }
+
+  private TreeNode buildTree(int[] preOrder, int ps, int pe, int[] inOrder, int is, int ie, Map<Integer, Integer> map) {
+    if (ps>pe)
+      return null;
+    TreeNode root = new TreeNode(preOrder[ps]);
+    int index = map.get(preOrder[ps]);
+    int distance = index - is;
+    root.left = buildTree(preOrder, ps + 1, ps + distance, inOrder, is, is + distance - 1, map);
+    root.right = buildTree(preOrder, ps + distance + 1, pe, inOrder, is + distance + 1, ie, map);
     return root;
   }
 }

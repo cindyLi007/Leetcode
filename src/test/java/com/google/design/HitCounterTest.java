@@ -13,13 +13,13 @@ public class HitCounterTest {
 
     // When
     hitCounter.hit(1);
-    hitCounter.hit(1);
-    hitCounter.hit(1);
+    hitCounter.hit(2);
+    hitCounter.hit(3);
+//    hitCounter.hit(300);
+    System.out.println(hitCounter.getHits(4));
     hitCounter.hit(300);
     System.out.println(hitCounter.getHits(300));
-    hitCounter.hit(300);
-    System.out.println(hitCounter.getHits(300));
-    hitCounter.hit(301);
+//    hitCounter.hit(301);
     System.out.println(hitCounter.getHits(301));
   }
 

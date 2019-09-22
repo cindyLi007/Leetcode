@@ -3,6 +3,7 @@ package com.google.array;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -18,15 +19,28 @@ public class MergeInterval {
    */
   public List<Interval> merge(List<Interval> intervals) {
     intervals.sort(Comparator.comparingInt(a -> a.start));
-    int i=1;
-    while (i<intervals.size()) {
-      if (intervals.get(i).start<=intervals.get(i-1).end) {
-        intervals.get(i-1).end = Math.max(intervals.get(i-1).end, intervals.get(i).end);
-        intervals.remove(i);
+    Iterator<Interval> itr = intervals.iterator();
+    Interval prev = itr.next();
+    while (itr.hasNext()) {
+      Interval cur = itr.next();
+      if (prev.end >= cur.start) {
+        prev.end = Math.max(prev.end, cur.end);
+        itr.remove();
       } else {
-        i++;
+        prev = cur;
       }
     }
+    /*
+     int i=1;
+     while (i<intervals.size()) {
+       if (intervals.get(i).start<=intervals.get(i-1).end) {
+         intervals.get(i-1).end = Math.max(intervals.get(i-1).end, intervals.get(i).end);
+         intervals.remove(i);
+       } else {
+        i++;
+       }
+     }
+     */
     return intervals;
   }
 

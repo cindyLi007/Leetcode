@@ -1,6 +1,7 @@
 package com.google.array;
 
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
@@ -21,13 +22,18 @@ public class MergeIntervalTest {
   @Test
   public void merge() throws Exception {
     // Given
-    List<Interval> list = Arrays.asList(new Interval[]{new Interval(2, 3), new Interval(4, 5),
-    new Interval(6,7), new Interval(8, 9), new Interval(1, 10)});
+    List<Interval> list = new LinkedList<>();
+    list.add(new Interval(2, 3));
+    list.add(new Interval(4, 5));
+    list.add(new Interval(6,7));
+    list.add(new Interval(8, 9));
+    list.add(new Interval(1, 10));
 
     // When
     List<Interval> res = mergeInterval.merge(list);
 
     // Then
+    assert(res.size()==1);
 
     }
 }

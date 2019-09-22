@@ -94,10 +94,30 @@ public class InsertInterval {
     while (l<=r) {
       int m=l+(r-l)/2, val= left ? intervals.get(m).end : intervals.get(m).start;
       if (val==v) return m;
-      else if (val<v) l=m+1; // to find a index in which val<v now m is the clost one
+      else if (val<v) l=m+1; // to find a index in which val<v now m is the closet one
       else r=m-1; // val>v to find a index in which val>v, now m is the closet one
     }
     return left ? r+1 : l-1;
+  }
+
+  public static int[][] insert(int[][] intervals, int[] newInterval) {
+    int N = intervals.length;
+    List<int[]> res = new ArrayList();
+    int i=0;
+    while (i<N && intervals[i][1] < newInterval[0]) {
+      res.add(intervals[i++]);
+    }
+    if (i<N) newInterval[0] = Math.min(newInterval[0], intervals[i++][0]);
+    while (i<N && intervals[i][0] < newInterval[1]) {
+      newInterval[1] = Math.max(newInterval[1], intervals[i][1]);
+      i++;
+    }
+    res.add(newInterval);
+    while (i<N) res.add(intervals[i++]);
+    int size = res.size();
+    int[][] r = new int[size][2];
+    for (i=0; i<size; i++) r[i]=res.get(i);
+    return r;
   }
 }
 

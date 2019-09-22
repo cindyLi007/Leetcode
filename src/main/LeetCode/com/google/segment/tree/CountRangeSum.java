@@ -1,5 +1,6 @@
 package com.google.segment.tree;
 
+// Leetcode 327
 public class CountRangeSum {
     public int countRangeSum(int[] nums, int lower, int upper) {
         if (nums.length==0) return 0;
