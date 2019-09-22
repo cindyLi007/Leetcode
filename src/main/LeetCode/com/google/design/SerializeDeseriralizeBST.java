@@ -8,31 +8,32 @@ import java.util.Map;
  * Created by ychang on 3/22/2017.
  */
 public class SerializeDeseriralizeBST {
+  int idx;
+
   // Encodes a tree to a single string.
   public String serialize(TreeNode root) {
+    if (root==null) return "";
     StringBuilder sb = new StringBuilder();
-    buildTree(root, sb);
-    return sb.toString();
-  }
-
-  private void buildTree(TreeNode root, StringBuilder sb) {
-    if (root==null)
-      return;
-    sb.append(root.val).append(",");
-    buildTree(root.left, sb);
-    buildTree(root.right, sb);
+    return sb.append(root.val).append(",").append(
+        serialize(root.left)).append(serialize(root.right)).toString();
   }
 
   // Decodes your encoded data to tree.
   public TreeNode deserialize(String data) {
-    int[] preOrder = Arrays.stream(data.split(",")).mapToInt(Integer::valueOf).toArray();
-    int[] inOrder = Arrays.copyOf(preOrder, preOrder.length);
-    Arrays.sort(inOrder);
-    Map<Integer, Integer> map = new HashMap();
-    for (int i = 0; i<inOrder.length; i++) {
-      map.put(inOrder[i], i);
-    }
-    return buildTree(preOrder, 0, preOrder.length - 1, inOrder, 0, inOrder.length - 1, map);
+    if (data.length()==0) return null;
+    idx=0;
+    return helper(data.split(","), Integer.MIN_VALUE, Integer.MAX_VALUE);
+  }
+
+  private TreeNode helper(String[] data, int min, int max) {
+    if (idx==data.length) return null;
+    int v = Integer.parseInt(data[idx]);
+    if (v<=min || v>=max) return null;
+    idx++;
+    TreeNode root = new TreeNode(v);
+    root.left = helper(data, min, v);
+    root.right = helper(data, v, max);
+    return root;
   }
 
   private TreeNode buildTree(int[] preOrder, int ps, int pe, int[] inOrder, int is, int ie, Map<Integer, Integer> map) {

@@ -1,0 +1,28 @@
+1. Given a list of jobs relationship, based on the dependencies, return a list of order for
+feasible running order. For ex.
+(A->B), (B->C), (B->D) return {C, D, B, A} or {D, C, B, A}
+follow-up:
+* how can we detect loop
+* when we should use BFS, when we should use DFS.
+BFS to DFS: BFS storage is queue, it maybe need lots of memory, if every node have lots of neighbors; DFS storage is
+stack, it can go deeper without less storage.
+For ex. Graph max fan-out is 2, max diameter is 10, BFS max storage is 2^10, DFS compute is 2^10
+
+2. Behavior Question
+What is your reaction for criticize.
+What you will do when you get bored.
+What is your best achievement
+
+3. System Design
+Design a file share system.
+* load balance: balance work load, user could not see IP of web servers, only can ping load balancer
+* mem cache: it is a memory cache, hard to do sync between every servers.
+* what is benefit for distributed system: availability and scalability, others?
+* how to prevent malicious huge amount requests, blacklist, IP mask?
+
+4. Pattern Match
+String match with "*"
+keep a list of all possible patterns, Map<String, List<String>> key is possible pattern, value is the list String match
+to the pattern
+
+5. Trie phone we can also build a number Trie instead of char Trie
