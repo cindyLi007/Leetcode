@@ -41,6 +41,9 @@ public Reponse Unlock(@parameter: userInfo, timestamp, houseInfo)
 @Path
 public Reponse lock(@parameter: userInfo, timestamp, houseInfo)
 
+RESTful API
+@GET can return JSON body including information
+
 Data Store
 How to store house information, NO-SQL
 Queue for Notification
