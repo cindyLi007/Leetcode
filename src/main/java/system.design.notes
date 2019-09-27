@@ -1,0 +1,16 @@
+Design:
+Generally at a 45 mins system design interview
+1. 35 mins for key components design, from workflow draw the key components; from core function define system API and data store modules. [first can ignore capacity and storage estimate]
+  * for system API, no need to define too many, always less than 3.
+    When design RESTful API, 4 part, what is the action, what is the HTTP method (PUT/POST/GET), what is the parameters and what response or HTTP code we expect.
+  * for components, generally split to 3 parts,
+  	1) application servers with load balancers, this part is for business logic.
+  	   a. Memcache: key-value storage. Should not change and not sync between each other, since each app server has memcache.
+  	2) caches to store metadata and text file,
+  	   a.
+  	   b. LRU
+  	3) file storage for photos and videos
+  * Data store modules
+    1) split a few data modules: users, object(such as house, text file), how to choose between SQL and NO-SQL
+    2) how to shard data need some more discussion: sharding by user (not evenly distributed); sharding by objects; sharding by creation_time
+ 2. 10 mins think about improvment
