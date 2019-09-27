@@ -2,6 +2,7 @@ package com.google.sort;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.PriorityQueue;
 
 public class CampusBike {
@@ -50,6 +51,37 @@ public class CampusBike {
             }
             return distance-i.distance;
         }
+    }
+
+    // Time: O(M*N), O(M*N)
+    // Bucket sort is much better than PriorityQueue, the latter one Time is O((M*N)lg(M*N)), bucket sort is only (M*N)
+    // that is because bucket sort need not to order-insert into queue when loop through all distance. it take O(1) to
+    // insert into the array, PriorityQueue will take O(lg(M*N)) to insert into it
+    public int[] assignBikes_bucketSort(int[][] workers, int[][] bikes) {
+        List<int[]>[] dist = (List<int[]>[]) new List[2000];
+        int M = workers.length, N = bikes.length;
+        for (int i=0; i<M; i++) {
+            for (int j=0; j<N; j++) {
+                int d = Math.abs(workers[i][0] - bikes[j][0]) + Math.abs(workers[i][1] - bikes[j][1]);
+                if (dist[d]==null) dist[d] = new ArrayList<>();
+                dist[d].add(new int[]{i, j});
+            }
+        }
+        int[] res = new int[M];
+        int[] visited = new int[N];
+        Arrays.fill(res, -1);
+        Arrays.fill(visited, -1);
+        for (int i=0; i<2000; i++) {
+            if (dist[i] == null) continue;
+            for (int[] item : dist[i]) {
+                int w = item[0], b = item[1];
+                if (res[w]==-1 && visited[b]==-1) {
+                    res[w]=b;
+                    visited[b]=w;
+                }
+            }
+        }
+        return res;
     }
 
     public static void main(String... args) {
