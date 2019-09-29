@@ -31,7 +31,7 @@ public class QueueReconstruction {
     for (int[] p : people) {
       list.add(p[1], p);
     }
-    return list.toArray(new int[people.length][]);
+    return list.toArray(new int[people.length][2]);
   }
 
   public static void main(String[] args) {
