@@ -13,4 +13,8 @@ Generally at a 45 mins system design interview
   * Data store modules
     1) split a few data modules: users, object(such as house, text file), how to choose between SQL and NO-SQL
     2) how to shard data need some more discussion: sharding by user (not evenly distributed); sharding by objects; sharding by creation_time
- 2. 10 mins think about improvment
+ 2. 10 mins think about improvement
+
+ Tricky Tips:
+ * for asynchronous behavior, we first think about processing queue
+

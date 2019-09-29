@@ -14,7 +14,7 @@ public class MinDominosRotations {
         // either in A or in B or in both, which means the final val must be from A[0] and B[0], check whether for each
         // following entry, there is the val appears in A[i] or B[i]
         int v = A[0];
-        // a means how many times changes in A, b menas how many times changes in B
+        // a means how many times changes in A, b means how many times changes in B
         for (int i=0, a=0, b=0; i<A.length && (A[i]==v || B[i]==v); i++) {
             if (A[i]!=v) a++;
             if (B[i]!=v) b++;

@@ -7,11 +7,11 @@
 2. System Design
 A In house:
 * there is a hub which can lock or unlock the door of the house, system send command to the hub to take action to
-  lock or unlock the door. This is Asynchronous command which means system sends the request to hub, not but wait hub finish
-  the request
+  lock or unlock the door. This is Asynchronous command which means system sends the request to hub, but not wait hub send
+  the response back.
 * Hub will send notification to system when it finishes an action which is lock or unlock
 * This is also a camera to detect the movement around the door, if there is no movement in 15 mins time interval, it will send
-  "Idle" status to system. If there is a movement, it will send "Active" status to system.
+  "Idle" status to system. If there is a movement, it will send "Active" status to system immediately.
 
 B In client:
 * client can use smart phone app to scan the door and click the unlock button, it will send a RESTful request to system
@@ -19,30 +19,39 @@ B In client:
 * If a unlock happen, system will send an Email to Employee including information for this time unlock.
 
 Design: key components, RESTful API, data store module
-Function: 1. unlock the door, the workflow is client send RESTful request to webServer through load balancer (user to Application Server Map),
+Function:
+1. Unlock the door, the workflow is client send RESTful request to webServer through load balancer (user to Application Server Map),
 Application Server can keep user's Authentication/Authorization info in memory or in user DB shard, after retrieve user information,
-AppSer send command to HUB and directly return OK to user, to quickly retrieve corresponding house information from DB shard,
-AppServ also need access a cache, and log the activities of DB and change the house status
+AppSer send command to HUB and directly return OK to user. However we need keep all "alive" requests in a middle cache, we called "Alive Lock Pool"
+
 2. Hub will send a notification to Server after it unlock the door, the AppServ need process the notification and send it to responding users
-that involves in keep a Queue as a cache to store all notification, AppServ will process them one by one.
-3. AppServ will send a lock command to Hub after 30 seconds, that means we keep another queue for all current locked house, after we send the
-lock command, that request is done. But AppServer expect notification for "lock successfully" and can finally remove the record from the queue
-4. Camera: every 15 mins, it will send a notification for house "Idle/safe" to AppServ, AppSever will keep a cache for all the house status
-   If camera detects a movement, it will send notification immediately to AppServer. AppServer will find the house status, if it is "unlocked",
-   which means the HUB unlocked the door, that is expected, otherwise, will trigger Alarm system.
+Handle these notification in a processing queue, and we need search user information in "Alive Lock Pool", so can send a notification to user.
+AppServ will process them one by one, including to quickly retrieve corresponding house/user information from "Alive Lock Pool", update the house status
+and remove it from "Alive Lock Pool"
+We also need a scanner to scan all object in "Alive Lock Pool", after 30 seconds, we will send lock command to HUB.
+
+3. When AppServ sends lock command to Hub, we also keep a "Pending lock pool" and wait for HUB notification for "successfully locked"
+There is another processing queue to cache all these kind of notifications. App server take notification one by one, do the following steps:
+   a. find the corresponding entry in "Pending lock pool"
+   b. update house status in DB,
+   c. remove it from "Pending lock pool".
+
+4. Camera: every 15 mins, it will send a notification for house "Idle/Safe" to AppServ, AppSever will keep a cache for all the house status
+   If camera detects a movement, it will send notification immediately to AppServer. AppServer will find the house status from DB or
+   from "Alive Lock Pool", if it is "unlocked" or in "Alive Lock Pool", which means the HUB unlocked the door, that is expected,
+   otherwise, will trigger Alarm system.
 
 RESTful API
 * the difference with PUT and POST is PUT is change and POST is create
 @PUT
-@Path
-public Reponse Unlock(@parameter: userInfo, timestamp, houseInfo)
-
-@PUT
-@Path
-public Reponse lock(@parameter: userInfo, timestamp, houseInfo)
+@Path("/unlock")
+public Response unlock(@parameter: userId, timestamp, houseId)
 
 RESTful API
 @GET can return JSON body including information
+
+Key components: App Servers with load balancer, user DB, house DB, Processing Queue for 2 types of notification, Cache to store "Alive unlock pool"
+and "pending lock pool", this cache should be key-value pair, key can be houseId, value is action information, Log DB (non-SQL), Email/notification server
 
 Data Store
 How to store house information, NO-SQL
