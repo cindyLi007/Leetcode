@@ -25,4 +25,4 @@ String match with "*"
 keep a list of all possible patterns, Map<String, List<String>> key is possible pattern, value is the list String match
 to the pattern
 
-5. Trie phone we can also build a number Trie instead of char Trie
+5. Trie phone we can also build a number Trie instead of char Trie visual interview, the person is in SF

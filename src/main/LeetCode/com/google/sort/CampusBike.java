@@ -54,7 +54,7 @@ public class CampusBike {
     }
 
     // Time: O(M*N), O(M*N)
-    // Bucket sort is much better than PriorityQueue, the latter one Time is O((M*N)lg(M*N)), bucket sort is only (M*N)
+    // Bucket sort is much better than PriorityQueue, the latter one Time Complexity is O((M*N)lg(M*N)), bucket sort is only (M*N)
     // that is because bucket sort need not to order-insert into queue when loop through all distance. it take O(1) to
     // insert into the array, PriorityQueue will take O(lg(M*N)) to insert into it
     public int[] assignBikes_bucketSort(int[][] workers, int[][] bikes) {
