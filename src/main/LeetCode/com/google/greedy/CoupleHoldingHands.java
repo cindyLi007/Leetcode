@@ -31,7 +31,9 @@ public class CoupleHoldingHands {
 
   public static void main(String... args) {
     // System.out.println(minSwapsCouples(new int[]{5, 4, 2, 6, 3, 1, 0, 7}));
-    System.out.println(minSwapsCouples(new int[]{0, 2, 4, 6, 7, 1, 3, 5}));
-
+    //System.out.println(minSwapsCouples(new int[]{0, 2, 4, 6, 7, 1, 3, 5}));
+    String ip = "1.1.1.1";
+    String s = ip.replaceAll("\\.", "[.]");
+    System.out.println(s);
   }
 }

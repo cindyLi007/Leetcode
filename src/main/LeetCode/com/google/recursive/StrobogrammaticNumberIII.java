@@ -1,8 +1,8 @@
 package com.google.recursive;
 
 public class StrobogrammaticNumberIII {
-    int res = 0, len1=0, len2=0;
-    public int strobogrammaticInRange(String low, String high) {
+    static int res = 0, len1=0, len2=0;
+    public static int strobogrammaticInRange(String low, String high) {
         len1=low.length(); len2=high.length();
         for (int i=len1; i<=len2; i++) {
             helper("", i, low, high);
@@ -13,7 +13,7 @@ public class StrobogrammaticNumberIII {
         return res;
     }
 
-    private void helper(String s, int targetLen, String low, String high) {
+    private static void helper(String s, int targetLen, String low, String high) {
         int len = s.length();
         if (len > targetLen) return;
 

@@ -18,15 +18,10 @@ public class QueueReconstruction {
     So on and so forth.
    */
   public int[][] reconstructQueue(int[][] people) {
-    Arrays.sort(people, new Comparator<int[]>() {
-      @Override
-      public int compare(int[] o1, int[] o2) {
-        return o1[0]==o2[0] ? o1[1]-o2[1] : o2[0]-o1[0];
-      }
-    });
-    /* this is Java 8 implementation, slower than use comparator directly
+    // besides use height descending order as dominated order, we also MUST define second order is ascending order for
+    // how many people in front of it. that is because for ex. we first insert [7,0], [7, 1], if we do not define 2nd order
+    // we maybe first process [7,1], but right now list is empty.
     Arrays.sort(people, (a, b) -> a[0]==b[0] ? a[1] - b[1] : b[0] - a[0]);
-    */
     List<int[]> list = new LinkedList();
     for (int[] p : people) {
       list.add(p[1], p);
