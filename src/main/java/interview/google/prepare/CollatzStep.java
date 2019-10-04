@@ -1,14 +1,13 @@
 package interview.google.prepare;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * 给了一个数学公式 如果 input n 是偶数就除以二， 奇数就乘三加一， 给了假设任意 input如果一直循环 call 这个function， 一定会到1
  part a: 写下给随意input， 要多少个steps才能到1 （就很简单。。）
  part b: 给一个大的 N， 返回1 到 N 之间用最多steps 的数
+ EPI 12.11
  */
 public class CollatzStep {
 
