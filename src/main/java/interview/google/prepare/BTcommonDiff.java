@@ -38,62 +38,43 @@ package interview.google.prepare;
 public class BTcommonDiff {
   int max;
 
-  public int maxCommonDiff(TreeNode root) {
+  public int maxComDiff(TreeNode root) {
     max = 0;
-    if (root == null) return max;
-    helper(root);
+    if (root==null) return max;
+    dfs(root.left, 1, null,  root.val);
+    dfs(root.right, 1, null,  root.val);
     return max;
   }
 
-  // return an array has 2 Paths, from left and from right. IF it is a root, return an empty array
-  private Path[] helper(TreeNode root) {
-    if (root.left == null && root.right == null) {
-      return new Path[0];
+  private void dfs(TreeNode root, int len, Integer diff, int parentVal) {
+    if (root==null) return;
+    else {
+      int length = (diff==null || parentVal - root.val == diff.intValue()) ? len+1 : 1;
+      max = Math.max(max, length);
+      Integer d = new Integer(parentVal - root.val);
+      dfs(root.left, length, d, root.val);
+      dfs(root.right, length, d, root.val);
     }
-
-    int maxLenLeft = 0;
-    Path leftPath = new Path(0, 0);
-    if (root.left != null) {
-      Path[] childPath = helper(root.left);
-      maxLenLeft = f(root.left, root.val, childPath, leftPath);
-    }
-
-    int maxLenRight = 0;
-    Path rightPath = new Path(0, 0);
-    if (root.right != null) {
-      Path[] childPath = helper(root.right);
-      maxLenRight = f(root.right, root.val, childPath, rightPath);
-    }
-
-    max = Math.max(maxLenLeft, maxLenRight);
-    Path[] res = new Path[]{leftPath, rightPath};
-    return res;
-  }
-
-  private int f(TreeNode node, int rootVal, Path[] childPath, Path path) {
-    int maxLen = 0;
-    int diff = rootVal - node.val;
-    if (childPath.length > 0) {
-      if (childPath[0] != null && childPath[0].diff == diff)maxLen = Math.max(maxLen, childPath[0].len + 1);
-      if (childPath[1] != null && childPath[1].diff == diff) maxLen = Math.max(maxLen, childPath[1].len + 1);
-    } else {
-      path.len = 1; path.diff = diff;
-    }
-    if (maxLen > 0) {
-      path.len = maxLen; path.diff = diff;
-    }
-    return maxLen;
   }
 
   public static void main(String... args) {
+    BTcommonDiff bTcommonDiff = new BTcommonDiff();
     TreeNode root = new TreeNode(-2, null, null);
     TreeNode left = new TreeNode(0, null, null);
     root.left = left;
     TreeNode bottom = new TreeNode(4, new TreeNode(5, null, new TreeNode(6, null, null)), new TreeNode(6, null, null));
     TreeNode middle = new TreeNode(2, bottom, null);
     left.left = middle;
-    BTcommonDiff bTcommonDiff = new BTcommonDiff();
-    System.out.println(bTcommonDiff.maxCommonDiff(root));
+    System.out.println(bTcommonDiff.maxComDiff(root)); // should be 5
+    TreeNode root1 = new TreeNode(2, null, null);
+    TreeNode left_1 = new TreeNode(4, null, null); root1.left = left_1;
+    TreeNode right = new TreeNode(5, null, null); root1.right = right;
+    left_1.left = new TreeNode(6, new TreeNode(8, null, null), new TreeNode(7, null, null));
+    left_1.right = new TreeNode(3, new TreeNode(9, null, null), new TreeNode(8, null, null));
+    right.left = new TreeNode(2, new TreeNode(6, null, null), new TreeNode(1, null, null));
+    right.right = new TreeNode(1, new TreeNode(6, null, null), new TreeNode(7, null, null));
+    System.out.println(bTcommonDiff.maxComDiff(root1)); // should be 4
+
   }
 }
 
@@ -107,13 +88,3 @@ class TreeNode {
     right = r;
   }
 }
-
-class Path {
-  int diff, len;
-
-  Path(int l, int d) {
-    diff = d;
-    len = l;
-  }
-}
-
