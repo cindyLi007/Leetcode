@@ -21,6 +21,7 @@ public class ConfusionNumberII {
     }
   };
 
+  // Time: O(L*5) + Time: O(L * 5 * 5^L), Space: O(L)
   public int confusingNumberII(int N) {
 
     // first count how many numbers from 1 to N construct with "0, 1, 6, 8, 9"
@@ -63,6 +64,7 @@ public class ConfusionNumberII {
   }
 
   // Calculate all numbers which is Strobogrammatic number from [1, N]
+  // Time: O(L * 5 * 5^L)
   private int helper(int N) {
     String NS = String.valueOf(N);
     int L = NS.length();
@@ -77,6 +79,7 @@ public class ConfusionNumberII {
     count += 2;
 
     // for each L i, use i-2 as the middle and add pair
+    // Time: O(L * 5 * 5^L)
     for (int i=2; i<=L; i++) {
       List<String> prev = list[i - 2];
       list[i] = new ArrayList<>();
