@@ -4,40 +4,36 @@ import java.util.Arrays;
 import java.util.Stack;
 
 /**
- * Created by ychang on 2/15/2017.
+ * Created by ychang on 2/15/2017. Leetcode 85. Maximal Rectangle
  */
 public class MaxRectangle {
   /**
-   * this can beat 54%
+   * M * N
    */
   public int maximalRectangle(char[][] matrix) {
-    if (matrix==null || matrix.length==0 || matrix[0].length==0) return 0;
-    int[] height = new int[matrix[0].length];
-    int res=0;
-    for (char[] row : matrix) {
-      for (int i=0; i<row.length; i++) {
-        if (row[i]=='0') height[i]=0;
-        else {
-          height[i]++;
+    int M = matrix.length, N = M==0 ? 0 : matrix[0].length;
+    if (M==0 || N==0) return 0;
+    int max = 0, height[]=new int[N+1];
+    for (int i=0; i<M; i++) {
+      Stack<Integer> stack = new Stack<>();
+      for (int j=0; j<N; j++) {
+        if (matrix[i][j]=='0') {
+          height[j]=0;
+        } else {
+          height[j]++;
         }
       }
-      res=Math.max(res, largest(height));
-    }
-    return res;
-  }
-
-  private int largest(int[] height) {
-    int res=0, i=0;
-    int[] h = Arrays.copyOf(height, height.length+1);
-    Stack<Integer> stack = new Stack();
-    while (i<h.length) {
-      if (stack.isEmpty() || h[i]>=h[stack.peek()]) stack.push(i++);
-      else {
-        int j=stack.pop();
-        res=Math.max(res, h[j]*(stack.isEmpty() ? i : i-stack.peek()-1));
+      stack.push(0);
+      for (int j=1; j<=N; j++) {
+        while (!stack.isEmpty() && height[j] < height[stack.peek()]) {
+          int h = height[stack.pop()];
+          int w = stack.isEmpty() ? j : j-stack.peek()-1;
+          max = Math.max(max, h * w);
+        }
+        stack.push(j);
       }
     }
-    return res;
+    return max;
   }
 
   /**

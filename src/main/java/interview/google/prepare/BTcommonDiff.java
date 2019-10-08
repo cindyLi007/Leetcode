@@ -23,7 +23,7 @@ package interview.google.prepare;
  * 2  6
  * 输出3（2->4->6）
  * for each node, 需要保留两条路的信息 左边的和右边的 不能只保留最长的 这是因为较短的那条有可能在parent中被扩展
- *  2
+ *  -2
  * /
  * 0
  * /
