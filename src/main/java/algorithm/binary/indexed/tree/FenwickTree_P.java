@@ -9,11 +9,8 @@ public class FenwickTree_P {
   }
 
   /**
-   * Range Sum query from 1 to ind
-   * ind is 1-indexed
-   * <p>
+   * Range Sum query from 1 to ind ind is 1-indexed
    * Time-Complexity:    O(log(n))
-   *
    * @param ind index
    * @return sum
    */
@@ -30,36 +27,26 @@ public class FenwickTree_P {
   }
 
   /**
-   * Range Sum Query from a to b.
-   * Search for the sum from array index from a to b
-   * a and b are 1-indexed
-   * <p>
+   * Range Sum Query from a to b. Search for the sum from array index from a to b, a and b are 1-indexed
    * Time-Complexity:    O(log(n))
-   *
-   * @param a left index
-   * @param b right index
+   * @param a left index @param b right index
    * @return sum
    */
   public int rsq(int a, int b) {
     assert b >= a && a > 0 && b > 0;
-
     return rsq(b) - rsq(a - 1);
   }
 
   /**
-   * Update the array at ind and all the affected regions above ind.
-   * ind is 1-indexed
-   * <p>
+   * Update the array at ind and all the affected regions above ind, ind is 1-indexed
    * Time-Complexity:    O(log(n))
-   *
-   * @param ind   index
-   * @param value value
    */
   public void update(int ind, int value) {
     assert ind > 0;
     while (ind < array.length) {
       array[ind] += value;
       // Extracting the portion up to the first significant one of the binary representation of 'ind' and incrementing ind by that number
+      // for example, if ind is 11 (1011), ind will increment 1, then increment 2, then increment 8
       ind += ind & (-ind);
     }
   }
@@ -91,9 +78,10 @@ public class FenwickTree_P {
    */
   public static void main(String[] args) {
 
-    FenwickTree_P ft = new FenwickTree_P(20);
+    FenwickTree_P ft = new FenwickTree_P(15);
 
     for (int i = 1; i <= ft.size(); i++) {
+      System.out.println(i*7-1);
       ft.update(i, i * 7 - 1);
     }
 
