@@ -4,56 +4,67 @@ package algorithm.binary.indexed.tree;
  * Created by ychang on 11/27/2016.
  */
 public class NumArray {
-  private int[] tree;
-  private int[] nums;
+  public int[] tree;
 
   public NumArray(int[] nums) {
-    this.nums = nums;
-    int sum;
-    int lowbit;
     tree = new int[nums.length + 1];
     for (int i = 1; i < tree.length; i++) {
-      sum = 0;
-      lowbit = i & (-i);
-      for (int j = i; j > i - lowbit; j--) {
-        sum += nums[j - 1]; // this is shift from nums. tree[i] corresponding num[i-1]
-      }
-      tree[i] = sum;
+      update(i, nums[i-1]);
     }
   }
 
   void update(int index, int val) {
-    int diff = val - nums[index];
-    nums[index] = val;
-    // need change all tree elements which related to nums[i]
-    // i should shift one to tree index
-    for (int i=index+1; i<tree.length; i+=(i&(-i))) {
-      tree[i] +=diff;
+    int diff = val - sumRange(index, index);
+    // 记住 update是越来越往大的数，getRangeSum 是越来越往小的数
+    while (index < tree.length) {
+      tree[index] += diff;
+      // 在计算机中，负数以原码的补码形式表达, 补码为原码取反加一
+      // 而一个数与他的补码"AND", 相当于erase所有的1, 只留下最右边的一位
+      index += index & (-index);
     }
   }
 
+  // from i to j inclusive
   public int sumRange(int i, int j) {
     return getSum(j) - getSum(i-1);
   }
 
   public int getSum(int index) {
     int sum=0;
-    for (int i=index+1; i>0; i-=i&(-i)) {
-      sum += tree[i];
+    // 记住 update是越来越往大的数，getRangeSum 是越来越往小的数
+    while (index > 0) {
+      sum += tree[index];
+      index -= index & (-index);
     }
     return sum;
   }
 
+  public int size() {
+    return tree.length;
+  }
+
   public static void main(String[] args) {
-    /*int[] array = new int[]{1, 0, 2, 1, 1, 3, 0, 4, 2, 5, 2, 2, 3, 1, 0, 2};
+    int[] array = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     NumArray numArray = new NumArray(array);
-    for (int i=0; i<array.length; i++) {
-      System.out.println("sum of " + i + " is " + numArray.getSum(i));
-    }*/
-    int i=3;
-    while (i<19) {
-      System.out.println(i);
-      i += i & (-i);
+    for (int i=1; i<numArray.size(); i++) {
+      System.out.println("sum of 1 to " + i + " is " + numArray.getSum(i) + ", ******** tree array " + i + " is " + numArray.tree[i]);
     }
+    System.out.println("Before sum of 3 to 7 is " + numArray.sumRange(3, 7) );
+    numArray.update(5, 15);
+    System.out.println("After sum of 3 to 7 is " + numArray.sumRange(3, 7) );
   }
 }
+/*
+**************************************
+1 ****** 55 ******** 1
+2 ****** 54 ******** 3
+3 ****** 52 ******** 3
+4 ****** 49 ******** 10
+5 ****** 45 ******** 5
+6 ****** 40 ******** 11
+7 ****** 34 ******** 7
+8 ****** 27 ******** 36
+9 ****** 19 ******** 9
+10 ****** 10 ******** 19
+**************************************
+ */

@@ -8,11 +8,13 @@ import java.util.*;
  * C-> D, H
  * E-> H, G
  * H-> G
- * return a dependency for all nodes
+ * return a dependency for all nodes,
+ * this one is similar withe EPI TaskSchedule
  */
 public class PackageDetector {
   Map<Character, Set<Character>> res = new HashMap<>();
 
+  // Time: O(V+E), Space: O(V)
   public void detectDependency(Map<Character, List<Character>> graph) {
     for (Character v : graph.keySet()) {
       dfs(v, graph);

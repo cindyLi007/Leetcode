@@ -78,18 +78,23 @@ public class FenwickTree_P {
    */
   public static void main(String[] args) {
 
-    FenwickTree_P ft = new FenwickTree_P(15);
+    FenwickTree_P ft = new FenwickTree_P(10);
 
     for (int i = 1; i <= ft.size(); i++) {
-      System.out.println(i*7-1);
-      ft.update(i, i * 7 - 1);
+      ft.update(i, i);
     }
+//    System.out.println("**************************************");
 
     for (int i = 1; i <= ft.size(); i++) {
-      System.out.println((ft.rsq(i, i) + " "));
-      System.out.println((ft.rsq(i, ft.size() - 1) + " "));
+      System.out.print((ft.rsq(i, i) + " ****** "));
+      System.out.print((ft.rsq(i, ft.size()) + " ******** "));
+      System.out.println(ft.array[i]);
     }
+    System.out.println("**************************************");
 
+    System.out.println("before from 3 to 7 is " + ft.rsq(3, 7));
+    ft.update(5, 10);
+    System.out.println("after from 3 to 7 is " + ft.rsq(3, 7));
     System.out.println();
   }
 }
