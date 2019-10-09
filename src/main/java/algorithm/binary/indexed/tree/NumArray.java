@@ -45,10 +45,15 @@ public class NumArray {
   }
 
   public static void main(String[] args) {
-    int[] array = new int[]{1, 0, 2, 1, 1, 3, 0, 4, 2, 5, 2, 2, 3, 1, 0, 2};
+    /*int[] array = new int[]{1, 0, 2, 1, 1, 3, 0, 4, 2, 5, 2, 2, 3, 1, 0, 2};
     NumArray numArray = new NumArray(array);
     for (int i=0; i<array.length; i++) {
       System.out.println("sum of " + i + " is " + numArray.getSum(i));
+    }*/
+    int i=3;
+    while (i<19) {
+      System.out.println(i);
+      i += i & (-i);
     }
   }
 }
