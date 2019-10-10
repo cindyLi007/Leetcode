@@ -3,48 +3,39 @@ package com.google.segment.tree;
 // Leetcode 327
 public class CountRangeSum {
     public int countRangeSum(int[] nums, int lower, int upper) {
-        if (nums.length==0) return 0;
-        Node root = build(nums, 0, nums.length-1);
-        int res = (int)query(root, lower, upper);
-        return res;
+        int n = nums.length;
+        long[] sums = new long[n + 1];
+        for (int i = 0; i < n; ++i)
+            sums[i + 1] = sums[i] + nums[i];
+        return countWhileMergeSort(sums, 0, n + 1, lower, upper);
     }
 
-    private long query(Node node, int low, int high) {
-        if (node.start == node.end) {
-            if (low <= node.sum && node.sum <= high) return 1;
-            return 0;
+    private int countWhileMergeSort(long[] sums, int start, int end, int lower, int upper) {
+        if (end - start <= 1) return 0;
+        int mid = (start + end) / 2;
+        int count = countWhileMergeSort(sums, start, mid, lower, upper)
+            + countWhileMergeSort(sums, mid, end, lower, upper);
+        int j = mid, k = mid;
+        long[] cache = new long[end - start];
+        for (int i = start, r = 0; i < mid; ++i, ++r) {
+            while (k < end && sums[k] - sums[i] < lower) k++;
+            while (j < end && sums[j] - sums[i] <= upper) j++;
+            count += j - k;
         }
-        int res = 0;
-        if (low <= node.sum && node.sum <= high) res++;
-        res += query(node.left, low, high) + query(node.right, low, high);
-        return res;
-    }
-
-    private Node build(int[] A, int low, int high) {
-        if (low==high) return new Node(low, high, (long)A[low]);
-        int mid = low + (high-low)/2;
-        Node root = new Node(low, high, 0);
-        root.left = build(A, low, mid);
-        root.right = build(A, mid+1, high);
-        root.sum = (long)root.left.sum + (long)root.right.sum;
-        return root;
-    }
-
-    private static class Node {
-        int start, end;
-        long sum;
-        Node left, right;
-
-        Node(int s, int e, long v) {
-            start = s;
-            end = e;
-            sum = v;
+        j=start; k=mid;
+        int r = 0;
+        while (j<mid && k<end) {
+            cache[r++] = (sums[j]<sums[k]) ? sums[j++] : sums[k++];
         }
+        while (j<mid) cache[r++] = sums[j++];
+        while (k<end) cache[r++] = sums[k++];
+        System.arraycopy(cache, 0, sums, start, cache.length);
+        return count;
     }
 
     public static void main(String... args) {
         CountRangeSum countRangeSum = new CountRangeSum();
-        int count = countRangeSum.countRangeSum(new int[]{0, -3, -3, 1, 1, 2}, 3, 5);
+        int count = countRangeSum.countRangeSum(new int[]{0, 3, -3, 2, -1, 2}, 3, 5);
         System.out.println(count);
     }
 }
