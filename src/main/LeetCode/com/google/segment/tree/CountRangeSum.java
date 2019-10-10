@@ -13,6 +13,8 @@ public class CountRangeSum {
     private int countWhileMergeSort(long[] sums, int start, int end, int lower, int upper) {
         if (end - start <= 1) return 0;
         int mid = (start + end) / 2;
+        // 当我们已经做完左边和右边的count以后 我们并不care它们内部的sum的顺序 我们只care左边的和右边这两个部分的sum的差值
+        // 此时应该把它们排序 这样便于查找 像Amazon 的面试题
         int count = countWhileMergeSort(sums, start, mid, lower, upper)
             + countWhileMergeSort(sums, mid, end, lower, upper);
         int j = mid, k = mid;
