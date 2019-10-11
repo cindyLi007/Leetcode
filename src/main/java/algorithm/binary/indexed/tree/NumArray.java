@@ -1,7 +1,11 @@
 package algorithm.binary.indexed.tree;
 
 /**
- * Created by ychang on 11/27/2016.
+ * Created by ychang on 10/8/2019.
+ * Space complexity O(n)
+ * Time complexity to create O(nlogn)
+ * Time complexity to update is O(logn)
+ * Time complexity to get sum is O(logn)
  */
 public class NumArray {
   public int[] tree;
@@ -20,6 +24,7 @@ public class NumArray {
       tree[index] += diff;
       // 在计算机中，负数以原码的补码形式表达, 补码为原码取反加一
       // 而一个数与他的补码"AND", 相当于erase所有的1, 只留下最右边的一位
+      // 举例可以看到 stripe会越来越大
       index += index & (-index);
     }
   }

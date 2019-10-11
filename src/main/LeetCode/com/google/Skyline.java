@@ -66,7 +66,7 @@ public class Skyline {
 
   /**
    * this method can beat 33%, this is because we use PriorityQueue instead of TreeMap to store height, PriorityQueue is
-   * slower than TreeMap, because TreeMap is a totally sorted data structure, while PQ need change root each time root is pop
+   * slower than TreeMap, because TreeMap is a totally sorted data structure, while PQ need change root each time when root is pop
    */
   public List<int[]> getSkyline_priorityQueue(int[][] buildings) {
     List<int[]> res = new ArrayList();
