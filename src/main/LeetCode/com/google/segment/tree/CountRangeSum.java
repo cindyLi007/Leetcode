@@ -18,11 +18,14 @@ public class CountRangeSum {
         int count = countWhileMergeSort(sums, start, mid, lower, upper)
             + countWhileMergeSort(sums, mid, end, lower, upper);
         int j = mid, k = mid;
+        // [low, m) and [m, high) has been sorted, now begin to merge them we need to find (sum[j] - sum[i]) in [lower, upper], j from right, i from left
+        // for each i in left side, find the range of j which j1 is the first idx make (sum[j] - sum[i] >= lower); j2 is the first idx make (sum[j]-sum[i] > upper)
         long[] cache = new long[end - start];
         for (int i = start, r = 0; i < mid; ++i, ++r) {
             while (k < end && sums[k] - sums[i] < lower) k++;
             while (j < end && sums[j] - sums[i] <= upper) j++;
             count += j - k;
+            // no need to reset k and j, that is becasue left half is sorted, next nums[i] must bigger than current nums[i]
         }
         j=start; k=mid;
         int r = 0;
@@ -37,7 +40,8 @@ public class CountRangeSum {
 
     public static void main(String... args) {
         CountRangeSum countRangeSum = new CountRangeSum();
-        int count = countRangeSum.countRangeSum(new int[]{0, 3, -3, 2, -1, 2}, 3, 5);
+        // int count = countRangeSum.countRangeSum(new int[]{0, 3, -3, 2, -1, 2}, 3, 5);
+        int count = countRangeSum.countRangeSum(new int[]{-2, 5, -1}, -2, 2);
         System.out.println(count);
     }
 }
