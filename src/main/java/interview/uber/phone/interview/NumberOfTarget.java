@@ -34,7 +34,6 @@ public class NumberOfTarget {
     int N = A.length, l = 0, h = N - 1;
     int res = 0;
 
-
     // 我们要找一个区间 [l, h] 在这个区间里的所有数都满足A[i]==target
     while (l <= h) {
       if (A[l] == target && A[h] == target) return h - l + 1;
@@ -44,7 +43,7 @@ public class NumberOfTarget {
       else { // A[m]==target
         // left side, 找到第一个i which A[i]<=target in range [l, m-1]
         int right = m, left = l;
-        while (left < right) {
+        while (left != right) {
           int mid = left + (right - left) / 2;
           if (A[mid] < target) left = mid + 1;
           else right = mid - 1;
@@ -53,12 +52,12 @@ public class NumberOfTarget {
         // right side 找到第一个i which A[i]>target
         left = m + 1;
         right = h;
-        while (left < right) {
+        while (left <= right) {
           int mid = left + (right - left) / 2;
           if (A[mid] > target) right = mid - 1;
           else left = mid + 1;
         }
-        int ri = left; // right is the last i which A[i] == target
+        int ri = left; // left is the first i which A[i] > target
         return ri - le;
       }
     }
@@ -68,8 +67,8 @@ public class NumberOfTarget {
   public static void main(String args[]) throws Exception {
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     NumberOfTarget s = new NumberOfTarget();
-    int res_1 = s.findTarget_recursive(new int[]{1, 4, 4, 4, 4, 4, 5, 6, 9, 10}, 4);
-    int res_2 = s.findTarget(new int[]{1, 4, 4, 4, 4, 4, 5, 6, 9, 10}, 11);
+    int res_1 = s.findTarget_recursive(new int[]{1, 4, 4, 4, 4, 5, 5, 6, 9, 10}, 4);
+    int res_2 = s.findTarget(new int[]{1, 4, 4, 4, 4, 5, 5, 6, 9, 10}, 4);
     System.out.println(res_1 + "  " + res_2);
   }
 }

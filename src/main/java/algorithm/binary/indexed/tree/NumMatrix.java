@@ -54,7 +54,8 @@ public class NumMatrix {
 
   public static void main(String... args) {
 
-    int[][] nums = new int[][]{{3, 0, 1, 4, 2},
+    int[][] nums = new int[][]{
+        {3, 0, 1, 4, 2},
         {5, 6, 3, 2, 1},
         {1, 2, 0, 1, 5},
         {4, 1, 0, 1, 7},
