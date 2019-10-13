@@ -1,0 +1,6 @@
+1. 给一个用string储存到表达式，里面有数字和加号乘号，没有括号，例如 “1+2*3”计算表达式到结果
+if is "*", pop the top of stack as op1, and parse next num, calculate the res and push back to stack.
+else push to stack. (no need to push "+")
+after traverse the string, we can poll from first, and sum all of them.
+
+2.

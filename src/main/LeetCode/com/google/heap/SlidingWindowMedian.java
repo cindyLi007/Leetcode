@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class SlidingWindowMedian {
-    // Time: O(N * K)
+    // Time: O(N * lgK)
     PriorityQueue<Integer> left = new PriorityQueue<>(Comparator.reverseOrder());
     PriorityQueue<Integer> right = new PriorityQueue<>();
 

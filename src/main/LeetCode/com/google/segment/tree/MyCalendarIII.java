@@ -1,20 +1,33 @@
 package com.google.segment.tree;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.TreeSet;
+import java.util.TreeMap;
 
 class MyCalendarThree {
-  List<int[]> intervals;
+  TreeMap<Integer, Integer> tree;
 
   public MyCalendarThree() {
-    intervals = new ArrayList<>();
+    tree = new TreeMap();
   }
 
+  // Time: O(N), Space: O(N) N is the number of event
   public int book(int start, int end) {
-    int[] i = new int[]{start, end};
-    int index = Collections.binarySearch(intervals, i, (o1, o2) -> o1[0] == o2[0] ? o1[1] - o2[1] : o1[0] - o1[0]);
-    return 0;
+    tree.put(start, tree.getOrDefault(start, 0) + 1);
+    tree.put(end, tree.getOrDefault(end, 0) - 1);
+    int k = 0, ongoing = 0;
+    for (int v : tree.values()) {
+      ongoing += v;
+      k = Math.max(k, ongoing);
+    }
+    return k;
+  }
+
+  public static void main(String... args) {
+    MyCalendarThree myCalendarThree = new MyCalendarThree();
+    System.out.println(myCalendarThree.book(10, 20)); // should be 1
+    System.out.println(myCalendarThree.book(50, 60)); // should be 1
+    System.out.println(myCalendarThree.book(10, 40)); // should be 2
+    System.out.println(myCalendarThree.book(5, 15)); // should be 3
+    System.out.println(myCalendarThree.book(5, 10)); // should be 3
+    System.out.println(myCalendarThree.book(25, 55)); // should be 3
   }
 }

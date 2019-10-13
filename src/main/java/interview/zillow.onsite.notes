@@ -68,10 +68,10 @@ keep a cache in memory, that is the result of during last 5 mins, top K most vis
 
 4. prefix, infix and postfix
 for (a-b)*c
-prefix is -ab*c, infix is a-b*c, postfix is ab-c*
-given a prefix, return postfix
+prefix is *-abc, infix is a-b*c, postfix is ab-c*
+given a prefix, return postfix, refer code
 we can build a tree from prefix, which is
 if next char is op, build a node and keep build left and right, otherwise return to upper level
-or we can also use single stack to parse the prefix, which is when we parse a number B in the string, if the pop of the
+or we can also use single stack to parse the prefix, which is when we parse a number B in the string, if the top of the
 stack is a number A, pop A and use the top of the stack op to calculate A op B, (we also pop the stack of operator)
 and push the result back.
