@@ -4,6 +4,7 @@ package com.google.bfs.dfs.dfs;
  * Created by ychang on 8/7/2017.
  */
 public class WordSearch {
+  // Time: O(N*M*4^L), Space: O(L)
   public boolean exist(char[][] board, String word) {
     if (board==null || board.length==0 || board[0].length==0 || word==null || word.length()==0) return false;
     int M=board.length, N=board[0].length;

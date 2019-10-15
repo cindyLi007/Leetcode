@@ -14,7 +14,7 @@ public class OddCounter {
   public static List<Integer> countNumbers(int[] nums) {
     Map<Integer, Integer> numOfCount = new HashMap<>();
     for (int n : nums) {
-      // This is a tricky part is since we only need know whether currently the number appears odd time or even time
+      // This is a tricky part: since we only need know whether currently the number appears odd time or even time
       // we do not care the count, so we can flip between 0 and 1
       numOfCount.put(n, numOfCount.getOrDefault(n, 0) ^ 1);
     }

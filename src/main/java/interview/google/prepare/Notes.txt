@@ -3,4 +3,4 @@ if is "*", pop the top of stack as op1, and parse next num, calculate the res an
 else push to stack. (no need to push "+")
 after traverse the string, we can poll from first, and sum all of them.
 
-2.
+2. Missing Range 这里我们利用了一个特性就是Integer.MAX + 1 = Integer.MIN, Integer.MIN - 1 = Integer.MAX 这样我们无需cast to long

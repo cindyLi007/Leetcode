@@ -2,4 +2,5 @@
    For ex. When I worked in CGI, for FOIA online system, from scratch, how to make Alfresco transational. 
 2. DHCP forwarding, if one Data center power outage, how to seamless redirect to other backup Data center
 3. Server A and Server B have a dedicated connection, server A send 1 thousand requests to server B, most of log are good, however, there is one request is 429(too many requests) occationally, how to investigate it. 
+Most likely that is because connection pool full
 4. What is the most complicated Unit Test and Intigration test   

@@ -2,6 +2,7 @@
 1. * Given a list of numbers, return all numbers which occurs odd times
    * Word search, give a 2D matrix and a list of words, find from any point in the matrix can build a valid word, the
      direction is 3 ways: left-to-right, up-to-down and left-upper to right-bottom
+     Leetcode 212. Word Search II
      DFS or BFS?
 
 2. System Design
@@ -57,21 +58,21 @@ Data Store
 How to store house information, NO-SQL
 Queue for Notification
 
-3. Given a data stream with keep feed in the system, return in the past 5 mins, top K most visited URL
-input is the data stream(URLs), output should be a list of URLs similar with hit count
-use heap to keep K most visited URL PriorityQueue
-2 maps, one keep <URL, count>; one keep <URL, list of Entry> Entry including timestamp of the URL
-when read a new URL, lazy update 2 maps, update PriorityQueue
+3. Given a data stream keeping feed in the system, return in the past 5 mins, top K most visited URL
+input is the data stream(URLs), output should be a list of URLs. Similar with leetcode hit count
+use heap to keep K most visited URL. Data structure includes one PriorityQueue<URL> reading Map<URL, HitCount> to retrieve top K
+When read the stream, map.get(url).hit(timestamp); // increment the counter or reset. 
+When calculate the top K, for (URL url : map.keySet()), compare map.get(url).getHits(currentTime) to insert to PQ // get how many hits for this url in past 300 seconds,
 
-keep a cache in memory, that is the result of during last 5 mins, top K most visited URL. we run the above method every
-10 seconds and in the end to update the cache.
+keep a cache in memory, that is the map<URL, HitCount>, we keep polling data from DB and updating this map. And we hava snapshot for it every 10 seconds to feed to PriorityQueue to render the top K most visited URL. 
 
 4. prefix, infix and postfix
-for (a-b)*c
-prefix is *-abc, infix is a-b*c, postfix is ab-c*
+for (a-b)*c prefix is *-abc, infix is a-b*c, postfix is ab-c*
 given a prefix, return postfix, refer code
-we can build a tree from prefix, which is
-if next char is op, build a node and keep build left and right, otherwise return to upper level
+we can build a tree from prefix, which is if next char is op, build a root and keep build left and right as oprands, otherwise return to upper level
 or we can also use single stack to parse the prefix, which is when we parse a number B in the string, if the top of the
 stack is a number A, pop A and use the top of the stack op to calculate A op B, (we also pop the stack of operator)
 and push the result back.
+
+5. Random pick up word from a book, how about words posibility is not evenly distributed
+EPI 5.16, 划分区间 根据概率大小决定区间大小

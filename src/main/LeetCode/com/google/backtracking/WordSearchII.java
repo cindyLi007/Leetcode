@@ -15,6 +15,7 @@ import java.util.List;
  * if no, stop it, so need not go deeper.
  */
 public class WordSearchII {
+  // Time: O(L*k + M*N*4*L)
   public List<String> findWords(char[][] board, String[] words) {
     int M=board.length, N=board[0].length;
     Trie root = build(words);
@@ -27,6 +28,7 @@ public class WordSearchII {
     return res;
   }
 
+  // Time: O(4^L)
   private void dfs(char[][] board, int M, int N, int i, int j, Trie root, List<String> res) {
     if (root.word!=null) {
       res.add(root.word);
@@ -42,6 +44,7 @@ public class WordSearchII {
     board[i][j]=c;
   }
 
+  // Time: O(L*k)
   private Trie build(String[] words) {
     Trie root = new Trie();
     for (String word : words) {
