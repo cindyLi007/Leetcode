@@ -10,7 +10,8 @@ import java.util.GregorianCalendar;
 /**
  * Treat Facade as Agent of subsystems. Each subsystem has only ONE actor it should be responsible for.
  * Subsystems may share same raw data, but they process data separately and return different results.
- * Considering an Company Employee class, we can have a facade including multiple subsystems to handle different processes based on its raw data
+ * Considering an Company Employee class, we can have a facade including multiple subsystems to handle different processes
+ * based on its raw data.
  * Each process is a module (Class and functions). For example, Classes: PayCalculator, HourReporter, EmployeeSaver.
  * Each class have a dedicate function (composed of a public method and couple of private methods). And in the
  * Facade, we have the instances of each subsystem.

@@ -46,7 +46,8 @@ public class FenwickTree_P {
     while (ind < array.length) {
       array[ind] += value;
       // Extracting the portion up to the first significant one of the binary representation of 'ind' and incrementing ind by that number
-      // for example, if ind is 11 (1011), ind will increment 1, then increment 2, then increment 8
+      // for example, if ind is 11 (1011), ind will increment 0001, then increment 2, then increment 4 (after the 1st increment, it always
+      // follow 2, 4, 8, 16, 32
       ind += ind & (-ind);
     }
   }
@@ -78,12 +79,11 @@ public class FenwickTree_P {
    */
   public static void main(String[] args) {
 
-    FenwickTree_P ft = new FenwickTree_P(10);
+    FenwickTree_P ft = new FenwickTree_P(16);
 
     for (int i = 1; i <= ft.size(); i++) {
       ft.update(i, i);
     }
-//    System.out.println("**************************************");
 
     for (int i = 1; i <= ft.size(); i++) {
       System.out.print((ft.rsq(i, i) + " ****** "));
@@ -93,7 +93,7 @@ public class FenwickTree_P {
     System.out.println("**************************************");
 
     System.out.println("before from 3 to 7 is " + ft.rsq(3, 7));
-    ft.update(5, 10);
+    ft.update(11, 10);
     System.out.println("after from 3 to 7 is " + ft.rsq(3, 7));
     System.out.println();
   }

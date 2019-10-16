@@ -12,7 +12,7 @@ public class NumMatrix {
   // Time: O(m*n*logM*logN)
   public NumMatrix(int[][] matrix) {
     m = matrix.length;
-    n = matrix[0].length;
+    n = m==0 ? 0 : matrix[0].length;
     tree = new int[m + 1][n + 1];
     nums = new int[m][n];
     for (int i = 0; i < m; i++) {
@@ -53,14 +53,13 @@ public class NumMatrix {
   }
 
   public static void main(String... args) {
-
     int[][] nums = new int[][]{
         {3, 0, 1, 4, 2},
         {5, 6, 3, 2, 1},
         {1, 2, 0, 1, 5},
         {4, 1, 0, 1, 7},
         {1, 0, 3, 0, 5}};
-    NumMatrix numMatrix = new NumMatrix(nums);
+    NumMatrix numMatrix = new NumMatrix(new int[][]{});
     System.out.println(numMatrix.sumRegion(2, 1, 4, 3));
     numMatrix.update(3, 2, 2);
     System.out.println(numMatrix.sumRegion(2, 1, 4, 3));

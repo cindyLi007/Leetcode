@@ -1,11 +1,11 @@
 package interview.uber.phone.interview;
 
 /* 2019/07/30
-Given a sorted array and a target number, return the number of target number in the array; If not contain, return 0.
+ * Given a sorted array and a target number, return the number of target number in the array; If not contain, return 0.
  */
 public class NumberOfTarget {
   // Time average is O(lgN), Space: O(lgN) related to code stack call
-  // iteration do the binary search, worst cas is O(1)
+  // iteration do the binary search
   // binary search, if the mid == target, we will binary search in left and right, O(lgN)
   public int findTarget_recursive(int[] A, int t) {
     if (A == null || A.length == 0)
@@ -41,7 +41,7 @@ public class NumberOfTarget {
       if (A[m] > target) h = m - 1;
       else if (A[m] < target) l = m + 1;
       else { // A[m]==target
-        // left side, 找到第一个i which A[i]<=target in range [l, m-1]
+        // left side, 找到第一个i which A[i]==target in range [l, m-1]
         int right = m, left = l;
         while (left != right) {
           int mid = left + (right - left) / 2;

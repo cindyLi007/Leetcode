@@ -1,4 +1,4 @@
-package com.google.sort;
+package com.google.divide.and.conqure;
 
 public class ReversePairs {
   public int reversePairs(int[] nums) {
@@ -14,9 +14,9 @@ public class ReversePairs {
     int k = m + 1;
     for (int i = left; i <= m; i++) {
       while (k <= right && nums[i] > 2L * nums[k]) k++;
-      res += k - m - 1;
+      res += k - (m + 1);
       // no need to reset k to m+1, that is because we only care the count, since left side and right side are sorted, when we move to
-      // next item, nums[i+1] >= nums[i] we can guarantee that all nums[j] (m+1<=j<=k) must satitsfy the condition, we only
+      // next item, nums[i+1] >= nums[i] we can guarantee that all nums[j] (m+1<=j<=k) must satisfy the condition, we only
       // need move forward to check whether bigger nums[k] still have nums[i] > nums[k] * 2;
     }
 

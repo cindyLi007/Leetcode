@@ -1,4 +1,4 @@
-package com.google.segment.tree;
+package com.google.divide.and.conqure;
 
 // Leetcode 327
 public class CountRangeSum {
@@ -21,15 +21,15 @@ public class CountRangeSum {
         int j = mid, k = mid;
         // [low, m) and [m, high) has been sorted, now begin to merge them we need to find (sum[j] - sum[i]) in [lower, upper], j from right, i from left
         // for each i in left side, find the range of j which j1 is the first idx make (sum[j] - sum[i] >= lower); j2 is the first idx make (sum[j]-sum[i] > upper)
-        long[] cache = new long[end - start];
-        for (int i = start, r = 0; i < mid; ++i, ++r) {
+        for (int i = start; i < mid; ++i) {
             while (k < end && sums[k] - sums[i] < lower) k++;
             while (j < end && sums[j] - sums[i] <= upper) j++;
             count += j - k;
-            // no need to reset k and j, that is becasue left half is sorted, next nums[i] must bigger than current nums[i]
+            // no need to reset k and j, that is because left half is sorted, next nums[i] must bigger than current nums[i]
         }
         j=start; k=mid;
         int r = 0;
+        long[] cache = new long[end - start];
         while (j<mid && k<end) {
             cache[r++] = (sums[j]<sums[k]) ? sums[j++] : sums[k++];
         }

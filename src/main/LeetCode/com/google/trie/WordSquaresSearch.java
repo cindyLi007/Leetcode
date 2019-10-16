@@ -1,85 +1,87 @@
 package com.google.trie;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Objects;
-
 import com.google.common.collect.Lists;
 
-/**
- * Created by ychang on 12/2/2016.
- */
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class WordSquaresSearch {
+  List<List<String>> res = new ArrayList();
+  int len;
+  Trie root;
+
+  // Time: O(N * N^L => N^L)  L is length of words, N is number of words, Space: O(N*L)
   public List<List<String>> wordSquares(String[] words) {
-    TrieTree root = new TrieTree(words);
-    List<List<String>> result = Lists.newLinkedList();
-    for (String word : words) {
-      List<String> list = Lists.newLinkedList();
-      list.add(word);
-      search(root, word.length(), 1, list, result);
+    len = words[0].length();
+    root = new Trie();
+    for (String w : words) {
+      root.insert(w);
     }
-    return result;
-  }
-
-  public static void main(String[] args) {
-    WordSquaresSearch was = new WordSquaresSearch();
-    //    String[] words = new String[]{"wall", "area", "lead", "lady", "ball"};
-//    String[] words = new String[]{"momy","oooo","yoyo"};
-    //    String[] words = new String[]{"abat", "atal", "atan", "baba"};
-    String[] words = new String[]{"ball", "area", "lead", "lady"};
-    List<List<String>> result = was.wordSquares(words);
-    result.stream().forEach(System.out::println);
-  }
-
-  void search(TrieTree root, int len, int depth, List<String> list, List<List<String>> result) {
-    if (depth==len) {
-      result.add(Lists.newLinkedList(list));
-      return;
-    }
-    StringBuilder sb = new StringBuilder();
-    for (int i=0; i<list.size(); i++) {
-      sb.append(list.get(i).charAt(depth));
-    }
-    String prefix = sb.toString();
-    List<String> candidates = root.get(prefix);
-    for (String next : candidates) {
-      list.add(next);
-      search(root, len, depth+1, list, result);
+    List<String> list = Lists.newLinkedList();
+    for (String w : words) {
+      list.add(w);
+      search(list, 1, root);
       list.remove(list.size()-1);
     }
+    return res;
   }
 
-  class TrieNode {
-    TrieNode[] children = new TrieNode[26];
-    List<String> matchedWords = new LinkedList();
-  }
-  class TrieTree {
-    TrieNode root = new TrieNode();
-
-    TrieTree(String[] words) {
-      for (String word : words) {
-        TrieNode currentNode = root;
-        for (int i=0; i<word.length(); i++) {
-          int index = word.charAt(i) - 'a';
-          if (Objects.isNull(currentNode.children[index]))
-            currentNode.children[index]=new TrieNode();
-          currentNode.matchedWords.add(word);
-          currentNode = currentNode.children[index];
-        }
+  private void search(List<String> list, int d, Trie root) {
+    if (d==len) {
+      res.add(new ArrayList(list));
+    } else {
+      StringBuilder prefix = new StringBuilder();
+      for (int i=0; i<d; i++) {
+        prefix.append(list.get(i).charAt(d));
+      }
+      List<String> next = root.find(prefix.toString());
+      for (String s : next) {
+        list.add(s);
+        search(list, d+1, root);
+        list.remove(list.size()-1);
       }
     }
+  }
 
-    List<String> get(String prefix) {
-      TrieNode node = get(root, prefix, 0);
-      if (Objects.isNull(node)) return new LinkedList<>();
-      return node.matchedWords;
+  class Trie {
+    Trie[] children;
+    List<String> words; // word set including all words with prefix till this Trie Node
+
+    public Trie() {
+      words = new ArrayList();
+      children = new Trie[26];
     }
 
-    TrieNode get(TrieNode root, String prefix, int depth) {
-      if (Objects.isNull(root)) return null;
-      if (prefix.length()==depth) return root;
-      int index = prefix.charAt(depth) - 'a';
-      return get(root.children[index], prefix, depth+1);
+    public void insert(String word) {
+      insert(this, word, 0);
     }
+
+    private Trie insert(Trie node, String word, int d) {
+      if (node==null) node = new Trie();
+      node.words.add(word);
+      if (d<len) {
+        int c = word.charAt(d) - 'a';
+        node.children[c] = insert(node.children[c], word, d+1);
+      }
+      return node;
+    }
+
+    public List<String> find(String word) {
+      Trie node = find(this, word, 0);
+      if (node==null) return Collections.emptyList();
+      return node.words;
+    }
+
+    private Trie find(Trie node, String word, int d) {
+      if (node==null || d==word.length()) return node;
+      int c = word.charAt(d) - 'a';
+      return find(node.children[c], word, d+1);
+    }
+  }
+
+  public static void main(String... args) {
+    WordSquaresSearch wordTemp = new WordSquaresSearch();
+    wordTemp.wordSquares(new String[]{"area","lead","wall","lady","ball"});
   }
 }

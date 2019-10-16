@@ -8,33 +8,30 @@ public class ReversePairs_BST_TLE {
   public int reversePairs(int[] nums) {
     int res = 0;
     TreeNode root = null;
-    for (int i = nums.length - 1; i>=0; i--) {
-      /**
-       * here we must use nums[i]/2.0, could not use (nums[i]-1)/2, because 0, it till 0, but should be -1
-       */
-      res += search(root, nums[i]/2.0, 0);
+    for (int i = 0; i<nums.length; i++) {
+      res += search(root, nums[i] * 2L + 1);
       root = insert(root, nums[i]);
     }
     return res;
   }
 
-  private int search(TreeNode root, double val, int prev) {
+  // find number >=val
+  private int search(TreeNode root, double val) {
     if (root==null)
-      return prev;
-    if (root.val<val)
-      return search(root.right, val, prev + root.small + root.count);
-    else if (root.val>val)
-      return search(root.left, val, prev);
-    return root.small + prev;
+      return 0;
+    if (root.val == val) return root.count;
+    if (root.val < val)
+      return search(root.right, val);
+    return search(root.left, val) + root.count;
   }
 
   private TreeNode insert(TreeNode root, int val) {
     if (root==null)
       return new TreeNode(val);
-    if (val>root.val)
+    if (val>root.val) {
+      root.count++;
       root.right = insert(root.right, val);
-    else if (val<root.val) {
-      root.small++;
+    } else if (val<root.val) {
       root.left = insert(root.left, val);
     } else
       root.count++;
@@ -42,13 +39,12 @@ public class ReversePairs_BST_TLE {
   }
 
   class TreeNode {
-    int val, count, small;
+    int val, count;
     TreeNode left, right;
 
     TreeNode(int v) {
       val = v;
       count = 1;
-      small = 0;
     }
   }
 }

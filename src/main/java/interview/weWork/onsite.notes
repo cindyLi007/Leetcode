@@ -1,0 +1,4 @@
+1. Given 2 graph start node, suppose they are identical peer in the graph, check whether the whole graph is same
+   首先确定Graph的数据结构用<Label, List<Edge>> 来表示，其中Edge有source和destination，Edge上可能还有distance,
+   这样比较某一个点和另一个点相等就变成了比较它们所有的Edge相等的问题。而Edge相等必须distance和source，target都相等才可以。
+   如果我们已知原点，从原点开始比较，用BFS比较。需要加一个Map<Vertex, Vertex> to map graph1 vertex to graph2 vertex
