@@ -62,7 +62,8 @@ public class PermutationsII {
          * for example [2, 2, 1, 1] startIdx is 1, if we swap index [1, 2], we can get [2, 1, 2, 1] and [2, 1, 1, 2],
          * but we will still do swap idex [1, 3] got the [2, 1, 1, 2] and [2, 1, 2, 1] again
          */
-        if (isNotRepeat(nums, i)) { // O(N*N)
+        //if (isNotRepeat(nums, i)) { // O(N*N)
+        if (i==startIdx || nums[i]!=nums[startIdx]) {
           swap(nums, i, startIdx);
           permute(nums, startIdx+1, res);
           swap(nums, i, startIdx);

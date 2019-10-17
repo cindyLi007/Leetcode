@@ -1,11 +1,13 @@
 package com.google.array;
 
-import com.google.dp.PalindromePatitionII;
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class PalindromePermutation {
-    // Time: O(N*N!), Space: O(N)
+    // Time: O(N*N!), Space: O(N) N is the length of s
     public List<String> generatePalindromes(String s) {
         Map<Character, Integer> map = new HashMap<>();
         for (char c : s.toCharArray()) {
@@ -61,7 +63,7 @@ public class PalindromePermutation {
 
     public static void main(String... args) {
         PalindromePermutation palindromePermutation = new PalindromePermutation();
-        List<String> res = palindromePermutation.generatePalindromes("aab");
+        List<String> res = palindromePermutation.generatePalindromes("aabb");
         res.stream().forEach(System.out::println);
     }
 }
