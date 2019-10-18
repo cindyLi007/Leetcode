@@ -16,8 +16,8 @@ public class FixedLengthListBinaryIndexTree {
     }
 
     void flip(int pos) {
-       pos++;
        int originalVal = sum(pos, pos);
+       pos++;
        int diff = originalVal == 0 ? 1 : -1;
        while (pos < tree.length) {
            tree[pos] += diff;
@@ -31,6 +31,7 @@ public class FixedLengthListBinaryIndexTree {
     }
 
     private int getRange(int i) {
+        i++;
         int sum = 0;
         while (i>0) {
             sum += tree[i];
