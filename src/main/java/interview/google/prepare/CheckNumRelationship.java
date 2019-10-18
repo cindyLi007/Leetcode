@@ -7,8 +7,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import static org.apache.commons.lang3.math.NumberUtils.toByte;
-
 /**
  * 给一堆未知数之间大于小于的关系，判断所有关系之间是否成立。
  * 比如输入 a<b, b<c, a<c, 输出就是成立；输入 a<b, b<c, c<a, 输出就是不成立。符号仅限大于号和小于号
@@ -107,13 +105,21 @@ public class CheckNumRelationship {
     };
     System.out.println(CheckNumRelationship.checkNumRelationship(graph));
 
-    Map<String, List<Edge>> graph_followup2= new HashMap<String, List<Edge>>() {
+    Map<String, List<Edge>> graph_followup2= new HashMap<String, List<Edge>>() { // should return false
+      {
+        put("b", Arrays.asList(new Edge("c", false)));
+        put("c", Arrays.asList(new Edge("a", true)));
+        put("a", Arrays.asList(new Edge("b", true), new Edge("c", false)));
+      }
+    };
+
+    /* Map<String, List<Edge>> graph_followup2= new HashMap<String, List<Edge>>() { // should return true
       {
         put("b", Arrays.asList(new Edge("a", true)));
         put("c", Arrays.asList(new Edge("b", true)));
         put("a", Arrays.asList(new Edge("c", true)));
       }
-    };
+    }; */
 
     System.out.println(checkNumCycle(graph_followup2));
   }
