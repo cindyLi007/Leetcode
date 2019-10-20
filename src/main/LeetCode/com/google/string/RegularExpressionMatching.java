@@ -57,6 +57,14 @@ public class RegularExpressionMatching {
             } else {
               dp[i + 1][j + 1] = dp[i + 1][j - 1];
             }
+            /*
+            if (s.charAt(i)==p.charAt(j) || p.charAt(j)=='.')
+                    dp[i+1][j+1] = dp[i][j];
+                else if (p.charAt(j)=='*') {
+                    if (p.charAt(j-1)==s.charAt(i) || p.charAt(j-1)=='.')
+                        dp[i+1][j+1] = dp[i+1][j-1] || dp[i][j+1];
+                }
+             */
           }
         }
       }

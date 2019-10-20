@@ -39,7 +39,7 @@ public class ConfusionNumberII {
     for (int i=1; i<L; i++) {
       count += 4 * (int)Math.pow(5, i-1);
     }
-    // now count is the toall number construct with "0, 1, 6, 8, 9} from [1, M] M is the number without leading digit
+    // now count is the total number construct with "0, 1, 6, 8, 9} from [1, M] M is the number without leading digit
 
     // compute [M+1, N] for ex. if num is 7822, compute from [1000, 6822)
     // from the most significant digit, for each one choose small that digit key from {0, 1, 6, 8, 9}
@@ -48,7 +48,7 @@ public class ConfusionNumberII {
       // if now is the most significant digit and it is 1, we could not choose 0, so skip
       if (i==0 && d==1) continue; 
       for (Integer key : map.keySet()) {
-        // we only choose key less than current d, for 6822, if now we hanle 8, we only check 60xx, 61xx, 66xx
+        // we only choose key less than current d, for 6822, if now we handle 8, we only check 60xx, 61xx, 66xx
         if (key.intValue() < d) {
           if (i==0 && key.intValue() == 0) continue;
           count += Math.pow(5, L-i-1);
@@ -56,7 +56,7 @@ public class ConfusionNumberII {
           break;
         }
       }
-      // if current d is not one of {0, 1, 6, 8, 9}, we could start with it, should stop. for ex. 7899, after we count 1xxx, 6xxx, we could not count 7xxx
+      // if current d is not one of {0, 1, 6, 8, 9}, we could not start with it, should stop. for ex. 7899, after we count 1xxx, 6xxx, we could not count 7xxx
       if (!map.containsKey(d)) break;
     }
 

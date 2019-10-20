@@ -47,6 +47,7 @@ public class Monarchy {
   private Person getNext(String name, Person root) {
     if (root.name.equals(name)) {
       if (root.children.size() > 0) return root.children.get(0);
+      // we find the person, but this person does not have children, we its next should be its sibling
       else return new Person("");
     } else {
       for (int i=0; i<root.children.size(); i++) {
@@ -55,6 +56,7 @@ public class Monarchy {
         if (p!=null) {
           if (StringUtils.isNotEmpty(p.name)) return p;
           if (i<root.children.size()-1) return root.children.get(i+1);
+          // it is the last child of its parent, so should return to its' uncle
           return p;
         }
       }

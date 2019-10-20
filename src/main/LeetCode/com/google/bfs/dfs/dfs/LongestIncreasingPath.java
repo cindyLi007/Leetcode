@@ -3,6 +3,7 @@ package com.google.bfs.dfs.dfs;
 import java.util.Arrays;
 
 public class LongestIncreasingPath {
+    // Time: O(N*M), Space: O(N*M)
     public int longestIncreasingPath(int[][] matrix) {
         int M=matrix.length, N=(M==0? 0 : matrix[0].length);
         if (M==0 || N==0) return 0;

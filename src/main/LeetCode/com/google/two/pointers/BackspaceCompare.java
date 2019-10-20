@@ -1,5 +1,7 @@
 package com.google.two.pointers;
 
+import java.util.Stack;
+
 public class BackspaceCompare {
     // Time:O(M+N)
     public boolean backspaceCompare(String S, String T) {
@@ -31,7 +33,29 @@ public class BackspaceCompare {
 
     public static void main(String... args) {
         BackspaceCompare backspaceCompare = new BackspaceCompare();
-        boolean res = backspaceCompare.backspaceCompare("bbbextm", "bbb#extm");
+        boolean res = backspaceCompare.backspaceCompare("y#fo##f", "y#f#o##f");
         System.out.println(res);
+    }
+
+    // Time: O(N+M)
+    public boolean backspaceCompare_Stack(String S, String T) {
+        // process S and T and compare it
+        String s = process(S), t = process(T);
+        return s.equals(t);
+    }
+
+    private String process(String s) {
+        Stack<Character> stack = new Stack();
+        for (char c : s.toCharArray()) {
+            if (c=='#') {
+                if(!stack.isEmpty()) stack.pop();
+            }
+            else stack.push(c);
+        }
+        StringBuilder sb = new StringBuilder();
+        while (!stack.isEmpty()) {
+            sb.append(stack.pop());
+        }
+        return sb.reverse().toString();
     }
 }

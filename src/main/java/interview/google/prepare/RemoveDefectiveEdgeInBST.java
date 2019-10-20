@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Given a binary tree, where an arbitary node has 2 parents i.e two nodes in the tree have the same child. Identify
+ * Given a binary tree, where an arbitrary node has 2 parents i.e two nodes in the tree have the same child. Identify
  * the defective node and remove an extra edge to fix the tree.
  * Follow-up 1: What if the tree is a BST? Answer: we could not arbit
  * Follow-up 2: Wha‍‌‌‌‌‌‍‍‌‌‍‌‌‍‌‌‌‍‌‌t if the tree is an N-ary tree?

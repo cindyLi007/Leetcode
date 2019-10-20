@@ -29,7 +29,7 @@ public class AlignText {
   // Space: O(N) N is # of char since we used a String[]
   public static String padLength(String words, int length) {
     if (words==null || words.length()==0) return "";
-    words = words.trim();
+    words = words.trim(); // any leading and trailing whitespace removed
     String[] wordArray = words.split("\\s+");
     int M = wordArray.length, N = words.replaceAll("\\s+", "").length();
 

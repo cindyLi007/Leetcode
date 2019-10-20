@@ -5,7 +5,7 @@ follow-up:
 * how can we detect loop
 * when we should use BFS, when we should use DFS.
 BFS to DFS: BFS storage is queue, it maybe need lots of memory, if every node have lots of neighbors; DFS storage is
-stack, it can go deeper without less storage.
+stack, it can go deeper with less storage.
 For ex. Graph max fan-out is 2, max diameter is 10, BFS max storage is 2^10, DFS compute is 2^10
 
 2. Behavior Question

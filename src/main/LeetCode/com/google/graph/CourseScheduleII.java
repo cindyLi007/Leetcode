@@ -23,10 +23,10 @@ public class CourseScheduleII {
     for (int[] edge : prerequisites) {
       graph.get(edge[1]).add(edge[0]);
     }
-    boolean[] visited = new boolean[numCourses], inStack = new boolean[numCourses];
+    boolean[] visited = new boolean[numCourses];
     Stack<Integer> stack = new Stack();
     for (int i = 0; i<numCourses; i++) {
-      if (!dfs(graph, i, stack, visited, inStack))
+      if (!dfs(graph, i, stack, visited, new boolean[numCourses]))
         return new int[0];
     }
     int[] res = new int[numCourses];
@@ -42,13 +42,12 @@ public class CourseScheduleII {
     if (visited[course])
       return true;
     inStack[course] = true;
-    visited[course] = true;
     for (Integer i : graph.get(course)) {
       if (!dfs(graph, i, stack, visited, inStack))
         return false;
     }
     stack.push(course);
-    inStack[course] = false;
+    visited[course] = true;
     return true;
   }
 
@@ -81,4 +80,5 @@ public class CourseScheduleII {
     }
     return (i==numCourses) ? res : new int[0];
   }
+
 }

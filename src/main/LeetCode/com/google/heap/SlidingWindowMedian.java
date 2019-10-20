@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class SlidingWindowMedian {
-    // Time: O(N * lgK)
+    // Time: O(N * K) that is because heap remove will loop through all elements
     PriorityQueue<Integer> left = new PriorityQueue<>(Comparator.reverseOrder());
     PriorityQueue<Integer> right = new PriorityQueue<>();
 
@@ -33,7 +33,7 @@ public class SlidingWindowMedian {
     }
 
     private void add(int v) {
-        // must first arbitary put in one heap, then poll that heap top to the other heap to keep the order
+        // must first arbitrary put in one heap, then poll that heap top to the other heap to keep the order
         right.offer(v);
         left.offer(right.poll());
         if (left.size()<right.size()) left.offer(right.poll());

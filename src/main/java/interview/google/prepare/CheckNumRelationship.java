@@ -31,7 +31,7 @@ import java.util.Set;
  */
 public class CheckNumRelationship {
 
-  // 这是用DFS来做，也可以用BFS来做，就是从所有inDegree ==0 的Vertex 开始BFS，如果一个Vertex在减去它的Source Vertex以后InDegree==0，
+  // 这是用DFS来做，也可以用BFS来做，就是从所有inDegree==0 的Vertex 开始BFS，如果一个Vertex在减去它的Source Vertex以后InDegree==0，
   // 就把它加入Queue，最后queue 为空的的时候看所遍历的Vertex是不是等于图中所有的Vertex
   public static boolean checkNumRelationship(Map<String, List<String>> graph) {
     // from each point, do dfs, check whether there is a cycle

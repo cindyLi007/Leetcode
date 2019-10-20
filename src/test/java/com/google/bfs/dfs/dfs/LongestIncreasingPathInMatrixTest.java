@@ -13,10 +13,10 @@ public class LongestIncreasingPathInMatrixTest {
   public void longestIncreasingPath() throws Exception {
     // Given
     int[][] array = new int[][]{{7, 8, 9}, {9, 7, 6}, {7, 2, 3}};
-    LongestIncreasingPathInMatrix longestIncreasingPathInMatrix = new LongestIncreasingPathInMatrix();
+    LongestIncreasingPath longestIncreasingPath = new LongestIncreasingPath();
 
     // When
-    int res = longestIncreasingPathInMatrix.longestIncreasingPath(array);
+    int res = longestIncreasingPath.longestIncreasingPath(array);
 
     // Then
     assertThat(res, is(6));

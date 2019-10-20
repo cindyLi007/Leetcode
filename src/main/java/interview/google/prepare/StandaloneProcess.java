@@ -7,6 +7,10 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Set;
 
+/**
+ * 输入一个list，每个元素包含是一个进程的id和起止时间。
+ * 要求输出所有进程的standalone时间（如果有的话）
+ */
 public class StandaloneProcess {
 
   // Time: O(NlgN) for

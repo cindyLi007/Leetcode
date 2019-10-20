@@ -11,6 +11,8 @@ import java.util.List;
   How to check only one order? queue.size() should always be one, then only one element at a time has indegree to be 0, so you only have one choice
  */
 public class SequenceReconstruction {
+
+    // Time: O(V+E), Space: O(V+E)
     public boolean sequenceReconstruction(int[] org, List<List<Integer>> seqs) {
         int N = org.length;
         // corner case
@@ -21,6 +23,7 @@ public class SequenceReconstruction {
         for (int i=1; i<=N; i++) graph[i]=new ArrayList<>();
 
         // build up graph and every vertex's inDegree
+        // Time: O(E)
         for (List<Integer> edges : seqs) {
             int i=0;
             // corner case
@@ -37,13 +40,15 @@ public class SequenceReconstruction {
             }
         }
 
+        // Time: O(V)
         Deque<Integer> queue = new ArrayDeque<>();
         for (int i=1; i<=N; i++) {
             if (inDegree[i]==0) queue.add(i);
         }
 
+        // Time: O(V+E)
         while (!queue.isEmpty()) {
-            // everytime we should only have one start point (inDegree==1) so we can only choose this point
+            // every time we should only have one start point (inDegree==0) so we can only choose this point
             if (queue.size()>1) return false;
 
             N--;

@@ -25,7 +25,7 @@ public class PlayList {
   public static boolean isValid(List<Song> list) {
     for (int i=1; i<list.size(); i++) {
       Song cur = list.get(i);
-      if (Math.abs((cur.key-list.get(i-1).key) % 11) > 1)
+      if (Math.abs(cur.key-list.get(i-1).key) % 11 > 1)
         return false;
     }
     return true;
@@ -52,7 +52,7 @@ public class PlayList {
   }
 
   private static boolean checkValid(int k, int prev) {
-    return Math.abs((k - prev) % 11) <= 1;
+    return Math.abs(k - prev) % 11 <= 1;
   }
 
   public static void main(String[] args) {
@@ -95,14 +95,14 @@ public class PlayList {
   }
 
   // print out the new list which includes the new inserted song
-  private static void printIncludingNewSong(List<Song> list, int idx, Song s) {
+  private static void printIncludingNewSong(List<Song> list, int insertPos, Song s) {
     for (int i = 0; i < list.size(); i++) {
-      if (i == idx) {
+      if (i == insertPos) {
         System.out.println(s.key + ", " + s.title);
       }
       System.out.println(list.get(i).key + ", " + list.get(i).title);
     }
-    if (idx == list.size()) {
+    if (insertPos == list.size()) {
       System.out.println(s.key + ", " + s.title);
     }
   }
