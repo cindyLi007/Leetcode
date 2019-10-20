@@ -5,7 +5,8 @@ public class RedundantConnectionII {
   public int[] findRedundantDirectedConnection(int[][] edges) {
     // in a valid D-tree, each node should have inDegree == 1, only one has node inDegree==0, that is the root
     // if one node has inDegree == 2, one of the edge must be removed, if there is no node with inDegree=2, there is must
-    // a cycle, we should remove the edge which in the cycle
+    // a cycle, we can remove any edge which in the cycle; however, it there is one node with inDegree==2 and a cycle,
+    // there is one and only one edge of the 2 edges leading-the-inDegree==2 in the cycle, we should remove that one
     int V = edges.length;
     int[] parent = new int[V+1];
     // can1 and can2 stands for 2 edges pointing same nodes
@@ -34,7 +35,8 @@ public class RedundantConnectionII {
       if (find(id, source) == child) { // there is a cycle
         if (can1.length==0) {
           return edge;
-        } else { // 
+        } else { //
+          // 之所以一定是can1 是因为我们已经把can2 removed 了，这时还会造成环就一定是can1引起的
           return can1;
         }
       }
