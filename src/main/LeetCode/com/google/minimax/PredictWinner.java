@@ -1,4 +1,4 @@
-package com.google.dp;
+package com.google.minimax;
 
 public class PredictWinner {
     public boolean predictTheWinner(int[] nums) {

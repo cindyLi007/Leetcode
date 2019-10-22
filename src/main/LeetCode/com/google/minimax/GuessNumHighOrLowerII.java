@@ -1,6 +1,4 @@
-package com.google.dp;
-
-import java.util.Arrays;
+package com.google.minimax;
 
 public class GuessNumHighOrLowerII {
     public int getMoneyAmount(int n) {
