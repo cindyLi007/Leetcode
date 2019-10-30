@@ -1,0 +1,62 @@
+Please use this Google doc during your interview (your interviewer will see what you write here). To free your hands for typing, we recommend using a headset or speakerphone.
+
+Ranked Choice Voting
+R 25%
+G 15%
+B 20%
+Y 40%
+
+Ballot: R, B, G, Y
+Ballot: B, G, R, Y
+
+
+Ranked Choice Algorithm:
+Count top valid selection
+if top selection > 50%
+Invalidate the worst performing selection, goto 1
+
+
+Problem: write a ranked choice vote counter, given a collection of ballots
+first count all 4 colors numbers, number/total number, any one > 50%
+if NO, we will find the least number color, G,
+count all 4 colors, ignore all G, choose the 2nd choice
+
+Data Structure:
+input List<Ballot>
+class Ballot{
+    int[4] colors {0(R), 1(G), 2(B), 3(Y)}
+}
+return int(color)
+
+// Time: O(L*N), len of ballots, N is number of choices
+public int findColor(List<Ballot> ballots) {
+  int N = ballots.size();
+  int[] choice = new int[4];
+  Set<Integer> leastColors = HashSet(); // store the worst performing selection, first is empty
+  while (true) {
+    // O(L)
+	for (Ballot b : ballots) {
+		int i = 0; // i is the choice for ballots
+		int c = b.colors[i];
+		// find the valid ballots
+		while (leastColors.contains(c)) {
+			c = b.colors[++i];
+        }
+		choice[c]++;
+	}
+    double least = 1.0;
+    int leastColor = -1;
+    // O(1)
+    for (int i=0; i<4; i++) {
+        if (leastColors.contains(i)) continue;
+        double p = (double)choice[i]/N;
+        if (p < least) {
+            least = Math.min(least, p);
+            leastColor = i;
+        }
+		if (p > 0.5) return i;
+    }
+    leastColors.add(leastColor);
+  }
+  return -1;
+}

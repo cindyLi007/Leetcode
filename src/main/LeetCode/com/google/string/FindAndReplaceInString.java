@@ -19,18 +19,17 @@ import java.util.List;
 // Time: O(NlgN), Space: O(N)
 public class FindAndReplaceInString {
     public String findReplaceString(String S, int[] indexes, String[] sources, String[] targets) {
-        int N = S.length();
         List<Node> list = new ArrayList<>();
         for (int i=0; i<indexes.length; i++) {
-            list.add(new Node(indexes[i], sources[i], targets[i]));
+            if (S.startsWith(sources[i], indexes[i])) {
+                list.add(new Node(indexes[i], sources[i], targets[i]));
+            }
         }
+        // O(MlgM), M is number of indexes
         Collections.sort(list);
         StringBuilder sb = new StringBuilder();
         int start = 0;
         for (Node node : list) {
-            if (node.idx < 0) continue;;
-            if (node.idx >= N) break;
-            if (!node.source.equals(S.substring(node.idx, node.idx + node.source.length()))) continue;
             sb.append(S, start, node.idx).append(node.target);
             start = node.idx + node.source.length();
         }

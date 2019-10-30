@@ -28,6 +28,7 @@ public class MinAreaRectangle {
         // O(N*N)
         for (int i=0; i<rows.size(); i++) {
             Integer key = rows.get(i);
+            // only one points in this row, could not form a line
             if (map.get(key).size()<=1) continue;
             for (int j=i+1; j< rows.size(); j++) {
                 if (j-i >= res) break;

@@ -12,6 +12,7 @@ public class LongestAbsolutePath {
     System.out.println("max length is " + lengthLongestPathArray("a\n\taa\n\t\taaa\n\t\t\tfile1.txt\naaaaaaaaaaaaaaaaaaaaa\n\tsth.png"));
   }
 
+  // Time: O(N), Space: O(N)
   public static int lengthLongestPath(String input) {
     int maxLen = 0;
     Stack<Integer> stack = new Stack<>();
@@ -19,12 +20,14 @@ public class LongestAbsolutePath {
     for (String s : split) {
       /**
        * must use lastIndexOf to find the last \t, that is indicate layer
+       * 注意 \n, \t 在String中都只是一个字符
        */
       int layer = s.lastIndexOf("\t") + 1;
       // pop out till this dir/file root dir, must be "while" instead of "if", stack should only store current dir/file parent dir
       while (layer<stack.size()) {
         stack.pop();
       }
+      // -layer 真重要
       int length = stack.isEmpty() ? s.length() : stack.peek() + s.length() - layer + 1;
       if (s.contains(".")) {
         maxLen = Math.max(length, maxLen);
