@@ -1,7 +1,5 @@
-package com.google.dp;
+package com.google.minimax;
 
-// leetcode 375. Guess Number Higher or Lower II
-// MiniMax
 public class GuessNumHighOrLowerII {
     // Time: O(N^3), Space: O(N^2)
     public int getMoneyAmount(int n) {
