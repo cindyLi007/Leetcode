@@ -42,6 +42,7 @@ public class LongestAbsolutePath {
     for (String s : strings) {
       int layer = s.lastIndexOf("\t") + 1;
       int length = layer==0 ? s.length() : stack[layer - 1] + s.length() - layer + 1; // this +1 is to add "/" for path
+      // 我们总是在现在处理的path上，so it does not matter to erase previously some layer path length, because we are done for that path
       stack[layer] = length;
       if (s.contains(".")) {
         maxLen = Math.max(maxLen, length);
