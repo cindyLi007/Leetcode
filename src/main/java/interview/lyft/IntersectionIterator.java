@@ -17,7 +17,7 @@ package interview.lyft;
 import java.util.*;
 import static org.junit.Assert.assertEquals;
 
-public class IntersectionIterator {
+public class IntersectionIterator implements Iterator<Integer> {
 
     private Iterator<Integer> it1;
     private Iterator<Integer> it2;
@@ -27,6 +27,12 @@ public class IntersectionIterator {
         this.it2 = it2;
     }
 
+    @Override
+    public boolean hasNext() {
+        return true;
+    }
+
+    @Override
     public Integer next() {
         if (!it1.hasNext() || !it2.hasNext()) return null;
         int i1 = it1.next(), i2 = it2.next();

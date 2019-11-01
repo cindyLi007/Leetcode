@@ -17,11 +17,13 @@ package com.google.Tree;
  * 4  5 6
  */
 public class CountCompleteTreeNodes {
+  // Time: h (height of the tree=logN) + (h-1) + (h-2)...+1 = O(h^2) = O(logN*logN)
   public int countNodes(TreeNode root) {
     if (root==null) return 0;
     int leftDepth = depthOfLeft(root);
     int rightDepth = depthOfRight(root);
 
+    // 他们相等表示root一定是full complete tree, 因为他们一个是最左边的点可以到达的深度 一个是最右边点可以到达的深度
     if (leftDepth==rightDepth)
       // 1<<leftDepth == (int)Math.pow(2, leftDepth), but need not do int cast
       return (1<<leftDepth)-1;

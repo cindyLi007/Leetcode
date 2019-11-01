@@ -38,6 +38,7 @@ public class UniqueEmailAddress {
             localName = localName.substring(0, localName.indexOf("+"));
         }
 
+        // 必须是"\\." 因为"." 表示任何字符
         localName = localName.replaceAll("\\.", "");
         return localName + domainName;
     }
