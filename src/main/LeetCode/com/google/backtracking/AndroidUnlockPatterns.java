@@ -4,6 +4,7 @@ package com.google.backtracking;
  * Created by ychang on 4/2/2017.
  */
 public class AndroidUnlockPatterns {
+  // Time: (N!), N is the max length n check https://leetcode.com/problems/android-unlock-patterns/solution/
   public int numberOfPatterns(int m, int n) {
     int[][] pass = new int[10][10];
     pass[1][3]=pass[3][1]=2;
@@ -13,6 +14,7 @@ public class AndroidUnlockPatterns {
     pass[1][9]=pass[9][1]=pass[3][7]=pass[7][3]=pass[2][8]=pass[8][2]=pass[4][6]=pass[6][4]=5;
 
     int res=0;
+    // since we only have 10 numbers, use an array is much faster than use a set
     boolean[] visited = new boolean[10];
 
     for (int i=m; i<=n; i++) {
