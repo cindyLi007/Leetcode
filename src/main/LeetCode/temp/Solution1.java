@@ -1,10 +1,5 @@
 package temp;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Created by ychang on 10/3/2017.
  */
@@ -54,11 +49,63 @@ class Solution1 {
   }
 
   public static void main(String... args) {
-    int[] array = {1, 2, 1, 2, 6, 7, 5, 1};
+    /*int[] array = {1, 2, 1, 2, 6, 7, 5, 1};
     int[] res = maxSumOfThreeSubarrays(array, 2);
     // how to sort an existing map
     Map<Integer, Integer> map = new HashMap<>();
     ArrayList arrayList = new ArrayList(map.keySet());
-    Collections.sort(arrayList);
+    Collections.sort(arrayList);*/
+
+    // System.out.println(f(5));
+    System.out.println(maxTime("?4:5?")); // should be "14:59"
+    System.out.println(maxTime("23:5?")); // should be "23;59"
+    System.out.println(maxTime("2?:22")); // should be "23:22"
+    System.out.println(maxTime("0?:??")); // should be "09:59"
+    System.out.println(maxTime("??:??")); // should be "23:59"
   }
+
+  /**
+   * Given a positive integer n, find out how many ways of writing n as a sum of positive integers. Two sums that differ
+   * only in the order of their summands are considered the same partition.
+   * Time: O(N*N)
+   */
+  public static int f(int n) {
+    int[][] dp = new int[n][n + 1];
+    for (int i = 0; i < n; i++) {
+      dp[i][0] = 1;
+    }
+    for (int i = 1; i < n; i++) {
+      for (int j = 1; j <= n; j++) {
+        dp[i][j] = dp[i-1][j] + (j-i>=0 ? dp[i][j-i] : 0); // without i + with i
+      }
+    }
+    return dp[n - 1][n];
+  }
+
+  /**
+   * You are given a string that represents time in the format hh:mm. Some of the digits are blank (represented by ?).
+   * Fill in ? such that the time represented by this string is the maximum possible.
+   * Maximum time: 23:59, minimum time: 00:00. You can assume that input string is always valid.
+   *
+   * Input: "?4:5?" Output: "14:59"
+   * Input: "23:5?" Output: "23:59"
+   * Input: "2?:22" Output: "23:22"
+   * Input: "0?:??" Output: "09:59"
+   * Input: "??:??" Output: "23:59"
+   */
+  public static String maxTime(String time) {
+    char[] ch = time.toCharArray();
+    if (ch[0]=='?') {
+      if (ch[1]<='3' || ch[1]=='?') ch[0] = '2';
+      else ch[0] = '1';
+    }
+    if (ch[1]=='?') {
+      ch[1] = ch[0]=='2' ? '3' : '9';
+    }
+    if (ch[3]=='?') ch[3] = '5';
+    if (ch[4]=='?') ch[4] = '9';
+    return String.valueOf(ch);
+  }
+
+
 }

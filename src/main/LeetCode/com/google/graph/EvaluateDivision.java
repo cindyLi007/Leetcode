@@ -1,14 +1,18 @@
 package com.google.graph;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Deque;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+// https://medium.com/@alexgolec/google-interview-problems-ratio-finder-d7aa8bf201e3
 public class EvaluateDivision {
+  // Time: O(N*(V+E)
   public double[] calcEquation(List<List<String>> equations, double[] values, List<List<String>> queries) {
     // build a di-D graph
     Map<String, List<Edge>> G = buildGraph(equations, values);
@@ -20,6 +24,29 @@ public class EvaluateDivision {
       res[i++] = dfs(q.get(0), q.get(1), G, 1.0, new HashSet());
     }
     return res;
+  }
+
+  // Time: O(V+E)
+  private double bfs(String src, String dest, Map<String, List<Edge>> G) {
+    if (!G.containsKey(src)) return -1.0;
+    Deque<Edge> queue = new ArrayDeque();
+    queue.offer(new Edge(src, 1.0));
+    Set<String> visited = new HashSet();
+    visited.add(src);
+
+    while (!queue.isEmpty()) {
+      Edge cur = queue.poll();
+      if (cur.target.equals(dest)) return cur.val;
+      if (G.containsKey(cur.target)) {
+        for (Edge ed : G.get(cur.target)) {
+          if (!visited.contains(ed.target)) {
+            visited.add(ed.target);
+            queue.offer(new Edge(ed.target, ed.val * cur.val));
+          }
+        }
+      }
+    }
+    return -1.0;
   }
 
   private double dfs(String src, String dest, Map<String, List<Edge>> G, double v, Set<String> visited) {
