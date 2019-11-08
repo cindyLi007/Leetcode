@@ -1,0 +1,53 @@
+public GraphNode cloneGraph(GraphNode startPoit) { // connected
+  if (startPoint==null) return null;
+  Map<GraphNode, GraphNode> map = new HashMap();
+  //Set<Integer> visited = HashSet();
+  helper(startPoint, map, visited);
+  return map.get(startPoint);
+}
+
+private void helper(GraphNode node, Map<GraphNode, GraphNode> map) {
+  if (map.containsKey(node) return map.get(node);
+  GraphNode n = new GraphNode(node.label);
+  map.put(node, n);
+  for (GraphNode neigh : node.neighbors) {
+    helper(neigh, map);
+    n.neighbors.add(map.get(neigh)); // v2_new.neighbors.add(v4_new)
+  }
+}
+
+// time: O(V+E) edge
+public Map<GraphNode, List<GraphNode>> cloneGraph(Map<GraphNode, List<GraphNode>> G) { // disconnected
+  //Map<GraphNode, GraphNode> visited = HashMap();
+  Map<GraphNode, List<GraphNode>> map = new HashMap();
+
+  for (GraphNode n : G) {
+    if (map.containsKey(n)) continue;
+    helper(n, map);
+  }
+  return map;
+}
+
+private GraphNode helper(GraphNode node, Map<GraphNode, List<GraphNode>> map) {
+  if (map.containsKey(node) return;
+
+  GraphNode n = new GraphNode(node.label);
+  map.put(n, new ArrayList());
+
+  for (GraphNode neigh : node.neighbors) {
+    map.get(n).add(helper(neigh, map));
+    //n.neighbors.add(map.get(neigh)); // v2_new.neighbors.add(v4_new)
+  }
+  return n;
+}
+
+clss GraphNode {
+  int label;
+  List<GraphNode> neighbors;
+
+  GraphNode(int val) {
+    label = val;
+    neighbors = new LinkedList();
+  }
+}
+  
