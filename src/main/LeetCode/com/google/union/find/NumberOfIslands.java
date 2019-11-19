@@ -4,6 +4,7 @@ package com.google.union.find;
  * Created by ychang on 12/8/2016.
  */
 public class NumberOfIslands {
+  // Time: O(M*N), Union Find has a O(lgN)
   public int numIslands(char[][] grid) {
     if (grid==null || grid.length==0 || grid[0].length==0)
       return 0;

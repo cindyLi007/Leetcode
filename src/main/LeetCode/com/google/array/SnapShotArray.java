@@ -1,35 +1,36 @@
 package com.google.array;
 
+import java.util.Map;
 import java.util.TreeMap;
 
 public class SnapShotArray {
   // Space: O(S) S is the number of set called
   TreeMap<Integer, Integer>[] map;
-  int snapTimes;
+  int time;
 
-  // O(N)
   public SnapShotArray(int length) {
     map = (TreeMap<Integer, Integer>[])new TreeMap[length];
-    snapTimes = 0;
-    for (int i=0; i<length; i++) {
-      map[i] = new TreeMap();
-      map[i].put(snapTimes, 0);
-    }
+    time = 0;
   }
 
   // O(1)
   public void set(int index, int val) {
-    map[index].put(snapTimes, val);
+    if (map[index]==null) map[index] = new TreeMap();
+    map[index].put(time, val);
   }
 
   // O(1)
   public int snap() {
-    return snapTimes++;
+    time++;
+    return time-1;
   }
 
   // O(lgM), M is the snap number
   public int get(int index, int snap_id) {
-    return map[index].floorEntry(snap_id).getValue();
+    if (map[index]==null) return 0;
+    Map.Entry<Integer, Integer> entry = map[index].floorEntry(snap_id);
+    if (entry==null) return 0;
+    return entry.getValue();
   }
 
   public static void main(String... args) {
@@ -37,10 +38,15 @@ public class SnapShotArray {
     snapShotArray.set(0, 5);
     snapShotArray.snap();
     snapShotArray.set(0, 6);*/
-    SnapShotArray snapShotArray = new SnapShotArray(1);
-    snapShotArray.set(0, 4);
-    snapShotArray.set(0, 16);
-    snapShotArray.set(0, 13);
+    SnapShotArray snapShotArray = new SnapShotArray(2);
+    snapShotArray.snap();
+    snapShotArray.get(1, 0);
+    snapShotArray.get(0, 0);
+    snapShotArray.set(1, 8);
+    snapShotArray.set(1, 0);
+    snapShotArray.set(0, 20);
+    snapShotArray.get(0, 0);
+    snapShotArray.set(0, 7);
     System.out.println(snapShotArray.snap());
     System.out.println(snapShotArray.get(0, 0));
     System.out.println(snapShotArray.snap());

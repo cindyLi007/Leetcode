@@ -32,7 +32,7 @@ public class Skyline {
      * and must use descending order, because that can guarantee left vertices before right vertices to push to tree map,
      * so keep skyline continuous
      */
-    Collections.sort(points, (o1, o2) -> o1[0]==o2[0] ? o2[1] - o1[1] : o1[0] - o2[0]); // make sure start before end
+    Collections.sort(points, (o1, o2) -> o1[0] == o2[0] ? o2[1] - o1[1] : o1[0] - o2[0]); // make sure start before end
 
     /**
      * Create a heap based on y, the head of the heap is the highest level of current heap, the key is the height, the
@@ -47,16 +47,16 @@ public class Skyline {
     heights.put(0, 1);
     int prev = 0;
     for (int[] p : points) {
-      if (p[1]>0) { // left point
+      if (p[1] > 0) { // left point
         heights.put(p[1], heights.getOrDefault(p[1], 0) + 1);
       } else { // right point, notice p[1] is neg number
         heights.put(-p[1], heights.get(-p[1]) - 1);
-        if (heights.get(-p[1])==0)
+        if (heights.get(-p[1]) == 0)
           heights.remove(-p[1]);
       }
 
       // if after add/remove new vertices, the new pq's head (current highest height) changed, no matter higher or lower
-      if (heights.firstKey()!=prev) {
+      if (heights.firstKey() != prev) {
         prev = heights.firstKey();
         res.add(new int[]{p[0], prev});
       }
@@ -79,17 +79,17 @@ public class Skyline {
      * when 2 buildings start-end-connected, make sure next-building's start before prev-building's end, so can erase duplicated points
      * such as [1, 3, 2], [3, 4, 2] should be [1, 2] [4, 0], not [1, 2] [3, 0], [3, 2], [4, 0]
      */
-    Collections.sort(points, (o1, o2) -> o1[0]==o2[0] ? o2[1] - o1[1] : o1[0] - o2[0]); // make sure start before end
+    Collections.sort(points, (o1, o2) -> o1[0] == o2[0] ? o2[1] - o1[1] : o1[0] - o2[0]); // make sure start before end
     PriorityQueue<Integer> heights = new PriorityQueue<>(Comparator.reverseOrder());
     heights.offer(0);
     int prev = 0;
     for (int[] p : points) {
-      if (p[1]>0)
+      if (p[1] > 0)
         heights.offer(p[1]);
       else
         heights.remove(-p[1]);
       int cur = heights.peek(); // current highest height
-      if (cur!=prev) {
+      if (cur != prev) {
         res.add(new int[]{p[0], cur});
         prev = cur;
       }
@@ -112,7 +112,7 @@ public class Skyline {
      * the smallest element at the root. When you remove that, the heap is reordered so that the next smallest element
      * is at the root.
      */
-    PriorityQueue<int[]> points = new PriorityQueue<>((o1, o2) -> o1[0]==o2[0] ? o2[1] - o1[1] : o1[0] - o2[0]);
+    PriorityQueue<int[]> points = new PriorityQueue<>((o1, o2) -> o1[0] == o2[0] ? o2[1] - o1[1] : o1[0] - o2[0]);
     for (int[] b : buildings) {
       points.add(new int[]{b[0], b[2]});
       points.add(new int[]{b[1], -b[2]});
@@ -126,14 +126,14 @@ public class Skyline {
      * get the top node each time to get a sorted list. MUST first set points.size() to a var, instead of using
      * i<points.size(), because points.size() changes during we remove element from it.
      */
-    for (int i = 0; i<size; i++) {
+    for (int i = 0; i < size; i++) {
       int[] p = points.remove();
-      if (p[1]>0)
+      if (p[1] > 0)
         heights.offer(p[1]);
       else
         heights.remove(-p[1]);
       int cur = heights.peek(); // current highest height
-      if (cur!=prev) {
+      if (cur != prev) {
         res.add(new int[]{p[0], cur});
         prev = cur;
       }

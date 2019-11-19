@@ -1,7 +1,5 @@
 package com.google.stack;
 
-import java.util.Stack;
-
 public class RemoveOuterParentheses {
     public static String removeOuterParentheses(String S) {
         StringBuilder sb = new StringBuilder();

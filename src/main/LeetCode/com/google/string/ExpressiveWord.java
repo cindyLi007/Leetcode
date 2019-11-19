@@ -4,33 +4,26 @@ public class ExpressiveWord {
     public int expressiveWords(String S, String[] words) {
         int res = 0;
         for (String word : words) {
-            if (match(word, S)) res++;
+            if (valid(word, S)) res++;
         }
         return res;
     }
 
-    private boolean match(String word, String s) {
-        int N = s.length(), M=word.length();
-        if (N<M) return false;
-        if (s.equals(word)) return true;
-        int i=0, j=0;
-        while (i<N && j<M) {
-            char c1 = s.charAt(i), c2 = word.charAt(j);
-            if (c1!=c2) return false;
-            int count1=1;
-            while (i<N-1 && s.charAt(i)==s.charAt(i+1)) {
-                count1++;
-                i++;
-            }
-            int count2=1;
-            while (j<M-1 && word.charAt(j)==word.charAt(j+1)) {
-                count2++;
-                j++;
-            }
-            i++; j++;
-            if (count1<count2 || (count1>count2 && count1<3)) return false;
+    private boolean valid(String s, String w) {
+        int M = s.length(), N = w.length(), i=0, j=0;
+        // outer loop make sure each time s[i]==w[j]; it is a new char group start point
+        while (i<M && j<N) {
+            if (s.charAt(i)!=w.charAt(j)) return false;
+            int i1=i, j1=j;
+            char c = s.charAt(i);
+            // inner loop to count of char c
+            while (i1<M && s.charAt(i1)==c) i1++;
+            while (j1<N && w.charAt(j1)==c) j1++;
+            int count1 = i1-i, count2 = j1-j;
+            if (count1<count2 || count1>count2 && count1<3) return false;
+            i=i1; j=j1;
         }
-        return i==N && j==M;
+        return i==M && j==N;
     }
 
     public static void main(String... args) {

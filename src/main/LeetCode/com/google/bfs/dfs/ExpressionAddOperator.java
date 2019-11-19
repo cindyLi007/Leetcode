@@ -1,72 +1,41 @@
 package com.google.bfs.dfs;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
-/**
- * Created by ychang on 4/29/2017.
+/*
+1. first think about the basic algorithm, should use recursive, for each round of recursive, try different number and for each
+   number try different operators. Pass prefix and value to next round, and when run out of the num string, check whether value == target
+2. need consider * is higher than + and -, how to handle that case? we need pass an extra val which is left number if next operation is "*"
+   but we still need record current res.
+3. corner case: could not have more than 1 zero in the begining, if is starts with 0, must only 0.
  */
 public class ExpressionAddOperator {
+  int N;
+  // Time: O(N*3^N), the front N is for each recurisive how to extract the substring, Space: O(N)
   public List<String> addOperators(String num, int target) {
     List<String> res = new ArrayList();
     if (num==null || num.length()==0) return res;
-    /**
-     * if the first char is 0, we can only set first operator to 0, not 03
-    */
-    int end = num.charAt(0)=='0' ? 1 : num.length();
-    for (int i=1; i<=end; i++) {
-      /** use long instead of int to prevent overflow
-       */
-      dfs(num, target, i, Long.parseLong(num.substring(0, i)), num.substring(0, i), res, Long.parseLong(num.substring(0, i)));
-    }
+    N = num.length();
+    helper(num, 0, 0, 0, "", target, res);
     return res;
   }
 
-  /**
-   * @param diff record so far multiplied value. for example, 5+2*3*4, diff is 24, val is 29, if next operation is + or -
-   *             use 29, if next operation is multiply, val should deduct diff, then add (diff*next), such as 29-24 + 24*2
-   *             5+48 (5+2*3*4*2).
-   */
-  private void dfs(String num, int target, int index, long val, String path, List<String> res, long diff) {
-    if (index==num.length()) {
-      if (val==target) res.add(path);
+  private void helper(String num, int start, long eval, long mulVal, String prefix, int target, List<String> res) {
+    if (start==N) {
+      if (eval == target) res.add(prefix);
     } else {
-      int end = num.charAt(index)=='0' ? index+1 : num.length();
-      for (int i=index+1; i<=end; i++) {
-        String number = num.substring(index, i);
-        long curVal = Long.parseLong(number);
-        dfs(num, target, i, val+curVal, path+"+"+ number, res, curVal);
-        dfs(num, target, i, val-curVal, path+"-"+ number, res, -curVal);
-        dfs(num, target, i, val-diff+diff*curVal, path+"*"+ number, res, diff*curVal);
+      int end = num.charAt(start)=='0' ? start+1 : N;
+      for (int i=start+1; i<=end; i++) {
+        String s = num.substring(start, i);
+        long v = Long.parseLong(s);
+        if (start==0) helper(num, i, v, v, ""+v, target, res);
+        else {
+          helper(num, i, eval + v, v, prefix + "+" + v, target, res);
+          helper(num, i, eval - v, -v, prefix + "-" + v, target, res);
+          helper(num, i, eval-mulVal + mulVal*v, mulVal*v, prefix + "*" + v, target, res);
+        }
       }
-    }
-  }
-
-  public List<String> addOperators_mine(String num, int target) {
-    List<String> res = new LinkedList();
-    dfs(num, target, "", 0, (long) 0, (long) 1, res);
-    return res;
-  }
-
-  private void dfs(String num, int target, String prefix, int index, long sum, long preMul, List<String> res) {
-    if (index==num.length()) {
-      if (target==sum)
-        res.add(prefix);
-      return;
-    }
-    for (int i = index + 1; i<=num.length(); i++) {
-      String sub = num.substring(index, i);
-      long n = Long.parseLong(sub);
-      if (prefix.length()==0)
-        dfs(num, target, "" + n, i, n, preMul*n, res);
-      else {
-        dfs(num, target, prefix + "+" + n, i, sum + n, n, res);
-        dfs(num, target, prefix + "-" + n, i, sum - n, -n, res);
-        dfs(num, target, prefix + "*" + n, i, sum - preMul + preMul*n, preMul*n, res);
-      }
-      if (sub.charAt(0)=='0')
-        i = num.length() + 1;
     }
   }
 }

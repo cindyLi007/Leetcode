@@ -1,16 +1,15 @@
 package com.google.DivideAndConquer;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.hasItems;
-import static org.hamcrest.core.Is.is;
+import com.google.Tree.ReversePairs_BIT;
+import com.google.Tree.ReversePairs_BST_TLE;
+import com.google.bfs.dfs.ExpressionAddOperator;
+import org.junit.Test;
 
 import java.util.List;
 
-import com.google.Tree.ReversePairs_BIT;
-import com.google.Tree.ReversePairs_BST_TLE;
-import org.junit.Test;
-
-import com.google.bfs.dfs.ExpressionAddOperator;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.hasItems;
+import static org.hamcrest.core.Is.is;
 
 /**
  * Created by ychang on 4/29/2017.
@@ -22,7 +21,7 @@ public class ExpressionAddOperatorTest {
     ExpressionAddOperator expressionAddOperator = new ExpressionAddOperator();
 
     // When
-    List<String> strings = expressionAddOperator.addOperators("105", 5);
+    List<String> strings = expressionAddOperator.addOperators("123", 6);
 
     // Then
     assertThat(strings, hasItems("1*0+5", "10-5"));

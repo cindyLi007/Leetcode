@@ -1,21 +1,26 @@
 package com.google.array;
 
 public class BestTimeBuySellStockIII {
+
+    // Leetcode 128 Time: O(N)
     public int maxProfit(int[] prices) {
-        int firstMaxProfit = 0, secondMaxProfit = 0;
-        int firstMin = Integer.MAX_VALUE, secondMin = Integer.MAX_VALUE;
-        for (int price : prices) {
-            firstMin = Math.min(price, firstMin);
-            // we need accumulate the first profit to this price
-            // for ex. 3, 9, 8, 15, when we go item 8, this value is 2,
-            // so when we go 15, we know the secondMaxProfit is 13
-            // buy 2nd time in this price, we need also consider till this price, which is the max profit for the
-            // 1st-time-buy-and-sell, so we can treat the 2nd-time-buy-and-sell as a single buy-and-sell buy
-            // add the 1st time profit
-            secondMin = Math.min(secondMin, price - firstMaxProfit);
-            firstMaxProfit = Math.max(firstMaxProfit, price - firstMin);
-            secondMaxProfit= Math.max(secondMaxProfit, price - secondMin);
+        int N = prices.length;
+        if (N<2) return 0;
+
+        // t0_0 means 0 transaction and 0 stock in hand AFTER this day
+        // t1_0 means 1 transaction(transaction counts when buy) and 0 stock in hand AFTER this day, for 1st day, that means no buy
+        // t2_0 means 2 transaction and 0 stock in hand AFTER this day
+        // t1_1 means 1 transaction and 1 stock in hand AFTER this day, for 1st day, that mean buy
+        // t2_1 means 0 transaction and 0 stock in hand AFTER this day
+
+        int t0_0=0, t1_0=0, t2_0=0, t1_1=-prices[0], t2_1=-prices[0];
+        for (int i=1; i<N; i++) {
+            // PAY ATTENTION for order, only t1_1 depends on t0_0 which is an inviant var
+            t2_0=Math.max(t2_0, t2_1 + prices[i]);
+            t2_1=Math.max(t2_1, t1_0 - prices[i]);
+            t1_0=Math.max(t1_0, t1_1 + prices[i]);
+            t1_1=Math.max(t1_1, t0_0 - prices[i]);
         }
-        return secondMaxProfit;
+        return t2_0;
     }
 }

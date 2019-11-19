@@ -1,9 +1,9 @@
 package com.google.union.find;
 
+import org.junit.Test;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
-
-import org.junit.Test;
 
 /**
  * Created by ychang on 6/16/2017.
@@ -12,7 +12,7 @@ public class NumberIslandTest {
   @Test
   public void numIslands() throws Exception {
     // Given
-    NumberIsland numberIsland = new NumberIsland();
+    NumberOfIslands numberIsland = new NumberOfIslands();
     char[][] grid = new char[][]{
         "11110".toCharArray(),
         "11010".toCharArray(),

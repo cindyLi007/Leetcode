@@ -14,4 +14,17 @@ public class BestTimeToBuySellStock {
     }
     return res;
   }
+
+  public int maxProfit_with1_dayCooldown(int[] prices) {
+    int N = prices.length;
+    if (N<2) return 0;
+    int t0=0, t1=-prices[0], old = 0;
+    for (int i=1; i<N; i++) {
+      int temp = t0;
+      t0 = Math.max(t0, t1 + prices[i]);
+      t1 = Math.max(t1, old - prices[i]);
+      old = temp;
+    }
+    return t0;
+  }
 }

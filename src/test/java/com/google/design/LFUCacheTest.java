@@ -9,7 +9,7 @@ public class LFUCacheTest {
   @Test
   public void get() throws Exception {
     // Given
-    LFUCache lfuCache = new LFUCache(2);
+    LFU lfuCache = new LFU(2);
 
     // when
     lfuCache.put(1, 1);

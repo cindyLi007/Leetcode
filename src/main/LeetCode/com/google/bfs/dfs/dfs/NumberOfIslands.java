@@ -40,7 +40,7 @@ public class NumberOfIslands {
 
   public int numIslands_bfs(char[][] grid) {
     int M=grid.length, N=M==0 ? 0 : grid[0].length;
-      int count=0;
+    int count=0;
     Queue<int[]> queue = new LinkedList();
     for (int i=0; i<M; i++) {
       for (int j=0; j<N; j++) {

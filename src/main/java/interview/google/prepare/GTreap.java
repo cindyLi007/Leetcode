@@ -17,7 +17,7 @@ public class GTreap {
   public TreeNode buildTree(int[][] A) {
     Arrays.sort(A, (o1, o2) -> o2[1] - o1[1]);
     TreeNode root = new TreeNode(A[0][0], A[0][1]);
-    // 但我们排完序以后 在Array里的nodes已经自然有了大的在前的属性 这时当我们insert one by one 的时候，自然就可以保证root 大于所有的children。
+    // 我们排完序以后 在Array里的nodes已经自然有了大的在前的属性 这时当我们insert one by one 的时候，自然就可以保证root 大于所有的children。
     for (int i = 1; i < A.length; i++) {
       insert(root, A[i][0], A[i][1]);
     }
