@@ -14,7 +14,7 @@ import java.util.Set;
  * can beat 26%
  */
 public class RemoveInvalidParentheses {
-  public List<String> removeInvalidParentheses(String s) {
+  public List<String> removeInvalidParentheses_BFS(String s) {
     List<String> res = new ArrayList();
     Queue<String> queue = new LinkedList();
     Set<String> visited = new HashSet();
@@ -50,5 +50,43 @@ public class RemoveInvalidParentheses {
       if (count<0) return false;
     }
     return count==0;
+  }
+
+  // Time: O(2^N)
+  public List<String> removeInvalidParentheses_DFS(String s) {
+    // 非常巧妙的先求出最小remove的左括号和右括号
+    int leftShouldRemove = 0, rightShouldRemove = 0;
+    for (char c : s.toCharArray()) {
+      if (c=='(') leftShouldRemove++;
+      if (c==')') {
+        if (leftShouldRemove>0) leftShouldRemove--;
+        else rightShouldRemove++;
+      }
+    }
+    Set<String> set = new HashSet();
+    dfs(s, 0, "", set, leftShouldRemove, rightShouldRemove, 0);
+    return new ArrayList(set);
+  }
+
+  /**
+   * @param left how many left parentheses should be removed
+   * @param right how many right parenthese should be removed
+   * @param open how many opened parenthese(left) in prefix open should always >=0, 这是因为任何时候都要保证左括号>=右括号
+   */
+  private void dfs(String s, int idx, String prefix, Set<String> set, int left, int right, int open) {
+    if (idx==s.length()) {
+      if (left==0 && right==0 && open==0) set.add(prefix);
+    } else {
+      char c = s.charAt(idx);
+      if (c=='(') {
+        dfs(s, idx+1, prefix+c, set, left, right, open+1);
+        if (left>0) dfs(s, idx+1, prefix, set, left-1, right, open);
+      } else if (c==')') {
+        if (open>0) dfs(s, idx+1, prefix+c, set, left, right, open-1);
+        if (right>0) dfs(s, idx+1, prefix, set, left, right-1, open);
+      } else {
+        dfs(s, idx+1, prefix+c, set, left, right, open);
+      }
+    }
   }
 }

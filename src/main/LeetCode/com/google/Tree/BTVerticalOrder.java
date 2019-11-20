@@ -44,7 +44,7 @@ public class BTVerticalOrder {
     if (root==null)
       return res;
     /**
-     * it is much faster to use 2 queues than using one queue with customized Node(Treenode, index)
+     * it is much faster to use 2 queues than using one queue with customized SegmentTree(Treenode, index)
      */
     Queue<TreeNode> queue = new LinkedList();
     Queue<Integer> number = new LinkedList();

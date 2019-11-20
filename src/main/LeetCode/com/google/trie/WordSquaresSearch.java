@@ -46,7 +46,7 @@ public class WordSquaresSearch {
 
   class Trie {
     Trie[] children;
-    List<String> words; // word set including all words with prefix till this Trie Node
+    List<String> words; // word set including all words with prefix till this Trie SegmentTree
 
     public Trie() {
       words = new ArrayList();

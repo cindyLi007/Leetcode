@@ -5,7 +5,7 @@ package com.google.binary.indexed.tree;
  * this can beat 73%
  */
 public class RangeSumQueryMutable {
-  // if we need return min and sum and/or other summary values, we can use Node[], in Node we can save multiple values
+  // if we need return min and sum and/or other summary values, we can use SegmentTree[], in SegmentTree we can save multiple values
   int[] nums;
   int[] bit;
 

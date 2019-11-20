@@ -61,14 +61,14 @@ public class FenwickTree_P {
    * Read the following commands:
    * init n     Initializes the array of size n all zeroes
    * set a b c    Initializes the array  with [a, b, c ...]
-   * rsq a b      Range Sum Query for the range [a,b]
+   * querySumRange a b      Range Sum Query for the range [a,b]
    * up  i v      Update the i position of the array with value v.
    * exit
    * <p>
    * The array is 1-indexed
    * Example:
    * set 1 2 3 4 5 6
-   * rsq 1 3
+   * querySumRange 1 3
    * Sum from 1 to 3 = 6
    * rmq 1 3
    * Min from 1 to 3 = 1
