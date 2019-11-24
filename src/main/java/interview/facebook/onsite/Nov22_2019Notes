@@ -1,0 +1,19 @@
+Round 1 : coding
+* PairArray
+* PalindromeRemoveOne
+
+Round 2 : Design
+Design a HTTP Resource Load (HRL) which is an App in smart phone to handle all HTTP resource download request from all
+various Apps in smart phone. For ex. there are App Stores, Facebook, Chrome, all of them based on HTTP protocol to download
+resource from website. The resource can be web page, can be video or pictures, can be a Application. For different resources
+requests from different Apps, how HRL handle them.
+
+First it is a standalone Application, not dependent on other website apps or data store. What I designed is a FIFO Queue to
+accept all requests from different Apps. For web page, which is not big, we can use RESTful API to take parameters, parameters
+including AppId, URL, etc. It should also assign a request ID to this request. So it can return JSON after download data from
+URL. Return should be a JSON. Including a plaintext.
+
+For big package, since it will take a while to download, HRL will first return an acknowledge to App, put the request to
+the queue, after the download is done, send an notification to the app and the location of the downloaded package.
+
+Round 3: coding
