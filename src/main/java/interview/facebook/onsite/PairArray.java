@@ -19,10 +19,10 @@ public class PairArray {
     List<int[]> res = new ArrayList<>();
     for (int[] a : A) {
       int x = a[0], y = a[1];
-      if (map.containsKey(K-x) && map.get(K-x)==K-y) {
-          res.add(new int[]{K-x, K-y});
-          res.add(a);
-          return res;
+      if (map.containsKey(K - x) && map.get(K - x) == K - y) {
+        res.add(new int[]{K - x, K - y});
+        res.add(a);
+        return res;
       }
       map.put(x, y);
     }

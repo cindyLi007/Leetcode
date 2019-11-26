@@ -39,4 +39,5 @@ public class SlidingWindowMedian {
         if (left.size()<right.size()) left.offer(right.poll());
         else if (right.size()<left.size()-1) right.offer(left.poll());
     }
+
 }
