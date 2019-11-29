@@ -7,142 +7,54 @@ import java.util.*;
  */
 public class WordLadderII {
   public List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {
-    List<List<String>> res = new LinkedList();
-    /**
-     * must convert List to HashSet to avoid TLE, because list.contains() is much slower than HashSet.contains()
-     */
-    Set<String> dict = new HashSet(wordList);
-    dict.remove(beginWord);
-    Queue<String> queue = new LinkedList();
+    List<List<String>> res = new ArrayList();
+    Set<String> D = new HashSet(wordList);
+    Queue<String> queue = new ArrayDeque();
     queue.offer(beginWord);
-    /**
-     * this map is use to store a word's all prev words from beginWord side
-     */
     Map<String, Set<String>> map = new HashMap();
-    Set<String> secondLastWords = new HashSet();
-    int len = beginWord.length();
+    Set<String> remove = new HashSet();
 
-    while (!queue.isEmpty() && secondLastWords.size()==0) {
+    // Time: O(N * L * L)
+    while (!queue.isEmpty() && !map.containsKey(endWord)) {
       int size = queue.size();
-      Set<String> removeStrings = new HashSet();
-      for (int i = 0; i<size; i++) {
+      for (int i = 0; i < size; i++) {
         String word = queue.poll();
-        for (int j = 0; j<len; j++) {
-          char[] charArray = word.toCharArray();
-          for (char ch = 'a'; ch<='z'; ch++) {
-            charArray[j] = ch;
-            String newWord = String.valueOf(charArray);
-            if (!newWord.equals(word) && dict.contains(newWord)) {
-              /** this Java 8 is slower than the below
-               map.computeIfAbsent(newWord, k -> new HashSet()).add(word);
-               */
-              if (!map.containsKey(newWord))
-                map.put(newWord, new HashSet<>());
-              map.get(newWord).add(word);
-              /**
-               Notice, we should NOT put !queue.contains(newWord) in line 41, because although queue contains newWord,
-               that maybe from another route, we still need add entry to map to record this route. check
-               !queue.contains(newWord) is just to avoid add newWord twice in queue
-               */
-              if (newWord.equals(endWord)) {
-                secondLastWords.add(word);
-                break; // this break will out for one position letter replace, but still go to next position
-              } else if (!queue.contains(newWord)) {
-                queue.offer(newWord);
-              }
-              removeStrings.add(newWord);
+        // O(L * L)
+        for (int j = 0; j < word.length(); j++) {
+          char[] array = word.toCharArray();
+          for (char c = 'a'; c <= 'z'; c++) {
+            array[j] = c;
+            String t = String.valueOf(array);
+            if (D.contains(t)) {
+              if (remove.add(t)) queue.offer(t);
+              map.computeIfAbsent(t, o -> new HashSet()).add(word);
+              if (t.equals(endWord)) break;
             }
           }
         }
       }
-      // dict is like a un-visited word lib
-      dict.removeAll(removeStrings);
+      D.removeAll(remove);
+      remove.clear();
     }
-
-    for (String word : secondLastWords) {
-      List<String> list = new LinkedList();
-      list.add(endWord);
-      dfs(map, list, word, beginWord, res);
-    }
+    // Need first check whether we have answer, if no, directly return empty list
+    if (map.containsKey(endWord))
+      dfs(beginWord, endWord, map, res, new ArrayList());
 
     return res;
   }
 
-  private void dfs(Map<String, Set<String>> map, List<String> list, String start, String beginWord, List<List<String>> res) {
-    list.add(0, start);
-    if (start.equals(beginWord)) {
-      res.add(new LinkedList(list));
+  private void dfs(String begin, String end, Map<String, Set<String>> map, List<List<String>> res, List<String> list) {
+    list.add(end);
+    if (end.equals(begin)) {
+      List<String> t = new ArrayList(list);
+      Collections.reverse(t);
+      res.add(t);
     } else {
-      Set<String> words = map.get(start);
-      for (String word : words) {
-        dfs(map, list, word, beginWord, res);
-        list.remove(0);
+      for (String s : map.get(end)) {
+        dfs(begin, s, map, res, list);
       }
     }
+    list.remove(list.size() - 1);
   }
 
-  int len;
-
-  public List<List<String>> findLadders_Graph(String beginWord, String endWord, List<String> wordList) {
-    Set<String> D = new HashSet<>(wordList);
-    len = beginWord.length();
-    Queue<Vertex> queue = new ArrayDeque<>();
-    List<String> removingString = new ArrayList<>();
-    queue.add(buildGraph(beginWord, new ArrayList<String>(), D, removingString));
-    List<List<String>> res = new ArrayList<>();
-    boolean found = false;
-
-    while (!queue.isEmpty() && !found) {
-      int size = queue.size();
-      for (int i=0; i<size; i++) {
-        Vertex v = queue.remove();
-        for (String n : v.neighbors) {
-          if (n.equals(endWord)) {
-            v.previousPath.add(n);
-            res.add(v.previousPath);
-            found = true;
-            break;
-          } else {
-            Vertex next = buildGraph(n, new ArrayList(v.previousPath), D, removingString);
-            if (next.neighbors.size() > 0) {
-              queue.add(next);
-            }
-          }
-        }
-      }
-      D.remove(removingString);
-      removingString.clear();
-    }
-
-    return res;
-  }
-
-  private Vertex buildGraph(String word, List<String> prevPath, Set<String> D, List<String> removingString) {
-    Vertex v = new Vertex(word, prevPath);
-    for (int i=0; i<len; i++) {
-      char[] chars = word.toCharArray();
-      for (char c='a'; c<='z'; c++) {
-        chars[i]=c;
-        String s = String.valueOf(chars);
-        if (D.contains(s)) {
-          removingString.add(s);
-          v.neighbors.add(s);
-        }
-      }
-    }
-    return v;
-  }
-
-  private class Vertex {
-    List<String> previousPath;
-    String label;
-    List<String> neighbors;
-
-    Vertex(String word, List<String> prevPath) {
-      label = word;
-      previousPath = prevPath;
-      previousPath.add(label);
-      neighbors = new ArrayList<>();
-    }
-  }
 }

@@ -38,27 +38,25 @@ public class DecodeString {
     return current.toString();
   }
 
-  int pos = 0;
+  int i=0, N;
   public String decodeString_recursive(String s) {
     StringBuilder sb = new StringBuilder();
-    int num = 0;
-    for (int i=pos; i<s.length(); i++) {
-      char c = s.charAt(i);
-      if (Character.isDigit(c)) {
-        num = num*10 + (c-'0');
-      } else if (c=='[') {
-        pos=i+1;
+    int num = 0, N = s.length();
+    while (i<N && s.charAt(i)!=']') {
+      char c = s.charAt(i++);
+      if (c=='[') { // go to deeper
         String inner = decodeString_recursive(s);
-        while (num-->0) sb.append(inner);
-        num=0;
-        i=pos;
-      } else if (c==']') {
-        pos=i;
-        return sb.toString();
-      } else {
+        for (int t=0; t<num; t++) {
+          sb.append(inner);
+        }
+        num = 0;
+      } else if (Character.isLetter(c)) {
         sb.append(c);
+      } else { // number
+        num = num*10 + (c-'0');
       }
     }
+    i++;
     return sb.toString();
   }
 

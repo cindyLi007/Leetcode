@@ -6,7 +6,7 @@ import java.util.*;
  * Created by ychang on 4/1/2017.
  */
 public class StrobogrammaticNumberII {
-  // Time: O(5^L), Space: (L)
+  // Time: O(5^(N/2)), Space: (N/2)
   public List<String> findStrobogrammatic_recursive(int n) {
     // we need handle the most outer separately, because we will NOT put leading 0 and tailing 0 in that case
     return helper(n, true);
@@ -38,12 +38,12 @@ public class StrobogrammaticNumberII {
       res.add("1");
       res.add("8");
     }
-    int i = (n%2)+2;
-    // each time i jump 2 because we need NOT n-1, n-3, ... list
-    for (; i<=n; i+=2) {
+    int i = (n%2)+1; // i is the start index from the pos after the middle
+    // each time i jump 2
+    for (; i<n; i+=2) {
       List<String> temp = new ArrayList();
       for (String s : res) {
-        if (i!=n) temp.add("0" + s + "0");
+        if (i!=n-1) temp.add("0" + s + "0");
         temp.add("1" + s + "1");
         temp.add("8" + s + "8");
         temp.add("6" + s + "9");
