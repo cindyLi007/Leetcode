@@ -9,9 +9,7 @@ public class GroupShiftedStrings {
   public List<List<String>> groupStrings(String[] strings) {
     Map<String, List<String>> map = new HashMap<>();
     for (String s : strings) {
-      String k = renderCode(s);
-      if (!map.containsKey(k)) map.put(k, new ArrayList<String>());
-      map.get(k).add(s);
+      map.computeIfAbsent(renderCode(s), o->new ArrayList<String>()).add(s);
     }
     return new ArrayList<>(map.values());
   }
@@ -20,9 +18,9 @@ public class GroupShiftedStrings {
     int offset = s.charAt(0) - 'a';
     int N = s.length();
     char[] ch = s.toCharArray();
-    for (int i = 0; i < N; i++) {
-      ch[i] = (char) (ch[i] - offset);
-      if (ch[i] < 'a') ch[i] += 26;
+    for (int i=0; i<N; i++) {
+      ch[i] = (char)(ch[i]- offset);
+      if (ch[i] < 'a') ch[i]+=26;
     }
     return String.valueOf(ch);
   }
