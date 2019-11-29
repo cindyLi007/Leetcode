@@ -1,9 +1,9 @@
 package com.google.string;
 
+import org.junit.Test;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
-
-import org.junit.Test;
 
 /**
  * Created by ychang on 5/2/2017.
@@ -16,7 +16,7 @@ public class RegularExpressionMatchingTest {
 
     // When
 //    boolean result = regularExpressionMatching.isMatch("aaaaaaaaaaaaab", "a*a*a*a*a*a*a*a*a*a*c");
-    boolean result = regularExpressionMatching.isMatch("aa", ".*");
+    boolean result = regularExpressionMatching.isMatch_dp("mississ","mis*");
 
     // Then
     assertThat(result, is(Boolean.FALSE));

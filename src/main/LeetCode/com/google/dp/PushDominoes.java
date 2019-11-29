@@ -1,41 +1,53 @@
 package com.google.dp;
 
 public class PushDominoes {
-    public static String pushDominoes(String dominoes) {
-        char[] dc = dominoes.toCharArray();
-        int N=dc.length;
-        int[] dist = new int[N];
-        // first round, record R from l to r
-        int idx=N;
-        for (int i=0; i<N; i++) {
-            if (dc[i]=='L' || dc[i]=='R') {
-                idx = dc[i]=='R' ? i : N;
-            } else { // dc[i] must be '.'
-                dist[i] = idx!=N ? i-idx : 0;
-            }
-        }
-        // second round, record L from r to l
-        idx=N;
-        for (int i=N-1; i>=0; i--) {
-            if (dc[i]=='L' || dc[i]=='R') {
-                idx = dc[i]=='L' ? i : N;
-            } else { // dc[i] must be '.'
-                if (idx==N) { // no L in right
-                    if (dist[i]!=0) dc[i]='R';
-                } else {
-                    if (dist[i]==0) dc[i]='L';
-                    else {
-                        int d = dist[i]-(idx-i);
-                        if (d!=0) dc[i]= (d>0 ? 'L' : 'R');
-                    }
-                }
-            }
-        }
-        return String.valueOf(dc);
-    }
 
     public static void main(String... args) {
         String s = pushDominoes(".L.R...LR..L..");
         System.out.println(s);
+    }
+
+    public static String pushDominoes(String dominoes) {
+        char[] D = dominoes.toCharArray();
+        int N = D.length;
+        int[] seconds = new int[N];
+        char cur = '.';
+        int dist = 0;
+        for (int i=0; i<N; i++) {
+            char c = D[i];
+            if (c=='R') {
+                cur = 'R';
+                dist = 0;
+            } else if (c=='.') {
+                if (cur == 'R') { D[i] = 'R'; seconds[i] = ++dist; }
+            } else { // c == 'L' block R further
+                cur = '.';
+                dist = 0;
+            }
+        }
+        cur = '.';
+        dist = 0;
+        for (int i=N-1; i>=0; i--) {
+            char c = D[i];
+            if (c=='L') {
+                cur = 'L';
+                dist = 1;
+            } else if (c=='.') {
+                if (cur == 'L') { D[i] = 'L'; dist++; }
+            } else { // c = 'R'
+                if (cur == 'L') {
+                    if (dist < seconds[i]) {
+                        D[i] = 'L';
+                        dist++;
+                    } else if (dist == seconds[i]) {
+                        D[i] = '.';
+                        cur = '.';
+                    } else {
+                        cur = '.';
+                    }
+                }
+            }
+        }
+        return String.valueOf(D);
     }
 }

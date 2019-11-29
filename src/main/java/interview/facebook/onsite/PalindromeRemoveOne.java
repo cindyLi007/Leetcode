@@ -1,7 +1,5 @@
 package interview.facebook.onsite;
 
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
-
 /**
  * Given a string, return whether we can make it as a Palindrome by removing only one char
  * For ex. "racecar, we can make by removing "e", or "acecar" we can remove last r, or "abab" we can remove the first a
@@ -17,8 +15,10 @@ public class PalindromeRemoveOne {
     if (N <= 2) return true; // remove 1 char can make it Palindrome
     int c1 = s.charAt(0), c2 = s.charAt(N - 1);
     if (c1 != c2) {
+      // if c1 != c2, we must remove one of them, so we only need to check whether [c1, c2-1] or [c1+1, c2} is palindrome
       return isPalindrome(s.substring(1)) || isPalindrome(s.substring(0, N - 1));
     } else {
+      // if c1 == c2, we does not care c1 and c2, because we need not remove them, so we check substring[c1+1, c2-1]
       return remove(s.substring(1, N - 1));
     }
   }

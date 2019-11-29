@@ -1,10 +1,10 @@
 package com.google.bfs.dfs.bfs;
 
+import org.junit.Test;
+
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
-
-import org.junit.Test;
 
 /**
  * Created by ychang on 3/5/2017.
@@ -21,7 +21,7 @@ public class WordLadderIITest {
     // When
     long l1 = System.currentTimeMillis();
 //    List<List<String>> ladders = wordLadderII.findLadders("sand", "acne", list);
-    List<List<String>> ladders = wordLadderII.findLadders_Graph("hit", "cog", list);
+    List<List<String>> ladders = wordLadderII.findLadders("hit", "cog", list);
     long l2 = System.currentTimeMillis();
     System.out.println(l2-l1);
     long l3 = System.currentTimeMillis();

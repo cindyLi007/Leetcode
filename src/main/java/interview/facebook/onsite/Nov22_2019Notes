@@ -17,3 +17,8 @@ For big package, since it will take a while to download, HRL will first return a
 the queue, after the download is done, send an notification to the app and the location of the downloaded package.
 
 Round 3: coding
+Anagrams Substring. 典型的Sliding window，在处理不同情况的时候 如果感觉容易混淆 可以先写redundant code 之后再合并
+
+Round 4: Behavior Questions and Graph Clone
+
+Round 5: Tree Iterator

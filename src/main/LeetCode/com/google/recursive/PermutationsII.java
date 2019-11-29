@@ -32,7 +32,7 @@ public class PermutationsII {
           marked[i]=false;
           // this while must be put inside the !marked[i], which means only when we choose i for pos, we check
           // whether next number(s) are same as this one, to avoid same pick for pos
-          // if we put outside !marked[i], for example, if i-th is chosen by prev pick, but (i+1)th is not, we will never
+          // if we put it outside !marked[i], for example, if i-th is chosen by prev pick, but (i+1)th is not, we will never
           // choose (i+1)th for any pos, so we will never fill in the list
           while (i<nums.length-1 && nums[i]==nums[i+1]) i++;
         }

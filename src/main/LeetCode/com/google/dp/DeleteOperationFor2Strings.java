@@ -23,7 +23,7 @@ public class DeleteOperationFor2Strings {
         return dp[N][M];
     }
 
-    // use the longest common sequence, because we can delete any pos in the 2 strings, when find the LCS, just neec to
+    // use the longest common sequence, because we can delete any pos in the 2 strings, when find the LCS, just need to
     // remove all chars which are not in LCS
     public int minDistance_LCS(String word1, String word2) {
         int N=word1.length(), M=word2.length();
@@ -39,4 +39,31 @@ public class DeleteOperationFor2Strings {
         }
         return N+M-2*dp[N][M];
     }
+
+    public static int minDistance_oneDArray(String word1, String word2) {
+        int M = word1.length(), N = word2.length();
+        if (M==0 || N==0) return Math.max(M, N);
+        int[] dp = new int[N+1];
+        for (int i=1; i<=N; i++) dp[i] = i;
+        for (int i=0; i<M; i++) {
+            int prev = dp[0];
+            dp[0]=i+1;
+            for (int j=0; j<N; j++) {
+                int temp = dp[j+1];
+                if (word1.charAt(i)==word2.charAt(j)) {
+                    dp[j+1] = prev;
+                } else {
+                    dp[j+1] = Math.min(dp[j+1], dp[j]) + 1;
+                }
+                prev = temp;
+            }
+        }
+        return dp[N];
+    }
+
+    public static void main(String... args) {
+        System.out.println(minDistance_oneDArray("sea", "eat"));
+        System.out.println(minDistance_oneDArray("a", "e"));
+    }
+
 }
