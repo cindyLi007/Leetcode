@@ -65,6 +65,7 @@ public class SentenceScreenFitting {
 
   // This is a wrong way to solve this problem, although it can pass the OJ. We should not pass words in sentence one by one
   // Remember it could fit in one row for the whole sentence. Or one row can contains multiple sentences.
+  // so we should parse for one ROW each time
   public static int wordsTyping_TLE(String[] sentence, int rows, int cols) {
     int i=0, res=0, j=0;
     while (i<rows) {
