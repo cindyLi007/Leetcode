@@ -5,27 +5,38 @@ package com.google;
  */
 public class SentenceScreenFitting {
   public static void main(String[] args) {
-//    int result = wordsTyping(new String[]{"Hello", "World"}, 2, 8);
-//    int result = wordsTyping(new String[]{"Hello", "leetcode"}, 1, 10);
-//    int result = wordsTyping(new String[]{"a", "bcd", "e"}, 3, 6);
-    int result = wordsTyping(new String[]{"I", "had", "apple", "pie"}, 4, 5);
+    int result = wordsTypeDp(new String[]{"Hello", "World"}, 2, 8); // 1
+    System.out.println(result);
+    result = wordsTyping_TLE(new String[]{"Hello", "leetcode"}, 1, 10); // 0
+    System.out.println(result);
+    result = wordsTyping_TLE(new String[]{"a", "bcd", "e"}, 3, 6); // 2
+    System.out.println(result);
+    result = wordsTyping_TLE(new String[]{"I", "had", "apple", "pie"}, 4, 5); // 1
+    System.out.println(result);
+    result = wordsTyping_TLE(new String[]{"f", "p", "a"}, 8, 7); // 10
     System.out.println(result);
   }
 
-  public static int wordsTyping(String[] sentence, int rows, int cols) {
+  public int wordsTyping(String[] sentence, int rows, int cols) {
     String s = String.join(" ", sentence) + " ";
-    int current = 0, len = s.length();
-    for (int i = 0; i < rows; i++) {
-      current += cols;
-      char c = s.charAt(current%len);
-      if (c == ' ') current++;
+    int L = s.length();
+    int curIdx = 0;
+    // process by every line
+    for (int i=0; i<rows; i++) {
+      // curIdx is index of sentence, each round it points to the index of s which will be put in the 1st position in next row
+      // (curIdx + cols) means with one row, from this idx, it can go to where of the sentence
+      // because (curIdx + cols) can be exceeds the length of the string, so we need use curIdx % L for correct idx
+      curIdx+=cols;
+      // if the letter put in the beginning of next row is a space, we need not reserve it
+      // just move forward the curIdx
+      if (s.charAt(curIdx%L)==' ') curIdx++;
       else {
-        // Here must be current-1 instead of current, because if current is the 1st char of a word, we need NOT current--
-        while (current > 0 && s.charAt((current - 1)%len) != ' ')
-          current--;
+        //if hit a letter, need backtrack to the last previous space to keep the word non-breaking
+        while (curIdx>0 && s.charAt(curIdx%L)!=' ') curIdx--;
+        curIdx++;
       }
     }
-    return current/len;
+    return curIdx/L;
   }
 
   public static int wordsTypeDp(String[] sentence, int rows, int cols) {
@@ -51,4 +62,25 @@ public class SentenceScreenFitting {
     }
     return current/len;
   }
+
+  // This is a wrong way to solve this problem, although it can pass the OJ. We should not pass words in sentence one by one
+  // Remember it could fit in one row for the whole sentence. Or one row can contains multiple sentences.
+  public static int wordsTyping_TLE(String[] sentence, int rows, int cols) {
+    int i=0, res=0, j=0;
+    while (i<rows) {
+      for (int k=0; i<rows && k<sentence.length; k++) {
+        String s = sentence[k];
+        int len = s.length();
+        if (cols-j < len) {
+          i++; j=0;
+          k--;
+        } else {
+          j += len + 1;
+        }
+      }
+      if (i<rows) res++;
+    }
+    return res;
+  }
+
 }
