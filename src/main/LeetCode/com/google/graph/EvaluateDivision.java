@@ -26,6 +26,55 @@ public class EvaluateDivision {
     return res;
   }
 
+  // Time: build G and preproces O(V+E), after that query is O(1)
+  public double[] calcEquation_faster(List<List<String>> equations, double[] values, List<List<String>> queries) {
+    // 1. build a di-D graph
+    Map<String, List<Edge>> G = buildGraph(equations, values);
+
+    // 2. preprocess the graph
+    // conv is a map for all nodes in one unit group, share one root, so entry is this map, key is the nodes,
+    // value is Edge <rootNode, root-to-node ratio value>
+    // when we do query, since every node has an edge to root node, the query time is constant
+    Map<String, Edge> conv = new HashMap();
+    for (String start : G.keySet()) {
+      // each call for query is for a separate group
+      if (!conv.containsKey(start)) preprocess(conv, G, start);
+    }
+
+    // 3. from that conv map, build queires one by one
+    int N = queries.size(), i=0;
+    double[] res = new double[N];
+    for (List<String> q : queries) {
+      res[i++] = query(q.get(0), q.get(1), conv);
+    }
+    return res;
+  }
+
+  private double query(String v1, String v2, Map<String, Edge> conv) {
+    if (!conv.containsKey(v1) || !conv.containsKey(v2)) return -1;
+    // two nodes should share some root (both of them has an edge to root node) which means they are in same group
+    if (conv.get(v1).target.equals(conv.get(v2).target)) {
+      return conv.get(v2).val / conv.get(v1).val;
+    }
+    return -1;
+  }
+
+  private void preprocess(Map<String, Edge> conv, Map<String, List<Edge>> G, String r) {
+    Deque<Edge> queue = new ArrayDeque();
+    queue.offer(new Edge(r, 1.0));
+    // the node in conv is a node in group, in Edge the "target" is the root node in the group, the val is ratio from root to this node
+    conv.put(r, new Edge(r, 1.0));
+
+    while (!queue.isEmpty()) {
+      Edge cur = queue.poll();
+      for (Edge edge : G.get(cur.target)) {
+        if (conv.containsKey(edge.target)) continue;
+        conv.put(edge.target, new Edge(r, cur.val * edge.val));
+        queue.offer(new Edge(edge.target, cur.val * edge.val));
+      }
+    }
+  }
+
   // Time: O(V+E)
   private double bfs(String src, String dest, Map<String, List<Edge>> G) {
     if (!G.containsKey(src)) return -1.0;

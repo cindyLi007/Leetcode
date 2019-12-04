@@ -26,21 +26,24 @@ public class CatMouseGame {
     // use dp to memorize the state result
     if (dp[step][m][c] != -1) return dp[step][m][c];
 
+    // res 1 means Mouse will win, 0 means draw, 2 means cat will win
     // if mouse turn
     if (step % 2 == 0) {
       int[] next = graph[m];
       boolean flag = false;
       for (int i : next) {
         int res = helper(dp, step + 1, i, c, graph);
-        if (res == 1) {
+        if (res == 1) { // if in the following steps, there in one can make mouse sure-win, it will definately choose that step and return;
           dp[step][m][c] = 1;
           return 1;
-        } else if (res == 0) {
+        } else if (res == 0) { // in in the following steps, there is one can make Tie, remember it
           flag = true;
         }
       }
+      // if hit this point, that means there is no steps can make mouse sure-win, check whether there is any steps can make draw
+      // if no, return cat win
       dp[step][m][c] = flag ? 0 : 2;
-    } else {
+    } else { // if cat turn
       int[] next = graph[c];
       boolean flag = false;
       for (int i : next) {

@@ -28,6 +28,7 @@ public class TextJustification {
           sb.append(' ');
         sb.append(words[j]);
       }
+      // this is for line which there is only one word or last line
       diff = maxWidth - sb.length();
       while (diff-->0)
         sb.append(' ');

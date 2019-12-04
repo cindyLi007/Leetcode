@@ -20,6 +20,8 @@ public class RangeModule {
     while (itr.hasNext()) {
       Interval next = itr.next();
       // NOTICE: could not >=, that is because start is inclusive
+      // 之所以可以break是因为不可能存在后面的item start < next.start了。因为我们是按end sort的，后面的end一定比 current item的end大
+      // if 后面的item start < current start, then 后面的item 就包含了current itme，这个item就没有存在的必要了
       if (next.start > right) break;
       left = Math.min(left, next.start);
       right = Math.max(right, next.end);

@@ -9,7 +9,7 @@ public class CampusBikeII {
   /*
   from worker 0, try every available bike, and from that point, try for worker 1, tried every available bike and so on,
   so this is a dfs questions, each time for a new worker, dp[n] = Math.min(distance(n, i) + dp[n-1][i is availble]) i is the
-  index of bike which is available for n. we need try all possible i for each new work
+  index of bike which is available for n. we need try all possible i for each new worker
    */
   int res = Integer.MAX_VALUE;
 
@@ -60,5 +60,6 @@ public class CampusBikeII {
     int res = campusBikeII.assignBikes(w, b);
     System.out.println(res);
   }
+
 }
 

@@ -13,7 +13,8 @@ public class SegmentTree {
     this.array = Arrays.copyOf(array, N);
     // The max size of this array is about 2 * 2 ^ log2(n) + 1
     // size = (int) (2 * Math.pow(2.0, Math.floor((Math.log((double) N) / Math.log(2.0)) + 1)));
-    size = N * 4;
+    int x = (int)Math.ceil(Math.log((double) N) / Math.log(2.0));
+    size = 2 * (int)Math.pow(2.0, x) - 1;
     heap = new Node[size];
     build(0, 0, N - 1);
   }
@@ -110,7 +111,7 @@ public class SegmentTree {
 
   //Test if the range1 contains range2
   private boolean contains(int from1, int to1, int from2, int to2) {
-    return from2 >= from1 && to2 <= to1;
+    return from1 <= from2 && to2 <= to1;
   }
 
   //The Node class represents a partition range of the array.

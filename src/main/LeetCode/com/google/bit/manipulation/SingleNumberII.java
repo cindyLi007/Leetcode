@@ -6,16 +6,17 @@ package com.google.bit.manipulation;
  * Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
  */
 public class SingleNumberII {
-    // Time: (N * M), M is the number of bit in an Integer
+    // Time: (N * 32), 32 is the number of bit in an Integer
     public int singleNumber(int[] nums) {
         int res=0;
         for (int i=0; i<32; i++) {
             int sum = 0;
             for (int num : nums) {
-                sum += (num >>>i ) & 1;
+                sum += (num >>i ) & 1;
             }
-            res += (sum % 3) << i;
+            res |= (sum % 3) << i;
         }
         return res;
     }
+
 }

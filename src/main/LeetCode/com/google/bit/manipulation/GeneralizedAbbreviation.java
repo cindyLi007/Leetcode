@@ -21,7 +21,7 @@ public class GeneralizedAbbreviation {
         List<String> res = new ArrayList<>();
         for (int j=0; j<(1<<word.length()); j++) {
             StringBuilder sb = new StringBuilder();
-            int idx=0, count=0;
+            int count=0;
             int x=j;
             for (int i=0; i<word.length(); i++) {
                 if (((x>>i) & 1) == 1) {

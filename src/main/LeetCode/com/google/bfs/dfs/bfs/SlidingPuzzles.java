@@ -2,6 +2,7 @@ package com.google.bfs.dfs.bfs;
 
 import java.util.*;
 
+// 这道题骨子里还是BFS，因为是从一种状态到另一种状态的转变的最小路径，而判断两钟状态之间是否可以转换的方法是看是否可以把0和它周围的数字替换
 public class SlidingPuzzles {
     int N, M;
     public int slidingPuzzle(int[][] board) {
