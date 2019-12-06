@@ -40,6 +40,7 @@ public class SentenceScreenFitting {
   }
 
   public static int wordsTypeDp(String[] sentence, int rows, int cols) {
+    // NOTICE: need put a space after join, because String.join only put delimiter between strings INSIDE the connected strings.
     String s = String.join(" ", sentence) + " ";
     int current = 0, len = s.length();
     int[] map = new int[len];
