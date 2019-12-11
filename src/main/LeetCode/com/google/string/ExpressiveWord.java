@@ -28,7 +28,8 @@ public class ExpressiveWord {
 
     public static void main(String... args) {
         ExpressiveWord expressiveWord = new ExpressiveWord();
-        int res = expressiveWord.expressiveWords("zzzzzyyyyy", new String[]{"zzyy","zy","zyy"});
+//        int res = expressiveWord.expressiveWords("zzzzzyyyyy", new String[]{"zzyy","zy","zyy"});
+        int res = expressiveWord.expressiveWords("heeellooo", new String[]{"hello"});
         System.out.println(res);
     }
 }

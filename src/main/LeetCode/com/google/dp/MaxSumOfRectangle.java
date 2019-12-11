@@ -3,8 +3,13 @@ package com.google.dp;
 import java.util.TreeSet;
 
 // Leetcode 363
+
+/*
+ * 我们从左边的边为0开始，右边的边从left 到 Column的头，在定了长方形的宽以后，算行from 0 to Row 的底的所有长方形的prefix sum
+ * so it transfers to 1-D prefix sum. after we get all value in the 1-d array, use a TreeMap to find the answer
+ */
 public class MaxSumOfRectangle {
-  // Time: O(C*C*R + C*C*R*lgR)
+  // Time: O(C*C*R + C*C*lgR)
   public static int maxSumSubmatrix(int[][] matrix, int k) {
     int R = matrix.length, C = matrix[0].length, res = Integer.MIN_VALUE;
     // for each start left col, find all rect from left to N, we record rect sum in array sum
@@ -20,11 +25,13 @@ public class MaxSumOfRectangle {
           sum[r] += (r == 0 ? 0 : sum[r - 1]) - prev + matrix[r][right];
           prev = temp;
           // if we want restrain to square, we can add following code
+          /*
           int L = right - left + 1;
           if (r >= L - 1) {
             int prevSum = r == L - 1 ? 0 : sum[r - L];
             if (sum[r] - prevSum <= k) res = Math.max(res, sum[r] - prevSum);
           }
+          */
         }
         // after this loop we have an array sum which has all sum [W:(left, right), H:(0, r)]
 

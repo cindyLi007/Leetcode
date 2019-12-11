@@ -29,7 +29,7 @@ public class StandaloneProcess {
       Process cur = points.poll();
       if (cur.isStart) {
         count++;
-        if (count==1) {
+        if (count==1) { // this is the first process in the timeline, when another process come, we can count this process as standalone
           start = cur.time;
         } else if (count==2) {
           res.add(new int[]{start, cur.time, id.iterator().next()}); // start, end, id

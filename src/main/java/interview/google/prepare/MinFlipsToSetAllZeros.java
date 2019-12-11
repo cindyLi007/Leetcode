@@ -36,6 +36,7 @@ public class MinFlipsToSetAllZeros {
     return bs;
   }
 
+  // Time: O(2^(M*N))
   private static void helper(BitSet status, int pos, int flips) {
     if (pos == L) {
       if (status.cardinality() == 0) res = Math.min(res, flips);

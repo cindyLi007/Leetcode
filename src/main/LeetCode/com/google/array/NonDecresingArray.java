@@ -1,6 +1,29 @@
 package com.google.array;
 
 public class NonDecresingArray {
+    // Time: O(N), Space: O(1)
+    public boolean checkPossibility_onePass(int[] nums) {
+        int N = nums.length;
+        if (N<=2) return true;
+        boolean found = false;
+        // min denotes before current's previous item, what is the max value
+        int max = nums[0], min = Integer.MIN_VALUE;
+        for (int i=1; i<N; i++) {
+            if (nums[i] < max) {
+                if (found) return false;
+                found = true;
+                // if (nums[i] <= min), that means we must change nums[i] to max+1;
+                if (nums[i] <= min) max++;
+                // we can change the nums[i-1] to lower value.
+                else max = nums[i];
+            } else {
+                min = max;
+                max = nums[i];
+            }
+        }
+        return true;
+    }
+
     public static boolean checkPossibility(int[] nums) {
         int count=0, N=nums.length, max=nums[0], min=nums[N-1];
         for (int i=0; i<N; i++) {

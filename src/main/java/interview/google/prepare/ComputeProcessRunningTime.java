@@ -30,7 +30,7 @@ public class ComputeProcessRunningTime {
     int[] curPAndT = processes[idx++];
     NaryTreeNode naryTreeNode = new NaryTreeNode(curPAndT[0], curPAndT[1]);
     int sumOfSubFunctions = 0;
-    while (idx < processes.length && processes[idx][1] > 0) {
+    while (idx < processes.length && processes[idx][1] > 0) { // processes[idx][1]>0 means it is start time
       // enter this point means naryTreeNode has children node
       NaryTreeNode subFunction = parse(processes);
       naryTreeNode.subFunctions.add(subFunction);

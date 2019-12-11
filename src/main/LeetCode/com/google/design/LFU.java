@@ -6,6 +6,7 @@ class LFU {
   Map<Integer, Integer> values;
   Map<Integer, Integer> counts;
   // could not use TreeMap to satisfy O(1), TreeMap firstEntry() is O(lgN)
+  // value use LinkedHashSet to guarantee that the least referred item is in first entry
   Map<Integer, LinkedHashSet<Integer>> freqMap;
   // use min to track the min freq currently
   int min=0;

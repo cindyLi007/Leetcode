@@ -15,6 +15,7 @@ public class PaintFence {
        * diff means in current location, paint diff color with prev one, same means paint same color with prev one.
        * since we only permit at most 2 adjacent fences paint same color, for example in pos i-1, we paint #4 color, in
        * pos i, we want to paint #4 color, we can only choose from diff from pos i-1 (which means pos i-2 and i-1 are different)
+       * 不能有3个连续的fence paint same color.
        */
       diff = (diff+same)*(k-1);
       same = temp;
