@@ -34,8 +34,11 @@ public class ReadBytes {
   }
 
   public static void main(String... args) {
-    byte[] original = new byte[]{(byte)Integer.parseInt("01101111", 2), (byte)Integer.parseInt("01101001", 2), (byte)Integer.parseInt("01101100", 2), (byte)Integer.parseInt("11101111", 2)};
+    byte[] original = new byte[]{(byte)Integer.parseInt("01101111", 2), (byte)Integer.parseInt("01101001", 2),
+        (byte)Integer.parseInt("01101100", 2), (byte)Integer.parseInt("11101111", 2)};
     byte[] res = readBits(12, original);
+    for (byte b : res)
+      System.out.println(b);
   }
 
 }

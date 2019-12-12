@@ -29,6 +29,7 @@ public class NumMatrix {
     row++;
     col++;
     for (int i = row; i <= m; i += i & (-i)) {
+      // 每一次outer of inner loop 都要重设 j to col
       for (int j = col; j <= n; j += j & (-j)) {
         tree[i][j] += diff;
       }

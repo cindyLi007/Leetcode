@@ -15,16 +15,21 @@ public class MinCostToMergeStones {
     for (int i=0; i<N; i++) sum[i+1] = sum[i]+stones[i];
 
     for (int L=K; L<=N; L++) { // L is the length of small range
+      // i is the subPiles is start point
       for (int i=0; i<=N-L; i++) {
+        // j is the end point, L 不一定是K的倍数
         int j=i+L-1;
         dp[i][j]=Integer.MAX_VALUE;
 
         // each time we need keep from i to m is a "can-merge-to-one-pile" piles set, so m step is K-1; because each time besides i, we add(K-1) to the piles
-        for (int m=i; m+1<=j; m+=K-1) {
+        // [i, i+K-1] length is K
+        // 把区间[i, j] split to [i, m] and [m+1，j], the left range must be merged to one pile, the right one maybe can or can not
+        for (int m=i; m<j; m+=K-1) {
           dp[i][j]=Math.min(dp[i][j], dp[i][m] + dp[m+1][j]);
         }
         if ((j-i)%(K-1)==0) {
           dp[i][j]+=sum[j+1] - sum[i]; // if [i, j] can merge to 1 pile, we need finally add each elem from i to j
+          System.out.println(dp[i][j]);
         }
       }
     }

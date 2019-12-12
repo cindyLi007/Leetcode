@@ -10,6 +10,7 @@ public class LongestPathInTree {
     return path;
   }
 
+  // return the longer path from root to left subtree leaf or right subtree leaf
   private int helper(TreeNode root) {
     if (root==null) return 0;
     int left = helper(root.left);

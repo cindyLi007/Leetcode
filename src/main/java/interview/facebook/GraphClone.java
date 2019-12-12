@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 // 2019 Nov. 8th phone interview
-// Given a Graph (connected or not connected), right code to clone the whole graph
+// Given a Graph (connected or not connected), write code to clone the whole graph
 public class GraphClone {
 
   // for connected graph

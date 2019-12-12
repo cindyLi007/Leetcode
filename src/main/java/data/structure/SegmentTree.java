@@ -132,6 +132,8 @@ public class SegmentTree {
    * init set 1 2 3 4 5 6
    */
   public static void main(String... args) {
+    int x = (int)Math.ceil(Math.log((double) 15) / Math.log(2.0));
+    System.out.println(x);
     int[] array = new int[]{1, 2, 3, 4, 5, 6};
     SegmentTree st = new SegmentTree(array);
     System.out.println(st.querySumRange(0, 3)); // should be 10
