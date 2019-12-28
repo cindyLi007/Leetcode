@@ -1,0 +1,45 @@
+1st round: TopNUsersWithMostWords
+refer code。 做得很快 但不够完美 因为我当时写的code是将这个map的所有items都放到priorityQueue中，没有判断是否>N，
+应该用PriorityQueue 只Keep前N个,使得时间复杂度降到 O(L * lgN)
+
+2nd round:
+what are the difference between C# and Java 答得不好，最重要的Java pass by value 没有想起来
+what is the function for hashcode in Map 这个答得还可以，说了我们对每一个放到map里的元素都要生成一个hashcode，这样才可以找到它对应的entry
+Autobox and box for java 这题答得比较模糊，主要是虽然平时用，但并没有感觉有太大的区别
+mutable class vs. immutable class
+完了再用equals来找到真正match的元素
+code: maxConcurrentMeetings refer code (sweep line)
+这道题在startTime and endTime 在同一点上时应该如何排序上纠缠了很久 先开始我说是end < start 但这样可能会有负值产生
+
+3rd round:
+主要是问怎么testing. 还问了Spring的Dependency Injection. 这个答得不好，因为Spring的东西都忘光了
+
+Lunch:获知加入Google还要参加一个为期一周的training 有些担忧
+
+4th round:
+Behavior
+基本都是老题，但提到一个如果两个组做一个东西，并且存在竞争关系，你在其中一个组，已经做了一半的工作，how to handle this situation, 答得不是很好。
+因为确实没有想过，也没有遇到过。发现我在微软尤其是Azure组还是学到很多东西的
+
+5th round:
+给一个Array only contains 0 and 1，只考虑其中为0的subarray，求各个subarray的子array总和
+for ex. [0, 0, 0, 1, 1, 0, 0], in this array, there are 2 subarrays, [0, 0, 0] and [0, 0], for first one, there are 6 subarrays,
+index 0 to 2, index 0, index 1, index 2, index 0 to 1, index 1 to 2. for 2nd one, there are 3 subarrays, index 0, index 1, index 0 to 1
+refer code
+前面这一问其实很简单，但我却卡壳在如何计算一个subarray 的总subarray的count上，浪费了太多时间，还需要面试官给提示，以至于后面那一问没有时间了，根本没有做出来
+
+
+follow up, to find all subarray for matix
+for ex. 0, 0, 0, 1
+        0, 0, 1, 1
+so besides each rows subarray, there are 3 more subarray, which is
+index [0, 0] to [1, 0], index [0, 1] to [1, 1] and index[0, 0] to [1, 1]
+
+面试总结：
+通过这次面试，我发现交流很重要，我指的是在面试中针对面试官介绍的scenario提有针对性的问题，比如Zillow再确定要我但没有谈offer之前的两次和manager的谈话，
+manager谈到了他们都用什么，他们的工作方式，对某一点我都能谈到我过去的经验，我的方式，感觉这也是最后愿意给我高薪水的一个重要原因
+还有和Square manager 谈的他们的API SDK, 我提的问题正好是他们最核心的问题，我其实也没有想到我能正好问道关键地方，但感觉问完以后，manager明显对我很满意
+包括这次Google的面试，由于我对Bahavior question准备充分，整个经过叙述合理，他们应该比较满意的。还有处理test case，后来是和我讨论的态度，我觉得应该不错
+我觉得我拿到了1到2个 strong hire, 1 到2个hire，总共3个strong hire / hire， 1 个 hire 和 1个 tend to hire. 真的是我们在天上的父的保佑。
+
+
