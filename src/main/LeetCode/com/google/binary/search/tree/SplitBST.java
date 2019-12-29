@@ -1,7 +1,5 @@
 package com.google.binary.search.tree;
 
-import sun.reflect.generics.tree.Tree;
-
 /**
  * Given a Binary Search Tree (BST) with root node root, and a target value V, split the tree into two subtrees where one subtree
  * has nodes that are all smaller or equal to the target value, while the other subtree has all nodes that are greater than the target value.

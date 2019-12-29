@@ -1,10 +1,9 @@
 package com.google.Tree;
 
 import org.junit.Test;
-import sun.reflect.generics.tree.Tree;
 
 import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
 public class PathSumIIITest {
 

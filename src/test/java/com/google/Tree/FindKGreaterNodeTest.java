@@ -1,11 +1,7 @@
 package com.google.Tree;
 
 import org.junit.Test;
-import sun.reflect.generics.tree.Tree;
-
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by grchan on 7/30/2018
